@@ -51,3 +51,6 @@ https://www.figma.com/file/FaSg1WJLw2FJhlEZvasdAZ/Digital_House?node-id=161%3A23
 ### Para actualizar el repositorio remoto usar:
 
 `git push https://github.com/gusavella/grupo_6_Games_Hub.git `
+
+#### Homepage: 
+![HomePage](./Wireframe/Home%20GamesHub.jpg)
