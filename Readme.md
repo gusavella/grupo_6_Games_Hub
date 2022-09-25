@@ -34,3 +34,6 @@ Los sitios con los que nos hemos referenciado para realizar este proyecto son:
 - https://store.steampowered.com/?l=spanish
 - https://www.gog.com/en/games
 
+### Para clonar el repositorio usar:
+
+`git clone https://github.com/gusavella/grupo_6_Games_Hub.git `
