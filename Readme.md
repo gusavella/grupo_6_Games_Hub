@@ -34,6 +34,12 @@ Los sitios con los que nos hemos referenciado para realizar este proyecto son:
 - https://store.steampowered.com/?l=spanish
 - https://www.gog.com/en/games
 
+### Enlace del diseño:
+
+El diseño preliminar se ha realizado con *Figma* y se puede encontrar en la siguiente URL
+
+https://www.figma.com/file/FaSg1WJLw2FJhlEZvasdAZ/Digital_House?node-id=161%3A238
+
 ### Para clonar el repositorio usar:
 
 `git clone https://github.com/gusavella/grupo_6_Games_Hub.git `
