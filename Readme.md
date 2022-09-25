@@ -10,6 +10,16 @@ La audiencia objetivo de este sitio web es general con deseo de comprar videojue
 
 ---> Adjuntar aqui la descripcion de cada uno
 
+#### Nahuel Zelaya:
+
+#### Felipe Mendez:
+
+#### Gonzalo potente:
+
+#### Nicolas Suzuki:
+
+#### Wilber Leon:
+
 #### Gustavo Avella:
 
 Ingeniero en electronica , amante de la tecnologia y los proyectos de innovacion , entusiasta de las nuevas tendencias tecnologicas.
