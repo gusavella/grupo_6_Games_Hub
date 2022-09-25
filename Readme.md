@@ -14,6 +14,8 @@ La audiencia objetivo de este sitio web es general con deseo de comprar videojue
 
 #### ___Felipe Mendez:___
 
+Estudiante es proceso de profesionalización, 19 años, apasionado por la programación web full stack, especialmente en el backend.
+
 #### ___Gonzalo potente:___
 
 #### ___Nicolas Suzuki:___
