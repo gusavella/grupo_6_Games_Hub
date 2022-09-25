@@ -1,4 +1,4 @@
-# ___GamesHub___
+# ***GamesHub***
 
 ## Sitio web para compra de videojuegos y consolas de juego
 
