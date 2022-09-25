@@ -1,4 +1,4 @@
-# GamesHub
+# ___GamesHub___
 
 ## Sitio web para compra de videojuegos y consolas de juego
 
@@ -10,17 +10,17 @@ La audiencia objetivo de este sitio web es general con deseo de comprar videojue
 
 ---> Adjuntar aqui la descripcion de cada uno
 
-#### Nahuel Zelaya:
+#### ___Nahuel Zelaya:___
 
-#### Felipe Mendez:
+#### ___Felipe Mendez:___
 
-#### Gonzalo potente:
+#### ___Gonzalo potente:___
 
-#### Nicolas Suzuki:
+#### ___Nicolas Suzuki:___
 
-#### Wilber Leon:
+#### ___Wilber Leon:___
 
-#### Gustavo Avella:
+#### ___Gustavo Avella:___
 
 Ingeniero en electronica , amante de la tecnologia y los proyectos de innovacion , entusiasta de las nuevas tendencias tecnologicas.
 
