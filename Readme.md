@@ -12,6 +12,8 @@ La audiencia objetivo de este sitio web es general con deseo de comprar videojue
 
 #### ___Nahuel Zelaya:___
 
+Me gusta hacer de todo un poco. Los videojuegos y la cocina me apasionan. Hace poco descubrí este mundo infinito de la programación, y la verdad que la encontré verdaderamente fascinante!!
+
 #### ___Felipe Mendez:___
 
 Estudiante es proceso de profesionalización, 19 años, apasionado por la programación web full stack, especialmente en el backend.
