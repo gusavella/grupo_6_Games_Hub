@@ -18,7 +18,8 @@ Me gusta hacer de todo un poco. Los videojuegos y la cocina me apasionan. Hace p
 
 Estudiante es proceso de profesionalización, 19 años, apasionado por la programación web full stack, especialmente en el backend.
 
-#### ___Gonzalo potente:___
+#### ___Gonzalo Potente:___
+Estudiante de 4to año de psicología. Hace un tiempo descubrí la programación y ahora decidí meterme a pleno, me interesa en específico el front end. Espero aprender mucho de la mano de mis profesores y compañeros, a la vez que disfrutar el recorrido con ellos. 
 
 #### ___Nicolas Suzuki:___
 
