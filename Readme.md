@@ -56,3 +56,6 @@ https://www.figma.com/file/FaSg1WJLw2FJhlEZvasdAZ/Digital_House?node-id=161%3A23
 
 #### Homepage: 
 ![HomePage](./Wireframe/Home%20GamesHub.jpg)
+
+#### Article: 
+![Article](./Wireframe/Articulo%20GamesHub.jpg)
