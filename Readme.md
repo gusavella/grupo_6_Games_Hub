@@ -22,6 +22,8 @@ Estudiante es proceso de profesionalización, 19 años, apasionado por la progra
 
 #### ___Wilber Leon:___
 
+Analista Sector Funerario, Loco por la tecnologia y estudiante de DH <3
+
 #### ___Gustavo Avella:___
 
 Ingeniero en electronica , amante de la tecnologia y los proyectos de innovacion , entusiasta de las nuevas tendencias tecnologicas.
@@ -59,3 +61,6 @@ https://www.figma.com/file/FaSg1WJLw2FJhlEZvasdAZ/Digital_House?node-id=161%3A23
 
 #### Article: 
 ![Article](./Wireframe/Articulo%20GamesHub.jpg)
+
+#### Carrito:
+ ![Article](./Wireframe/carrito_GamesHub.PNG
