@@ -37,3 +37,11 @@ Los sitios con los que nos hemos referenciado para realizar este proyecto son:
 ### Para clonar el repositorio usar:
 
 `git clone https://github.com/gusavella/grupo_6_Games_Hub.git `
+
+### Para actualizar el repositorio local usar:
+
+`git pull https://github.com/gusavella/grupo_6_Games_Hub.git `
+
+### Para actualizar el repositorio remoto usar:
+
+`git push https://github.com/gusavella/grupo_6_Games_Hub.git `
