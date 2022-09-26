@@ -22,6 +22,7 @@ Estudiante es proceso de profesionalización, 19 años, apasionado por la progra
 Estudiante de 4to año de psicología. Hace un tiempo descubrí la programación y ahora decidí meterme a pleno, me interesa en específico el front end. Espero aprender mucho de la mano de mis profesores y compañeros, a la vez que disfrutar el recorrido con ellos. 
 
 #### ___Nicolas Suzuki:___
+Me gusta mucho la tecnologia y los videojuegos. Me apasiona la programacion desde hace años pero nunca le dedique el tiempo necesario. Ahora espero poder cumplir mi sueño de ser programador.
 
 #### ___Wilber Leon:___
 
