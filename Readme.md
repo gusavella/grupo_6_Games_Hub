@@ -59,6 +59,10 @@ https://www.figma.com/file/FaSg1WJLw2FJhlEZvasdAZ/Digital_House?node-id=161%3A23
 
 `git push https://github.com/gusavella/grupo_6_Games_Hub.git `
 
+### Enlace Trello:
+
+[Trello - GamesHub](https://trello.com/b/gS8b9Xn9/equipo6gameshub)
+
 #### Homepage: 
 ![HomePage](./Wireframe/Home%20GamesHub.jpg)
 
