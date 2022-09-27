@@ -8,7 +8,6 @@ La audiencia objetivo de este sitio web es general con deseo de comprar videojue
 
 ### Integrantes del grupo: 
 
----> Adjuntar aqui la descripcion de cada uno
 
 #### ___Nahuel Zelaya:___
 
