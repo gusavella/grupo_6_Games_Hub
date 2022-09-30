@@ -1,0 +1,23 @@
+{
+  "name": "grupo_6_games_hub",
+  "version": "1.0.0",
+  "description": "La audiencia objetivo de este sitio web es general con deseo de comprar videojuegos y/o consolas de videojuegos.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusavella/grupo_6_Games_Hub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gusavella/grupo_6_Games_Hub/issues"
+  },
+  "homepage": "https://github.com/gusavella/grupo_6_Games_Hub#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
