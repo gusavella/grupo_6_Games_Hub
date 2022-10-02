@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #302A3F;
+    color: #FFFFFF;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header img {
+    width: 25%;
+}
+
+.top-header h2 {
+    display: none;
+    width: 25%;
+}
+
+.top-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-header {
+    display: none;
+}
