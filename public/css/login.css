@@ -10,6 +10,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     background-color: #6929BA;
+    font-family: 'Changa', sans-serif;
 }
 
 header {
@@ -122,6 +123,8 @@ footer h2 {
     .nav-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
     }
 
     nav ul,
