@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #6929BA;
+}
+
 header {
     background-color: #302A3F;
     color: #FFFFFF;
@@ -17,6 +25,7 @@ header {
 
 .top-header img {
     width: 25%;
+    max-width: 85px;
 }
 
 .top-header h2 {
@@ -30,6 +39,136 @@ header {
     justify-content: flex-end;
 }
 
+button {
+    background-color: #183153;
+    color: white;
+}
+
 .nav-header {
     display: none;
+}
+
+main {
+    background-color: #6929BA;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #542195;
+    padding: 25px;
+    border-radius: 5px;
+    height: 70vh;
+}
+
+.login-box h3 {
+    border-bottom: solid 1px white;
+    width: 100%;
+    text-align: center;
+}
+
+.login-box button {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+label {
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register {
+    text-decoration: none;
+    color: white;
+}
+
+.log-in {
+    background-color: #1AADB4;
+    color: white;
+}
+
+footer {
+    background-color: #302A3F;
+    color: white;
+}
+
+footer h2 {
+    text-align: center;
+    padding: 15px;
+}
+
+.payment-logos,
+.social-media {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .burger-menu {
+        display: none;
+    }
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul,
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    li {
+        padding: 3px;
+        list-style: none;
+    }
+
+    .login-box {
+        padding: 25px 50px 25px;
+    }
+
+    footer h2 {
+        display: none;
+    }
+
+    .payment-logos,
+    .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 20px;
+    }
+    .social-logos,
+    .logos {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer p {
+        border-bottom: solid 1px white;
+    }
 }
