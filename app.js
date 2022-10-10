@@ -9,3 +9,11 @@ app.use(express.static(publicPath));
 app.listen(3030, () => {
     console.log("Server in port 3030 online.")
 })
+
+app.get('/login',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/login.html'))
+})
+
+app.get('/cart',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
+})
