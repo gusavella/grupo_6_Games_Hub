@@ -19,25 +19,33 @@
   <body>
     <header></header>
     <main>
+        <iframe
+            width="100%"
+            height="200"
+        src="https://www.youtube.com/embed/6nUvWkD8rAE"
+        title="Terraria – Update 1.4.3 Official Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
       <div class="logo">
-        <img src="/images/terraria-logo.jpg" alt="Terraria Logo" width="25%" />
+        <img src="/images/terraria-logo.jpg" alt="Terraria Logo" />
         <h1>Terraria</h1>
       </div>
 
-      <section>
+      <section class="product-buy">
         <div class="product-buy-info">
           <div class="product-prices">
             <p class="product-discount">-50%</p>
             <p class="product-final-price">4.99$</p>
             <p class="product-price">9.99$</p>
           </div>
-          <p class="product-addcar">
-            Añadir al carrito<i class="fa-solid fa-cart-shopping"></i>
-          </p>
+          <a class="product-addcar" href="#">Añadir al carrito<i class="fa-solid fa-cart-shopping"></i></a>
         </div>
       </section>
 
-      <section>
+      <section class="product-info">
         <h2>Sobre este juego</h2>
         <h3>¡Cava, lucha y construye!</h3>
         <p>
@@ -54,55 +62,41 @@
           propios jugadores.
         </p>
       </section>
+
       <div id="product-slider">
         <ul class="slider">
           <li id="slide1">
-            <iframe
-            width="100%"
-            height="300"
-        src="https://www.youtube.com/embed/6nUvWkD8rAE"
-        title="Terraria – Update 1.4.3 Official Trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
-          </li>
-          <li id="slide2">
             <img src="/images/terraria1.png" alt="Terraria Imagen 1" />
           </li>
-          <li id="slide3">
+          <li id="slide2">
             <img src="/images/terraria2.avif" alt="Terraria Imagen 2" />
           </li>
-          <li id="slide4">
+          <li id="slide3">
             <img src="/images/terraria3.jpg" alt="Terraria Imagen 2" />
           </li>
-          <li id="slide5">
+          <li id="slide4">
             <img src="/images/terraria4.jpg" alt="Terraria Imagen 2" />
           </li>
-          <li id="slide6">
+          <li id="slide5">
             <img src="/images/terraria5.jpg" alt="Terraria Imagen 2" />
           </li>
         </ul>
 
         <ul class="menu">
           <li>
-            <a href="#slide1">1</a>
+            <a href="#slide1"></a>
           </li>
           <li>
-            <a href="#slide2">2</a>
+            <a href="#slide2"></a>
           </li>
           <li>
-            <a href="#slide3">3</a>
+            <a href="#slide3"></a>
           </li>
           <li>
-            <a href="#slide4">4</a>
+            <a href="#slide4"></a>
           </li>
           <li>
-            <a href="#slide5">5</a>
-          </li>
-          <li>
-            <a href="#slide6">6</a>
+            <a href="#slide5"></a>
           </li>
         </ul>
       </div>
