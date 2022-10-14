@@ -9,3 +9,5 @@ app.use(express.static(publicPath));
 app.listen(3030, () => {
     console.log("Server in port 3030 online.")
 })
+
+app.get(('/terraria'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/productDetail.html'))))
