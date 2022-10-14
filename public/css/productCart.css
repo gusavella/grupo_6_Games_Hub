@@ -1,0 +1,130 @@
+* {
+   
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Changa', sans-serif;
+}
+
+body {
+    background-color:#6929BA;
+}
+
+section{
+   display:flex;
+   flex-wrap: nowrap;
+   color: white;
+   padding-top:10px;
+}
+.cart-container{
+    display:flex;
+    flex-wrap: nowrap;
+    display:flex;
+    flex-direction: column;
+     
+}
+.cart-tittle{
+    text-align: center;
+}
+
+.section-top-line{
+    width:50%;
+    margin:auto;
+   
+}
+
+.section-container , .total-container{
+    background-color:rgba(0,0,0,0.4);
+    width:80%;
+    border-radius:10px;
+    margin:auto;
+}
+
+
+article{
+    padding-top:5px;
+    padding-bottom:5px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+article div p {
+    color: white;
+}
+
+.article-image{
+    width:40%;
+}
+.delete-quantity{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.delete-basket,.quantity{
+    background-color:rgba(0,0,0,0.1);
+    color: white;
+    border-radius:5px;
+    padding: 0 5px ;
+    margin-right: 2px;
+}
+
+.quantity-form{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.value-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-value{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5% ;
+}
+.total-bottom-line{
+    width:90%;
+    padding: 0 5% ;
+    margin:auto;
+    
+}
+.total{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 5% 5% 0 ;
+    color:#1AADB4;
+}
+.buy-button{
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    background-color:#1AADB4;
+    color:white;
+    margin-bottom: 5px;
+  
+}
+
+@media (min-width:768px) {
+    .cart-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        flex-wrap: nowrap;
+        align-content: space-between;
+    }
+    .section-container{
+        width: 80%;
+        margin: 10px;
+     }
+    .total-container{
+       width: 100%;
+       margin: 10px;
+    }
+}
