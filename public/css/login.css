@@ -106,7 +106,9 @@ main {
 }
 
 .forgot-pass {
+    color: #1AADB4;
     font-size: 10px;
+    text-decoration: none;
 }
 
 label {
@@ -124,9 +126,15 @@ form {
     color: white;
 }
 
-.log-in {
+.login-button {
     background-color: #1AADB4;
     color: white;
+    transition: all 450ms;
+}
+
+.login-button:hover {
+    background-color: #183153;
+    color: #1AADB4;
 }
 
 footer {
@@ -143,6 +151,12 @@ footer h2 {
 .social-media {
     display: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+
 
 @media (min-width: 576px) {
     .burger-menu {
