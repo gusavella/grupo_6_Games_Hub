@@ -38,6 +38,7 @@ header {
     width: 50%;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 button {
@@ -79,6 +80,33 @@ main {
     padding: 5px;
     border-radius: 5px;
     border-width: 0px;
+}
+
+.login-form input {
+    padding: 2px;
+}
+
+.login-form input:invalid {
+    border: 2px solid red;
+}
+
+.login-form input:valid {
+    border: 2px solid black;
+}
+
+.remember-check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -37px;
+}
+
+.remember-check label{
+    font-size: 12px;
+}
+
+.forgot-pass {
+    font-size: 10px;
 }
 
 label {
@@ -163,7 +191,7 @@ footer h2 {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        font-size: 20px;
+        font-size: 15px;
     }
     .social-logos,
     .logos {

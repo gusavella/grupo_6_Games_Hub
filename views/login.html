@@ -51,14 +51,18 @@
     <main>
         <div class="login-box">
             <h3>Login</h3>
-            <form action="#" method="post">
+            <form class="login-form" action="/" method="get">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" required placeholder="name@mail.com">
 
                 <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" required>
-
+                <input type="password" name="password" id="password" required placeholder="Password">
+                <div class="remember-check">
+                <input type="checkbox" value="Si" id="remember-pass">
+                <label for="remember-pass">Recordarme</label>
+            </div>
                 <button class="log-in" type="submit">Ingresar</button>
+                <a href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a>
             </form>
             <a class="register" href="#">Registrarse</a>
         </div>
