@@ -21,6 +21,7 @@ body {
 }
 .cart-tittle{
     text-align: center;
+    font-size:24px;
 }
 
 .section-top-line{
@@ -95,6 +96,8 @@ article{
     justify-content: center;
     padding: 10px  0px ;
     color:#1AADB4;
+    font-size:24px;
+    
 }
 .buy-button{
     margin:auto;
