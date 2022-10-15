@@ -114,10 +114,12 @@ article{
 .delete-basket:hover,.quantity:hover{
     background-color: #1AADB4;
     margin:1px solid white;
+    transition:0.5s;
 }
 
 .buy-button:hover{
     background-color: #843890;
+    transition:1s;
 }
 @media (min-width:768px) {
     .cart-container{
