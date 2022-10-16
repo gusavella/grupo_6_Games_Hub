@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Changa', sans-serif;
 }
 
 /* ----------------------------------HEADER---------------------------------- */
@@ -42,7 +43,7 @@ header {
     font-size: 24px;
 }
 .header-nav-bar{
-    display:flex;
+    display:none;
 }
 .header-link{
     color: white;
@@ -54,7 +55,6 @@ header {
 /* ----------------------------------MAIN---------------------------------- */
 body {
     background-color: #6929BA;
-    font-family: sans-serif;
     width: 100%;
     font-size: 18px;
     text-align:left;
@@ -272,10 +272,11 @@ footer section{
         display:block;
     }
     .header-nav-bar{
+        display: flex;
         justify-content: space-around;
     }
     /* ----------------------------------HEADER---------------------------------- */
-    /* ----------------------------------BODY---------------------------------- */
+    /* ----------------------------------MAIN---------------------------------- */
     main{
         display:flex;
         flex-wrap: wrap;
@@ -322,7 +323,7 @@ footer section{
         padding: 1.9%;
         font-size: 30px;
     }
-    /* ----------------------------------BODY---------------------------------- */
+    /* ----------------------------------MAIN---------------------------------- */
 
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
