@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&family=Kanit:wght@200&family=Roboto:wght@100&family=Taviraj:wght@200&display=swap');
+
+/* Global */
+
+* {
+    font-family: 'Changa', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Carousel */
+
+.carousel {
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-item {
+    width: 100%;
+    padding: 1em;
+    display: none
+}
+
+.carousel-item-selected {
+    display: block;
+}
+
+.carousel-nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.carousel-button {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.carousel-button-selected {
+    background-color: rgba(255,255,255,0.7);
+}
+
+/* Card main */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid thin black;
+    border-radius: 10px;
+    width: 200px;
+    height: 350px;
+    margin: 20px;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    transition: all 0.25s;
+}
+
+.card p{
+    color: green;
+}
+
+.card img {
+    width: 100%;
+    height: 270px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.best-selling,
+.recommended,
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Title headers */
+
+.section-title {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid thin grey;
+    margin: 0 40px;
+    align-items: center;
+}
+
+/* Texto */
+
+.section-title h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+
+    /* Clip Background Image */
+
+    background: url(/images/main-cards/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+
+}
+
+/* Animate Background Image */
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.section-title a {
+    text-decoration: none;
+    padding: 0 15px;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.section-title a:hover {
+    color: #1AADB4;
+}
+
+.section-1, .section-3{
+    background-color: #6829badc;
+}
+
+.section-2{
+    background-color: #ffa5fddc;
+}
