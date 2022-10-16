@@ -10,7 +10,7 @@ app.listen(3030, () => {
     console.log("Server in port 3030 online.")
 })
 
-
+app.get(('/'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/main.html'))))
 app.get(('/terraria'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/productDetail.html'))))
 app.get(('/login'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/login.html'))))
 app.get(('/register'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/register.html'))))
