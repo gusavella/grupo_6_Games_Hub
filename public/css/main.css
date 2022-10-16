@@ -11,14 +11,42 @@
 
 /* Carousel */
 
-.carousel{
-   display: flex;
-   justify-content: center;
-   background-color: black;
+.carousel {
+    position: relative;
+    background-color: rgba(0,0,0,0.8);
 }
 
-.carousel img{
-    width: 80%;
+.carousel-item {
+    width: 100%;
+    padding: 1em;
+    display: none
+}
+
+.carousel-item-selected {
+    display: block;
+}
+
+.carousel-nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.carousel-button {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.carousel-button-selected {
+    background-color: rgba(255,255,255,0.7);
 }
 
 /* Card main */
@@ -90,18 +118,18 @@
     /* Animate Background Image */
 
     -webkit-text-fill-color: transparent;
-    -webkit-animation: aitf 80s linear infinite;
+    animation: aitf 80s linear infinite;
 
     /* Activate hardware acceleration for smoother animations */
 
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
 
 }
 
 /* Animate Background Image */
 
-@-webkit-keyframes aitf {
+@keyframes aitf {
     0% {
         background-position: 0% 50%;
     }
