@@ -14,6 +14,10 @@ app.get('/login',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/login.html'))
 })
 
+app.get('/',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/main.html'))
+})
+
 app.get('/cart',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
 })
