@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/register.css" rel="stylesheet" />
+    <link href="/public/css/register.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       rel="stylesheet"
@@ -60,17 +60,42 @@
         </nav>
       </header>
     <main>
-        <div>
-            <p class="register">Registro</p>
-            <hr>
-            <div>
-            <form>
-               <label for="nombres">Nombres:</label> 
-               <input>
-            </form>
+      <div class="register-box">
+        <h3 class="title">Registro</h3>
+        <hr /> 
+          <form action="#" method="POST">
+          <div class="user-details">
+            <div class="user-details-inputs">
+            <div class="input-box">
+              <label class="details" for="names">Nombres:</label>
+              <input type="text" name="names" id="names" placeholder="Ingresa tu nombre" required />
+            
+            
+              <label class="details" for="surnames">Apellidos:</label>
+              <input type="text" name="surnames" id="surnames" placeholder= "Ingresa tu apellido" />
+           
+            
+              <label class="details" for="password">Contraseña:</label>
+              <input type="password" name="password" id="password" required />
             </div>
+            <div class="input-box">
+              <label class="details" for="phone">Teléfono:</label>
+              <input type="tel" name="phone" id="phone" required />
+            
+            
+              <label class="details" for="email">E-mail:</label>
+              <input type="email" name="email" id="email" required />
+           
+              <label class="details" for="adress">Dirección:</label>
+              <input type="text" name="adress" id="adress" />
+            </div>
+            </div>
+            </div>
+            <div class="form-submit-button">
+            <input type="submit" name="boton-registrar" value="Registrar">
+            </div>
+          </form>
         </div>
-    </main>  
     <footer>
         <section class="header-payment">
           <div>

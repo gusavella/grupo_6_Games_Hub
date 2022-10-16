@@ -1,18 +1,52 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Changa', sans-serif;
+    font-family: "Changa", sans-serif;
 }
 
 body {
-    background-color: #6929BA;
-    width: 100%;
-    font-size: 18px;
-    text-align:left;
-    line-height: 24px;
-}
+    background-color:#6929BA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
 
+.register-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #542195;
+    color: white;
+    /* max-width: 1000px; */
+    /* width: 100%; */
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.form-submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+.form-submit-button input {
+    background-color: #1AADB4;
+    color: white;
+    border: none;
+    padding: 5px 25px;
+}
+.register-box h3 {
+    text-align: center;
+}
+.user-details-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+
+}
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
