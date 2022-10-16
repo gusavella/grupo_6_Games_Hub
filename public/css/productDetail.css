@@ -5,6 +5,19 @@
     font-family: 'Changa', sans-serif;
 }
 
+body {
+    background-color: #6929BA;
+    width: 100%;
+    font-size: 18px;
+    text-align:left;
+    line-height: 24px;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: #6929BA;
+}
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
@@ -53,13 +66,7 @@ header {
 /* ----------------------------------HEADER---------------------------------- */
 
 /* ----------------------------------MAIN---------------------------------- */
-body {
-    background-color: #6929BA;
-    width: 100%;
-    font-size: 18px;
-    text-align:left;
-    line-height: 24px;
-}
+
 
 main {
     width: 90%;
@@ -134,6 +141,9 @@ main {
     padding: 1.9%;
     border-radius: 5px;
     text-decoration: none;
+}
+.product-addcar:hover{
+    background-color: #14CAE7;
 }
 
 .product-info{

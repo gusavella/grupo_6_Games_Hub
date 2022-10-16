@@ -12,12 +12,7 @@ app.listen(3030, () => {
 
 
 app.get(('/terraria'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/productDetail.html'))))
-
-app.get('/login',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/login.html'))
-})
-
-app.get('/cart',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/productCart.html'))
-})
+app.get(('/login'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/login.html'))))
+app.get(('/register'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/register.html'))))
+app.get(('/cart'), (req, res) => res.sendFile(path.resolve(__dirname, ('./views/productCart.html'))))
 
