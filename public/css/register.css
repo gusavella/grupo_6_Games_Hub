@@ -12,7 +12,9 @@ body {
     justify-content: center;
     align-items: center;
 } 
-
+main {
+    width: 90%;
+}
 .register-box {
     display: flex;
     flex-direction: column;
@@ -46,7 +48,13 @@ body {
 .input-box {
     display: flex;
     flex-direction: column;
+    margin: 15px 30px 30px 30px;
 
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
 }
 /* ----------------------------------HEADER---------------------------------- */
 header {
