@@ -8,6 +8,12 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #6929BA;
+}
+a{
+    color: white;
+}
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
@@ -15,8 +21,8 @@ header {
     width: 100%;
     height: 80px;
     padding-bottom: 20px;
-    margin-bottom: 5px;
     font-size: 18px;
+    margin-bottom: 20px;
 }
 .header-logo{
     display: inline-flex;
@@ -33,7 +39,8 @@ header {
     align-self: center;
     width: 600%;
     font-size: 24px;
-    margin:auto;    
+    margin:auto;
+    cursor:default;
 }
 .header-user-list{
     display:flex;
@@ -63,7 +70,9 @@ li{
 
 .carousel {
     position: relative;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #843890;
+    margin: auto;
+    border-radius: 20px;
 }
 
 .carousel-item {
@@ -105,14 +114,14 @@ li{
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: solid thin black;
+    border: solid thin #1AADB4;
     border-radius: 10px;
     width: 200px;
     height: 350px;
     margin: 20px;
     justify-content: space-between;
     background-color: #D9D9D9;
-    transition: all 0.25s;
+    transition: all 0.4s;
 }
 
 .card p{
@@ -127,8 +136,20 @@ li{
 }
 
 .card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);;
+    color: white;
+}
+
+.card .price a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s;
+}
+
+.card:hover .price a {
+    border-top: 1px solid white;
+    color: white;
 }
 
 .best-selling,
@@ -138,7 +159,6 @@ li{
     flex-wrap: wrap;
     justify-content: center;
 }
-
 /* Title headers */
 
 .section-title {
@@ -202,11 +222,11 @@ li{
 }
 
 .section-1, .section-3{
-    background-color: #6829badc;
+    background-color: #6929BA;
 }
 
 .section-2{
-    background-color: #ffa5fddc;
+    background-color: #843890;
 }
 /* ----------------------------------FOOTER---------------------------------- */
 footer{
@@ -231,7 +251,7 @@ h2{
 @media (min-width:769px){
     /* ----------------------------------HEADER---------------------------------- */
     header{
-        height: 110px;
+        height: 115px;
     }
     .header-logo{
         width: 70%;
@@ -251,9 +271,14 @@ h2{
         justify-content: space-around;
     }
      /* ----------------------------------HEADER---------------------------------- */
+     /* ----------------------------------MAIN---------------------------------- */
+     .carousel{
+        width: 70%;
+     }
+     /* ----------------------------------MAIN---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
-        height: 135px;
+        height: 150px;
         display:flex;
         flex-wrap: wrap;
         justify-content: space-around;
