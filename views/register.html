@@ -1,133 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/register.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/css/register.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet" />
+  <link
     href="https://fonts.googleapis.com/css2?family=Changa&family=Kanit:wght@200&family=Roboto:wght@100&family=Taviraj:wght@200&display=swap"
     rel="stylesheet" />
-    <title>Registro</title>
+  <title>Registro</title>
 </head>
 <header>
-    <div class="header-logo">
-      <img src="/images/logo.png" alt="Logo GamesHub" />
-      <p>Games Hub</p>
-    </div>
-    <ul class="header-user-list">
-      <li><a class="header-link" href="/login">Login</a></li>
+  <div class="header-logo">
+    <img src="/images/logo.png" alt="Logo GamesHub" />
+    <p>Games Hub</p>
+  </div>
+  <ul class="header-user-list">
+    <li><a class="header-link" href="/login">Login</a></li>
+    <li>
+      <a class="header-icon" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+    </li>
+    <li>
+      <a class="header-icon burger-menu" href="#"><i class="fa-solid fa-bars"></i></a>
+    </li>
+  </ul>
+  <nav>
+    <ul class="header-nav-bar">
+      <li><a class="header-link" href="/">Tienda</a></li>
+      <li><a class="header-link" href="/">Ofertas</a></li>
+      <li><a class="header-link" href="/">Recomendados</a></li>
+      <li><a class="header-link" href="#">Categorias</a></li>
+      <li><a class="header-link" href="/">Más vendidos</a></li>
       <li>
-        <a class="header-icon" href="/cart"
-          ><i class="fa-solid fa-cart-shopping"></i
-        ></a>
-      </li>
-      <li>
-        <a class="header-icon burger-menu" href="#"
-          ><i class="fa-solid fa-bars"></i
-        ></a>
+        <div class="search">
+          <form action="#">
+            <input type="text" placeholder="Buscar productos, marcas" name="search" />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
       </li>
     </ul>
-    <nav>
-      <ul class="header-nav-bar">
-        <li><a class="header-link" href="/">Tienda</a></li>
-        <li><a class="header-link" href="/">Ofertas</a></li>
-        <li><a class="header-link" href="/">Recomendados</a></li>
-        <li><a class="header-link" href="#">Categorias</a></li>
-        <li><a class="header-link" href="/">Más vendidos</a></li>
-        <li>
-          <div class="search">
-            <form action="#">
-              <input
-                type="text"
-                placeholder="Buscar productos, marcas"
-                name="search"
-              />
-              <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  </nav>
+</header>
+
 <body>
-    
-    <main>
-      <div class="register-box">
-        <h3 class="title">Registro</h3>
-        <hr /> 
-          <form action="#" method="POST">
-          <div class="user-details">
-            <div class="user-details-inputs">
-            <div class="input-box">
+  <div class="register-box">
+    <h3 class="title">Registro</h3>
+    <hr />
+    <form action="#" method="POST">
+      <div class="user-details">
+        <div class="input-box">
+          <div class="register-block-inline">
+            <div class="register-division">
               <label class="details" for="names">Nombres:</label>
               <input type="text" name="names" id="names" placeholder="Ingresa tu nombre" required />
-            
-            
+
+            </div>
+            <div class="register-division">
+
               <label class="details" for="surnames">Apellidos:</label>
-              <input type="text" name="surnames" id="surnames" placeholder= "Ingresa tu apellido" />
-           
-            
+              <input type="text" name="surnames" id="surnames" placeholder="Ingresa tu apellido" />
+            </div>
+          </div>
+          <div class="register-block-inline">
+            <div class="register-division">
               <label class="details" for="password">Contraseña:</label>
               <input type="password" name="password" id="password" required />
             </div>
-            <div class="input-box">
+            <div class="register-division">
               <label class="details" for="phone">Teléfono:</label>
               <input type="tel" name="phone" id="phone" required />
-            
-            
-              <label class="details" for="email">E-mail:</label>
-              <input type="email" name="email" id="email" required />
-           
-              <label class="details" for="adress">Dirección:</label>
-              <input type="text" name="adress" id="adress" />
             </div>
-            </div>
-            </div>
-            <div class="form-submit-button">
-            <input type="submit" name="boton-registrar" value="Registrar">
-            </div>
-          </form>
+          </div>
+          <div class="register-block-inline">
+            <div class="register-division">
+            <label class="details" for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required />
+              </div>
+              <div class="register-division">
+            <label class="details" for="adress">Dirección:</label>
+            <input type="text" name="adress" id="adress" />
+              </div>
+          </div>
         </div>
-    
+
+        <div class="form-submit-button">
+          <input type="submit" name="boton-registrar" value="Registrar" />
+        </div>
+    </form>
+  </div>
 </body>
 <footer>
-    <section class="header-payment">
-      <div>
-        <h2>Medios de pago</h2>
-      </div>
-      <div>
-        <ul class="header-payment-list">
-          <li><i class="fa-brands fa-cc-visa footer-icon"></i></li>
-          <li><i class="fa-brands fa-cc-mastercard footer-icon"></i></li>
-          <li><i class="fa-brands fa-cc-paypal footer-icon"></i></li>
-          <li><i class="fa-brands fa-bitcoin footer-icon"></i></li>
-          <li><i class="fa-brands fa-cc-amazon-pay footer-icon"></i></li>
-        </ul>
-      </div>
-    </section>
-    <section class="header-social">
-      <div>
-        <h2>Redes sociales</h2>
-      </div>
-      <div>
-        <ul class="header-social-list">
-          <li><i class="fa-brands fa-square-facebook footer-icon"></i></li>
-          <li><i class="fa-brands fa-square-twitter footer-icon"></i></li>
-          <li><i class="fa-brands fa-square-instagram footer-icon"></i></li>
-          <li><i class="fa-brands fa-square-whatsapp footer-icon"></i></li>
-          <li><i class="fa-brands fa-telegram footer-icon"></i></li>
-        </ul>
-      </div>
-    </section>
-    <p>GAMES HUB 2022</p>
-  </footer>
+  <section class="header-payment">
+    <div>
+      <h2>Medios de pago</h2>
+    </div>
+    <div>
+      <ul class="header-payment-list">
+        <li><i class="fa-brands fa-cc-visa footer-icon"></i></li>
+        <li><i class="fa-brands fa-cc-mastercard footer-icon"></i></li>
+        <li><i class="fa-brands fa-cc-paypal footer-icon"></i></li>
+        <li><i class="fa-brands fa-bitcoin footer-icon"></i></li>
+        <li><i class="fa-brands fa-cc-amazon-pay footer-icon"></i></li>
+      </ul>
+    </div>
+  </section>
+  <section class="header-social">
+    <div>
+      <h2>Redes sociales</h2>
+    </div>
+    <div>
+      <ul class="header-social-list">
+        <li><i class="fa-brands fa-square-facebook footer-icon"></i></li>
+        <li><i class="fa-brands fa-square-twitter footer-icon"></i></li>
+        <li><i class="fa-brands fa-square-instagram footer-icon"></i></li>
+        <li><i class="fa-brands fa-square-whatsapp footer-icon"></i></li>
+        <li><i class="fa-brands fa-telegram footer-icon"></i></li>
+      </ul>
+    </div>
+  </section>
+  <p>GAMES HUB 2022</p>
+</footer>
+
 </html>

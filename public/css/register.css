@@ -19,10 +19,11 @@ body {
     background-color:rgba(0,0,0,0.4);
     color: white;
     /* max-width: 1000px; */
-    /* width: 100%; */
+    width: 90%; 
     padding: 25px 30px;
     border-radius: 5px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .form-submit-button {
     text-align: center;
@@ -40,7 +41,7 @@ body {
 .user-details-inputs {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .input-box {
     display: flex;
@@ -97,6 +98,19 @@ li{
     list-style-type: none;
 }
 /* ----------------------------------HEADER---------------------------------- */
+.register-block-inline{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    .register-division{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+    }
+        
+    
 /* ----------------------------------FOOTER---------------------------------- */
 footer{
     background-color: #302A3F;
@@ -140,6 +154,24 @@ h2{
         justify-content: space-around;
     }
     /* ----------------------------------HEADER---------------------------------- */
+    .register-block-inline{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+.input-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.register-division{
+    display: inline;
+    width: 50%;
+    
+}
+
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
         height: 135px;
