@@ -45,6 +45,7 @@ main {
     flex-direction: row;
     justify-content: center;
 }
+
 .input-box {
     display: flex;
     flex-direction: column;
@@ -117,7 +118,10 @@ li{
         margin: auto;
         flex-direction: column;
     }
-        
+    .details{
+        width:100%;
+        margin:auto;
+    }      
     
 /* ----------------------------------FOOTER---------------------------------- */
 footer{
@@ -179,6 +183,10 @@ h2{
     width: 50%;
     
 }
+.details{
+    width:80%;
+    margin:auto;
+} 
 
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
