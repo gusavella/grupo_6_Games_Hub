@@ -8,6 +8,12 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #6929BA;
+}
+a{
+    color: white;
+}
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
@@ -16,6 +22,7 @@ header {
     height: 80px;
     padding-bottom: 20px;
     font-size: 18px;
+    margin-bottom: 20px;
 }
 .header-logo{
     display: inline-flex;
@@ -32,7 +39,8 @@ header {
     align-self: center;
     width: 600%;
     font-size: 24px;
-    margin:auto;    
+    margin:auto;
+    cursor:default;
 }
 .header-user-list{
     display:flex;
@@ -62,7 +70,9 @@ li{
 
 .carousel {
     position: relative;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #843890;
+    margin: auto;
+    border-radius: 20px;
 }
 
 .carousel-item {
@@ -104,7 +114,7 @@ li{
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: solid thin black;
+    border: solid thin #1AADB4;
     border-radius: 10px;
     width: 200px;
     height: 350px;
@@ -212,11 +222,11 @@ li{
 }
 
 .section-1, .section-3{
-    background-color: #6829badc;
+    background-color: #6929BA;
 }
 
 .section-2{
-    background-color: #4a4dffdc;
+    background-color: #843890;
 }
 /* ----------------------------------FOOTER---------------------------------- */
 footer{
@@ -241,7 +251,7 @@ h2{
 @media (min-width:769px){
     /* ----------------------------------HEADER---------------------------------- */
     header{
-        height: 110px;
+        height: 115px;
     }
     .header-logo{
         width: 70%;
@@ -261,6 +271,11 @@ h2{
         justify-content: space-around;
     }
      /* ----------------------------------HEADER---------------------------------- */
+     /* ----------------------------------MAIN---------------------------------- */
+     .carousel{
+        width: 70%;
+     }
+     /* ----------------------------------MAIN---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
         height: 150px;
