@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background-color: #6929BA;
+    background:  #6929BA;
     font-family: 'Changa', sans-serif;
 }
 /* ----------------------------------HEADER---------------------------------- */
@@ -77,7 +77,7 @@ main {
     align-items: center;
     justify-content: space-between;
     color: white;
-    background-color: #542195;
+    background-color:rgba(0,0,0,0.4);
     padding: 25px;
     border-radius: 5px;
     height: 70vh;

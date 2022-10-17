@@ -7,7 +7,9 @@
 }
 
 body {
-    background-color:#6929BA;
+    /* background-color:#6929BA; */
+
+    background: linear-gradient(to bottom, #6929BA,#843890);
 }
 
 /* ----------------------------------HEADER---------------------------------- */
@@ -117,6 +119,10 @@ article{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.article-quantity{
+    margin:0px 5px;
 }
 .value-container{
     display:flex;
