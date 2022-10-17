@@ -12,17 +12,20 @@ body {
     justify-content: center;
     align-items: center;
 } 
-
+main {
+    width: 90%;
+}
 .register-box {
     display: flex;
     flex-direction: column;
     background-color: #542195;
     color: white;
-    /* max-width: 1000px; */
-    /* width: 100%; */
+     /* max-width: 500px;  */
+     /* width: 100%;  */
     padding: 25px 30px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin: 20px;
+
 }
 .form-submit-button {
     text-align: center;
@@ -45,7 +48,13 @@ body {
 .input-box {
     display: flex;
     flex-direction: column;
+    margin: 15px 30px 30px 30px;
 
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
 }
 /* ----------------------------------HEADER---------------------------------- */
 header {
@@ -140,6 +149,8 @@ h2{
         justify-content: space-around;
     }
     /* ----------------------------------HEADER---------------------------------- */
+
+
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
         height: 135px;

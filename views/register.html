@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/public/css/register.css" rel="stylesheet" />
+    <link href="/css/register.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       rel="stylesheet"
@@ -68,7 +68,7 @@
             <div class="user-details-inputs">
             <div class="input-box">
               <label class="details" for="names">Nombres:</label>
-              <input type="text" name="names" id="names" placeholder="Ingresa tu nombre" required />
+              <input type="text" name="names" id="names" placeholder="Ingresa tu nombre" minlength="3" required  />
             
             
               <label class="details" for="surnames">Apellidos:</label>
@@ -76,7 +76,7 @@
            
             
               <label class="details" for="password">Contraseña:</label>
-              <input type="password" name="password" id="password" required />
+              <input type="password" name="password" id="password" minlength="6" required />
             </div>
             <div class="input-box">
               <label class="details" for="phone">Teléfono:</label>
@@ -96,6 +96,7 @@
             </div>
           </form>
         </div>
+        </main>
     <footer>
         <section class="header-payment">
           <div>
