@@ -9,8 +9,9 @@ body {
     background: linear-gradient(to bottom, #6929BA,#843890);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    height: 100vh;
 } 
 main {
     width: 90%;
@@ -56,6 +57,9 @@ main {
 form {
     display: flex;
     flex-direction: column;
+}
+.header-form{
+    display:inline;
 }
 /* ----------------------------------HEADER---------------------------------- */
 header {
@@ -146,7 +150,7 @@ h2{
 @media (min-width:769px){
     /* ----------------------------------HEADER---------------------------------- */
     header{
-        height: 110px;
+        height: 115px;
     }
     .header-logo{
         width: 70%;
