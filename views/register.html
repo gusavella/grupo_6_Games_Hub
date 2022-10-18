@@ -1,131 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/register.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa&family=Kanit:wght@200&family=Roboto:wght@100&family=Taviraj:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registro</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/css/register.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Changa&family=Kanit:wght@200&family=Roboto:wght@100&family=Taviraj:wght@200&display=swap"
-    rel="stylesheet" />
-  <title>Registro</title>
-</head>
-<header>
-  <div class="header-logo">
-    <img src="/images/logo.png" alt="Logo GamesHub" />
-    <p>Games Hub</p>
-  </div>
-  <ul class="header-user-list">
-    <li><a class="header-link" href="/login">Login</a></li>
-    <li>
-      <a class="header-icon" href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-    </li>
-    <li>
-      <a class="header-icon burger-menu" href="#"><i class="fa-solid fa-bars"></i></a>
-    </li>
-  </ul>
-  <nav>
-    <ul class="header-nav-bar">
-      <li><a class="header-link" href="/">Tienda</a></li>
-      <li><a class="header-link" href="/">Ofertas</a></li>
-      <li><a class="header-link" href="/">Recomendados</a></li>
-      <li><a class="header-link" href="#">Categorias</a></li>
-      <li><a class="header-link" href="/">Más vendidos</a></li>
-      <li>
-        <div class="search">
-          <form action="#">
-            <input type="text" placeholder="Buscar productos, marcas" name="search" />
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-          </form>
-        </div>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<body>
-  <div class="register-box">
-    <h3 class="title">Registro</h3>
-    <hr />
-    <form action="#" method="POST">
-        <div class="input-box">
-          <div class="register-block-inline">
-            <div class="register-division">
-              <div class="details" > <label for="names">Nombres:</label></div>
-             
-              <input class="details" type="text" name="names" id="names" placeholder=" Ingresa tu nombre" required />
-
-            </div>
-            <div class="register-division">
-              <div class="details" >  <label class="details" for="surnames">Apellidos:</label></div>
-             
-              <input  class="details" type="text" name="surnames" id="surnames" placeholder=" Ingresa tu apellido" />
-            </div>
-          </div>
-          <div class="register-block-inline">
-            <div class="register-division">
-              <div class="details" > <label class="details" for="password">Contraseña:</label></div>
-              
-              <input class="details" type="password" name="password" id="password" minlength="6" placeholder="Mínimo 6 caracteres" required />
-            </div>
-            <div class="register-division">
-              <div class="details" >  <label class="details" for="phone">Teléfono:</label></div>
-              <input class="details" type="tel" name="phone" id="phone" placeholder=" ej: 1122334455" required />
-            </div>
-          </div>
-          <div class="register-block-inline">
-            <div class="register-division">
-              <div class="details" ><label class="details" for="email">E-mail:</label></div>
-              
-              <input class="details" type="email" name="email" id="email" placeholder=" ej: laracroft@....com" required />
-            </div>
-            <div class="register-division">
-              <div class="details" ><label class="details" for="adress">Dirección:</label></div>
-              
-              <input class="details" type="text" name="adress" id="adress" placeholder=" ej: calle falsa 123"/>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-submit-button">
-          <input type="submit" name="boton-registrar" value="Registrar" />
-        </div>
-    </form>
-  </div>
-</body>
-<footer>
-  <section class="header-payment">
-    <div>
-      <h2>Medios de pago</h2>
-    </div>
-    <div>
-      <ul class="header-payment-list">
-        <li><i class="fa-brands fa-cc-visa footer-icon"></i></li>
-        <li><i class="fa-brands fa-cc-mastercard footer-icon"></i></li>
-        <li><i class="fa-brands fa-cc-paypal footer-icon"></i></li>
-        <li><i class="fa-brands fa-bitcoin footer-icon"></i></li>
-        <li><i class="fa-brands fa-cc-amazon-pay footer-icon"></i></li>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img src="/images/logo.png" alt="Logo GamesHub" />
+        <p>Games Hub</p>
+      </div>
+      <ul class="header-user-list">
+        <li><a class="header-link" href="/login">Login</a></li>
+        <li>
+          <a class="header-icon" href="/cart"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+        </li>
+        <li>
+          <a class="header-icon burger-menu" href="#"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+        </li>
       </ul>
-    </div>
-  </section>
-  <section class="header-social">
-    <div>
-      <h2>Redes sociales</h2>
-    </div>
-    <div>
-      <ul class="header-social-list">
-        <li><i class="fa-brands fa-square-facebook footer-icon"></i></li>
-        <li><i class="fa-brands fa-square-twitter footer-icon"></i></li>
-        <li><i class="fa-brands fa-square-instagram footer-icon"></i></li>
-        <li><i class="fa-brands fa-square-whatsapp footer-icon"></i></li>
-        <li><i class="fa-brands fa-telegram footer-icon"></i></li>
-      </ul>
-    </div>
-  </section>
-  <p>GAMES HUB 2022</p>
-</footer>
+      <nav>
+        <ul class="header-nav-bar">
+          <li><a class="header-link" href="/">Tienda</a></li>
+          <li><a class="header-link" href="/">Ofertas</a></li>
+          <li><a class="header-link" href="/">Recomendados</a></li>
+          <li><a class="header-link" href="#">Categorias</a></li>
+          <li><a class="header-link" href="/">Más vendidos</a></li>
+          <li>
+            <div class="search">
+              <form class="header-form" action="#">
+                <input
+                  type="text"
+                  placeholder="Buscar productos, marcas"
+                  name="search"
+                />
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="register-box">
+        <h3 class="title">Registro</h3>
+        <hr />
+        <form action="#" method="POST">
+          <div class="input-box">
+            <div class="register-block-inline">
+              <div class="register-division">
+                <div class="details"><label for="names">Nombres:</label></div>
 
+                <input
+                  class="details"
+                  type="text"
+                  name="names"
+                  id="names"
+                  placeholder=" Ingresa tu nombre"
+                  required
+                />
+              </div>
+              <div class="register-division">
+                <div class="details">
+                  <label class="details" for="surnames">Apellidos:</label>
+                </div>
+
+                <input
+                  class="details"
+                  type="text"
+                  name="surnames"
+                  id="surnames"
+                  placeholder=" Ingresa tu apellido"
+                />
+              </div>
+            </div>
+            <div class="register-block-inline">
+              <div class="register-division">
+                <div class="details">
+                  <label class="details" for="password">Contraseña:</label>
+                </div>
+
+                <input
+                  class="details"
+                  type="password"
+                  name="password"
+                  id="password"
+                  minlength="6"
+                  placeholder="Mínimo 6 caracteres"
+                  required
+                />
+              </div>
+              <div class="register-division">
+                <div class="details">
+                  <label class="details" for="phone">Teléfono:</label>
+                </div>
+                <input
+                  class="details"
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder=" ej: 1122334455"
+                  required
+                />
+              </div>
+            </div>
+            <div class="register-block-inline">
+              <div class="register-division">
+                <div class="details">
+                  <label class="details" for="email">E-mail:</label>
+                </div>
+
+                <input
+                  class="details"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=" ej: laracroft@....com"
+                  required
+                />
+              </div>
+              <div class="register-division">
+                <div class="details">
+                  <label class="details" for="adress">Dirección:</label>
+                </div>
+
+                <input
+                  class="details"
+                  type="text"
+                  name="adress"
+                  id="adress"
+                  placeholder=" ej: calle falsa 123"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-submit-button">
+            <input type="submit" name="boton-registrar" value="Registrar" />
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <section class="header-payment">
+        <div>
+          <h2>Medios de pago</h2>
+        </div>
+        <div>
+          <ul class="header-payment-list">
+            <li><i class="fa-brands fa-cc-visa footer-icon"></i></li>
+            <li><i class="fa-brands fa-cc-mastercard footer-icon"></i></li>
+            <li><i class="fa-brands fa-cc-paypal footer-icon"></i></li>
+            <li><i class="fa-brands fa-bitcoin footer-icon"></i></li>
+            <li><i class="fa-brands fa-cc-amazon-pay footer-icon"></i></li>
+          </ul>
+        </div>
+      </section>
+      <section class="header-social">
+        <div>
+          <h2>Redes sociales</h2>
+        </div>
+        <div>
+          <ul class="header-social-list">
+            <li><i class="fa-brands fa-square-facebook footer-icon"></i></li>
+            <li><i class="fa-brands fa-square-twitter footer-icon"></i></li>
+            <li><i class="fa-brands fa-square-instagram footer-icon"></i></li>
+            <li><i class="fa-brands fa-square-whatsapp footer-icon"></i></li>
+            <li><i class="fa-brands fa-telegram footer-icon"></i></li>
+          </ul>
+        </div>
+      </section>
+      <p>GAMES HUB 2022</p>
+    </footer>
+  </body>
 </html>
