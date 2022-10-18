@@ -9,8 +9,24 @@
     margin: 0;
 }
 body{
-    background-color: #6929BA;
+    background-color: black;
 }
+
+body::after {
+    content: "";
+    background-image: url(/images/main-cards/city.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
 a{
     color: white;
 }
@@ -22,7 +38,6 @@ header {
     height: 80px;
     padding-bottom: 20px;
     font-size: 18px;
-    margin-bottom: 20px;
 }
 .header-logo{
     display: inline-flex;
@@ -70,15 +85,13 @@ li{
 
 .carousel {
     position: relative;
-    background-color: #843890;
     margin: auto;
-    border-radius: 20px;
 }
 
 .carousel-item {
     width: 100%;
     padding: 1em;
-    display: none
+    display: none;
 }
 
 .carousel-item-selected {
@@ -99,13 +112,13 @@ li{
     width: 20px;
     height: 20px;
     display: inline-block;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.2);
     border-radius: 50%;
     margin: 0 10px;
 }
 
 .carousel-button-selected {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.9);
 }
 
 /* Card main */
@@ -221,12 +234,17 @@ li{
     color: #1AADB4;
 }
 
-.section-1, .section-3{
-    background-color: #6929BA;
+.section-1 {
+    background: rgb(132,56,144);
 }
 
-.section-2{
-    background-color: #843890;
+.section-2 {
+    background: rgb(105,41,186);
+    background: linear-gradient(0deg, rgba(105,41,186,1) 0%, rgba(132,56,144,1) 100%);
+}
+
+.section-3 {
+    background: #6929ba;
 }
 /* ----------------------------------FOOTER---------------------------------- */
 footer{
