@@ -22,7 +22,7 @@ main {
     background-color:rgba(0,0,0,0.4);
     color: white;
     /* max-width: 1000px; */
-    width: 90%; 
+    width: 100%; 
     padding: 25px 30px;
     border-radius: 5px;
     margin-top: 20px;
@@ -61,6 +61,7 @@ form {
 .header-form{
     display:inline;
 }
+
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
