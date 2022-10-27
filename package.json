@@ -4,7 +4,8 @@
   "description": "La audiencia objetivo de este sitio web es general con deseo de comprar videojuegos y/o consolas de videojuegos.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "dev":"nodemon run ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,19 @@
   },
   "homepage": "https://github.com/gusavella/grupo_6_Games_Hub#readme",
   "dependencies": {
-    "express": "^4.18.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "4.18.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.3.0",
+    "eslint-plugin-promise": "6.1.1"
   }
 }
