@@ -10,6 +10,9 @@ const controlador = {
   productCart:(req, res) => {
       res.render("productCart");
   },
+  register:(req, res) => {
+    res.render("register");
+},
 };
 
 module.exports = controlador;

@@ -2,7 +2,7 @@
   "name": "grupo_6_games_hub",
   "version": "1.0.0",
   "description": "La audiencia objetivo de este sitio web es general con deseo de comprar videojuegos y/o consolas de videojuegos.",
-  "main": "app.js",
+
   "scripts": {
     "start": "node ./bin/www",
     "dev":"nodemon run ./bin/www"
