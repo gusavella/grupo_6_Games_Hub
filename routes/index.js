@@ -4,6 +4,5 @@ const mainController =require('../controllers/mainController');
 let id;
 router.get('/',mainController.index)
 router.get('/about',mainController.about)
-router.get('/carrito',mainController.productCart)
-router.get('/registro',mainController.register)
+router.get('/register',mainController.register)
 module.exports=router;

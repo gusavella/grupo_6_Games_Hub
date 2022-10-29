@@ -7,9 +7,6 @@ const controlador = {
   about: (req, res) => {
     res.sendFile(path.resolve(__dirname, "../views/about.html"));
   },
-  productCart:(req, res) => {
-      res.render("productCart");
-  },
   register:(req, res) => {
     res.render("register");
 },
