@@ -28,77 +28,34 @@
           <p>Carrito de compras</p>
           <hr class="section-top-line" />
         </div>
+        <% for(let i = 0; i<products.length ; i++) { %>
+          <article>
+            <img src="<%=products[i].imageUri%>" alt="game_photo" class="article-image" />
+            <div>
+              <p><%=products[i].name%></p>
+              <p>PS4</p>
+              <div class="delete-quantity">
+                <button class="delete-basket">
+                  <em class="fa-solid fa-trash"></em>
+                </button>
+  
+                <p>| Cantidad :</p>
+                <p class="article-quantity">1</p>
+                <form class="quantity-form">
+                  <button class="quantity">+</button>
+                  <button class="quantity">-</button>
+                </form>
+              </div>
+              <div class="value-container">
+                <p>Valor:</p>
+                <p><%=products[i].value%></p>
+              </div>
+            </div>
+          </article>
 
-        <article>
-          <img src="/images/games/need_for_speed_heat.jpg" alt="game_photo" class="article-image" />
-          <div>
-            <p>Need for speed</p>
-            <p>PS4</p>
-            <div class="delete-quantity">
-              <button class="delete-basket">
-                <em class="fa-solid fa-trash"></em>
-              </button>
 
-              <p>| Cantidad :</p>
-              <p class="article-quantity">1</p>
-              <form class="quantity-form">
-                <button class="quantity">+</button>
-                <button class="quantity">-</button>
-              </form>
-            </div>
-            <div class="value-container">
-              <p>Valor:</p>
-              <p>$12345</p>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <img src="/images/games/dota-2.jpg" alt="game_photo" class="article-image" />
-          <div>
-            <p>Dota 2</p>
-            <p>PS4</p>
-            <div class="delete-quantity">
-              <button class="delete-basket">
-                <em class="fa-solid fa-trash"></em>
-              </button>
-
-              <p>| Cantidad :</p>
-              <p class="article-quantity">1</p>
-              <form class="quantity-form">
-                <button class="quantity">+</button>
-                <button class="quantity">-</button>
-              </form>
-            </div>
-            <div class="value-container">
-              <p>Valor:</p>
-              <p>$12345</p>
-            </div>
-          </div>
-        </article>
-        <article>
-          <img src="/images/games/forza-horizon-5.jpg" alt="game_photo" class="article-image" />
-          <div>
-            <p>Forza horizon 5</p>
-            <p>PS4</p>
-            <div class="delete-quantity">
-              <button class="delete-basket">
-                <em class="fa-solid fa-trash"></em>
-              </button>
-
-              <p>| Cantidad :</p>
-              <p class="article-quantity" >1</p>
-              <form class="quantity-form">
-                <button class="quantity">+</button>
-                <button class="quantity">-</button>
-              </form>
-            </div>
-            <div class="value-container">
-              <p>Valor:</p>
-              <p>$12345</p>
-            </div>
-          </div>
-        </article>
+        <% } %>
+          
       </section>
       </div>
 
@@ -110,28 +67,22 @@
           <hr class="section-top-line" />
         </div>
         <div class="cart-value-description">
-          <div class="cart-value">
-            <p>Need for speed</p>
-            <p>$12345</p>
-          </div>
-          <div class="cart-value">
-            <p>Dota 2</p>
-            <p>$12345</p>
-          </div>
-          <div class="cart-value">
-            <p>Forza horizon 5</p>
-            <p>$12345</p>
-          </div>
+          <% for(let i = 0; i<products.length ; i++) { %>
+            <div class="cart-value">
+              <p><%=products[i].name%></p>
+              <p>$<%=products[i].value%></p>
+            </div>
+            <% } %>
         </div>
         <hr class="total-bottom-line" />
-        <div class="total">
-          $24690
-        </div>
+        <strong class="total">
+          $<%=totalCart%>
+        </strong>
         <form> <input type="submit" class="buy-button" value="Comprar"></form>
        
       </section>
       </div>
   </div>
-</body>
+ </body>
 <%- include('partials/footer')%>
 </html>
