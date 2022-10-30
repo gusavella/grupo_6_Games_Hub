@@ -21,108 +21,107 @@
   </head>
   <%- include('partials/header')%>
 
-    <main>
-      <div class="register-box">
-        <h3 class="title">Registro</h3>
-        <hr />
-        <form action="#" method="POST">
-          <div class="input-box">
-            <div class="register-block-inline">
-              <div class="register-division">
-                <div class="details"><label for="names">Nombres:</label></div>
+  <main>
+    <div class="register-box">
+      <h3 class="title">Registro</h3>
+      <hr />
+      <form action="#" method="POST">
+        <div class="input-box">
+          <div class="register-block-inline">
+            <div class="register-division">
+              <div class="details"><label for="names">Nombres:</label></div>
 
-                <input
-                  class="details"
-                  type="text"
-                  name="names"
-                  id="names"
-                  placeholder=" Ingresa tu nombre"
-                  minlength="3"
-                  required
-                />
-              </div>
-              <div class="register-division">
-                <div class="details">
-                  <label class="details" for="surnames">Apellidos:</label>
-                </div>
-
-                <input
-                  class="details"
-                  type="text"
-                  name="surnames"
-                  id="surnames"
-                  placeholder=" Ingresa tu apellido"
-                />
-              </div>
+              <input
+                class="details"
+                type="text"
+                name="names"
+                id="names"
+                placeholder=" Ingresa tu nombre"
+                minlength="3"
+                required
+              />
             </div>
-            <div class="register-block-inline">
-              <div class="register-division">
-                <div class="details">
-                  <label class="details" for="password">Contraseña:</label>
-                </div>
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="surnames">Apellidos:</label>
+              </div>
 
-                <input
-                  class="details"
-                  type="password"
-                  name="password"
-                  id="password"
-                  minlength="6"
-                  placeholder="Mínimo 6 caracteres"
-                  required
-                />
-              </div>
-              <div class="register-division">
-                <div class="details">
-                  <label class="details" for="phone">Teléfono:</label>
-                </div>
-                <input
-                  class="details"
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  placeholder=" ej: 1122334455"
-                  minlength="8"
-                  required
-                />
-              </div>
-            </div>
-            <div class="register-block-inline">
-              <div class="register-division">
-                <div class="details">
-                  <label class="details" for="email">E-mail:</label>
-                </div>
-
-                <input
-                  class="details"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder=" ej: laracroft@....com"
-                  required
-                />
-              </div>
-              <div class="register-division">
-                <div class="details">
-                  <label class="details" for="adress">Dirección:</label>
-                </div>
-
-                <input
-                  class="details"
-                  type="text"
-                  name="adress"
-                  id="adress"
-                  placeholder=" ej: calle falsa 123"
-                />
-              </div>
+              <input
+                class="details"
+                type="text"
+                name="surnames"
+                id="surnames"
+                placeholder=" Ingresa tu apellido"
+              />
             </div>
           </div>
+          <div class="register-block-inline">
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="password">Contraseña:</label>
+              </div>
+
+              <input
+                class="details"
+                type="password"
+                name="password"
+                id="password"
+                minlength="6"
+                placeholder="Mínimo 6 caracteres"
+                required
+              />
+            </div>
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="phone">Teléfono:</label>
+              </div>
+              <input
+                class="details"
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder=" ej: 1122334455"
+                minlength="8"
+                required
+              />
+            </div>
+          </div>
+          <div class="register-block-inline">
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="email">E-mail:</label>
+              </div>
+
+              <input
+                class="details"
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" ej: laracroft@....com"
+                required
+              />
+            </div>
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="adress">Dirección:</label>
+              </div>
+
+              <input
+                class="details"
+                type="text"
+                name="adress"
+                id="adress"
+                placeholder=" ej: calle falsa 123"
+              />
+            </div>
+          </div>
+        </div>
 
         <div class="form-submit-button">
           <input type="submit" name="boton-registrar" value="Registrar" />
         </div>
-    </form>
-  </div>
-    </main>
-<%- include('partials/footer')%>
-
+      </form>
+    </div>
+  </main>
+  <%- include('partials/footer')%>
 </html>

@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background:  #6929BA;
+    background: linear-gradient(to bottom, #6929BA,#843890);
     font-family: 'Changa', sans-serif;
 }
 /* ----------------------------------HEADER---------------------------------- */
@@ -65,7 +65,7 @@ li{
 /* ----------------------------------HEADER---------------------------------- */
 
 main {
-    background-color: #6929BA;
+    
     display: flex;
     justify-content: center;
     padding: 10px;
