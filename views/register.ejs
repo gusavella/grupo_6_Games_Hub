@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/register.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       rel="stylesheet"
@@ -19,13 +19,13 @@
     />
     <title>Registro</title>
   </head>
-  <%- include('partials/header')%>
-
-  <main>
+  <body class="body-register">
+    <%- include('partials/header')%>
+    <main class="main-register">
     <div class="register-box">
       <h3 class="title">Registro</h3>
       <hr />
-      <form action="#" method="POST">
+      <form class="register-form" action="#" method="POST">
         <div class="input-box">
           <div class="register-block-inline">
             <div class="register-division">
@@ -124,4 +124,5 @@
     </div>
   </main>
   <%- include('partials/footer')%>
+</body>
 </html>

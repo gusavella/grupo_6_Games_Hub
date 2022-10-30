@@ -144,7 +144,6 @@ footer section{
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #6929BA,#843890);
     font-family: 'Changa', sans-serif;
 }
 
@@ -232,5 +231,87 @@ footer section{
     }
 }
 /* --------------------------- LOGIN --------------------------- */
+/* --------------------------- REGISTER --------------------------- */
+.body-register {
+    background: linear-gradient(to bottom, #6929BA,#843890);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+} 
+.main-register {
+    width: 90%;
+}
+.register-box {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(0,0,0,0.4);
+    color: white;
+    /* max-width: 1000px; */
+    width: 100%; 
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.form-submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+.form-submit-button input {
+    background-color: #1AADB4;
+    color: white;
+    border: none;
+    padding: 5px 25px;
+}
+.register-box h3 {
+    text-align: center;
+}
+.user-details-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 30px 30px 30px;
+
+}
+ 
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:769px){
+    .register-block-inline{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .input-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .register-division{
+    display: inline;
+    width: 50%;
+    }
+
+    .details{
+    width:80%;
+    margin:auto;
+    } 
+
+}
+
+/* --------------------------- REGISTER --------------------------- */
 
 
