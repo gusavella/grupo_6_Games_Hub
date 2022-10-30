@@ -100,14 +100,6 @@ main {
     padding: 2px;
 }
 
-.login-form input:invalid {
-    border: 2px solid red;
-}
-
-.login-form input:valid {
-    border: 2px solid black;
-}
-
 .remember-check {
     display: flex;
     align-items: center;
