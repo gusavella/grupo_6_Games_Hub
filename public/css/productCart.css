@@ -222,6 +222,7 @@ footer section{
         margin: auto;
         flex-wrap: nowrap;
         align-content: space-between;
+
     }
     .section-container{
         width: 80%;
