@@ -2,7 +2,7 @@ const path = require("path");
 
 const controlador = {
   index: (req, res) => {
-    res.render("index",{tittle:'hola'});
+    res.render('main.ejs');
   },
   about: (req, res) => {
     res.sendFile(path.resolve(__dirname, "../views/about.html"));
