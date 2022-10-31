@@ -642,5 +642,241 @@ article{
 }
 /* --------------------------- productCart --------------------------- */
 
+/* --------------------------- productDetail --------------------------- */
+
+main {
+    width: 90%;
+    margin:auto;
+    background-color: #6929BA;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.logo h1{
+    width: 40%;
+    font-size: 38px;
+    text-align: left;
+    align-self: center;
+    margin-left: 20px;
+}
+
+.product-buy-info {
+    background-color: #843890;
+    border: solid 1px rgba(0,0,0,0.4);
+    width: 80%;
+    height: 90px;
+    margin:auto;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.product-prices{
+    display:flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+.product-discount{
+    background-color: #1AADB4;
+    align-self: center;
+    width: 33%;
+    border-radius: 4px;
+}
+
+.product-final-price{
+    font-size: 24px;
+    text-align: right;
+    width: 33%;
+}
+
+.product-price{
+    text-decoration: line-through;
+    text-align: left;
+    margin-left: 5px;
+    width: 33%;
+}
+
+.product-addcar{
+    color:white;
+    background-color: #1AADB4;
+    width: 90%;
+    padding: 1.9%;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.product-addcar:hover{
+    background-color: #14CAE7;
+}
+
+.product-info{
+    background-color: rgba(0,0,0,0.4);
+    padding:10px;
+    margin: 11px 0px;
+    border-radius: 5px;
+}
+
+i {
+    margin-left: 10px;
+}
+
+h2 {
+    margin: 15px 0px 0px 0px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px white;
+    text-align: center;
+}
+h3{
+    padding:20px 0px;
+}
+
+#product-slider{
+    font-family: sans-serif;
+    margin: auto;
+    background-color: #843890;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+}
+  
+#product-slider > ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+  
+#product-slider > ul.slider{
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    height: 300px;
+}
+  
+#product-slider > ul.slider h1{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+}
+  
+#product-slider > ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+  
+#product-slider > ul.slider li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+  
+#product-slider > ul.slider li:first-child {
+    opacity: 1;
+}
+  
+#product-slider > ul.slider li:target {
+    opacity: 1;
+}
+  
+#product-slider > .menu{
+    text-align: center;
+    margin: 10px;
+}
+  
+#product-slider > .menu li{
+    display: inline-block;
+    text-align: center;
+}
+  
+#product-slider > .menu li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #1AADB4;
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+    font-size: 16px;
+    border-radius: 100%;
+}
+@media (min-width:769px){
+    main{
+        display:flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .logo{
+        display:inline-flex;
+        width: 50%;
+        margin-top: 10px;
+        height: 100%;
+    }
+    .logo h1{
+        font-size: 50px;
+    }
+    .product-buy{
+        width: 50%;
+    }
+    .product-buy-info{
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+    .product-detail-container{
+        display: flex;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .product-prices{
+        align-items: center;
+        width: 100%;
+    }
+    .product-discount{
+        font-size: 30px;
+        width: 30%;
+        padding: 20px 0px;
+        align-self: center;
+    }
+    .product-final-price{
+        font-size: 45px;
+    }
+    .product-price{
+        font-size: 30px;
+    }
+    .product-addcar{
+        margin: auto;
+        padding: 1.9%;
+        font-size: 30px;
+    }
+}
+
+/* --------------------------- productDetail --------------------------- */
+
 
 
