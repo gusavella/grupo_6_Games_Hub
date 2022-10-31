@@ -542,7 +542,7 @@ a{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
-
+    align-items: center;
 }
 
 .cart-article-image{
