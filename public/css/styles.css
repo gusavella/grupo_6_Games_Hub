@@ -881,5 +881,25 @@ h3{
 
 /* --------------------------- productDetail --------------------------- */
 
+/* --------------------------- not-found page --------------------------- */
 
-
+.not-found{
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+   
+}
+.not-found-image{
+    width:15%;
+    height:20%;
+   
+}
+.not-found-text{
+    margin:auto;
+    color:white;
+}
+/* --------------------------- not-found page --------------------------- */
