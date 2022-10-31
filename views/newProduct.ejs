@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6f834f16b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <title>Nuevo Producto</title>
+</head>
+<body>
+    <%- include('partials/header')%>
+    <main class="new-product-main">
+        <div class="new-product-box">
+            <h3>Agregar nuevo producto:</h3>
+            <form class="new-product-form" action="/" method="get">
+                <label for="new-name" >Nombre:</label>
+                <input type="text" name="new-name" id="new-name">
+
+                <label for="new-description">Descripcion:</label>
+                <textarea name="new-description" id="new-description" cols="30" rows="10">Contenido</textarea>
+
+                <label for="new-img">Imagen:</label>
+                <input type="file" name="new-img" id="new-img">
+
+                <label for="new-categorie">Categoria</label>
+                <input type="text" name="new-categorie" id="new-categorie">
+
+                <label for="new-console">Consolas compatibles:</label>
+                <div class="new-console-checkbox">
+                    <input type="checkbox" name="new-console" id="ps4" value="ps4">
+                    <label for="ps4">PS4</label>
+
+                    <input type="checkbox" name="new-console" id="ps5" value="ps5">
+                    <label for="ps5">PS5</label>
+
+                    <input type="checkbox" name="new-console" id="xbox" value="xbox">
+                    <label for="xbox">XBox</label>
+
+                    <input type="checkbox" name="new-console" id="Pc" value="Pc">
+                    <label for="Pc">Pc</label>
+
+                    <input type="checkbox" name="new-console" id="nintendo-switch" value="nintendo-switch">
+                    <label for="nintendo-switch">Nintendo Switch</label>
+                </div>
+                <label for="new-price">Precio:</label>
+                <input type="number" name="new-price" id="new-price">
+            </form>
+        </div>
+    </main>
+    <%- include('partials/footer')%>
+</body>
+</html>

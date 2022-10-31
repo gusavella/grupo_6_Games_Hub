@@ -921,3 +921,32 @@ h3{
 }
 /* --------------------------- not-found page --------------------------- */
 
+/* --------------------------- new product --------------------------- */
+
+.new-product-main {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-product-box {
+    text-align: center;
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 5px;
+    width: 70vw;
+
+}
+
+.new-product-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-product-box input {
+    border-radius: 5px;
+}
