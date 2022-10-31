@@ -512,6 +512,7 @@ a{
     flex-wrap: nowrap;
     display:flex;
     flex-direction: column;
+    color:white
      
 }
 .cart-tittle{
