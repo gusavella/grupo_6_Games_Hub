@@ -25,11 +25,11 @@ const products = [
     },
     {
         id:4,
-        name:'Forza horizon 4',
+        name:'Terraria',
         value:3456,
         consoleType:'PC',
         discount:15,
-        imageUri:'/images/games/forza-horizon-5.jpg'
+        imageUri:'/images/games/terraria2.avif'
     },
  
 ]
