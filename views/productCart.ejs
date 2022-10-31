@@ -22,15 +22,15 @@
   <%- include('partials/header')%>
   <div class="cart-container">
 
-      <div class="section-container">
+      <div class="cart-section-container">
         <section>
         <div class="cart-tittle">
           <p>Carrito de compras</p>
           <hr class="section-top-line" />
         </div>
         <% for(let i = 0; i<products.length ; i++) { %>
-          <article>
-            <img src="<%=products[i].imageUri%>" alt="game_photo" class="article-image" />
+          <article class="cart-article">
+            <img src="<%=products[i].imageUri%>" alt="game_photo" class="cart-article-image" />
             <div>
               <p><%=products[i].name%></p>
               <p><%=products[i].consoleType%></p>
@@ -60,7 +60,7 @@
       </div>
 
 
-      <div class="total-container">
+      <div class="cart-total-container">
         <section>
         <div class="cart-tittle">
           <p>Total</p>

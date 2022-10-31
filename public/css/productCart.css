@@ -76,7 +76,7 @@ header {
    
 }
 
-.section-container , .total-container{
+.cart-section-container , .cart-total-container{
     background-color:rgba(0,0,0,0.4);
     width:80%;
     border-radius:10px;
@@ -86,7 +86,7 @@ header {
 }
 
 
-article{
+.cart-article{
     padding-top:5px;
     padding-bottom:5px;
     display:flex;
@@ -95,7 +95,7 @@ article{
 
 }
 
-.article-image{
+.cart-article-image{
     width:40%;
 }
 .delete-quantity{
@@ -224,11 +224,11 @@ footer section{
         align-content: space-between;
 
     }
-    .section-container{
+    .cart-section-container{
         width: 80%;
         margin: 10px;
      }
-    .total-container{
+    .cart-total-container{
        width: 100%;
        margin: 10px;
     }
