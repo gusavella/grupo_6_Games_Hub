@@ -145,7 +145,7 @@ const products = [
         value:6.99,
         consoleType:'PC',
         discount:15,
-        imageUri:'/images/games/terraria2.avif',
+        imageUri:'/images/main-cards/mhw.jpeg',
         section: 'offer',
         tag: '/mhw'
     }
