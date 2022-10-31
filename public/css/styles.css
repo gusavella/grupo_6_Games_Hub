@@ -625,7 +625,7 @@ footer{
     background-color: #302A3F;
     color: white;
     width: 100%;
-    height: 80px;
+    height: 200px;
 }
 footer p{
     padding-top: 27px;
@@ -640,7 +640,7 @@ footer section{
 @media (min-width:769px) {
     /* ----------------------------------HEADER---------------------------------- */
     header{
-        height: 110px;
+        height: 120px;
     }
     .header-logo{
         width: 70%;
