@@ -314,4 +314,199 @@ footer section{
 
 /* --------------------------- REGISTER --------------------------- */
 
+/* --------------------------- MAIN --------------------------- */
+
+.body-main::after {
+    content: "";
+    background-image: url(/images/main-cards/city.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+a{
+    color: white;
+}
+
+/* Carousel */
+
+.carousel {
+    position: relative;
+    margin: auto;
+}
+
+.carousel-item {
+    width: 100%;
+    padding: 1em;
+    display: none;
+}
+
+.carousel-item-selected {
+    display: block;
+}
+
+.carousel-nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.carousel-button {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.carousel-button-selected {
+    background-color: rgba(255,255,255,0.9);
+}
+
+/* Card main */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid thin #1AADB4;
+    border-radius: 10px;
+    width: 200px;
+    height: 350px;
+    margin: 20px;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    transition: all 0.4s;
+}
+
+.card p{
+    color: green;
+}
+
+.card img {
+    width: 100%;
+    height: 270px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);;
+    color: white;
+}
+
+.card .price a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.4s;
+}
+
+.card:hover .price a {
+    border-top: 1px solid white;
+    color: white;
+}
+
+.best-selling,
+.recommended,
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* Title headers */
+
+.section-title {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid thin grey;
+    margin: 0 40px;
+    align-items: center;
+}
+
+/* Texto */
+
+.section-title h3 {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+
+    /* Clip Background Image */
+
+    background: url(/images/main-cards/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+
+}
+
+/* Animate Background Image */
+
+@keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.section-title a {
+    text-decoration: none;
+    padding: 0 15px;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.section-title a:hover {
+    color: #1AADB4;
+}
+
+.section-1 {
+    background: rgb(132,56,144);
+}
+
+.section-2 {
+    background: rgb(105,41,186);
+    background: linear-gradient(0deg, rgba(105,41,186,1) 0%, rgba(132,56,144,1) 100%);
+}
+
+.section-3 {
+    background: #6929ba;
+}
+@media (min-width:769px){
+    /* ----------------------------------MAIN---------------------------------- */
+    .carousel{
+        width: 70%;
+     }
+     /* ----------------------------------MAIN---------------------------------- */
+}
+/* --------------------------- MAIN --------------------------- */
+
 
