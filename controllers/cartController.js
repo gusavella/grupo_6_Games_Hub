@@ -1,5 +1,5 @@
 
-let products = require('../models/product')
+let products = require('../models/productCart')
 const controller = {
   cart: (req, res) => {
     let totalCart=0

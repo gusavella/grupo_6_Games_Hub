@@ -884,6 +884,7 @@ h3{
 /* --------------------------- not-found page --------------------------- */
 
 .not-found{
+    padding: 30%;
     flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
@@ -891,15 +892,32 @@ h3{
     justify-content: center;
     align-items: center;
     margin:auto;
+  
    
 }
 .not-found-image{
     width:15%;
     height:20%;
-   
+    animation: App-logo-spin infinite 20s linear;
 }
 .not-found-text{
     margin:auto;
     color:white;
 }
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  } */
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
 /* --------------------------- not-found page --------------------------- */
+
