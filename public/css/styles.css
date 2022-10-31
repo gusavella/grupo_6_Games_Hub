@@ -98,6 +98,11 @@ footer section{
         display: flex;
         justify-content: space-around;
     }
+
+    .fa-magnifying-glass:before, .fa-search:before {
+        position: relative;
+        right: 5px;
+    }
     /* ----------------------------------HEADER---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
@@ -163,7 +168,6 @@ footer section{
     background-color:rgba(0,0,0,0.4);
     padding: 25px;
     border-radius: 5px;
-    height: 70vh;
 }
 
 .login-box h3 {
@@ -928,6 +932,7 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 
 .new-product-box {
