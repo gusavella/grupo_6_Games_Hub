@@ -79,7 +79,7 @@ footer section{
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */
     header{
-        height: 110px;
+        height: 120px;
     }
     .header-logo{
         width: 70%;
@@ -101,7 +101,7 @@ footer section{
     /* ----------------------------------HEADER---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
-        height: 135px;
+        height: 170px;
         display:flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -686,10 +686,9 @@ footer section{
 
 /* --------------------------- productDetail --------------------------- */
 
-main {
+.product-main {
     width: 90%;
     margin:auto;
-    background-color: #6929BA;
     color: white;
 }
 
@@ -862,7 +861,7 @@ h3{
     border-radius: 100%;
 }
 @media (min-width:769px){
-    main{
+    .product-main{
         display:flex;
         flex-wrap: wrap;
         margin-bottom: 10px;
