@@ -2,7 +2,7 @@ const products = [
     {
         id:1,
         name:'Need for speed heat',
-        value:12345,
+        value:9.99,
         consoleType:'PS4',
         discount:25,
         imageUri:'/images/games/need_for_speed_heat.jpg',
@@ -12,7 +12,7 @@ const products = [
     {
         id:2,
         name:'Dota 2',
-        value:12345,
+        value:2.99,
         consoleType:'PS5',
         discount:20,
         imageUri:'/images/games/dota-2.jpg',
@@ -72,7 +72,7 @@ const products = [
     {
         id:8,
         name:'ARK Survival Evolved',
-        value:7.50,
+        value:7.49,
         consoleType:'PC',
         discount:15,
         imageUri:'/images/main-cards/ark-survival.jpeg',
@@ -112,7 +112,7 @@ const products = [
     {
         id:12,
         name:'Captain Tsubasa',
-        value:3456,
+        value:5.99,
         consoleType:'PC',
         discount:15,
         imageUri:'/images/main-cards/captain-tsubasa.jpeg',
@@ -122,7 +122,7 @@ const products = [
     {
         id:13,
         name:'Dragon Ball Z Kakarot',
-        value:3456,
+        value:3.99,
         consoleType:'XBOX',
         discount:15,
         imageUri:'/images/main-cards/dbz-kakarot.jpeg',
@@ -132,7 +132,7 @@ const products = [
     {
         id:14,
         name:'FIFA 23',
-        value:3456,
+        value:19.99,
         consoleType:'PC',
         discount:15,
         imageUri:'/images/main-cards/fifa23.jpg',
