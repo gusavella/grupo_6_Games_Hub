@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head')%>
-<body>
+  <%- include('partials/head')%>
+  <body>
     <%- include('partials/header')%>
     <main class="new-product-main">
-        <div class="new-product-box">
-            <h3>Agregar nuevo producto</h3>
-            <form class="new-product-form" action="/" method="get">
-                <label for="new-name" >Nombre:</label>
-                <input type="text" name="new-name" id="new-name">
+      <div class="new-product-box">
+        <h3>Agregar nuevo producto</h3>
+        <form class="new-product-form" action="/" method="get">
+          <div class="new-product-div">
+            <label for="new-name">Nombre:</label>
+            <input type="text" name="new-name" id="new-name" />
+          </div>
+            <label for="new-description">Descripcion:</label>
+            <textarea
+              name="new-description"
+              id="new-description"
+              cols="30"
+              rows="10"
+            >Contenido
+            </textarea>
+          <div class="new-product-div">
+            <label for="new-img">Imagen:</label>
+            <input type="file" name="new-img" id="new-img" />
+          </div>
+          <div class="new-product-div">
+          <label for="new-categorie">Categoria</label>
+          <select name="new-categorie" id="new-categorie">
+            <option value="accion">Accion</option>
+            <option value="aventura">Aventura</option>
+            <option value="arcade">Arcade</option>
+            <option value="deportes">Deportes</option>
+            <option value="estrategia">Estrategia</option>
+          </select>
+          </div>
+          <label for="new-console">Consolas compatibles:</label>
+          <div class="new-console-checkbox">
+            <input type="checkbox" name="new-console" id="ps4" value="ps4" />
+            <label for="ps4">PS4</label>
 
-                <label for="new-description">Descripcion:</label>
-                <textarea name="new-description" id="new-description" cols="30" rows="10">Contenido</textarea>
+            <input type="checkbox" name="new-console" id="ps5" value="ps5" />
+            <label for="ps5">PS5</label>
 
-                <label for="new-img">Imagen:</label>
-                <input type="file" name="new-img" id="new-img">
+            <input type="checkbox" name="new-console" id="xbox" value="xbox" />
+            <label for="xbox">XBox</label>
 
-                <label for="new-categorie">Categoria</label>
-                <input type="text" name="new-categorie" id="new-categorie">
+            <input type="checkbox" name="new-console" id="Pc" value="Pc" />
+            <label for="Pc">Pc</label>
 
-                <label for="new-console">Consolas compatibles:</label>
-                <div class="new-console-checkbox">
-                    <input type="checkbox" name="new-console" id="ps4" value="ps4">
-                    <label for="ps4">PS4</label>
-
-                    <input type="checkbox" name="new-console" id="ps5" value="ps5">
-                    <label for="ps5">PS5</label>
-
-                    <input type="checkbox" name="new-console" id="xbox" value="xbox">
-                    <label for="xbox">XBox</label>
-
-                    <input type="checkbox" name="new-console" id="Pc" value="Pc">
-                    <label for="Pc">Pc</label>
-
-                    <input type="checkbox" name="new-console" id="nintendo-switch" value="nintendo-switch">
-                    <label for="nintendo-switch">Nintendo Switch</label>
-                </div>
-                <label for="new-price">Precio:</label>
-                <input type="number" name="new-price" id="new-price">
-
-                <button class="new-product-button" type="submit">Crear</button>
-            </form>
-        </div>
+            <input
+              type="checkbox"
+              name="new-console"
+              id="nintendo-switch"
+              value="nintendo-switch"
+            />
+            <label for="nintendo-switch">Nintendo Switch</label>
+          </div>
+          <div class="new-product-div">
+          <label for="new-price">Precio:</label>
+          <input type="number" name="new-price" id="new-price" />
+            </div>
+          <button class="new-product-button" type="submit">Crear</button>
+        </form>
+      </div>
     </main>
     <%- include('partials/footer')%>
-</body>
+  </body>
 </html>

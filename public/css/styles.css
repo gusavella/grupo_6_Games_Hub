@@ -928,7 +928,6 @@ h3{
 /* --------------------------- new product --------------------------- */
 
 .new-product-main {
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -941,7 +940,7 @@ h3{
     background-color:rgba(0,0,0,0.4);
     padding: 25px;
     border-radius: 5px;
-    width: 70vw;
+    width: 85vw;
 
 }
 
@@ -949,7 +948,15 @@ h3{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.new-product-box h3 {
+    border-bottom: solid 1px white;
+}
+
+.new-product-box select {
+    border-radius: 5px;
 }
 
 .new-product-box input {
