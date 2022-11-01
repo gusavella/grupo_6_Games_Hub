@@ -7,7 +7,7 @@ const products = [
         discount:25,
         imageUri:'/images/games/need_for_speed_heat.jpg',
         section: 'none',
-        tag: '/nfsheat'
+        tag: '/product/'
     },
     {
         id:2,
@@ -17,7 +17,7 @@ const products = [
         discount:20,
         imageUri:'/images/games/dota-2.jpg',
         section: 'none',
-        tag: '/dota2'
+        tag: '/product/'
     },
     {
         id:3,
@@ -27,7 +27,7 @@ const products = [
         discount:15,
         imageUri:'/images/games/forza-horizon-5.jpg',
         section: 'none',
-        tag: '/forza5'
+        tag: '/product/'
     },
     {
         id:4,
@@ -37,7 +37,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/terraria.jpg',
         section: 'sellers',
-        tag: '/terraria'
+        tag: '/product/'
     },
     {
         id:5,
@@ -47,7 +47,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/cyberpunk.jpeg',
         section: 'sellers',
-        tag: '/cyberpunk'
+        tag: '/product/'
     },
     {
         id:6,
@@ -57,7 +57,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/fortnite.jpeg',
         section: 'sellers',
-        tag: '/fortnite'
+        tag: '/product/'
     },
     {
         id:7,
@@ -67,7 +67,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/playstation-store.jpeg',
         section: 'sellers',
-        tag: '/pscard'
+        tag: '/product/'
     },
     {
         id:8,
@@ -77,7 +77,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/ark-survival.jpeg',
         section: 'recommended',
-        tag: '/ark'
+        tag: '/product/'
     },
     {
         id:9,
@@ -87,7 +87,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/cs-anthology.jpg',
         section: 'recommended',
-        tag: '/csanthology'
+        tag: '/product/'
     },
     {
         id:10,
@@ -97,7 +97,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/doom-eternal.jpeg',
         section: 'recommended',
-        tag: '/doom-eternal'
+        tag: '/product/'
     },
     {
         id:11,
@@ -107,7 +107,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/cod-infinite.jpg',
         section: 'recommended',
-        tag: '/cod-iw'
+        tag: '/product/'
     },
     {
         id:12,
@@ -117,7 +117,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/captain-tsubasa.jpeg',
         section: 'offer',
-        tag: '/captain-tsubasa'
+        tag: '/product/'
     },
     {
         id:13,
@@ -127,7 +127,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/dbz-kakarot.jpeg',
         section: 'offer',
-        tag: '/dbz-kakarot'
+        tag: '/product/'
     },
     {
         id:14,
@@ -137,7 +137,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/fifa23.jpg',
         section: 'offer',
-        tag: '/fifa23'
+        tag: '/product/'
     },
     {
         id:15,
@@ -147,7 +147,7 @@ const products = [
         discount:15,
         imageUri:'/images/main-cards/mhw.jpeg',
         section: 'offer',
-        tag: '/mhw'
+        tag: '/product/'
     }
  
 ]
