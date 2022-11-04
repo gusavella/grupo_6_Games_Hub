@@ -1,5 +1,11 @@
+const fs = require('fs');
+const path = require('path');
 
-let products = require('../models/productCart')
+const productsFilePath = path.join(__dirname, '../models/productsCart.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 const controller = {
   cart: (req, res) => {
     let totalCart=0
