@@ -14,7 +14,12 @@ const controller = {
     newProduct: (req,res) => {
       res.render("newProduct.ejs",{tittle:'New Product'});
     }
-  
+  ,
+  create: (req,res) => {
+    let game = req.body;
+        game.image=req.file.filename;
+   res.send(game)
+  }
   };
   
   module.exports = controller;
