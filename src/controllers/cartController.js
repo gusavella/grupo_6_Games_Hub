@@ -7,7 +7,7 @@ const controller = {
       totalCart=products[i].value+totalCart
      }
   
-    res.render("productCart",{products:products,totalCart:totalCart,tittle:'Product Cart'});
+    res.render("productCart.ejs",{products:products,totalCart:totalCart,tittle:'Product Cart'});
 
   },
 

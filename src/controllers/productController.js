@@ -3,7 +3,7 @@ const controller = {
       res.render("productDetail",{tittle:'Product'});
     },
     newProduct: (req,res) => {
-      res.render("newProduct",{tittle:'New Product'});
+      res.render("newProduct.ejs",{tittle:'New Product'});
     }
   
   };

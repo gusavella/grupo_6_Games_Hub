@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body class="body-main">
+  <%- include('./partials/header') %>
+    <main>
+       <%- include('./partials/carousel-main') %>
+        <div class="container-main">
+            <div class="container-section">
+                <div class="section-1">
+                    <div class="section-title">
+                        <div class="box-title">
+                            <h3>Los más vendidos</h3>
+                        </div>
+                        <div class="button">
+                            <a href="#">Ver todos</a>
+                        </div>
+                    </div>
+                    <section class="best-selling">
+                        <% for(let i=0;i<products.length;i++){%>
+                            <% if(products[i].section == 'sellers'){ %>
+                                <div class="card">
+                                    <img src="<%=products[i].imageUri%>" alt="imagen-game">
+                                    <h4><%=products[i].name%></h4>
+                                    <p class="price"><%=products[i].value %> - <span><a href="<%=products[i].tag %>">COMPRAR</a></span></p>
+                                </div>
+                            <%} %>
+                        <%} %>
+                    </section>
+                </div>
+                <div class="section-2">
+                    <div class="section-title">
+                        <div class="box-title">
+                            <h3>Recomendados</h3>
+                        </div>
+                        <div class="button">
+                            <a href="#">Ver todos</a>
+                        </div>
+                    </div>
+                    <section class="recommended">
+                        <% for(let i=0;i<products.length;i++){%>
+                            <% if(products[i].section == 'recommended'){ %>
+                                <div class="card">
+                                    <img src="<%=products[i].imageUri%>" alt="imagen-game">
+                                    <h4><%=products[i].name%></h4>
+                                    <p class="price"><%=products[i].value %> - <span><a href="<%=products[i].tag %>">COMPRAR</a></span></p>
+                                </div>
+                            <%} %>
+                        <%} %>
+                    </section>
+                </div>
+                <div class="section-3">
+                    <div class="section-title">
+                        <div class="box-title">
+                            <h3>Ofertas</h3>
+                        </div>
+                        <div class="button">
+                            <a href="#">Ver todos</a>
+                        </div>
+                    </div>
+                    <section class="offers">
+                        <% for(let i=0;i<products.length;i++){%>
+                            <% if(products[i].section == 'offer'){ %>
+                                <div class="card">
+                                    <img src="<%=products[i].imageUri%>" alt="imagen-game">
+                                    <h4><%=products[i].name%></h4>
+                                    <p class="price">USD <%=products[i].value %> - <span><a href="<%=products[i].tag %>">COMPRAR</a></span></p>
+                                </div>
+                            <%} %>
+                        <%} %>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer') %>
+    <script src="/js/carousel.js"></script>
+</body>
+
+</html>

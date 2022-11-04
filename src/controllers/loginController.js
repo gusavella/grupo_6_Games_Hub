@@ -1,6 +1,6 @@
 const controller = {
     login: (req, res) => {
-      res.render("login",{tittle:'Login'});
+      res.render("login.ejs",{tittle:'Login'});
     },
    };
   

@@ -1,6 +1,6 @@
 const controller = {
     register : (req, res) => {
-        res.render ("register",{tittle:'Register'});
+        res.render ("register.ejs",{tittle:'Register'});
     },
 };
 

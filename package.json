@@ -4,8 +4,8 @@
   "description": "La audiencia objetivo de este sitio web es general con deseo de comprar videojuegos y/o consolas de videojuegos.",
 
   "scripts": {
-    "start": "node ./bin/www",
-    "dev":"nodemon run ./bin/www"
+    "start": "node ./src/bin/www",
+    "dev":"nodemon run ./src/bin/www"
   },
   "repository": {
     "type": "git",
