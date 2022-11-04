@@ -16,6 +16,7 @@
         </div>
         <% for(let i = 0; i<products.length ; i++) { %>
           <article class="cart-article">
+          
             <img src="<%=products[i].imageUri%>" alt="game_photo" class="cart-article-image" />
             <div>
               <p><%=products[i].name%></p>
@@ -37,7 +38,7 @@
                 <p><%=products[i].value%></p>
               </div>
             </div>
-          </article>
+                   </article>
 
 
         <% } %>

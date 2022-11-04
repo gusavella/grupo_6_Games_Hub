@@ -21,11 +21,13 @@
                     <section class="best-selling">
                         <% for(let i=0;i<products.length;i++){%>
                             <% if(products[i].section == 'sellers'){ %>
+                                <a href="/product/">
                                 <div class="card">
                                     <img src="<%=products[i].imageUri%>" alt="imagen-game">
                                     <h4><%=products[i].name%></h4>
                                     <p class="price"><%=products[i].value %> - <span><a href="<%=products[i].tag %>">COMPRAR</a></span></p>
                                 </div>
+                            </a>
                             <%} %>
                         <%} %>
                     </section>
@@ -42,11 +44,13 @@
                     <section class="recommended">
                         <% for(let i=0;i<products.length;i++){%>
                             <% if(products[i].section == 'recommended'){ %>
+                                <a href="/product/">
                                 <div class="card">
                                     <img src="<%=products[i].imageUri%>" alt="imagen-game">
                                     <h4><%=products[i].name%></h4>
                                     <p class="price"><%=products[i].value %> - <span><a href="<%=products[i].tag %>">COMPRAR</a></span></p>
                                 </div>
+                                </a>
                             <%} %>
                         <%} %>
                     </section>
@@ -63,11 +67,13 @@
                     <section class="offers">
                         <% for(let i=0;i<products.length;i++){%>
                             <% if(products[i].section == 'offer'){ %>
+                                <a href="/product/">
                                 <div class="card">
                                     <img src="<%=products[i].imageUri%>" alt="imagen-game">
                                     <h4><%=products[i].name%></h4>
                                     <p class="price">USD <%=products[i].value %> - <span><a href="<%=products[i].tag %>">COMPRAR</a></span></p>
                                 </div>
+                                </a>
                             <%} %>
                         <%} %>
                     </section>
