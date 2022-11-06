@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head')%>
+  <body>
+    <%- include('../partials/header')%>
+    <main class="new-product-main">
+      <div class="new-product-box">
+        <h3>Edicion de producto</h3>
+        <form
+          action="/product/edit?_method=PUT"
+          class="new-product-form"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="new-product-div">
+            <label for="new-name">Nombre:</label>
+            <input
+              type="text"
+              name="new-name"
+              id="new-name"
+              value="<%=product.name%>"
+            />
+          </div>
+          <label for="new-description">Descripcion:</label>
+          <textarea
+            type="textarea"
+            cols="40"
+            rows="10"
+            name="new-description"
+            id="new-description"
+            class="edit-product-text-area"
+            
+          ><%=product.description%></textarea>
+          <div class="new-product-div">
+            <label for="new-img">Imagen:</label>
+            <input type="file" name="new-img" id="new-img" />
+          </div>
+          <div class="new-product-div">
+            <label for="new-categorie">Categoria</label>
+            <select name="new-categorie" id="new-categorie">
+              <option value="accion" <%=product.category=='accion'?'selected':''%>>Accion</option>
+              <option value="aventura" <%=product.category=='aventura'?'selected':''%> >Aventura</option>
+              <option value="arcade" <%=product.category=='arcade'?'selected':''%>>Arcade</option>
+              <option value="deportes" <%=product.category=='deportes'?'selected':''%>>Deportes</option>
+              <option value="estrategia"<%=product.category=='estrategia'?'selected':''%>>Estrategia</option>
+            </select>
+          </div>
+          <label for="new-console">Consolas compatibles:</label>
+          <div class="new-console-checkbox">
+            <input type="checkbox" name="new-console" id="ps4" value="ps4"  <%=product.consoleType=='ps4'?'checked':''%>/>
+            <label for="ps4">PS4</label>
+
+            <input type="checkbox" name="new-console" id="ps5" value="ps5" <%=product.consoleType=='ps5'?'checked':''%> />
+            <label for="ps5">PS5</label>
+
+            <input type="checkbox" name="new-console" id="xbox" value="xbox" <%=product.consoleType=='xbox'?'checked':''%>  />
+            <label for="xbox">XBox</label>
+
+            <input type="checkbox" name="new-console" id="Pc" value="Pc"  <%=product.consoleType=='Pc'?'checked':''%>/>
+            <label for="Pc">Pc</label>
+
+            <input
+              type="checkbox"
+              name="new-console"
+              id="nintendo-switch"
+              value="nintendo-switch"
+              <%=product.consoleType=='nintendo-switch'?'checked':''%>
+            />
+            <label for="nintendo-switch">Nintendo Switch</label>
+          </div>
+          <div class="new-product-div">
+            <label for="new-price">Precio:</label>
+            <input type="number" name="new-price" id="new-price" value="<%=product.value%>"/>
+          </div>
+          <div class="new-product-div">
+            <label for="discount">Descuento:</label>
+            <input type="number" name="discount" id="discount" value="<%=product.discount%>"/>
+          </div>
+          <button class="new-product-button" type="submit">Editar</button>
+        </form>
+      </div>
+    </main>
+    <%- include('../partials/footer')%>
+  </body>
+</html>

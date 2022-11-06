@@ -963,7 +963,10 @@ h3{
 .new-product-box input {
     border-radius: 5px;
 }
-
+.edit-product-text-area{
+    width: 100%;
+    
+}
 .new-product-button {
     margin: 15px;
     padding: 5px;
