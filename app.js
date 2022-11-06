@@ -2,6 +2,7 @@ let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');
 let logger = require('morgan');
 
 let indexRouter = require('./src/routes/index');
@@ -21,12 +22,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
+app.use(methodOverride('_method')); 
 
 app.use('/', indexRouter);
 app.use('/cart', cartRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
-app.use('/product', productRouter);
+app.use('/products', productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
