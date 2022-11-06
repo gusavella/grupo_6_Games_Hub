@@ -9,10 +9,10 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
     product: (req, res) => {
-      res.render("productDetail",{tittle:'Product'});
+      res.render("products/productDetail",{tittle:'Product'});
     },
     newProduct: (req,res) => {
-      res.render("newProduct.ejs",{tittle:'New Product'});
+      res.render("products/newProduct.ejs",{tittle:'New Product'});
     }
   ,
   create: (req,res) => {

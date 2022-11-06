@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('partials/head')%>
+  <%- include('../partials/head')%>
 
 
 <body>
-  <%- include('partials/header')%>
+  <%- include('../partials/header')%>
   <div class="cart-container">
 
       <div class="cart-section-container">
@@ -35,7 +35,7 @@
               </div>
               <div class="value-container">
                 <p>Valor:</p>
-                <p><%=products[i].value%></p>
+                <p>$<%=products[i].value%></p>
               </div>
             </div>
                    </article>
@@ -71,5 +71,5 @@
       </div>
   </div>
  </body>
-<%- include('partials/footer')%>
+<%- include('../partials/footer')%>
 </html>
