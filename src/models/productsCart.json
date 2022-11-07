@@ -29,14 +29,15 @@
         "section": "none",
        " tag": "/product/"
     },
+   
     {
-        "id":4,
-        "name":"Terraria",
-        "value":11.98,
-        "consoleType":"PC",
-        "discount":15,
-        "imageUri":"/images/main-cards/terraria.jpg",
-        "section": "sellers",
-       " tag": "/product/"
-    }
+        "id": "17",
+        "name": "Juego de GamesHub",
+        "value": "6.99",
+        "consoleType": "xbox",
+        "discount": "17",
+        "imageUri": "/images/games/1667783285444.jpeg",
+        "category": "accion",
+        "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
+       }
 ]

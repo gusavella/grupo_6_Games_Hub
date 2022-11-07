@@ -7,27 +7,27 @@
       <div class="new-product-box">
         <h3>Edicion de producto</h3>
         <form
-          action="/product/edit?_method=PUT"
+          action="/product/<%=product.id%>/edit?_method=PUT"
           class="new-product-form"
           method="post"
           enctype="multipart/form-data"
         >
           <div class="new-product-div">
-            <label for="new-name">Nombre:</label>
+            <label for="name">Nombre:</label>
             <input
               type="text"
-              name="new-name"
-              id="new-name"
+              name="name"
+              id="name"
               value="<%=product.name%>"
             />
           </div>
-          <label for="new-description">Descripcion:</label>
+          <label for="description">Descripcion:</label>
           <textarea
             type="textarea"
             cols="40"
             rows="10"
-            name="new-description"
-            id="new-description"
+            name="description"
+            id="description"
             class="edit-product-text-area"
             
           ><%=product.description%></textarea>
@@ -36,8 +36,8 @@
             <input type="file" name="new-img" id="new-img" />
           </div>
           <div class="new-product-div">
-            <label for="new-categorie">Categoria</label>
-            <select name="new-categorie" id="new-categorie">
+            <label for="category">Categoria</label>
+            <select name="category" id="category">
               <option value="accion" <%=product.category=='accion'?'selected':''%>>Accion</option>
               <option value="aventura" <%=product.category=='aventura'?'selected':''%> >Aventura</option>
               <option value="arcade" <%=product.category=='arcade'?'selected':''%>>Arcade</option>
@@ -45,23 +45,23 @@
               <option value="estrategia"<%=product.category=='estrategia'?'selected':''%>>Estrategia</option>
             </select>
           </div>
-          <label for="new-console">Consolas compatibles:</label>
+          <label for="console">Consolas compatibles:</label>
           <div class="new-console-checkbox">
-            <input type="checkbox" name="new-console" id="ps4" value="ps4"  <%=product.consoleType=='ps4'?'checked':''%>/>
+            <input type="checkbox" name="console" id="ps4" value="ps4"  <%=product.consoleType=='ps4'?'checked':''%>/>
             <label for="ps4">PS4</label>
 
-            <input type="checkbox" name="new-console" id="ps5" value="ps5" <%=product.consoleType=='ps5'?'checked':''%> />
+            <input type="checkbox" name="console" id="ps5" value="ps5" <%=product.consoleType=='ps5'?'checked':''%> />
             <label for="ps5">PS5</label>
 
-            <input type="checkbox" name="new-console" id="xbox" value="xbox" <%=product.consoleType=='xbox'?'checked':''%>  />
+            <input type="checkbox" name="console" id="xbox" value="xbox" <%=product.consoleType=='xbox'?'checked':''%>  />
             <label for="xbox">XBox</label>
 
-            <input type="checkbox" name="new-console" id="Pc" value="Pc"  <%=product.consoleType=='Pc'?'checked':''%>/>
+            <input type="checkbox" name="console" id="Pc" value="Pc"  <%=product.consoleType=='Pc'?'checked':''%>/>
             <label for="Pc">Pc</label>
 
             <input
               type="checkbox"
-              name="new-console"
+              name="console"
               id="nintendo-switch"
               value="nintendo-switch"
               <%=product.consoleType=='nintendo-switch'?'checked':''%>
@@ -69,8 +69,8 @@
             <label for="nintendo-switch">Nintendo Switch</label>
           </div>
           <div class="new-product-div">
-            <label for="new-price">Precio:</label>
-            <input type="number" name="new-price" id="new-price" value="<%=product.value%>"/>
+            <label for="price">Precio:</label>
+            <input type="number" name="price" id="price" value="<%=product.value%>"/>
           </div>
           <div class="new-product-div">
             <label for="discount">Descuento:</label>

@@ -25,5 +25,7 @@ router.post('/new', upload.single('new-img'),productController.create)
 
 // Editar un producto
 router.get('/:id/edit',productController.showEdit)
+//
+router.put('/:id/edit',upload.single('new-img'),productController.update)
 
 module.exports = router;
