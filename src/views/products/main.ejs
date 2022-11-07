@@ -15,13 +15,15 @@
                             <h3>Los más vendidos</h3>
                         </div>
                         <div class="button">
-                            <a href="#">Ver todos</a>
+                            <a href="/best-selling">Ver todos</a>
                         </div>
                     </div>
                     <section class="best-selling">
+                        <% let count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section == 'sellers'){ %>
-                                <a href="/product/">
+                            <% if(products[i].section == 'sellers' && count<=3){ %>
+                                <% count++ %> 
+                                <a href="/product/<%=products[i].id%>">
                                 <div class="card">
                                     <img src="<%=products[i].imageUri%>" alt="imagen-game">
                                     <h4><%=products[i].name%></h4>
@@ -38,13 +40,15 @@
                             <h3>Recomendados</h3>
                         </div>
                         <div class="button">
-                            <a href="#">Ver todos</a>
+                            <a href="/recommended">Ver todos</a>
                         </div>
                     </div>
                     <section class="recommended">
+                        <% count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section == 'recommended'){ %>
-                                <a href="/product/">
+                            <% if(products[i].section == 'recommended' && count<=3){ %>
+                                <% count++ %> 
+                                <a href="/product/<%=products[i].id%>">
                                 <div class="card">
                                     <img src="<%=products[i].imageUri%>" alt="imagen-game">
                                     <h4><%=products[i].name%></h4>
@@ -61,13 +65,15 @@
                             <h3>Ofertas</h3>
                         </div>
                         <div class="button">
-                            <a href="#">Ver todos</a>
+                            <a href="/offers">Ver todos</a>
                         </div>
                     </div>
                     <section class="offers">
+                        <% count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section == 'offer'){ %>
-                                <a href="/product/">
+                            <% if(products[i].section == 'offer' && count<=3){ %>
+                                <% count++ %> 
+                                <a href="/product/<%=products[i].id%>">
                                 <div class="card">
                                     <img src="<%=products[i].imageUri%>" alt="imagen-game">
                                     <h4><%=products[i].name%></h4>

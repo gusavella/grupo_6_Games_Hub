@@ -148,6 +148,116 @@ const products = [
         imageUri:'/images/main-cards/mhw.jpeg',
         section: 'offer',
         tag: '/product/'
+    },
+    {
+        id:16,
+        name:'Crash Bandicoot Trilogy',
+        value:6.99,
+        consoleType:'XBOX',
+        discount:15,
+        imageUri:'/images/main-cards/crashbandicoot.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:17,
+        name:'Days Gone',
+        value:6.99,
+        consoleType:'PS5',
+        discount:15,
+        imageUri:'/images/main-cards/daysgone.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:18,
+        name:'Devil May Cry 5',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/devilmaycry5.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:19,
+        name:'Devil May Cry HD Collection',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/devilmaycryHD.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:20,
+        name:'Duke Nukem Forever',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/mhw.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:21,
+        name:'God of War',
+        value:6.99,
+        consoleType:'PS5',
+        discount:15,
+        imageUri:'/images/main-cards/godofwar.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:22,
+        name:'Monster Hunter World',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/mhw.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:23,
+        name:'GTA V',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/gtaV.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:24,
+        name:'Hollow Knight',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/hollowknight.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:25,
+        name:'Visage',
+        value:6.99,
+        consoleType:'PC',
+        discount:15,
+        imageUri:'/images/main-cards/visage.jpeg',
+        section: 'sellers',
+        tag: '/product/'
+    },
+    {
+        id:26,
+        name:'Sonic Frontiers',
+        value:6.99,
+        consoleType:'XBOX',
+        discount:15,
+        imageUri:'/images/main-cards/sonic.jpeg',
+        section: 'recommended',
+        tag: '/product/'
     }
  
 ]
