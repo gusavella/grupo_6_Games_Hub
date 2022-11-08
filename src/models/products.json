@@ -165,15 +165,14 @@
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
-  "id": 16,
+  "id": "16",
   "name": "Monster Hunter World",
-  "value": 6.99,
-  "consoleType": "xbox",
-  "discount": 15,
+  "value": "6.99",
+  "consoleType": "ps5",
+  "discount": "15",
   "imageUri": "/images/main-cards/mhw.jpeg",
-  "section": "",
-  "category": "deportes",
-  "description": " Prueba de texto par aun producto nuevo"
+  "category": "arcade",
+  "description": " Prueba de texto del formulario de edicion"
  },
  {
   "id": "17",
@@ -184,5 +183,6 @@
   "imageUri": "/images/games/1667783285444.jpeg",
   "category": "accion",
   "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
- }
+ 
+  }
 ]
