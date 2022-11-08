@@ -14,9 +14,13 @@ const controller = {
     res.render("products/newProduct.ejs", { tittle: "New Product" });
   },
   create: (req, res) => {
-    let game = req.body;
-    game.image = req.file.filename;
-    res.send(game);
+    let game = req.body; 
+    let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    game.imageUri = req.file.filename;
+    game.id = products[products.length - 1].id+1;
+    products.push (game);
+    fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
+    res.redirect('/')
   },
   showEdit: (req, res) => {
     let id = req.params.id;
