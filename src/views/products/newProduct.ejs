@@ -8,13 +8,13 @@
         <h3>Agregar nuevo producto</h3>
         <form action="/product/new" class="new-product-form" method="post" enctype="multipart/form-data">
           <div class="new-product-div">
-            <label for="new-name">Nombre:</label>
-            <input type="text" name="new-name" id="new-name" />
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" />
           </div>
-            <label for="new-description">Descripcion:</label>
+            <label for="description">Descripcion:</label>
             <textarea
-              name="new-description"
-              id="new-description"
+              name="description"
+              id="description"
               cols="30"
               rows="10"
             >Contenido
@@ -24,8 +24,8 @@
             <input type="file" name="new-img" id="new-img" />
           </div>
           <div class="new-product-div">
-          <label for="new-categorie">Categoria</label>
-          <select name="new-categorie" id="new-categorie">
+          <label for="category">Categoría</label>
+          <select name="category" id="category">
             <option value="accion">Accion</option>
             <option value="aventura">Aventura</option>
             <option value="arcade">Arcade</option>
@@ -33,32 +33,44 @@
             <option value="estrategia">Estrategia</option>
           </select>
           </div>
-          <label for="new-console">Consolas compatibles:</label>
-          <div class="new-console-checkbox">
-            <input type="checkbox" name="new-console" id="ps4" value="ps4" />
+          <label for="consoleType">Consolas compatibles:</label>
+          <div class="consoleType-checkbox">
+            <input type="checkbox" name="consoleType" id="ps4" value="ps4" />
             <label for="ps4">PS4</label>
 
-            <input type="checkbox" name="new-console" id="ps5" value="ps5" />
+            <input type="checkbox" name="consoleType" id="ps5" value="ps5" />
             <label for="ps5">PS5</label>
 
-            <input type="checkbox" name="new-console" id="xbox" value="xbox" />
+            <input type="checkbox" name="consoleType" id="xbox" value="xbox" />
             <label for="xbox">XBox</label>
 
-            <input type="checkbox" name="new-console" id="Pc" value="Pc" />
+            <input type="checkbox" name="consoleType" id="Pc" value="Pc" />
             <label for="Pc">Pc</label>
 
             <input
               type="checkbox"
-              name="new-console"
+              name="consoleType"
               id="nintendo-switch"
               value="nintendo-switch"
             />
             <label for="nintendo-switch">Nintendo Switch</label>
           </div>
           <div class="new-product-div">
-          <label for="new-price">Precio:</label>
-          <input type="number" name="new-price" id="new-price" />
+          <label for="value">Precio:</label>
+          <input type="number" name="value" id="value" />
             </div>
+            <div class="new-product-div">
+              <label for="discount">Descuento:</label>
+              <input type="number" name="discount" id="discount"/>
+            </div>
+            <div class="new-product-div">
+              <label for="section">Sección</label>
+              <select name="section" id="section">
+                <option value="on-sale">Oferta</option>
+                <option value="recommended">Recomendado</option>
+                <option value="best-sellers">Más Vendidos</option>
+              </select>
+              </div>
           <button class="new-product-button" type="submit">Crear</button>
         </form>
       </div>
