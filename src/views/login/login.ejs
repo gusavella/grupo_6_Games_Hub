@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6f834f16b5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <title>Login</title>
-</head>
+    <%- include('../partials/head')%>
+    
 <body class="body-login">
-  <%- include('partials/header')%>
+  <%- include('../partials/header')%>
     <main class="main-login">
         <div class="login-box">
             <h3>Login</h3>
@@ -29,9 +20,9 @@
                 <button class="login-button" type="submit">Ingresar</button>
                 <a href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a>
             </form>
-            <a class="register" href="#">Registrarse</a>
+            <a class="register" href="register">Registrarse</a>
         </div>
     </main>
-    <%- include('partials/footer')%>
+    <%- include('../partials/footer')%>
 </body>
 </html>

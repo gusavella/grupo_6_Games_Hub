@@ -2,10 +2,9 @@
   "name": "grupo_6_games_hub",
   "version": "1.0.0",
   "description": "La audiencia objetivo de este sitio web es general con deseo de comprar videojuegos y/o consolas de videojuegos.",
-
   "scripts": {
-    "start": "node ./bin/www",
-    "dev":"nodemon run ./bin/www"
+    "start": "node ./src/bin/www",
+    "dev": "nodemon run ./src/bin/www"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,9 @@
     "ejs": "^3.1.8",
     "express": "4.18.1",
     "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
     "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.20"
   },
   "devDependencies": {

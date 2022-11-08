@@ -1,0 +1,43 @@
+[
+    {
+        "id":1,
+        "name":"Need for speed heat",
+        "value":9.99,
+        "consoleType":"PS4",
+        "discount":25,
+        "imageUri":"/images/games/need_for_speed_heat.jpg",
+        "section": "none",
+       " tag": "/product/"
+    },
+    {
+        "id":2,
+        "name":"Dota 2",
+        "value":2.99,
+        "consoleType":"PS5",
+        "discount":20,
+        "imageUri":"/images/games/dota-2.jpg",
+        "section": "none",
+       " tag": "/product/"
+    },
+    {
+        "id":3,
+        "name":"Forza horizon 5",
+        "value":4567,
+        "consoleType":"XBOX ONE",
+        "discount":15,
+        "imageUri":"/images/games/forza-horizon-5.jpg",
+        "section": "none",
+       " tag": "/product/"
+    },
+   
+    {
+        "id": "17",
+        "name": "Juego de GamesHub",
+        "value": "6.99",
+        "consoleType": "xbox",
+        "discount": "17",
+        "imageUri": "/images/games/1667783285444.jpeg",
+        "category": "accion",
+        "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
+       }
+]

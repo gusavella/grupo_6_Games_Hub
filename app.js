@@ -2,18 +2,19 @@ let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');
 let logger = require('morgan');
 
-let indexRouter = require('./routes/index');
-let cartRouter = require('./routes/cart');
-let loginRouter = require('./routes/login');
-let registerRouter = require('./routes/register');
-let productRouter = require('./routes/product');
+let indexRouter = require('./src/routes/index');
+let cartRouter = require('./src/routes/cart');
+let loginRouter = require('./src/routes/login');
+let registerRouter = require('./src/routes/register');
+let productRouter = require('./src/routes/product');
 
 let app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/src/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -21,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
+
+app.use(methodOverride('_method')); 
 
 app.use('/', indexRouter);
 app.use('/cart', cartRouter);

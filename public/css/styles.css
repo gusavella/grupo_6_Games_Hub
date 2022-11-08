@@ -98,6 +98,11 @@ footer section{
         display: flex;
         justify-content: space-around;
     }
+
+    .fa-magnifying-glass:before, .fa-search:before {
+        position: relative;
+        right: 5px;
+    }
     /* ----------------------------------HEADER---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
@@ -163,7 +168,6 @@ footer section{
     background-color:rgba(0,0,0,0.4);
     padding: 25px;
     border-radius: 5px;
-    height: 70vh;
 }
 
 .login-box h3 {
@@ -921,3 +925,60 @@ h3{
 }
 /* --------------------------- not-found page --------------------------- */
 
+/* --------------------------- new product --------------------------- */
+
+.new-product-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.new-product-box {
+    text-align: center;
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 5px;
+    width: 85vw;
+    max-width: 1000px;
+
+}
+
+.new-product-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.new-product-box h3 {
+    border-bottom: solid 1px white;
+}
+
+.new-product-box select {
+    border-radius: 5px;
+}
+
+.new-product-box input {
+    border-radius: 5px;
+}
+.edit-product-text-area{
+    width: 100%;
+    
+}
+.new-product-button {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 150px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+}
+
+.new-product-button:hover {
+    background-color: #183153;
+    color: #1AADB4;
+}
