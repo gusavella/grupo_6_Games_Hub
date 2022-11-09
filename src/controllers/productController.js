@@ -31,7 +31,7 @@ const controller = {
   update: (req, res) => {
     let productOld = products.find(product=>product.id==req.params.id)
     const editedGame={
-      id:req.params.id,
+      id:parseInt(req.params.id),
       name:req.body.name,
       value:req.body.price,
       consoleType:req.body.console,
