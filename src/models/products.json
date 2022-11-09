@@ -95,7 +95,7 @@
   "discount": 15,
   "imageUri": "/images/main-cards/cs-anthology.jpg",
   "section": "recommended",
-  "caregory": "deportes",
+  "category": "deportes",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
@@ -106,7 +106,7 @@
   "discount": 15,
   "imageUri": "/images/main-cards/doom-eternal.jpeg",
   "section": "recommended",
-  "caregory": "estrategia",
+  "category": "estrategia",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
@@ -117,7 +117,7 @@
   "discount": 15,
   "imageUri": "/images/main-cards/cod-infinite.jpg",
   "section": "recommended",
-  "caregory": "estrategia",
+  "category": "estrategia",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
@@ -128,7 +128,7 @@
   "discount": 15,
   "imageUri": "/images/main-cards/captain-tsubasa.jpeg",
   "section": "offer",
-  "caregory": "arcade",
+  "category": "arcade",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
@@ -139,7 +139,7 @@
   "discount": 15,
   "imageUri": "/images/main-cards/dbz-kakarot.jpeg",
   "section": "",
-  "caregory": "aventura",
+  "category": "aventura",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
@@ -165,7 +165,7 @@
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
-  "id": "16",
+  "id": 16,
   "name": "Monster Hunter World",
   "value": "6.99",
   "consoleType": "ps5",
@@ -175,7 +175,7 @@
   "description": " Prueba de texto del formulario de edicion"
  },
  {
-  "id": "17",
+  "id": 17,
   "name": "Juego de GamesHub",
   "value": "6.99",
   "consoleType": "xbox",
@@ -183,6 +183,5 @@
   "imageUri": "/images/games/1667783285444.jpeg",
   "category": "accion",
   "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
- 
-  }
+ }
 ]
