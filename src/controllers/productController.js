@@ -47,7 +47,7 @@ const controller = {
     }
 });
 fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
-res.redirect('/product/17/edit')
+res.redirect(`/product/${req.params.id}/edit`)
  
   },
 };
