@@ -2,23 +2,23 @@
  {
   "id": 1,
   "name": "Need for speed heat",
-  "value": 9.99,
+  "value": "9.99",
   "consoleType": "ps4",
-  "discount": 25,
+  "discount": "25",
+  "section": "recommended",
   "imageUri": "/images/games/need_for_speed_heat.jpg",
-  "section": "none",
-  "category": "Deportes",
+  "category": "accion",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
   "id": 2,
   "name": "Dota 2",
-  "value": 2.99,
+  "value": "2.99",
   "consoleType": "ps5",
-  "discount": 20,
+  "discount": "20",
+  "section": "best-sellers",
   "imageUri": "/images/games/dota-2.jpg",
-  "section": "none",
-  "category": "Aventura",
+  "category": "accion",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
@@ -165,23 +165,35 @@
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
-  "id": 16,
+  "id": "16",
   "name": "Monster Hunter World",
   "value": "6.99",
   "consoleType": "ps5",
   "discount": "15",
+  "section": "recommended",
   "imageUri": "/images/main-cards/mhw.jpeg",
   "category": "arcade",
   "description": " Prueba de texto del formulario de edicion"
  },
  {
-  "id": 17,
+  "id": "17",
   "name": "Juego de GamesHub",
   "value": "6.99",
   "consoleType": "xbox",
-  "discount": "17",
-  "imageUri": "/images/games/1667783285444.jpeg",
+  "discount": "30",
+  "section": "best-sellers",
+  "imageUri": "/images/games/1667956557086.jpg",
   "category": "accion",
   "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
+ },
+ {
+  "id": 18,
+  "name": "Juego de prueba POST",
+  "value": "150",
+  "consoleType": "xbox",
+  "discount": "20",
+  "imageUri": "/images/games/1667952651797.jpeg",
+  "category": "aventura",
+  "description": "Contenido\r\n            contenido dela descripcion del juego de prueba"
  }
 ]

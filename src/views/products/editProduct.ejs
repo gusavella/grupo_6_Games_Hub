@@ -6,6 +6,7 @@
     <main class="new-product-main">
       <div class="new-product-box">
         <h3>Edicion de producto</h3>
+        <img src=" <%= product.imageUri %> " alt="imagen de juego" width="120px" height="150px">
         <form
           action="/product/<%=product.id%>/edit?_method=PUT"
           class="new-product-form"
@@ -76,6 +77,14 @@
             <label for="discount">Descuento:</label>
             <input type="number" name="discount" id="discount" value="<%=product.discount%>"/>
           </div>
+          <div class="new-product-div">
+            <label for="section">Sección</label>
+            <select name="section" id="section">
+              <option value="on-sale" <%=product.section=='on-sale'?'selected':''%>>Oferta</option>
+              <option value="recommended"  <%=product.section=='recommended'?'selected':''%>>Recomendado</option>
+              <option value="best-sellers" <%=product.section=='best-sellers'?'selected':''%>>Más Vendidos</option>
+            </select>
+            </div>
           <button class="new-product-button" type="submit">Editar</button>
         </form>
       </div>

@@ -16,7 +16,7 @@ const controller = {
   create: (req, res) => {
     let game = req.body; 
     let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    game.imageUri = req.file.filename;
+    game.imageUri = '/images/games/'+ req.file.filename;
     game.id = products[products.length - 1].id+1;
     products.push (game);
     fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
@@ -36,6 +36,7 @@ const controller = {
       value:req.body.price,
       consoleType:req.body.console,
       discount:req.body.discount,
+      section:req.body.section,
       imageUri:req.file?'/images/games/'+req.file.filename:productOld.imageUri,
       category:req.body.category,
       description:req.body.description
