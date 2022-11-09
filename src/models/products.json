@@ -167,13 +167,12 @@
  {
   "id": 16,
   "name": "Monster Hunter World",
-  "value": 6.99,
-  "consoleType": "xbox",
-  "discount": 15,
+  "value": "6.99",
+  "consoleType": "ps5",
+  "discount": "15",
   "imageUri": "/images/main-cards/mhw.jpeg",
-  "section": "",
-  "category": "deportes",
-  "description": " Prueba de texto par aun producto nuevo"
+  "category": "arcade",
+  "description": " Prueba de texto del formulario de edicion"
  },
  {
   "id": 17,
@@ -184,27 +183,5 @@
   "imageUri": "/images/games/1667783285444.jpeg",
   "category": "accion",
   "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
- },
- {
-  "name": "lol",
-  "description": "Contenido jejejej\r\n            ",
-  "category": "aventura",
-  "consoleType": "Pc",
-  "value": "1000",
-  "discount": "10",
-  "section": "recommended",
-  "imageUri": "1667872805202.jpg",
-  "id": 18
- },
- {
-  "name": "lol",
-  "description": "Contenido jejejej\r\n            ",
-  "category": "aventura",
-  "consoleType": "Pc",
-  "value": "1000",
-  "discount": "10",
-  "section": "recommended",
-  "imageUri": "1667872957603.jpg",
-  "id": 19
  }
 ]
