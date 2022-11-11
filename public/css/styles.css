@@ -973,7 +973,7 @@ h3{
     border-radius: 5px;
 }
 .edit-product-text-area{
-    width: 100%;
+    width: 70%;
     
 }
 .new-product-button {
@@ -990,4 +990,12 @@ h3{
 .new-product-button:hover {
     background-color: #183153;
     color: #1AADB4;
+}
+
+.edit-product-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }

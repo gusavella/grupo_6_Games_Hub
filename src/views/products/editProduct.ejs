@@ -9,11 +9,11 @@
         <img src=" <%= product.imageUri %> " alt="imagen de juego" width="120px" height="150px">
         <form
           action="/product/<%=product.id%>/edit?_method=PUT"
-          class="new-product-form"
+          class="edit-product-form"
           method="post"
           enctype="multipart/form-data"
         >
-          <div class="new-product-div">
+          <div class="edit-product-div">
             <label for="name">Nombre:</label>
             <input
               type="text"
@@ -22,6 +22,7 @@
               value="<%=product.name%>"
             />
           </div>
+          <div class="edit-product-div">
           <label for="description">Descripcion:</label>
           <textarea
             type="textarea"
@@ -32,11 +33,12 @@
             class="edit-product-text-area"
             
           ><%=product.description%></textarea>
-          <div class="new-product-div">
+          </div>
+          <div class="edit-product-div">
             <label for="new-img">Imagen:</label>
             <input type="file" name="new-img" id="new-img" />
           </div>
-          <div class="new-product-div">
+          <div class="edit-product-div">
             <label for="category">Categoria</label>
             <select name="category" id="category">
               <option value="accion" <%=product.category=='accion'?'selected':''%>>Accion</option>
@@ -46,6 +48,7 @@
               <option value="estrategia"<%=product.category=='estrategia'?'selected':''%>>Estrategia</option>
             </select>
           </div>
+          <div class="edit-product-div">
           <label for="console">Consolas compatibles:</label>
           <div class="new-console-checkbox">
             <input type="checkbox" name="console" id="ps4" value="ps4"  <%=product.consoleType=='ps4'?'checked':''%>/>
@@ -69,11 +72,12 @@
             />
             <label for="nintendo-switch">Nintendo Switch</label>
           </div>
-          <div class="new-product-div">
+          </div>
+          <div class="edit-product-div">
             <label for="price">Precio:</label>
             <input type="number" name="price" id="price" value="<%=product.value%>"/>
           </div>
-          <div class="new-product-div">
+          <div class="edit-product-div">
             <label for="discount">Descuento:</label>
             <input type="number" name="discount" id="discount" value="<%=product.discount%>"/>
           </div>
