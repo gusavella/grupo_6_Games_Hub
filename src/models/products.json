@@ -196,5 +196,16 @@
   "imageUri": "/images/games/1667952651797.jpeg",
   "category": "aventura",
   "description": "Contenido\r\n            contenido dela descripcion del juego de prueba fdsajkkjndfjksd"
+ },
+ {
+  "name": "juego nuevo 1",
+  "description": "Contenido\r\n            contenido de prueba x,y,z",
+  "category": "arcade",
+  "consoleType": "Pc",
+  "value": "53",
+  "discount": "4",
+  "section": "recommended",
+  "imageUri": "/images/games/1667957983965.jpg",
+  "id": 19
  }
 ]
