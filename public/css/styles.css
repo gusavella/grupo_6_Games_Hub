@@ -518,7 +518,23 @@ a{
         width: 70%;
      }
 }
-/* --------------------------- MAIN --------------------------- */
+/* --------------------------- MAIN ---------------------------------- */
+
+/* --------------------------- Category Pages ------------------------ */
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.adds {
+    width: 25%;
+}
+
+.main-container .container-selling {
+    width: 75%;
+}
+
 /* --------------------------- productCart --------------------------- */
 .cart-container{
     display:flex;

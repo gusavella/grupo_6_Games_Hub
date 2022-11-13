@@ -195,7 +195,7 @@ const products = [
         value:6.99,
         consoleType:'PC',
         discount:15,
-        imageUri:'/images/main-cards/mhw.jpeg',
+        imageUri:'/images/main-cards/dukenukem.jpeg',
         section: 'sellers',
         tag: '/product/'
     },

@@ -1,6 +1,9 @@
 const { render } = require("ejs");
+const fs = require("fs");
 const path = require("path");
-let products = require('../models/product')
+
+const productsFilePath = path.join(__dirname, "../models/products.json");
+let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const controlador = {
   index: (req, res) => {
