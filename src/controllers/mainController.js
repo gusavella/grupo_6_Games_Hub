@@ -17,6 +17,9 @@ const controlador = {
   },
   offer: (req,res) => {
     res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
+  },
+  allProducts: (req,res) => {
+    res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
   }
 };
 

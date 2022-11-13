@@ -400,12 +400,8 @@ a{
     height: 350px;
     margin: 20px;
     justify-content: space-between;
-    background-color: #D9D9D9;
+    background-color: black;
     transition: all 0.4s;
-}
-
-.card p{
-    color: green;
 }
 
 .card img {
@@ -423,13 +419,15 @@ a{
 
 .card .price a {
     text-decoration: none;
-    color: black;
+    color: #843890;
     transition: all 0.4s;
 }
 
 .card:hover .price a {
     border-top: 1px solid white;
     color: white;
+    text-shadow: 3px 3px 20px #ff99cc,
+    -2px 1px 30px #ff99cc;
 }
 
 .best-selling,
