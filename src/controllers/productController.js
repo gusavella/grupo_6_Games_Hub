@@ -8,7 +8,9 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
   product: (req, res) => {
-    res.render("products/productDetail", { tittle: "Product" });
+    const id = req.params.id;
+    const product = products.find(product => product.id == id);
+    res.render("products/productDetail", { tittle: "Product" , product: product});
   },
   newProduct: (req, res) => {
     res.render("products/newProduct.ejs", { tittle: "New Product" });

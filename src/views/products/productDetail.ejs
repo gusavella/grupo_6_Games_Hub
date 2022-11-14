@@ -6,28 +6,18 @@
   <body>
     <%- include('../partials/header') %>
     <main class="product-main">
-      <iframe
-        width="100%"
-        height="200"
-        src="https://www.youtube.com/embed/6nUvWkD8rAE"
-        title="Terraria – Update 1.4.3 Official Trailer"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
-      </iframe>
       <div class="product-detail-container">
       <div class="logo">
-        <img src="/images/games/terraria-logo.jpg" alt="Terraria Logo" />
-        <h1>Terraria</h1>
+        <img src="<%= product.imageUri %>" alt="Terraria Logo" />
+        <h1><%= product.name %></h1>
       </div>
 
       <section class="product-buy">
         <div class="product-buy-info">
           <div class="product-prices">
-            <p class="product-discount">-50%</p>
-            <p class="product-final-price">4.99$</p>
-            <p class="product-price">9.99$</p>
+            <p class="product-discount"><%= product.discount %></p>
+            <p class="product-final-price"><%= product.discountValue %></p>
+            <p class="product-price"><%= product.value %></p>
           </div>
           <a class="product-addcar" href="#"
             >Añadir al carrito<i class="fa-solid fa-cart-shopping"></i
@@ -37,20 +27,7 @@
     </div>
       <section class="product-info">
         <h2>Sobre este juego</h2>
-        <h3>¡Cava, lucha y construye!</h3>
-        <p>
-          El mundo mismo está al alcance de tu mano mientras luchas por la
-          supervivencia, la fortuna y la gloria. Adéntrate en extensiones
-          cavernosas, busca enemigos cada vez más grandes para poner a prueba tu
-          temple en combate o construye tu propia ciudad.
-        </p>
-        <h3>¡En el mundo de Terraria, la elección es tuya!</h3>
-        <p>
-          Combinando elementos de los juegos de acción clásicos con la libertad
-          de la creatividad estilo sandbox, Terraria es una experiencia de juego
-          única en la que tanto el viaje como el destino son tan únicos como los
-          propios jugadores.
-        </p>
+        <p><%= product.description %></p>
       </section>
 
       <div id="product-slider">
