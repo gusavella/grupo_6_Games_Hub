@@ -13,7 +13,7 @@ const controller = {
     res.render("products/productDetail", { tittle: "Product" , product: product});
   },
   newProduct: (req, res) => {
-    res.render("products/newProduct.ejs", { tittle: "New Product" });
+    res.render("products/newProduct", { tittle: "New Product" });
   },
   create: (req, res) => {
     let game = req.body; 

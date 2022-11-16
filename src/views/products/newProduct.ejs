@@ -6,12 +6,13 @@
     <main class="new-product-main">
       <div class="new-product-box">
         <h3>Agregar nuevo producto</h3>
+        <div class="new-product-form-box">
         <form action="/product/new" class="new-product-form" method="post" enctype="multipart/form-data">
           <div class="new-product-div">
-            <label for="name">Nombre:</label>
+            <label for="name">Nombre: </label>
             <input type="text" name="name" id="name" />
           </div>
-            <label for="description">Descripcion:</label>
+            <label for="description">Descripcion: </label>
             <textarea
               name="description"
               id="description"
@@ -20,11 +21,11 @@
             >Contenido
             </textarea>
           <div class="new-product-div">
-            <label for="new-img">Imagen:</label>
+            <label for="new-img">Imagen: </label>
             <input type="file" name="new-img" id="new-img" />
           </div>
           <div class="new-product-div">
-          <label for="category">Categoría</label>
+          <label for="category">Categoría: </label>
           <select name="category" id="category">
             <option value="accion">Accion</option>
             <option value="aventura">Aventura</option>
@@ -33,7 +34,7 @@
             <option value="estrategia">Estrategia</option>
           </select>
           </div>
-          <label for="consoleType">Consolas compatibles:</label>
+          <label for="consoleType">Consolas compatibles: </label>
           <div class="consoleType-checkbox">
             <input type="checkbox" name="consoleType" id="ps4" value="ps4" />
             <label for="ps4">PS4</label>
@@ -56,15 +57,15 @@
             <label for="nintendo-switch">Nintendo Switch</label>
           </div>
           <div class="new-product-div">
-          <label for="value">Precio:</label>
+          <label for="value">Precio: </label>
           <input type="number" name="value" id="value" />
             </div>
             <div class="new-product-div">
-              <label for="discount">Descuento:</label>
-              <input type="number" name="discount" id="discount"/>
+              <label for="discount">Descuento: </label>
+              <input type="number" name="discountValue" id="discount"/>
             </div>
             <div class="new-product-div">
-              <label for="section">Sección</label>
+              <label for="section">Sección: </label>
               <select name="section" id="section">
                 <option value="on-sale">Oferta</option>
                 <option value="recommended">Recomendado</option>
@@ -73,6 +74,7 @@
               </div>
           <button class="new-product-button" type="submit">Crear</button>
         </form>
+      </div>
       </div>
     </main>
     <%- include('../partials/footer')%>
