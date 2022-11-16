@@ -1,2 +1,20 @@
 [
+ {
+  "names": "Manuel",
+  "surnames": "Belgrano",
+  "password": "bandera",
+  "phone": "12345678",
+  "email": "manu@gmail.com",
+  "adress": "argentina 123",
+  "id": 1
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "caballo",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "adress": "cordillera 456",
+  "id": 2
+ }
 ]
