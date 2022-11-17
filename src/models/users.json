@@ -5,6 +5,7 @@
   "password": "bandera",
   "phone": "12345678",
   "email": "manu@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
   "adress": "argentina 123",
   "id": 1
  },
@@ -14,6 +15,7 @@
   "password": "caballo",
   "phone": "45678910",
   "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
   "adress": "cordillera 456",
   "id": 2
  },
@@ -23,6 +25,7 @@
   "password": "4564654654",
   "phone": "456465465",
   "email": "jajaj@jajajaj",
+  "image": "/images/users/1667867621671.jpeg",
   "adress": "alla 123",
   "id": 3
  }
