@@ -52,6 +52,15 @@ fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
 res.redirect(`/product/${req.params.id}/edit`)
  
   },
+  delete:(req,res)=>{
+   
+      const id = req.params.id;
+      const finalProducts=products.filter(product=>product.id!=id);
+      fs.writeFileSync(productsFilePath,JSON.stringify(finalProducts,null," "));
+      res.redirect('/')
+
+ 
+  }
 };
 
 module.exports = controller;
