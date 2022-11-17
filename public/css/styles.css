@@ -1018,17 +1018,33 @@ h3{
     align-items: flex-start;
 }
 
+.new-product-form-box {
+    margin: auto;
+    max-width: 556px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .new-product-box h3 {
     border-bottom: solid 1px white;
 }
 
 .new-product-box select {
     border-radius: 5px;
+    margin: 5px;
 }
 
 .new-product-box input {
     border-radius: 5px;
+    margin: 5px;
 }
+.new-product-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .edit-product-text-area{
     width: 70%;
     
@@ -1049,10 +1065,26 @@ h3{
     color: #1AADB4;
 }
 
-.edit-product-div {
+.edit-product-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+}
+
+.edit-product-form-box {
+    margin: auto;
+    max-width: 556px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-product-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     margin: auto;
 }
