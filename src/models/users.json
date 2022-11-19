@@ -2,11 +2,11 @@
  {
   "names": "Manuel",
   "surnames": "Belgrano",
-  "password": "bandera",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "12345678",
   "email": "manu@gmail.com",
   "image": "/images/users/1667867621671.jpeg",
-  "adress": "argentina 123",
+  "adress": "argentina123",
   "id": 1
  },
  {
