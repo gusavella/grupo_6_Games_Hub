@@ -3,11 +3,11 @@
   "id": 1,
   "name": "Mortal Kombat XL",
   "value": "9.99",
-  "consoleType": "ps5",
+  "consoleType": "nintendo-switch",
   "discount": "25",
-  "section": "on-sale",
+  "section": "recommended",
   "imageUri": "/images/main-cards/mkxl.jpeg",
-  "category": "aventura",
+  "category": "deportes",
   "description": "Mortal Kombat XL es una edición mejorada y revisada de Mortal Kombat X, que incluirá el juego principal y los contenidos del Kombat Pack 1 y 2, además de futuros paquetes como Apocalypse, y los skins de los packs de trajes y apariencias lanzados con anterioridad."
  },
  {

@@ -4,6 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 let logger = require('morgan');
+const expressSession = require("express-session");
 
 let indexRouter = require('./src/routes/index');
 let cartRouter = require('./src/routes/cart');
@@ -22,8 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
-
 app.use(methodOverride('_method')); 
+app.use(expressSession({secret: "secret",
+resave: false,
+saveUninitialized: true}));
 
 app.use('/', indexRouter);
 app.use('/cart', cartRouter);
