@@ -33,7 +33,7 @@ const User={
         userData.id=this.generateId()
         allUsers.push(userData)
         fs.writeFileSync(this.fileName,JSON.stringify(allUsers,null,' '))
-        return true
+        return userData
     },
     delete: function(id){
         let allUsers = this.findAll()
