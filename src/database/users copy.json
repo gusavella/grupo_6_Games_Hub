@@ -30,13 +30,33 @@
   "id": 3
  },
  {
-  "names": "peppa",
-  "surnames": "pig",
+  "names": "Jose",
+  "surnames": "San Martin",
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "45678910",
-  "email": "pepaPig@gmail.com",
+  "email": "pepito@gmail.com",
   "image": "/images/users/1667867621671.jpeg",
-  "adress": "cordillera 789",
+  "adress": "cordillera 456",
   "id": 4
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "cordillera 456",
+  "id": 5
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "cordillera 456",
+  "id": 6
  }
 ]
