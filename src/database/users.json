@@ -38,5 +38,15 @@
   "image": "/images/users/1667867621671.jpeg",
   "adress": "cordillera 789",
   "id": 4
+ },
+ {
+  "names": "pedro",
+  "surnames": "perez",
+  "password": "$2a$10$lndNorZs.5jMAMbIsS45YeyoiTy9Hil9ZIGJqGRcw/XFFAnXHop/m",
+  "phone": "123456789",
+  "email": "pperez@gmail.com",
+  "adress": "calle falsa 123",
+  "id": 5
  }
+
 ]
