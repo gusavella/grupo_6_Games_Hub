@@ -47,6 +47,14 @@
   "email": "pperez@gmail.com",
   "adress": "calle falsa 123",
   "id": 5
+ },
+ {
+  "names": "jaime",
+  "surnames": "puentes",
+  "password": "$2a$10$2arIBpoH2okhQh9CVqQgI.HvXZdcIglviXdgme9R0VmIBMySUlhL6",
+  "phone": "212121212121",
+  "email": "jp@gmail.com",
+  "adress": "colombia 123",
+  "id": 6
  }
-
 ]
