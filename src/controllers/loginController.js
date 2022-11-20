@@ -19,7 +19,7 @@ const controller = {
       users.forEach((user) => {
         if(user.email == userLoged.email && bcrypt.compareSync(userLoged.password,user.password)){
           console.log('usuario encontrado y validado el password..excelente')
-          res.send(userLoged).status(200)
+          res.redirect('/')
         } else {
           res.render("login/login.ejs",{tittle:'Login'});
         }
