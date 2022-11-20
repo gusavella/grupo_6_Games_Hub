@@ -75,6 +75,8 @@ footer p{
 footer section{
     display:none;
 }
+
+
 /* ----------------------------------FOOTER---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */
@@ -228,6 +230,10 @@ footer section{
 .login-button:hover {
     background-color: #183153;
     color: #1AADB4;
+}
+
+.login-validation-error{
+    color: red;
 }
 @media (min-width: 769px) {
     .login-box {
