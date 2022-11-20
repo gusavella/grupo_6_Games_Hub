@@ -4,6 +4,6 @@ const loginController =require('../controllers/loginController');
 
 router.get('/',loginController.login)
 
-router.post('/',loginController.checkLogin)
+router.post('/',loginController.loginProcess)
 
 module.exports = router;

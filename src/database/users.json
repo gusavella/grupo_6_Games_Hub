@@ -12,7 +12,7 @@
  {
   "names": "Jose",
   "surnames": "San Martin",
-  "password": "caballo",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "45678910",
   "email": "pepito@gmail.com",
   "image": "/images/users/1667867621671.jpeg",
@@ -22,7 +22,7 @@
  {
   "names": "Pedro",
   "surnames": "alvarez",
-  "password": "4564654654",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "456465465",
   "email": "jajaj@jajajaj",
   "image": "/images/users/1667867621671.jpeg",
