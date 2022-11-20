@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt= require("bcryptjs")
 const User={
     fileName:  path.join(__dirname, "../database/users.json"),
     getData :   function(){
@@ -31,6 +32,7 @@ const User={
     create: function(userData){
         let allUsers = this.findAll()
         userData.id=this.generateId()
+        userData.password = encryptPass=bcrypt.hashSync(userData.password,10)
         allUsers.push(userData)
         fs.writeFileSync(this.fileName,JSON.stringify(allUsers,null,' '))
         return userData
