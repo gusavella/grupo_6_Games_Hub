@@ -24,9 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
 app.use(methodOverride('_method')); 
-app.use(expressSession({secret: "secret",
-resave: false,
-saveUninitialized: true}));
+app.use(expressSession({secret: "secret",resave: false,saveUninitialized: false}));
 
 app.use('/', indexRouter);
 app.use('/cart', cartRouter);

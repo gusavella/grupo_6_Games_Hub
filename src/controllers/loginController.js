@@ -7,19 +7,37 @@ const User = require("../models/Users")
 
 const controller = {
     login: (req, res) => {
+      console.log(req.session)
       res.render("login/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
-      let userLoged = {...req.body}
-      
-      users.forEach((user) => {
-        if(user.email == userLoged.email && bcrypt.compareSync(userLoged.password,user.password)){
-          console.log('usuario encontrado y validado el password..excelente')
-          res.redirect('/')
-        } else {
-          res.render("login/login.ejs",{tittle:'Login'});
+    
+      let userToLogin = User.findByField('email',req.body.email)
+
+      if(userToLogin){
+        let isOkPassword = bcrypt.compareSync(req.body.password,userToLogin.password)
+        if(isOkPassword){
+          delete userToLogin.password
+          req.session.userLogged=userToLogin
+            return res.redirect('/')
         }
-      })
+        return res.render('login/login.ejs',{ tittle:'Login',
+                                  errors:{
+                                    password:{
+                                      msg:'Credenciales invalidas - password'
+                                    }
+                                  }
+                  })
+      }
+
+      return res.render('login/login.ejs',{ tittle:'Login',
+                                  errors:{
+                                    email:{
+                                      msg:'Credenciales invalidas - email '
+                                    }
+                                  }
+                  })
+
     }
    };
   
