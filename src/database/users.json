@@ -40,13 +40,21 @@
   "id": 4
  },
  {
-  "names": "pedro",
+  "names": "pablo",
   "surnames": "perez",
   "password": "$2a$10$lndNorZs.5jMAMbIsS45YeyoiTy9Hil9ZIGJqGRcw/XFFAnXHop/m",
   "phone": "123456789",
   "email": "pperez@gmail.com",
   "adress": "calle falsa 123",
   "id": 5
+ },
+ {
+  "names": "jesus",
+  "surnames": "alvarez",
+  "password": "$2a$10$2arIBpoH2okhQh9CVqQgI.HvXZdcIglviXdgme9R0VmIBMySUlhL6",
+  "phone": "212121212121",
+  "email": "jp@gmail.com",
+  "adress": "colombia 123",
+  "id": 6
  }
-
 ]
