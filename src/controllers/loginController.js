@@ -7,11 +7,10 @@ const User = require("../models/Users")
 
 const controller = {
     login: (req, res) => {
-      console.log(req.session)
+      console.log(req.cookies.test)
       res.render("login/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
-    
       let userToLogin = User.findByField('email',req.body.email)
 
       if(userToLogin){
@@ -19,6 +18,11 @@ const controller = {
         if(isOkPassword){
           delete userToLogin.password
           req.session.userLogged=userToLogin
+          if(req.body.rememberCheck){
+            res.cookie('userEmail',`${userToLogin.email}`,{maxAge:1000*60})
+          }
+         
+          console.log(req.session)
             return res.redirect('/')
         }
         return res.render('login/login.ejs',{ tittle:'Login',
@@ -38,6 +42,10 @@ const controller = {
                                   }
                   })
 
+    },
+    logout: (req,res) => {
+      req.session.destroy()
+      return res.redirect('/')
     }
    };
   
