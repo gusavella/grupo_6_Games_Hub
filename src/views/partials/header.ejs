@@ -8,7 +8,7 @@
         <li><a class="header-link" href="/login">Login</a></li>
         <li><a class="header-link" href="/register">Register</a></li>
         <% if (locals.isLogged==true){%>
-          <li><%=locals.userLogged.names%></li>
+          <li class="header-name"><%=locals.userLogged.names%></li>
         <%}%>
         <li>
           <a class="header-icon" href="/cart"

@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt= require("bcryptjs")
+const {	validationResult} = require('express-validator');
 const User = require("../models/Users")
 
  let users = User.findAll();
@@ -11,6 +12,15 @@ const controller = {
       res.render("login/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
+
+      const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('login/login.ejs', {tittle:'Login',
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
       let userToLogin = User.findByField('email',req.body.email)
 
       if(userToLogin){
@@ -44,6 +54,7 @@ const controller = {
 
     },
     logout: (req,res) => {
+      res.clearCookie('userEmail')
       req.session.destroy()
       return res.redirect('/')
     }
