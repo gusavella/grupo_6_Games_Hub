@@ -216,7 +216,7 @@
  },
  {
   "id": 19,
-  "name": "Devil May Cry HD Collection",
+  "name": "Devil May Cry HD",
   "description": "Comercializada en Xbox 360 y PlayStation 3 en 2012, Devil May Cry HD Collection es la versión diseñada para la actual generación de consolas y plataformas. Devil May Cry HD Collection llegará a Xbox One, PS4 y PC, e incluirá Devil May Cry, Devil May Cry 2 y Devil May Cry 3: Dante’s Awakening – Special Edition, así como gráficos en alta definición y 60 frames por segundo.",
   "category": "arcade",
   "consoleType": "Pc",
@@ -396,7 +396,7 @@
  },
  {
   "id": 34,
-  "name": "SpiderMan Miles Morales",
+  "name": "Miles Morales",
   "discountValue": "5.94$",
   "value": 6.99,
   "consoleType": "nintendo-switch",
