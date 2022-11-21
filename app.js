@@ -12,6 +12,8 @@ let loginRouter = require('./src/routes/login');
 let registerRouter = require('./src/routes/register');
 let productRouter = require('./src/routes/product');
 
+let userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
+
 let app = express();
 
 // view engine setup
@@ -25,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
 app.use(methodOverride('_method')); 
 app.use(expressSession({secret: "secret",resave: false,saveUninitialized: false}));
+app.use(userLoggedMiddleware);
 
 app.use('/', indexRouter);
 app.use('/cart', cartRouter);
