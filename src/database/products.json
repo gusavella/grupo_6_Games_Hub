@@ -13,7 +13,7 @@
  {
   "id": 2,
   "name": "Quake 4",
-  "discountValue": "2.39$",
+  "discountValue": "2.39",
   "value": 2.99,
   "consoleType": "Pc",
   "discount": "20",
@@ -25,7 +25,7 @@
  {
   "id": 3,
   "name": "Human Fall Flat",
-  "discountValue": "7.49$",
+  "discountValue": "7.49",
   "value": 9.99,
   "consoleType": "xbox",
   "discount": "15",
@@ -37,7 +37,7 @@
  {
   "id": 4,
   "name": "Terraria",
-  "discountValue": "10.19$",
+  "discountValue": "10.19",
   "value": 11.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -49,7 +49,7 @@
  {
   "id": 5,
   "name": "Cyberpunk 2077",
-  "discountValue": "7.49$",
+  "discountValue": "7.49",
   "value": 9.99,
   "consoleType": "xbox",
   "discount": "15",
@@ -61,7 +61,7 @@
  {
   "id": 6,
   "name": "Fortnite - Season 4",
-  "discountValue": "3.39$",
+  "discountValue": "3.39",
   "value": 3.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -73,7 +73,7 @@
  {
   "id": 7,
   "name": "PlayStation Card",
-  "discountValue": "7.49$",
+  "discountValue": "7.49",
   "value": 9.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -85,7 +85,7 @@
  {
   "id": 8,
   "name": "ARK Survival Evolved",
-  "discountValue": "7.49$",
+  "discountValue": "7.49",
   "value": 9.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -97,7 +97,7 @@
  {
   "id": 9,
   "name": "Counter Strike",
-  "discountValue": "3.39$",
+  "discountValue": "3.39",
   "value": 3.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -109,7 +109,7 @@
  {
   "id": 10,
   "name": "Doom Eternal - Deluxe",
-  "discountValue": "3.39$",
+  "discountValue": "3.39",
   "value": 3.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -121,7 +121,7 @@
  {
   "id": 11,
   "name": "COD - Infinite Warfare",
-  "discountValue": "3.39$",
+  "discountValue": "3.39",
   "value": 3.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -133,7 +133,7 @@
  {
   "id": 12,
   "name": "Captain Tsubasa",
-  "discountValue": "5.09$",
+  "discountValue": "5.09",
   "value": 5.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -145,7 +145,7 @@
  {
   "id": 13,
   "name": "Dragon Ball Z Kakarot",
-  "discountValue": "3.39$",
+  "discountValue": "3.39",
   "value": 3.99,
   "consoleType": "xbox",
   "discount": "15",
@@ -157,7 +157,7 @@
  {
   "id": 14,
   "name": "FIFA 23",
-  "discountValue": "16.99$",
+  "discountValue": "16.99",
   "value": 19.99,
   "consoleType": "Pc",
   "discount": "15",
@@ -169,7 +169,7 @@
  {
   "id": 15,
   "name": "Monster Hunter World",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -181,7 +181,7 @@
  {
   "id": 16,
   "name": "Crash Bandicoot Trilogy",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "ps5",
   "discount": "15",
@@ -193,7 +193,7 @@
  {
   "id": 17,
   "name": "Days Gone",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "xbox",
   "discount": "30",
@@ -205,7 +205,7 @@
  {
   "id": 18,
   "name": "Devil May Cry 5",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "xbox",
   "discount": "20",
@@ -220,7 +220,7 @@
   "description": "Comercializada en Xbox 360 y PlayStation 3 en 2012, Devil May Cry HD Collection es la versión diseñada para la actual generación de consolas y plataformas. Devil May Cry HD Collection llegará a Xbox One, PS4 y PC, e incluirá Devil May Cry, Devil May Cry 2 y Devil May Cry 3: Dante’s Awakening – Special Edition, así como gráficos en alta definición y 60 frames por segundo.",
   "category": "arcade",
   "consoleType": "Pc",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "discount": "4",
   "section": "recommended",
@@ -229,7 +229,7 @@
  {
   "id": 20,
   "name": "Duke Nukem Forever",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -241,7 +241,7 @@
  {
   "id": 21,
   "name": "God of War",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -253,7 +253,7 @@
  {
   "id": 22,
   "name": "Mafia III",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -265,7 +265,7 @@
  {
   "id": 23,
   "name": "GTA V",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -277,7 +277,7 @@
  {
   "id": 24,
   "name": "Hollow Knight",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -289,7 +289,7 @@
  {
   "id": 25,
   "name": "Visage",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -301,7 +301,7 @@
  {
   "id": 26,
   "name": "Evil West",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "ps5",
   "discount": "15",
@@ -313,7 +313,7 @@
  {
   "id": 27,
   "name": "Just Dance 2023",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -325,7 +325,7 @@
  {
   "id": 28,
   "name": "LOTR Gollum",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -337,7 +337,7 @@
  {
   "id": 29,
   "name": "Midnight Suns",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -349,7 +349,7 @@
  {
   "id": 30,
   "name": "Naruto Storm Trilogy",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -361,7 +361,7 @@
  {
   "id": 31,
   "name": "One Piece Oddysey",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -373,7 +373,7 @@
  {
   "id": 32,
   "name": "Park Beyond",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -385,7 +385,7 @@
  {
   "id": 33,
   "name": "Residen Evil 4",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -396,8 +396,8 @@
  },
  {
   "id": 34,
-  "name": "Miles Morales",
-  "discountValue": "5.94$",
+  "name": "SpiderMan Miles Morales",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -409,7 +409,7 @@
  {
   "id": 35,
   "name": "Steam Gift Card",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -421,7 +421,7 @@
  {
   "id": 36,
   "name": "The Devil In Me",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -433,7 +433,7 @@
  {
   "id": 37,
   "name": "Thief",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -445,7 +445,7 @@
  {
   "id": 38,
   "name": "Xbox Card $10",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -457,7 +457,7 @@
  {
   "id": 39,
   "name": "Xbox Card $15",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -469,7 +469,7 @@
  {
   "id": 40,
   "name": "Xbox Card $50",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -481,7 +481,7 @@
  {
   "id": 41,
   "name": "Sonic Frontiers",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -493,7 +493,7 @@
  {
   "id": 42,
   "name": "A Plague Tale",
-  "discountValue": "5.94$",
+  "discountValue": "5.94",
   "value": 6.99,
   "consoleType": "nintendo-switch",
   "discount": "15",
@@ -501,5 +501,16 @@
   "section": "sellers",
   "category": "accion",
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
+ },
+ {
+  "name": "Juego de GamesHub",
+  "description": "El mejor juego de la historia...realizado por gamesHub",
+  "category": "aventura",
+  "consoleType": "xbox",
+  "value": "50",
+  "discountValue": "15",
+  "section": "on-sale",
+  "imageUri": "/images/games/1669000750169.png",
+  "id": 43
  }
 ]
