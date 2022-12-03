@@ -110,12 +110,11 @@
  {
   "id": 10,
   "name": "Doom Eternal - Deluxe",
-  "discountValue": "3.39",
-  "value": 3.99,
+  "value": "3.99",
   "consoleType": "Pc",
   "discount": "15",
+  "section": "on-sale",
   "imageUri": "/images/main-cards/doom-eternal.jpeg",
-  "section": "offer",
   "category": "estrategia",
   "description": "DOOM Eternal es la secuela del éxito de 2016, DOOM. Ahondando de nuevo en las raíces clásicas del género de acción en primera persona, la segunda parte desarrollada por id Software y Bethesda sigue apostando por la guerra sin cuartel contra los demonios en Xbox One, PS4, PC y Nintendo Switch."
  },
@@ -504,14 +503,25 @@
   "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
  },
  {
+  "id": 43,
   "name": "Juego de GamesHub",
-  "description": "El mejor juego de la historia...realizado por gamesHub",
-  "category": "aventura",
-  "consoleType": "xbox",
   "value": "50",
-  "discountValue": "15",
+  "consoleType": "xbox",
+  "discount": "25",
   "section": "on-sale",
   "imageUri": "/images/games/1669000750169.png",
-  "id": 43
+  "category": "aventura",
+  "description": "El mejor juego de la historia...realizado por gamesHub"
+ },
+ {
+  "id": 44,
+  "name": "juego 2",
+  "value": "23",
+  "consoleType": "ps5",
+  "discount": "56",
+  "section": "best-sellers",
+  "imageUri": "/images/games/1670086824106.jpg",
+  "category": "arcade",
+  "description": "Estees el contenido de este juego x un juego fuera de este mundo....lo mejor que se ha construido en la historia de los juegos...................................................."
  }
 ]
