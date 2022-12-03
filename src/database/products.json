@@ -2,9 +2,10 @@
  {
   "id": 1,
   "name": "Mortal Kombat XL",
-  "value": "9.99",
+  "value": 9.99,
   "consoleType": "nintendo-switch",
-  "discount": "25",
+  "discountValue": "2.39",
+  "discount": 25,
   "section": "recommended",
   "imageUri": "/images/main-cards/mkxl.jpeg",
   "category": "deportes",
