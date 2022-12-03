@@ -9,23 +9,29 @@
         <div class="new-product-form-box">
         <form action="/product/new" class="new-product-form" method="post" enctype="multipart/form-data">
           <div class="new-product-div">
-            <label for="name">Nombre: </label>
-            <input type="text" name="name" id="name" />
+            <label for="name" class="new-product-label">Nombre: </label>
+            <input type="text" name="name" id="name" 
+            placeholder="Ingrese nombre del juego"/>
           </div>
-            <label for="description">Descripcion: </label>
+
+          <div class="new-product-div">
+            <label for="new-img" class="new-product-label">Imagen: </label>
+            <input type="file" name="new-img" id="new-img" />
+          </div>
+          <div class="new-product-div">
+            <label for="description" class="new-product-label">Descripcion: </label>
             <textarea
               name="description"
               id="description"
               cols="30"
               rows="10"
-            >Contenido
+              placeholder="Contenido de la descripcion del juego"
+            >
             </textarea>
+            </div>
+          
           <div class="new-product-div">
-            <label for="new-img">Imagen: </label>
-            <input type="file" name="new-img" id="new-img" />
-          </div>
-          <div class="new-product-div">
-          <label for="category">Categoría: </label>
+          <label for="category" class="new-product-label">Categoría: </label>
           <select name="category" id="category">
             <option value="accion">Accion</option>
             <option value="aventura">Aventura</option>
@@ -34,7 +40,8 @@
             <option value="estrategia">Estrategia</option>
           </select>
           </div>
-          <label for="consoleType">Consolas compatibles: </label>
+          <div class="new-product-div">
+          <label for="consoleType" class="new-product-label">Consolas compatibles: </label>
           <div class="consoleType-checkbox">
             <input type="checkbox" name="consoleType" id="ps4" value="ps4" />
             <label for="ps4">PS4</label>
@@ -54,25 +61,29 @@
               id="nintendo-switch"
               value="nintendo-switch"
             />
+            </div>
             <label for="nintendo-switch">Nintendo Switch</label>
           </div>
           <div class="new-product-div">
-          <label for="value">Precio: </label>
-          <input type="number" name="value" id="value" />
+          <label for="value" class="new-product-label">Precio: </label>
+          <input type="number" name="value" id="value" placeholder="Ingrese precio del juego" />
             </div>
             <div class="new-product-div">
-              <label for="discount">Descuento: </label>
-              <input type="number" name="discountValue" id="discount"/>
+              <label for="discount" class="new-product-label">Descuento: </label>
+              <input type="number" name="discountValue" id="discount" 
+              placeholder="Ingrese % de descuento"/>
             </div>
             <div class="new-product-div">
-              <label for="section">Sección: </label>
+              <label for="section" class="new-product-label">Sección: </label>
               <select name="section" id="section">
                 <option value="on-sale">Oferta</option>
                 <option value="recommended">Recomendado</option>
                 <option value="best-sellers">Más Vendidos</option>
               </select>
               </div>
-          <button class="new-product-button" type="submit">Crear</button>
+              <div class="new-product-div-button">
+          <button class="new-product-button" type="submit">Agregar Producto</button>
+        </div>
         </form>
       </div>
       </div>
