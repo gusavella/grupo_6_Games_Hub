@@ -6,18 +6,19 @@
       </div>
       <ul class="header-user-list">
         <li><a class="header-link" href="/login">Login</a></li>
+        <li><a class="header-link" href="/login/logout">Logout</a></li>
         <li><a class="header-link" href="/register">Register</a></li>
         <% if (locals.isLogged==true){%>
           <li class="header-name"><%=locals.userLogged.names%></li>
         <%}%>
         <li>
           <a class="header-icon" href="/cart"
-            ><i class="fa-solid fa-cart-shopping"></i
+            ><em class="fa-solid fa-cart-shopping"></em
           ></a>
         </li>
         <li>
           <a class="header-icon burger-menu" href="#"
-            ><i class="fa-solid fa-bars"></i
+            ><em class="fa-solid fa-bars"></em
           ></a>
         </li>
       </ul>
