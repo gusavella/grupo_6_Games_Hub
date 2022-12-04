@@ -12,7 +12,7 @@ const controller = {
       res.render("login/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
-
+      console.log(req.body)
       const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {

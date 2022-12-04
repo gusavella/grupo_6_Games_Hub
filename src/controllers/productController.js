@@ -17,7 +17,12 @@ const controller = {
   },
   create: (req, res) => {
     let game = req.body; 
+  
     let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    game.value=parseFloat(req.body.value)
+    game.discount=parseFloat(req.body.discount)
+    game.discountValue=(game.value*(1-game.discount/100)).toFixed(2) // Para que solamente tenga dos digitos
+    game.discountValue=parseFloat(game.discountValue)
     game.imageUri = '/images/games/'+ req.file.filename;
     game.id = products[products.length - 1].id+1;
     products.push (game);
@@ -35,21 +40,23 @@ const controller = {
     const editedGame={
       id:parseInt(req.params.id),
       name:req.body.name,
-      value:req.body.price,
       consoleType:req.body.console,
-      discount:req.body.discount,
+      value:parseFloat(req.body.price),
+      discount:parseFloat(req.body.discount),
+      discountValue:(parseFloat(req.body.price)*(1-parseFloat(req.body.discount/100))).toFixed(2) ,// Para que solamente tenga dos digitos
       section:req.body.section,
       imageUri:req.file?'/images/games/'+req.file.filename:productOld.imageUri,
       category:req.body.category,
       description:req.body.description
   }
+  editedGame.discountValue=parseFloat(editedGame.discountValue)
   products.forEach((product,index)=>{
     if(product.id==req.params.id){
       products[index]=editedGame;
     }
-});
-fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
-res.redirect(`/product/${req.params.id}/edit`)
+  });
+  fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
+  res.redirect(`/product/${req.params.id}/edit`)
  
   },
   delete:(req,res)=>{

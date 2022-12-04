@@ -657,10 +657,11 @@ a{
 .product-addcar{
     color:white;
     background-color: #1AADB4;
-    width: 90%;
+    width: 100%;
     padding: 1.9%;
     border-radius: 5px;
     text-decoration: none;
+    border:0;
 }
 .product-addcar:hover{
     background-color: #14CAE7;
