@@ -661,6 +661,7 @@ a{
     padding: 1.9%;
     border-radius: 5px;
     text-decoration: none;
+    border:0;
 }
 .product-addcar:hover{
     background-color: #14CAE7;

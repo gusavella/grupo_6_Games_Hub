@@ -1,43 +1,50 @@
 [
-    {
-        "id":1,
-        "name":"Need for speed heat",
-        "value":9.99,
-        "consoleType":"PS4",
-        "discount":25,
-        "imageUri":"/images/games/need_for_speed_heat.jpg",
-        "section": "none",
-       " tag": "/product/"
-    },
-    {
-        "id":2,
-        "name":"Dota 2",
-        "value":2.99,
-        "consoleType":"PS5",
-        "discount":20,
-        "imageUri":"/images/games/dota-2.jpg",
-        "section": "none",
-       " tag": "/product/"
-    },
-    {
-        "id":3,
-        "name":"Forza horizon 5",
-        "value":4567,
-        "consoleType":"XBOX ONE",
-        "discount":15,
-        "imageUri":"/images/games/forza-horizon-5.jpg",
-        "section": "none",
-       " tag": "/product/"
-    },
-   
-    {
-        "id": "17",
-        "name": "Juego de GamesHub",
-        "value": "6.99",
-        "consoleType": "xbox",
-        "discount": "17",
-        "imageUri": "/images/games/1667867621671.jpeg",
-        "category": "accion",
-        "description": "El mejor juego construido con los mejores desarrolladores existentes en Digital House"
-       }
+ {
+  "id": 22,
+  "name": "Mafia III",
+  "consoleType": "nintendo-switch",
+  "value": 6.99,
+  "discount": 15,
+  "discountValue": 5.94,
+  "section": "recommended",
+  "imageUri": "/images/main-cards/mafiaIII.jpeg",
+  "category": "accion",
+  "description": "En la tercera entrega de la reputada saga Mafia, nos moveremos por New Bourdeaux, una ciudad inspirada en Nueva Orleans, en el año 1968, moviéndonos por los bajos fondos, entablando contactos con la mafia y entrando en la guerra de intereses y bandas de la época. El título de mundo abierto de 2K Games y Hangar 13, apostará por incluir nuevas mecánicas de negocios, un mayor plantel de vehículos y armas y una narrativa que hará homenaje a las clásicas películas del género negro."
+ },
+ {
+  "id": 24,
+  "name": "Hollow Knight",
+  "consoleType": "nintendo-switch",
+  "value": 6.99,
+  "discount": 15,
+  "discountValue": 5.94,
+  "section": "offer",
+  "imageUri": "/images/main-cards/hollowknight.jpeg",
+  "category": "accion",
+  "description": "Hollow Knight, desarrollado por Team Cherry, ofrecerá una aventura de estilo bidimensional que combinará acción y plataformas en un mundo de fantasía medieval, el reino de Hallownest. Incluirá animaciones hechas con estilo tradicional, retos para el jugador, coleccionables por desbloquear y una banda sonora única."
+ },
+ {
+  "id": 26,
+  "name": "Evil West",
+  "consoleType": "ps5",
+  "value": 6.99,
+  "discount": 15,
+  "discountValue": 5.94,
+  "section": "sellers",
+  "imageUri": "/images/main-cards/evilwest.jpeg",
+  "category": "accion",
+  "description": "Una oscura amenaza consume la frontera americana. Como uno de los últimos agentes de una institución ultrasecreta dedicada a cazar vampiros, eres la última línea de defensa de la humanidad contra un terror profundamente arraigado que emerge ahora de entre las sombras. Álzate y conviértete en un superhéroe del salvaje Oeste, erradica la amenaza de los vampiros y ¡salva a los Estados Unidos!"
+ },
+ {
+  "id": 8,
+  "name": "ARK Survival Evolved",
+  "consoleType": "Pc",
+  "value": 9.99,
+  "discount": 15,
+  "discountValue": 8.49,
+  "section": "offer",
+  "imageUri": "/images/main-cards/ark-survival.jpeg",
+  "category": "deportes",
+  "description": "ARK: Survival Evolved para PC es un nuevo juego de supervivencia y mundo abierto. A lo largo de la aventura tendremos que cazar para sobrevivir, crear objetos, mejorar nuestra tecnología, construir refugios, etcétera. Todo ello mientras exploramos una gigantesca isla repleta de dinosaurios, lo que se perfila como uno de sus mayores atractivos."
+ }
 ]

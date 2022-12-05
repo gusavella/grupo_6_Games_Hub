@@ -22,10 +22,11 @@
               <p><%=products[i].name%></p>
               <p><%=products[i].consoleType%></p>
               <div class="delete-quantity">
-                <button class="delete-basket">
+                <form action="/cart/<%=products[i].id%>?_method=DELETE" method="post">
+                 <button class="delete-basket" type="submit">
                   <em class="fa-solid fa-trash"></em>
                 </button>
-  
+                </form>
                 <p>Cantidad :</p>
                 <p class="article-quantity">1</p>
                 <form class="quantity-form">
@@ -35,7 +36,7 @@
               </div>
               <div class="value-container">
                 <p>Valor:</p>
-                <p>$<%=products[i].value%></p>
+                <p>$<%=products[i].discountValue%></p>
               </div>
             </div>
                    </article>
@@ -57,7 +58,7 @@
           <% for(let i = 0; i<products.length ; i++) { %>
             <div class="cart-value">
               <p><%=products[i].name%></p>
-              <p>$<%=products[i].value%></p>
+              <p>$<%=products[i].discountValue%></p>
             </div>
             <% } %>
         </div>
