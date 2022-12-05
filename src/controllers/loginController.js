@@ -8,7 +8,7 @@ const User = require("../models/Users")
 
 const controller = {
     login: (req, res) => {
-      console.log(req.cookies.test)
+      console.log('cookies:',req.cookies.test)
       res.render("login/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {

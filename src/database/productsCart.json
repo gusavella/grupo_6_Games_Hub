@@ -1,17 +1,5 @@
 [
  {
-  "id": 38,
-  "name": "Xbox Card $10",
-  "consoleType": "nintendo-switch",
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "offer",
-  "imageUri": "/images/main-cards/xbox10.jpeg",
-  "category": "accion",
-  "description": " ¡Cava, lucha y construye! El mundo mismo está al alcance de tu mano mientras luchas por la supervivencia, la fortuna y la gloria. Adéntrate en extensiones cavernosas, busca enemigos cada vez más grandes para poner a prueba tu temple en combate o construye tu propia ciudad. ¡En el mundo de Terraria, la elección es tuya! Combinando elementos de los juegos de acción clásicos con la libertad de la creatividad estilo sandbox, Terraria es una experiencia de juego única en la que tanto el viaje como el destino son tan únicos como los propios jugadores."
- },
- {
   "id": 22,
   "name": "Mafia III",
   "consoleType": "nintendo-switch",
@@ -36,27 +24,27 @@
   "description": "Hollow Knight, desarrollado por Team Cherry, ofrecerá una aventura de estilo bidimensional que combinará acción y plataformas en un mundo de fantasía medieval, el reino de Hallownest. Incluirá animaciones hechas con estilo tradicional, retos para el jugador, coleccionables por desbloquear y una banda sonora única."
  },
  {
-  "id": 2,
-  "name": "Quake 4",
-  "consoleType": "Pc",
-  "value": 2.99,
-  "discount": 20,
-  "discountValue": 2.39,
-  "section": "offer",
-  "imageUri": "/images/main-cards/quake.jpeg",
-  "category": "accion",
-  "description": "Quake 4 es la nueva entrega de Quake, la popular saga de videojuegos de acción en primera persona creada por John Romero, John Carmack y American McGee. Apostando por un diseño enfocado en los eSports y la vertiente online y competitiva, Quake Champions es una reformulación de Quake con nuevos ingredientes, mejores gráficos y la misma jugabilidad sólida y frenética de siempre."
- },
- {
-  "id": 23,
-  "name": "GTA V",
-  "consoleType": "nintendo-switch",
+  "id": 26,
+  "name": "Evil West",
+  "consoleType": "ps5",
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
   "section": "sellers",
-  "imageUri": "/images/main-cards/gtaV.jpeg",
+  "imageUri": "/images/main-cards/evilwest.jpeg",
   "category": "accion",
-  "description": "Grand Theft Auto V para PS5 es una versión mejorada y ampliada del GTA V original aparecido en PS3 en 2013. Contará con mejoras gráficas y el nuevo contenido incluido en su versión de PS4, como armas, vehículos o misiones, además de una banda sonora ampliada y GTA Online. Nos cuenta la épica historia de Michael, Franklin y Trevor en la ciudad de Los Santos y sus alrededores."
+  "description": "Una oscura amenaza consume la frontera americana. Como uno de los últimos agentes de una institución ultrasecreta dedicada a cazar vampiros, eres la última línea de defensa de la humanidad contra un terror profundamente arraigado que emerge ahora de entre las sombras. Álzate y conviértete en un superhéroe del salvaje Oeste, erradica la amenaza de los vampiros y ¡salva a los Estados Unidos!"
+ },
+ {
+  "id": 8,
+  "name": "ARK Survival Evolved",
+  "consoleType": "Pc",
+  "value": 9.99,
+  "discount": 15,
+  "discountValue": 8.49,
+  "section": "offer",
+  "imageUri": "/images/main-cards/ark-survival.jpeg",
+  "category": "deportes",
+  "description": "ARK: Survival Evolved para PC es un nuevo juego de supervivencia y mundo abierto. A lo largo de la aventura tendremos que cazar para sobrevivir, crear objetos, mejorar nuestra tecnología, construir refugios, etcétera. Todo ello mientras exploramos una gigantesca isla repleta de dinosaurios, lo que se perfila como uno de sus mayores atractivos."
  }
 ]

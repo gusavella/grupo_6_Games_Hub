@@ -10,6 +10,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
   cart: (req, res) => {
     let totalCart=0
+    productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
      for(const element of productsCart) { 
       totalCart=element.discountValue+totalCart
      }
@@ -25,6 +26,14 @@ const controller = {
     productsCart.push(product)
     fs.writeFileSync(productsCartFilePath,JSON.stringify(productsCart,null," "));
     res.redirect(`/cart`)
+  },
+  
+  delete:(req,res)=>{
+   
+      const id = req.params.id;
+      const finalProductsCart=productsCart.filter(product=>product.id!=id);
+      fs.writeFileSync(productsCartFilePath,JSON.stringify(finalProductsCart,null," "));
+      res.redirect(`/cart`)
   }
 
 };

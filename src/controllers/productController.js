@@ -66,7 +66,6 @@ const controller = {
       fs.writeFileSync(productsFilePath,JSON.stringify(finalProducts,null," "));
       res.redirect('/')
 
- 
   }
 };
 
