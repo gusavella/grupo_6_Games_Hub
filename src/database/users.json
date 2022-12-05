@@ -56,5 +56,14 @@
   "email": "jp@gmail.com",
   "adress": "colombia 123",
   "id": 6
+ },
+ {
+  "names": "Salvador",
+  "surnames": "Dali",
+  "password": "$2a$10$seLLEp3d7vxI0hla2xmAOeuXRI1ksckHXhJsHVmiojUFnsN0F0E8i",
+  "phone": "12345678",
+  "email": "salvador@dali.com",
+  "adress": "ahreloco123",
+  "id": 7
  }
 ]

@@ -5,10 +5,16 @@
         <p>Games Hub</p>
       </div>
       <ul class="header-user-list">
-        <li><a class="header-link" href="/login">Login</a></li>
-        <li><a class="header-link" href="/login/logout">Logout</a></li>
-        <li><a class="header-link" href="/register">Register</a></li>
-        <% if (locals.isLogged==true){%>
+        <% if (!locals.isLogged){%>
+          <li><a class="header-link" href="/login">Login</a></li>
+        <%}%>
+        <% if (locals.isLogged){%>
+          <li><a class="header-link" href="/login/logout">Logout</a></li>
+        <%}%>
+        <% if (!locals.isLogged){%>
+          <li><a class="header-link" href="/register">Register</a></li>
+        <%}%>
+        <% if (locals.isLogged){%>
           <li class="header-name"><%=locals.userLogged.names%></li>
         <%}%>
         <li>
