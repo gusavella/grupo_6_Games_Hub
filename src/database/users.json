@@ -65,5 +65,14 @@
   "email": "salvador@dali.com",
   "adress": "ahreloco123",
   "id": 7
+ },
+ {
+  "names": "Gonzalo",
+  "surnames": "Potente",
+  "password": "$2a$10$gxbH2UGUUiCIoPeaVvfn0elitgCZCPyGFV0IAoSBOuqWfV2jXOVDS",
+  "phone": "123456789",
+  "email": "Gp@gmail.com",
+  "adress": "calle falsa 123",
+  "id": 8
  }
 ]

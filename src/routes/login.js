@@ -10,4 +10,5 @@ router.post('/',validateLoginmiddleware,loginController.loginProcess)
 
 router.get('/logout',loginController.logout)
 
+
 module.exports = router;

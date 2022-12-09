@@ -42,28 +42,29 @@
               <div class="edit-product-div">
                 <label for="console" class="edit-product-label" >Consolas compatibles:</label>
                 <div class="new-console-checkbox">
-                  <input type="checkbox" name="console" id="ps4" value="ps4" <%=product.consoleType=='ps4'
+                  <input type="checkbox" name="console" id="ps4" value="ps4" <%=product.consoleType.includes('ps4')
                     ?'checked':''%>/>
                   <label for="ps4">PS4</label>
 
-                  <input type="checkbox" name="console" id="ps5" value="ps5" <%=product.consoleType=='ps5'
+                  <input type="checkbox" name="console" id="ps5" value="ps5" <%=product.consoleType.includes('ps5')
                     ?'checked':''%>
                   />
                   <label for="ps5">PS5</label>
 
-                  <input type="checkbox" name="console" id="xbox" value="xbox" <%=product.consoleType=='xbox'
+                  <input type="checkbox" name="console" id="xbox" value="xbox" <%=product.consoleType.includes('xbox')
                     ?'checked':''%> />
                   <label for="xbox">XBox</label>
 
-                  <input type="checkbox" name="console" id="Pc" value="Pc" <%=product.consoleType=='Pc'
+                  <input type="checkbox" name="console" id="Pc" value="Pc" <%=product.consoleType.includes('Pc')
                     ?'checked':''%>/>
                   <label for="Pc">Pc</label>
 
                   <input type="checkbox" name="console" id="nintendo-switch" value="nintendo-switch"
-                    <%=product.consoleType=='nintendo-switch' ?'checked':''%>
+                    <%=product.consoleType.includes('nintendo-switch') ?'checked':''%>
                   />
                   <label for="nintendo-switch">Nintendo Switch</label>
                 </div>
+               
               </div>
               <div class="edit-product-div">
                 <label for="price" class="edit-product-label" >Precio:</label>

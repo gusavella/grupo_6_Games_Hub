@@ -62,7 +62,13 @@
  {
   "id": 6,
   "name": "Fortnite - Season 4",
-  "consoleType": "Pc",
+  "consoleType": [
+   "ps4",
+   "ps5",
+   "xbox",
+   "Pc",
+   "nintendo-switch"
+  ],
   "value": 3.99,
   "discount": 15,
   "discountValue": 3.39,
@@ -170,7 +176,7 @@
  {
   "id": 15,
   "name": "Monster Hunter World",
-  "consoleType": "nintendo-switch",
+  "consoleType": "Pc",
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
@@ -182,12 +188,16 @@
  {
   "id": 16,
   "name": "Crash Bandicoot Trilogy",
-  "consoleType": "ps5",
+  "consoleType": [
+   "ps4",
+   "ps5",
+   "nintendo-switch"
+  ],
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
   "section": "recommended",
-  "imageUri": "images/main-cards/crashbandicoot.jpeg",
+  "imageUri": "/images/main-cards/crashbandicoot.jpeg",
   "category": "arcade",
   "description": "Se trata de una remasterización de los tres primeros juegos de la serie Crash Bandicoot aparecidos en la consola PlayStation a finales de los 90 y desarrollados por Naughty Dog, pero mejorados con gráficos totalmente renovados, cambios estéticos y ciertas novedades jugables."
  },
@@ -542,7 +552,10 @@
  {
   "id": 46,
   "name": "Gustavo ",
-  "consoleType": "ps5",
+  "consoleType": [
+   "ps4",
+   "nintendo-switch"
+  ],
   "value": 2,
   "discount": 5,
   "discountValue": 1.9,
