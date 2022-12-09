@@ -37,10 +37,20 @@ const controller = {
 
   update: (req, res) => {
     let productOld = products.find(product=>product.id==req.params.id)
+    let consoleTypeArray=[];
+    
+    if(req.body.console){
+        let consoleTypeArray2=[];
+        let isArray=Array.isArray(req.body.console)
+        consoleTypeArray2.push(req.body.console)
+        consoleTypeArray=(isArray)?req.body.console:consoleTypeArray2
+        console.log(consoleTypeArray)
+    }
+
     const editedGame={
       id:parseInt(req.params.id),
       name:req.body.name,
-      consoleType:req.body.console,
+      consoleType:consoleTypeArray,
       value:parseFloat(req.body.price),
       discount:parseFloat(req.body.discount),
       discountValue:(parseFloat(req.body.price)*(1-parseFloat(req.body.discount/100))).toFixed(2) ,// Para que solamente tenga dos digitos
