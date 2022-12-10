@@ -8,7 +8,7 @@
     <div class="register-box">
       <h3 class="title">Registro</h3>
       <hr />
-      <form class="register-form" action="/register" method="POST">
+      <form class="register-form" action="/register" method="POST" enctype="multipart/form-data">
         <div class="input-box">
           <div class="register-block-inline">
             <div class="register-division">
@@ -97,6 +97,12 @@
                 id="adress"
                 placeholder=" ej: calle falsa 123"
               />
+            </div>
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="">Imagen de perfil</label>
+                <input type="file" name="image" id="image">  
+              </div>
             </div>
           </div>
         </div>

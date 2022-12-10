@@ -74,5 +74,15 @@
   "email": "Gp@gmail.com",
   "adress": "calle falsa 123",
   "id": 8
+ },
+ {
+  "names": "Felipe",
+  "surnames": "Mendez",
+  "password": "$2a$10$RaIejlgKiPuHoDQg.7i0G.49UxbohjS7kGavkg2dYgo7/sFa8AEm6",
+  "phone": "123466771",
+  "email": "hotmail@hotmail.com",
+  "adress": "La Palmita",
+  "image": "/images/users/1670637997643.jpg",
+  "id": 9
  }
 ]

@@ -10,9 +10,9 @@ const controller = {
     },
     createUser: (req, res) => {
         let newUser = req.body
+        newUser.image = '/images/users/' + req.file.filename;
         User.create(newUser)
         res.redirect('/')
-        
     }
 };
 
