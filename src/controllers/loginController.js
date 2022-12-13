@@ -33,7 +33,7 @@ const controller = {
           }
          
           console.log(req.session)
-            return res.redirect('/')
+            return res.redirect('/register/profile')
         }
         return res.render('login/login.ejs',{ tittle:'Login',
                                   errors:{

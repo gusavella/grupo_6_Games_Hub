@@ -2,7 +2,9 @@
  {
   "id": 30,
   "name": "Naruto Storm Trilogy",
-  "consoleType": ["nintendo-switch"],
+  "consoleType": [
+   "nintendo-switch"
+  ],
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
@@ -10,21 +12,6 @@
   "imageUri": "/images/main-cards/narutostorm.jpeg",
   "category": "accion",
   "description": "Naruto: Ultimate Ninja Storm Trilogy es un recopilatorio exclusivo de la distribución digital que incluye los tres primeros juegos numerados de esta exitosa saga de juegos de lucha basados en el famoso manga creado por Masashi Kishimoto."
- },
- {
-  "id": 16,
-  "name": "Crash Bandicoot Trilogy",
-  "consoleType": [
-    "ps5",
-    "Pc"
-   ],
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "recommended",
-  "imageUri": "images/main-cards/crashbandicoot.jpeg",
-  "category": "arcade",
-  "description": "Se trata de una remasterización de los tres primeros juegos de la serie Crash Bandicoot aparecidos en la consola PlayStation a finales de los 90 y desarrollados por Naughty Dog, pero mejorados con gráficos totalmente renovados, cambios estéticos y ciertas novedades jugables."
  },
  {
   "id": 25,
@@ -37,17 +24,5 @@
   "imageUri": "/images/main-cards/visage.jpeg",
   "category": "accion",
   "description": "Visage es un videojuego de terror en primera persona desarrollado por SadSquare Studio, con énfasis en el horror psicológico, que nos llevará a vivir una serie de sucesos paranormales ambientados en los años ochenta, en un pueblo apartado y en un caserón enorme. Está pensado para consolas y PC."
- },
- {
-  "id": 17,
-  "name": "Days Gone",
-  "consoleType": "xbox",
-  "value": 6.99,
-  "discount": 30,
-  "discountValue": 4.89,
-  "section": "recommended",
-  "imageUri": "/images/main-cards/daysgone.jpeg",
-  "category": "accion",
-  "description": "Days Gone es el videojuego de acción, zombies y supervivencia en mundo abierto exclusivo para PlayStation 4 desarrollado por Bend Studio. Nos invitará, encarnando al motero Deacon St. John, a sobrevivir en un escenario rural y desolado ambientado en la época actual plagado de voraces seres infectados por un misterioso virus."
  }
 ]

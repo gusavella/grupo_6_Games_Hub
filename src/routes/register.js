@@ -20,4 +20,6 @@ router.get ("/", guestMiddleware, registerController.register);
 
 router.post('/', upload.single('image'), registerController.createUser);
 
+router.get('/profile', registerController.profile)
+
 module.exports = router;

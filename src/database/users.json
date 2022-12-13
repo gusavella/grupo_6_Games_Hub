@@ -84,5 +84,15 @@
   "adress": "La Palmita",
   "image": "/images/users/1670637997643.jpg",
   "id": 9
+ },
+ {
+  "names": "Nahuel",
+  "surnames": "Zelaya",
+  "password": "$2a$10$peH4mFUb1HA.DlvYM4/Xyetf.XKBBaXjtiXfBFnUnwTRLHGMr3cc2",
+  "phone": "123456789",
+  "email": "nahuel@gmail.com",
+  "adress": "hola mundo",
+  "image": "/images/users/1670726676581.png",
+  "id": 10
  }
 ]
