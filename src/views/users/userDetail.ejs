@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body class="body-main">
+  <%- include('../partials/header') %>
+    <main>
+        <div class="container-profile" style="display: flex; justify-content: space-evenly;">
+            <div class="img-profile">
+                <img src="/images/users/1667871311254.jpg" alt="" style="width: 300px;">
+            </div>
+            <div class="data-profile">
+                <h3><%= user.names%></h3>
+                <p><%= user.surnames%></p>
+            </div>
+            <div class="edit-profile">
+                <p><%= user.adress%></p>
+                <button>Modificar</button>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

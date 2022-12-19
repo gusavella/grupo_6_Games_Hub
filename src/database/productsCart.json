@@ -1,67 +1,42 @@
 [
  {
-  "id": 30,
-  "name": "Naruto Storm Trilogy",
-  "consoleType": [
-   "nintendo-switch"
-  ],
+  "id": 23,
+  "name": "GTA V",
+  "consoleType": "nintendo-switch",
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
   "section": "sellers",
-  "imageUri": "/images/main-cards/narutostorm.jpeg",
+  "imageUri": "/images/main-cards/gtaV.jpeg",
   "category": "accion",
-  "description": "Naruto: Ultimate Ninja Storm Trilogy es un recopilatorio exclusivo de la distribución digital que incluye los tres primeros juegos numerados de esta exitosa saga de juegos de lucha basados en el famoso manga creado por Masashi Kishimoto."
+  "description": "Grand Theft Auto V para PS5 es una versión mejorada y ampliada del GTA V original aparecido en PS3 en 2013. Contará con mejoras gráficas y el nuevo contenido incluido en su versión de PS4, como armas, vehículos o misiones, además de una banda sonora ampliada y GTA Online. Nos cuenta la épica historia de Michael, Franklin y Trevor en la ciudad de Los Santos y sus alrededores."
  },
  {
   "id": 16,
   "name": "Crash Bandicoot Trilogy",
   "consoleType": [
+   "ps4",
    "ps5",
-   "Pc"
+   "nintendo-switch"
   ],
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
   "section": "recommended",
-  "imageUri": "images/main-cards/crashbandicoot.jpeg",
+  "imageUri": "/images/main-cards/crashbandicoot.jpeg",
   "category": "arcade",
   "description": "Se trata de una remasterización de los tres primeros juegos de la serie Crash Bandicoot aparecidos en la consola PlayStation a finales de los 90 y desarrollados por Naughty Dog, pero mejorados con gráficos totalmente renovados, cambios estéticos y ciertas novedades jugables."
  },
  {
-  "id": 25,
-  "name": "Visage",
-  "consoleType": "nintendo-switch",
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "recommended",
-  "imageUri": "/images/main-cards/visage.jpeg",
-  "category": "accion",
-  "description": "Visage es un videojuego de terror en primera persona desarrollado por SadSquare Studio, con énfasis en el horror psicológico, que nos llevará a vivir una serie de sucesos paranormales ambientados en los años ochenta, en un pueblo apartado y en un caserón enorme. Está pensado para consolas y PC."
- },
- {
-  "id": 17,
-  "name": "Days Gone",
-  "consoleType": "xbox",
-  "value": 6.99,
-  "discount": 30,
-  "discountValue": 4.89,
-  "section": "recommended",
-  "imageUri": "/images/main-cards/daysgone.jpeg",
-  "category": "accion",
-  "description": "Days Gone es el videojuego de acción, zombies y supervivencia en mundo abierto exclusivo para PlayStation 4 desarrollado por Bend Studio. Nos invitará, encarnando al motero Deacon St. John, a sobrevivir en un escenario rural y desolado ambientado en la época actual plagado de voraces seres infectados por un misterioso virus."
- },
- {
-  "id": 43,
-  "name": "Juego de GamesHub",
-  "consoleType": "xbox",
-  "value": 50,
-  "discount": 25,
-  "discountValue": 37.5,
+  "id": 2,
+  "name": "Quake 4",
+  "consoleType": "Pc",
+  "value": 7.65,
+  "discount": 20.5,
+  "discountValue": 6.08,
   "section": "offer",
-  "imageUri": "/images/games/1669000750169.png",
-  "category": "aventura",
-  "description": "El mejor juego de la historia...realizado por gamesHub"
+  "imageUri": "/images/main-cards/quake.jpeg",
+  "category": "accion",
+  "description": "Quake 4 es la nueva entrega de Quake, la popular saga de videojuegos de acción en primera persona creada por John Romero, John Carmack y American McGee. Apostando por un diseño enfocado en los eSports y la vertiente online y competitiva, Quake Champions es una reformulación de Quake con nuevos ingredientes, mejores gráficos y la misma jugabilidad sólida y frenética de siempre."
  }
 ]

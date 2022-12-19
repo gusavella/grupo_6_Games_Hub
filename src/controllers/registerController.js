@@ -13,6 +13,9 @@ const controller = {
         newUser.image = '/images/users/' + req.file.filename;
         User.create(newUser)
         res.redirect('/')
+    },
+    profile: (req, res) => {
+        res.render('users/userDetail', {tittle:'Games Hub'})
     }
 };
 
