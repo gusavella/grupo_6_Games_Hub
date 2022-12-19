@@ -33,7 +33,7 @@ const controller = {
           }
          
           console.log(req.session)
-            return res.redirect('/register/profile')
+            return res.redirect(`/users/detail/${userToLogin.id}`)
         }
         return res.render('login/login.ejs',{ tittle:'Login',
                                   errors:{

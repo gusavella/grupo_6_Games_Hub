@@ -15,7 +15,7 @@ const controller = {
         res.redirect('/')
     },
     profile: (req, res) => {
-        res.render('login/userDetail', {tittle:'Games Hub'})
+        res.render('users/userDetail', {tittle:'Games Hub'})
     }
 };
 

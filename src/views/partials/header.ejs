@@ -15,7 +15,7 @@
           <li><a class="header-link" href="/register">Register</a></li>
         <%}%>
         <% if (locals.isLogged){%>
-          <li class="header-name"><a href="/userDetail"><%=locals.userLogged.names%></a></li>
+          <li class="header-name"><a href="/users/detail/<%=locals.userLogged.id%>"><%=locals.userLogged.names%></a></li>
         <%}%>
         <li>
           <a class="header-icon" href="/cart"
