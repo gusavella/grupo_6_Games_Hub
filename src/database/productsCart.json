@@ -2,7 +2,9 @@
  {
   "id": 30,
   "name": "Naruto Storm Trilogy",
-  "consoleType": ["nintendo-switch"],
+  "consoleType": [
+   "nintendo-switch"
+  ],
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
@@ -15,9 +17,9 @@
   "id": 16,
   "name": "Crash Bandicoot Trilogy",
   "consoleType": [
-    "ps5",
-    "Pc"
-   ],
+   "ps5",
+   "Pc"
+  ],
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
@@ -49,5 +51,17 @@
   "imageUri": "/images/main-cards/daysgone.jpeg",
   "category": "accion",
   "description": "Days Gone es el videojuego de acción, zombies y supervivencia en mundo abierto exclusivo para PlayStation 4 desarrollado por Bend Studio. Nos invitará, encarnando al motero Deacon St. John, a sobrevivir en un escenario rural y desolado ambientado en la época actual plagado de voraces seres infectados por un misterioso virus."
+ },
+ {
+  "id": 43,
+  "name": "Juego de GamesHub",
+  "consoleType": "xbox",
+  "value": 50,
+  "discount": 25,
+  "discountValue": 37.5,
+  "section": "offer",
+  "imageUri": "/images/games/1669000750169.png",
+  "category": "aventura",
+  "description": "El mejor juego de la historia...realizado por gamesHub"
  }
 ]

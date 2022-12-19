@@ -2,7 +2,10 @@
  {
   "id": 1,
   "name": "Mortal Kombat XL",
-  "consoleType": "nintendo-switch",
+  "consoleType": [
+   "ps5",
+   "nintendo-switch"
+  ],
   "value": 9.99,
   "discount": 25,
   "discountValue": 7.49,
@@ -58,18 +61,19 @@
   "imageUri": "/images/main-cards/cyberpunk.jpeg",
   "category": "accion",
   "description": "Cyberpunk 2077 es el nuevo videojuego de rol en primera persona con estructura de mundo abierto de CD Projekt RED. Los padres de The Witcher nos presentan para Xbox One, PC y PS4 una aventura de corte futurista y ciberpunk en la que encarnaremos a un personaje diseñado a nuestra medida y en la que tendremos que sobrevivir en una peligrosa urbe plagada de corporaciones, ciborgs, bandas y las más variadas amenazas tecnológicas."
- }, {
-    "id": 6,
-    "name": "Fortnite - Season 4",
-    "consoleType": "Pc",
-    "value": 3.99,
-    "discount": 15,
-    "discountValue": 3.39,
-    "section": "offer",
-    "imageUri": "/images/main-cards/fortnite.jpeg",
-    "category": "accion",
-    "description": "Fortnite Battle Royale es la variante ‘battle royale’ gratuita multijugador de Fortnite, el videojuego de Epic Games. Cogiendo las bases jugables del título de acción, construcción y supervivencia, los padres de Paragon han diseñado una propuesta similar a la del todopoderoso PUBG pero con sus propias ideas, tanto en consolas como PlayStation 4 y Xbox One, como en PC."
-   },
+ },
+ {
+  "id": 6,
+  "name": "Fortnite - Season 4",
+  "consoleType": "Pc",
+  "value": 3.99,
+  "discount": 15,
+  "discountValue": 3.39,
+  "section": "offer",
+  "imageUri": "/images/main-cards/fortnite.jpeg",
+  "category": "accion",
+  "description": "Fortnite Battle Royale es la variante ‘battle royale’ gratuita multijugador de Fortnite, el videojuego de Epic Games. Cogiendo las bases jugables del título de acción, construcción y supervivencia, los padres de Paragon han diseñado una propuesta similar a la del todopoderoso PUBG pero con sus propias ideas, tanto en consolas como PlayStation 4 y Xbox One, como en PC."
+ },
  {
   "id": 7,
   "name": "PlayStation Card",
@@ -547,11 +551,12 @@
   "name": "Gustavo ",
   "consoleType": [
    "ps4",
+   "Pc",
    "nintendo-switch"
   ],
-  "value": 2,
-  "discount": 5,
-  "discountValue": 1.9,
+  "value": 2.86,
+  "discount": 25,
+  "discountValue": 2.15,
   "section": "sellers",
   "imageUri": "/images/games/1670165389845.jpg",
   "category": "aventura",
