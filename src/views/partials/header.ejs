@@ -6,13 +6,13 @@
       </div>
       <ul class="header-user-list">
         <% if (!locals.isLogged){%>
-          <li><a class="header-link" href="/login">Login</a></li>
+          <li><a class="header-link" href="users/login">Login</a></li>
         <%}%>
         <% if (locals.isLogged){%>
-          <li><a class="header-link" href="/login/logout">Logout</a></li>
+          <li><a class="header-link" href="/users/logout">Logout</a></li>
         <%}%>
         <% if (!locals.isLogged){%>
-          <li><a class="header-link" href="/register">Register</a></li>
+          <li><a class="header-link" href="users/register">Register</a></li>
         <%}%>
         <% if (locals.isLogged){%>
           <li class="header-name"><a href="/users/detail/<%=locals.userLogged.id%>"><%=locals.userLogged.names%></a></li>
@@ -43,7 +43,7 @@
                   placeholder="Buscar productos, marcas"
                   name="search"
                 />
-                <button><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+                <button><em class="fa-solid fa-magnifying-glass search-icon"></em></button>
               </form>
             </div>
           </li>

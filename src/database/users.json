@@ -5,7 +5,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "12345678",
   "email": "manu@gmail.com",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "argentina123",
   "id": 1
  },
@@ -15,7 +15,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "45678910",
   "email": "pepito@gmail.com",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "cordillera 456",
   "id": 2
  },
@@ -25,7 +25,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "456465465",
   "email": "jajaj@jajajaj",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "alla 123",
   "id": 3
  },
@@ -35,7 +35,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "45678910",
   "email": "pepaPig@gmail.com",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "cordillera 789",
   "id": 4
  },
@@ -46,6 +46,7 @@
   "phone": "123456789",
   "email": "pperez@gmail.com",
   "adress": "calle falsa 123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 5
  },
  {
@@ -55,6 +56,7 @@
   "phone": "212121212121",
   "email": "jp@gmail.com",
   "adress": "colombia 123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 6
  },
  {
@@ -64,6 +66,7 @@
   "phone": "12345678",
   "email": "salvador@dali.com",
   "adress": "ahreloco123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 7
  },
  {
@@ -73,6 +76,7 @@
   "phone": "123456789",
   "email": "Gp@gmail.com",
   "adress": "calle falsa 123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 8
  },
  {
@@ -94,5 +98,15 @@
   "adress": "hola mundo",
   "image": "/images/users/1670726676581.png",
   "id": 10
+ },
+ {
+  "names": "perro",
+  "surnames": "perres",
+  "password": "$2a$10$32kbEqn93C2yxMmJFfw0Y.t.G1s04Hjw/YAnqv9R3AZyAy2lE6Sma",
+  "phone": "1234567890",
+  "email": "ppz@gmail.com",
+  "adress": "calle de colombia",
+  "image": "/images/users/1671419690187.ico",
+  "id": 11
  }
 ]

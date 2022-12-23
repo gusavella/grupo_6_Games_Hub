@@ -8,15 +8,15 @@
     <main>
         <div class="container-profile" style="display: flex; justify-content: space-evenly;">
             <div class="img-profile">
-                <img src="/images/users/1667871311254.jpg" alt="" style="width: 300px;">
+                <img src="<%= user.image%>" alt="" style="width: 300px;">
             </div>
             <div class="data-profile">
-                <h3><%= user.names%></h3>
-                <p><%= user.surnames%></p>
+                <p>Nombres: <%= user.names%></p>
+                <p>Apellidos: <%= user.surnames%></p>
             </div>
-            <div class="edit-profile">
-                <p><%= user.adress%></p>
-                <button>Modificar</button>
+            <div class="data-profile">
+                <p>Direccion: <%= user.adress%></p>
+                <p>Telefono: <%= user.phone%></p>
             </div>
         </div>
     </main>
