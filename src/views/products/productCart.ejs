@@ -22,7 +22,7 @@
               <p><%=products[i].name%></p>
               <p><%=products[i].consoleType%></p>
               <div class="delete-quantity">
-                <form action="/cart/<%=products[i].id%>?_method=DELETE" method="post">
+                <form action="/products/cart/<%=products[i].id%>?_method=DELETE" method="post">
                  <button class="delete-basket" type="submit">
                   <em class="fa-solid fa-trash"></em>
                 </button>

@@ -19,7 +19,7 @@
             <p class="product-final-price">$<%= product.discountValue %></p>
             <p class="product-price">$<%= product.value %></p>
           </div>
-          <form method="post" action=<%=`/cart/add/${product.id}` %>>
+          <form method="post" action=<%=`/products/cart/add/${product.id}` %>>
 
             <button class="product-addcar" type="submit"
             >Añadir al carrito<i class="fa-solid fa-cart-shopping"></i

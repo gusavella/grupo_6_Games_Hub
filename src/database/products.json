@@ -561,5 +561,20 @@
   "imageUri": "/images/games/1670165389845.jpg",
   "category": "aventura",
   "description": "            dfvgsdfgsdvfsdfa"
+ },
+ {
+  "name": "juego x",
+  "description": "            thfdgadfgdfgdfssgg",
+  "category": "aventura",
+  "consoleType": [
+   "ps5",
+   "Pc"
+  ],
+  "value": 251.35,
+  "discount": 25,
+  "section": "recommended",
+  "discountValue": 188.51,
+  "imageUri": "/images/games/1671890109387.ico",
+  "id": 47
  }
 ]
