@@ -4,7 +4,8 @@ const path = require("path");
 const productsFilePath = path.join(__dirname, "../database/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const productsCartFilePath = path.join(__dirname, '../database/productsCart.json');
+let productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
 
 const controller = {
   product: (req, res) => {
@@ -76,6 +77,49 @@ const controller = {
       fs.writeFileSync(productsFilePath,JSON.stringify(finalProducts,null," "));
       res.redirect('/')
 
+  },
+  index: (req, res) => {
+    res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
+  },
+  best: (req,res) => {
+    res.render('products/bestSelling.ejs', {products:products,tittle:'Games Hub'})
+  },
+  recommended: (req,res) => {
+    res.render('products/recommended.ejs', {products:products,tittle:'Games Hub'})
+  },
+  offer: (req,res) => {
+    res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
+  },
+  allProducts: (req,res) => {
+    res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
+  },
+  cart: (req, res) => {
+    let totalCart=0
+    productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
+    // console.log(productsCart)
+     for(const element of productsCart) { 
+      totalCart=element.discountValue+totalCart
+     }
+     totalCart=parseFloat(totalCart).toFixed(2)
+    res.render("products/productCart.ejs",{products:productsCart,totalCart:totalCart,tittle:'Product Cart'});
+
+  },
+  addToCart:(req,res)=>{
+    let product = products.find(product=>product.id==req.params.id)
+    if(!product){
+      res.redirect(`/`)
+    }
+    productsCart.push(product)
+    fs.writeFileSync(productsCartFilePath,JSON.stringify(productsCart,null," "));
+    res.redirect(`/products/cart/all`)
+  },
+  
+  cartDelete:(req,res)=>{
+   
+      const id = req.params.id;
+      const finalProductsCart=productsCart.filter(product=>product.id!=id);
+      fs.writeFileSync(productsCartFilePath,JSON.stringify(finalProductsCart,null," "));
+      res.redirect(`/products/cart/all`)
   }
 };
 

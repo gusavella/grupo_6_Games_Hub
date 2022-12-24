@@ -1,8 +1,9 @@
 let express = require('express');
 let router = express.Router();
 const multer = require('multer');
+let path = require('path');
 const userController =require('../controllers/userController');
-const validateLoginmiddleware= require('../middlewares/validateLoginMiddleware')
+const validateLoginMiddleware= require('../middlewares/validateLoginMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware')
 
 let storage = multer.diskStorage({
@@ -19,10 +20,13 @@ router.get('/detail/:id',userController.detail)
 //Login
 router.get('/login',guestMiddleware,userController.login)
 
-router.post('/',validateLoginmiddleware,userController.loginProcess)
+router.post('/login',validateLoginMiddleware,userController.loginProcess)
 
 router.get('/logout',userController.logout)
 //Login
+
+
+
 //REGISTER
 router.get ("/register", guestMiddleware, userController.register);
 

@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt= require("bcryptjs")
+const {	validationResult} = require('express-validator');
 const User = require("../models/Users")
+
 
 const productsFilePath = path.join(__dirname, "../database/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -34,7 +37,7 @@ const controller = {
           delete userToLogin.password
           req.session.userLogged=userToLogin
           if(req.body.rememberCheck){
-            res.cookie('userEmail',`${userToLogin.email}`,{maxAge:1000*60})
+            res.cookie('userEmail',`${userToLogin.email}`,{maxAge:1000*60*10})
           }
          
           console.log(req.session)
@@ -64,14 +67,17 @@ const controller = {
       return res.redirect('/')
     },
     register : (req, res) => {
-      res.render ("users/register.ejs",{tittle:'Register'});
-    },
-    createUser: (req, res) => {
-        let newUser = req.body
-        newUser.image = '/images/users/' + req.file.filename;
-        User.create(newUser)
-        res.redirect('/')
-    }
+      res.render ("register/register.ejs",{tittle:'Register'});
+  },
+  createUser: (req, res) => {
+      let newUser = req.body
+      newUser.image = '/images/users/' + req.file.filename;
+      User.create(newUser)
+      res.redirect('/')
+  },
+  profile: (req, res) => {
+      res.render('users/userDetail', {tittle:'Games Hub'})
+  }
 };
 
 module.exports = controller;
