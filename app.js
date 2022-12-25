@@ -7,8 +7,6 @@ let logger = require('morgan');
 const expressSession = require("express-session");
 
 let indexRouter = require('./src/routes/index');
-// let loginRouter = require('./src/routes/login');
-// let registerRouter = require('./src/routes/register');
 let productRouter = require('./src/routes/productRouter');
 let userRouter = require('./src/routes/userRouter');
 
@@ -30,8 +28,6 @@ app.use(expressSession({secret: "secret",resave: false,saveUninitialized: false}
 app.use(userLoggedMiddleware);
 
 app.use('/', indexRouter);
-// app.use('/login', loginRouter);
-// app.use('/register', registerRouter);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
 
