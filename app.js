@@ -9,6 +9,7 @@ const expressSession = require("express-session");
 let indexRouter = require('./src/routes/index');
 let productRouter = require('./src/routes/productRouter');
 let userRouter = require('./src/routes/userRouter');
+let roleRouter = require('./src/routes/roleRouter');
 
 let userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
 
@@ -30,6 +31,7 @@ app.use(userLoggedMiddleware);
 app.use('/', indexRouter);
 app.use('/products', productRouter);
 app.use('/users', userRouter);
+app.use('/roles', roleRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
