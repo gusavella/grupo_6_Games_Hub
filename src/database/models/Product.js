@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Game';
+    let alias = 'Product';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -32,11 +32,11 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.FLOAT,
             allowNull: false
         },
-        categories_id: {
+        category_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        sections_id: {
+        section_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
@@ -56,18 +56,18 @@ module.exports = (sequelize, dataTypes) => {
 
         Game.belongsTo(models.Section, {
             as: "section",
-            foreignKey: "sections_id"
+            foreignKey: "section_id"
         }),
         Game.belongsTo(models.Category, {
             as: "category",
-            foreignKey: "categories_id"
+            foreignKey: "category_id"
         })
 
         Game.belongsToMany(models.Console, {
             as: "consoles",
-            through: "games_consoles",
-            foreignKey: "games_id",
-            otherKey: "consoles_id",
+            through: "products_consoles",
+            foreignKey: "product_id",
+            otherKey: "console_id",
             timestamps: true
         })
 

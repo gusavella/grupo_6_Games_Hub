@@ -23,9 +23,9 @@ module.exports = (sequelize, dataTypes) => {
 
     Section.associate = function(models) {
        
-        Section.hasMany(models.Game, {
-            as: "movies",
-            foreignKey: "sections_id"
+        Section.hasMany(models.Product, {
+            as: "products",
+            foreignKey: "section_id"
         })
     }
  

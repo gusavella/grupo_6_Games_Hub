@@ -25,11 +25,11 @@ module.exports = (sequelize, dataTypes) => {
     Console.associate = function (models) {
 
 
-        Console.belongsToMany(models.Game, {
-            as: "games",
-            through: "games_consoles",
-            foreignKey: "consoles_id",
-            otherKey: "games_id",
+        Console.belongsToMany(models.Product, {
+            as: "products",
+            through: "products_consoles",
+            foreignKey: "console_id",
+            otherKey: "product_id",
             timestamps: true
         })
 
