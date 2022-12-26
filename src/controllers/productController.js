@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 const productsFilePath = path.join(__dirname, "../database/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
@@ -8,6 +11,28 @@ const productsCartFilePath = path.join(__dirname, '../database/productsCart.json
 let productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
 
 const controller = {
+  index: (req, res) => {
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+        //console.log(products);
+        res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
+    })
+
+
+    //res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
+  },
+  best: (req,res) => {
+    res.render('products/bestSelling.ejs', {products:products,tittle:'Games Hub'})
+  },
+  recommended: (req,res) => {
+    res.render('products/recommended.ejs', {products:products,tittle:'Games Hub'})
+  },
+  offer: (req,res) => {
+    res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
+  },
+  allProducts: (req,res) => {
+    res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
+  },
   product: (req, res) => {
     const id = req.params.id;
     const product = products.find(product => product.id == id);
@@ -78,21 +103,7 @@ const controller = {
       res.redirect('/')
 
   },
-  index: (req, res) => {
-    res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
-  },
-  best: (req,res) => {
-    res.render('products/bestSelling.ejs', {products:products,tittle:'Games Hub'})
-  },
-  recommended: (req,res) => {
-    res.render('products/recommended.ejs', {products:products,tittle:'Games Hub'})
-  },
-  offer: (req,res) => {
-    res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
-  },
-  allProducts: (req,res) => {
-    res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
-  },
+  
   cart: (req, res) => {
     let totalCart=0
     productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
