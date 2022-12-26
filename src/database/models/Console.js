@@ -22,18 +22,18 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Console = sequelize.define(alias, cols, config); 
 
-    // Console.associate = function (models) {
+    Console.associate = function (models) {
 
 
-    //     Console.belongsToMany(models.Movie, {
-    //         as: "movies",
-    //         through: "actor_movie",
-    //         foreignKey: "actor_id",
-    //         otherKey: "movie_id",
-    //         timestamps: false
-    //     })
+        Console.belongsToMany(models.Product, {
+            as: "products",
+            through: "products_consoles",
+            foreignKey: "console_id",
+            otherKey: "product_id",
+            timestamps: true
+        })
 
-   // }
+   }
  
     return Console
 };
