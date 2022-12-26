@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Role';
+    let alias = 'Category';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -20,20 +20,17 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'update_time',
         deletedAt: 'delete_time'
     }
-    const Role = sequelize.define(alias, cols, config); 
+    const Category = sequelize.define(alias, cols, config); 
 
-    // Role.associate = function (models) {
+    Category.associate = function (models) {
 
 
-    //     Role.belongsToMany(models.Movie, {
-    //         as: "movies",
-    //         through: "actor_movie",
-    //         foreignKey: "actor_id",
-    //         otherKey: "movie_id",
-    //         timestamps: false
-    //     })
+        Category.hasMany(models.Game, {
+            as: "movies",
+            foreignKey: "categories_id"
+        })
 
-   // }
+   }
  
-    return Role
+    return Category
 };

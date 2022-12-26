@@ -1,13 +1,12 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Role';
+    let alias = 'Section';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
+
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -20,20 +19,15 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'update_time',
         deletedAt: 'delete_time'
     }
-    const Role = sequelize.define(alias, cols, config); 
+    const Section = sequelize.define(alias, cols, config); 
 
-    // Role.associate = function (models) {
-
-
-    //     Role.belongsToMany(models.Movie, {
-    //         as: "movies",
-    //         through: "actor_movie",
-    //         foreignKey: "actor_id",
-    //         otherKey: "movie_id",
-    //         timestamps: false
-    //     })
-
-   // }
+    Section.associate = function(models) {
+       
+        Section.hasMany(models.Game, {
+            as: "movies",
+            foreignKey: "sections_id"
+        })
+    }
  
-    return Role
+    return Section
 };
