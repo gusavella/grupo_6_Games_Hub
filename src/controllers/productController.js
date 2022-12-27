@@ -14,24 +14,37 @@ const controller = {
   index: (req, res) => {
     db.Product.findAll({include: ["section","category","consoles"]})
     .then(products => {
-        //console.log(products);
         res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
     })
-
-
-    //res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
   },
   best: (req,res) => {
-    res.render('products/bestSelling.ejs', {products:products,tittle:'Games Hub'})
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/bestSelling.ejs', {products:products,tittle:'Games Hub'})
+    })
+ 
   },
   recommended: (req,res) => {
-    res.render('products/recommended.ejs', {products:products,tittle:'Games Hub'})
+
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/recommended.ejs', {products:products,tittle:'Games Hub'})
+    })
+ 
   },
   offer: (req,res) => {
-    res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
+    })
+    
   },
   allProducts: (req,res) => {
-    res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
+    })
+    
   },
   product: (req, res) => {
     const id = req.params.id;
