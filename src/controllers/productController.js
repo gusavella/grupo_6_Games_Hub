@@ -46,27 +46,40 @@ const controller = {
     })
     
   },
-  product: (req, res) => {
-    const id = req.params.id;
-    const product = products.find(product => product.id == id);
-    res.render("products/productDetail", { tittle: "Product" , product: product});
+  productDetail: (req, res) => {
+    db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
+    .then(product => {
+           res.render("products/productDetail", { tittle: "Product" , product: product});
+    })
+    
+    
   },
-  newProduct: (req, res) => {
-    res.render("products/newProduct", { tittle: "New Product" });
+  newProduct: async(req, res) => {
+    let categories= await db.Category.findAll();
+    let sections= await db.Section.findAll();
+    res.render("products/newProduct", { tittle: "New Product" ,categories,sections});
   },
   create: (req, res) => {
-    let game = req.body; 
-  
-    let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    game.value=parseFloat(req.body.value)
-    game.discount=parseFloat(req.body.discount)
-    game.discountValue=(game.value*(1-game.discount/100)).toFixed(2) // Para que solamente tenga dos digitos
-    game.discountValue=parseFloat(game.discountValue)
-    game.imageUri = '/images/games/'+ req.file.filename;
-    game.id = products[products.length - 1].id+1;
-    products.push (game);
-    fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
-    res.redirect('/')
+    //Pendiente actualizacion de consolas 
+    console.log(req.body)
+    db.Product.create(
+      {
+                 name : req.body.name ,
+          description : req.body.description,
+                image : '/images/games/'+ req.file.filename,
+                value : parseFloat(req.body.value),
+             discount : parseFloat(req.body.discount),
+          final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
+          category_id : req.body.category,
+           section_id : req.body.section
+      }
+  )
+  .then(() => {
+      res.redirect('/products/all')
+  })
+  .catch(e => console.log(e))
+
+
   },
   showEdit: (req, res) => {
     let id = req.params.id;
