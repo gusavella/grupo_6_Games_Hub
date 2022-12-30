@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
@@ -57,7 +56,8 @@ const controller = {
   newProduct: async(req, res) => {
     let categories= await db.Category.findAll();
     let sections= await db.Section.findAll();
-    res.render("products/newProduct", { tittle: "New Product" ,categories,sections});
+    let consoles= await db.Console.findAll();
+    res.render("products/newProduct", { tittle: "New Product" ,categories,sections,consoles});
   },
   create: (req, res) => {
     //Pendiente actualizacion de consolas 
@@ -81,45 +81,50 @@ const controller = {
 
 
   },
-  showEdit: (req, res) => {
-    let id = req.params.id;
-    let product = products.find(product=>product.id==id)
-    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product});
+  showEdit: async (req, res) => {
+    try{
+    let categories= await db.Category.findAll();
+    let sections= await db.Section.findAll();
+    let consoles= await db.Console.findAll();
+    let product= await  db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
+        
+  // console.log(product)
+    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product,categories,sections,consoles});
+    }
+    catch(e){
+      conmsole.log(e)
+    }
   },
 
-  update: (req, res) => {
-    let productOld = products.find(product=>product.id==req.params.id)
-    let consoleTypeArray=[];
-    
-    if(req.body.console){
-        let consoleTypeArray2=[];
-        let isArray=Array.isArray(req.body.console)
-        consoleTypeArray2.push(req.body.console)
-        consoleTypeArray=(isArray)?req.body.console:consoleTypeArray2
-        console.log(consoleTypeArray)
-    }
+  update: async(req, res) => {
+    try{
+    let productOld = await  db.Product.findByPk(req.params.id)
+  
 
     const editedGame={
-      id:parseInt(req.params.id),
       name:req.body.name,
-      consoleType:consoleTypeArray,
       value:parseFloat(req.body.price),
       discount:parseFloat(req.body.discount),
-      discountValue:(parseFloat(req.body.price)*(1-parseFloat(req.body.discount/100))).toFixed(2) ,// Para que solamente tenga dos digitos
-      section:req.body.section,
-      imageUri:req.file?'/images/games/'+req.file.filename:productOld.imageUri,
-      category:req.body.category,
+      final_value:(parseFloat(parseFloat(req.body.price)*(1-parseFloat(req.body.discount)/100))).toFixed(2) ,// Para que solamente tenga dos digitos
+      section_id:req.body.section,
+      image:req.file?'/images/games/'+req.file.filename:productOld.image,
+      category_id:req.body.category,
       description:req.body.description
   }
-  editedGame.discountValue=parseFloat(editedGame.discountValue)
-  products.forEach((product,index)=>{
-    if(product.id==req.params.id){
-      products[index]=editedGame;
-    }
-  });
-  fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
-  res.redirect(`/product/${req.params.id}/edit`)
- 
+
+  console.log(editedGame)
+    await db.Product.update(editedGame, {
+      where:{
+        id:req.params.id
+      }
+    });
+
+   
+ }
+ catch(e){
+  console.log(e)
+ }
+ res.redirect(`/products/${req.params.id}`)
   },
   delete:(req,res)=>{
    
