@@ -22,7 +22,7 @@
                         <% let count = 0 %> 
                         
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section.name == 'sellers' && count<=3){ %>
+                            <% if(products[i].section.id == 1 && count<=3){ %>
 
                                 <% count++ %> 
                                 
@@ -55,7 +55,7 @@
                     <section class="recommended">
                         <% count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section.name == 'recommended' && count<=3){ %>
+                            <% if(products[i].section.id == 2 && count<=3){ %>
                                 <% count++ %> 
                                 
                                 <div class="card">
@@ -87,7 +87,7 @@
                     <section class="recommended">
                         <% count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section.name == 'offer' && count<=3){ %>
+                            <% if(products[i].section.id == 3 && count<=3){ %>
                                 <% count++ %> 
                                 
                                 <div class="card">
