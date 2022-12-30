@@ -33,7 +33,7 @@
                 <label for="category" class="edit-product-label" >Categoria</label>
                 <select name="category" id="category">
                   <% for (let i=0 ; i<categories.length ; i++) {%>
-                    <option value="accion" <%=product.category_id==categories[i].id ?'selected':''%> ><%= categories[i].name %></option>
+                    <option value=<%=categories[i].id%> <%=product.category_id==categories[i].id ?'selected':''%> ><%= categories[i].name %></option>
                   <%}%>
                 </select>
               </div>
@@ -67,7 +67,7 @@
                 <select name="section" id="section">
 
                   <% for (let i=0 ; i<sections.length ; i++) {%>
-                    <option value="accion" <%=product.section_id==sections[i].id ?'selected':''%> ><%= sections[i].name %></option>
+                    <option value=<%=sections[i].id%> <%=product.section_id==sections[i].id ?'selected':''%> ><%= sections[i].name %></option>
                   <%}%>
                   
                 </select>
