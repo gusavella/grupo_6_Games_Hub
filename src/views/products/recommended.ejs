@@ -15,7 +15,7 @@
         <div class="container-selling">
             <section class="recommended">
                 <% for(let i=0;i<products.length;i++){%>
-                    <% if(products[i].section.name == 'recommended'){ %>
+                    <% if(products[i].section.id == 2){ %>
                         <div class="card">
                             <div class="face front">
                                 <img src="<%=products[i].image%>" alt="imagen-game">

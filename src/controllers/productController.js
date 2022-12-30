@@ -126,14 +126,19 @@ const controller = {
  }
  res.redirect(`/products/${req.params.id}`)
   },
-  delete:(req,res)=>{
+  delete: async (req,res)=>{
    
       const id = req.params.id;
-      const finalProducts=products.filter(product=>product.id!=id);
-      fs.writeFileSync(productsFilePath,JSON.stringify(finalProducts,null," "));
+    try{
+       await  db.Product.destroy({where :{
+                                          id:req.params.id
+                                        }})   
       res.redirect('/')
-
-  },
+    }
+    catch(e){
+      console.log(e)
+  }
+},
   
   cart: (req, res) => {
     let totalCart=0
