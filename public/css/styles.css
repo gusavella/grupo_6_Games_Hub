@@ -947,7 +947,30 @@ h2 {
     align-content: center;
 
 }
+
+.edit-product-delete-button{
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 150px;
+    background-color:rgb(170, 7, 89) ;
+    color: white;
+    transition: all 450ms;
+
+}
+
+.edit-product-delete-button:hover {
+    background-color:rgb(255, 0, 128)  ;
+  }
+
 /* ---------------------EDIT PRODUCT ------------------------*/
+
+/* --------------------- USER DETAIL ------------------------*/
+.data-profile{
+    color:white;
+}
+/* --------------------- USER DETAIL ------------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */

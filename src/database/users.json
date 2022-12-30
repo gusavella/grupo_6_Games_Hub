@@ -5,7 +5,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "12345678",
   "email": "manu@gmail.com",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "argentina123",
   "id": 1
  },
@@ -15,7 +15,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "45678910",
   "email": "pepito@gmail.com",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "cordillera 456",
   "id": 2
  },
@@ -25,7 +25,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "456465465",
   "email": "jajaj@jajajaj",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "alla 123",
   "id": 3
  },
@@ -35,7 +35,7 @@
   "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
   "phone": "45678910",
   "email": "pepaPig@gmail.com",
-  "image": "/images/users/1667867621671.jpeg",
+  "image": "/images/users/1667871311254.jpg",
   "adress": "cordillera 789",
   "id": 4
  },
@@ -46,6 +46,7 @@
   "phone": "123456789",
   "email": "pperez@gmail.com",
   "adress": "calle falsa 123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 5
  },
  {
@@ -55,6 +56,7 @@
   "phone": "212121212121",
   "email": "jp@gmail.com",
   "adress": "colombia 123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 6
  },
  {
@@ -64,6 +66,67 @@
   "phone": "12345678",
   "email": "salvador@dali.com",
   "adress": "ahreloco123",
+  "image": "/images/users/1667871311254.jpg",
   "id": 7
+ },
+ {
+  "names": "Gonzalo",
+  "surnames": "Potente",
+  "password": "$2a$10$gxbH2UGUUiCIoPeaVvfn0elitgCZCPyGFV0IAoSBOuqWfV2jXOVDS",
+  "phone": "123456789",
+  "email": "Gp@gmail.com",
+  "adress": "calle falsa 123",
+  "image": "/images/users/1667871311254.jpg",
+  "id": 8
+ },
+ {
+  "names": "Felipe",
+  "surnames": "Mendez",
+  "password": "$2a$10$RaIejlgKiPuHoDQg.7i0G.49UxbohjS7kGavkg2dYgo7/sFa8AEm6",
+  "phone": "123466771",
+  "email": "hotmail@hotmail.com",
+  "adress": "La Palmita",
+  "image": "/images/users/1670637997643.jpg",
+  "id": 9
+ },
+ {
+  "names": "Nahuel",
+  "surnames": "Zelaya",
+  "password": "$2a$10$peH4mFUb1HA.DlvYM4/Xyetf.XKBBaXjtiXfBFnUnwTRLHGMr3cc2",
+  "phone": "123456789",
+  "email": "nahuel@gmail.com",
+  "adress": "hola mundo",
+  "image": "/images/users/1670726676581.png",
+  "id": 10
+ },
+ {
+  "names": "perro",
+  "surnames": "perres",
+  "password": "$2a$10$32kbEqn93C2yxMmJFfw0Y.t.G1s04Hjw/YAnqv9R3AZyAy2lE6Sma",
+  "phone": "1234567890",
+  "email": "ppz@gmail.com",
+  "adress": "calle de colombia",
+  "image": "/images/users/1671419690187.ico",
+  "id": 11
+ },
+ {
+  "names": "prueba",
+  "surnames": "qwerty",
+  "password": "$2a$10$AUMan7Cfvtxn2YrOFrO5vOhY8Np85zj4Xq99Pc/8r048GGQdn0c26",
+  "phone": "54984546845",
+  "email": "prueba@qwerty.com",
+  "adress": "uhssdhAKJHJK",
+  "image": "/images/users/1671890562168.ico",
+  "id": 12
+ },
+ {
+  "names": "prueba123",
+  "surnames": "123",
+  "password": "$2a$10$6mZR9QM25.sj4f6utnelzu4NrQ1SU91C4ccsUmO8Sma.FTAVjSrH.",
+  "phone": "123456789",
+  "email": "prueba@qwerty2.com",
+  "adress": "fyftsertaedfds",
+  "image": "/images/users/1671893186231.ico",
+  "id": 13
  }
 ]

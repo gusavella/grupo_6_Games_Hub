@@ -2,7 +2,10 @@
  {
   "id": 1,
   "name": "Mortal Kombat XL",
-  "consoleType": "nintendo-switch",
+  "consoleType": [
+   "ps5",
+   "nintendo-switch"
+  ],
   "value": 9.99,
   "discount": 25,
   "discountValue": 7.49,
@@ -170,7 +173,7 @@
  {
   "id": 15,
   "name": "Monster Hunter World",
-  "consoleType": "nintendo-switch",
+  "consoleType": "Pc",
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
@@ -182,12 +185,16 @@
  {
   "id": 16,
   "name": "Crash Bandicoot Trilogy",
-  "consoleType": "ps5",
+  "consoleType": [
+   "ps4",
+   "ps5",
+   "nintendo-switch"
+  ],
   "value": 6.99,
   "discount": 15,
   "discountValue": 5.94,
   "section": "recommended",
-  "imageUri": "images/main-cards/crashbandicoot.jpeg",
+  "imageUri": "/images/main-cards/crashbandicoot.jpeg",
   "category": "arcade",
   "description": "Se trata de una remasterización de los tres primeros juegos de la serie Crash Bandicoot aparecidos en la consola PlayStation a finales de los 90 y desarrollados por Naughty Dog, pero mejorados con gráficos totalmente renovados, cambios estéticos y ciertas novedades jugables."
  },
@@ -542,13 +549,32 @@
  {
   "id": 46,
   "name": "Gustavo ",
-  "consoleType": "ps5",
-  "value": 2,
-  "discount": 5,
-  "discountValue": 1.9,
+  "consoleType": [
+   "ps4",
+   "Pc",
+   "nintendo-switch"
+  ],
+  "value": 2.86,
+  "discount": 25,
+  "discountValue": 2.15,
   "section": "sellers",
   "imageUri": "/images/games/1670165389845.jpg",
   "category": "aventura",
   "description": "            dfvgsdfgsdvfsdfa"
+ },
+ {
+  "name": "juego x",
+  "description": "            thfdgadfgdfgdfssgg",
+  "category": "aventura",
+  "consoleType": [
+   "ps5",
+   "Pc"
+  ],
+  "value": 251.35,
+  "discount": 25,
+  "section": "recommended",
+  "discountValue": 188.51,
+  "imageUri": "/images/games/1671890109387.ico",
+  "id": 47
  }
 ]

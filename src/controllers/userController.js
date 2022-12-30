@@ -4,19 +4,27 @@ const bcrypt= require("bcryptjs")
 const {	validationResult} = require('express-validator');
 const User = require("../models/Users")
 
- let users = User.findAll();
+
+const productsFilePath = path.join(__dirname, "../database/products.json");
+let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
 
 const controller = {
+    detail: (req, res) => {
+          let user=User.findByPk(req.params.id)
+          console.log(user)
+        res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+    },
     login: (req, res) => {
       console.log('cookies:',req.cookies)
-      res.render("login/login.ejs",{tittle:'Login'});
+      res.render("users/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
       console.log(req.body)
       const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
-			return res.render('login/login.ejs', {tittle:'Login',
+			return res.render('users/login.ejs', {tittle:'Login',
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
@@ -29,13 +37,13 @@ const controller = {
           delete userToLogin.password
           req.session.userLogged=userToLogin
           if(req.body.rememberCheck){
-            res.cookie('userEmail',`${userToLogin.email}`,{maxAge:1000*60})
+            res.cookie('userEmail',`${userToLogin.email}`,{maxAge:1000*60*10})
           }
          
           console.log(req.session)
-            return res.redirect('/')
+            return res.redirect(`/users/detail/${userToLogin.id}`)
         }
-        return res.render('login/login.ejs',{ tittle:'Login',
+        return res.render('users/login.ejs',{ tittle:'Login',
                                   errors:{
                                     password:{
                                       msg:'Credenciales invalidas - password'
@@ -44,7 +52,7 @@ const controller = {
                   })
       }
 
-      return res.render('login/login.ejs',{ tittle:'Login',
+      return res.render('users/login.ejs',{ tittle:'Login',
                                   errors:{
                                     email:{
                                       msg:'Credenciales invalidas - email '
@@ -57,8 +65,19 @@ const controller = {
       res.clearCookie('userEmail')
       req.session.destroy()
       return res.redirect('/')
-    }
-   };
-  
-  module.exports = controller;
-  
+    },
+    register : (req, res) => {
+      res.render ("register/register.ejs",{tittle:'Register'});
+  },
+  createUser: (req, res) => {
+      let newUser = req.body
+      newUser.image = '/images/users/' + req.file.filename;
+      User.create(newUser)
+      res.redirect('/')
+  },
+  profile: (req, res) => {
+      res.render('users/userDetail', {tittle:'Games Hub'})
+  }
+};
+
+module.exports = controller;

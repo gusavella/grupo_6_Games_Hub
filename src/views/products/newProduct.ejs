@@ -7,7 +7,7 @@
       <div class="new-product-box">
         <h3>Agregar nuevo producto</h3>
         <div class="new-product-form-box">
-        <form action="/product/new" class="new-product-form" method="post" enctype="multipart/form-data">
+        <form action="/products/new" class="new-product-form" method="post" enctype="multipart/form-data">
           <div class="new-product-div">
             <label for="name" class="new-product-label">Nombre: </label>
             <input type="text" name="name" id="name" 
@@ -33,11 +33,9 @@
           <div class="new-product-div">
           <label for="category" class="new-product-label">Categoría: </label>
           <select name="category" id="category">
-            <option value="accion">Accion</option>
-            <option value="aventura">Aventura</option>
-            <option value="arcade">Arcade</option>
-            <option value="deportes">Deportes</option>
-            <option value="estrategia">Estrategia</option>
+            <% for (let i=0 ; i<categories.length ; i++) {%>
+            <option value="<%=categories[i].id%>"><%= categories[i].name %></option>
+            <%}%>
           </select>
           </div>
           <div class="new-product-div">
@@ -76,9 +74,11 @@
             <div class="new-product-div">
               <label for="section" class="new-product-label">Sección: </label>
               <select name="section" id="section">
-                <option value="offer">Oferta</option>
-                <option value="recommended">Recomendado</option>
-                <option value="sellers">Más Vendidos</option>
+
+
+                <% for (let i=0 ; i<sections.length ; i++) {%>
+                  <option value="<%=sections[i].id%>"><%= sections[i].name %></option>
+                  <%}%>
               </select>
               </div>
               <div class="new-product-div-button">

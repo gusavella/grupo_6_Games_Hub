@@ -15,25 +15,27 @@
                             <h3>Los más vendidos</h3>
                         </div>
                         <div class="button">
-                            <a href="/best-selling">Ver todos</a>
+                            <a href="/products/best-selling">Ver todos</a>
                         </div>
                     </div>
                     <section class="best-selling">
                         <% let count = 0 %> 
+                        
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section == 'sellers' && count<=3){ %>
+                            <% if(products[i].section.name == 'sellers' && count<=3){ %>
+
                                 <% count++ %> 
                                 
                                 <div class="card">
                                     <div class="face front">
-                                        <img src="<%=products[i].imageUri%>" alt="imagen-game">
+                                        <img src="<%=products[i].image%>" alt="imagen-game">
                                         <h3><%=products[i].name %></h3>
                                     </div>
                                     <div class="face back">
                                         <h4><%=products[i].name%></h4>
-                                        <p>Categoría: <%=products[i].category%></p>
+                                        <p>Categoría: <%=products[i].category.name%></p>
                                         <div class="link-buy">
-                                            <a href="/product/<%=products[i].id%>"><%=products[i].value %> - COMPRAR</a>
+                                            <a href="/products/<%=products[i].id%>"><%=products[i].final_value %> - COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -47,25 +49,25 @@
                             <h3>Recomendados</h3>
                         </div>
                         <div class="button">
-                            <a href="/recommended">Ver todos</a>
+                            <a href="/products/recommended">Ver todos</a>
                         </div>
                     </div>
                     <section class="recommended">
                         <% count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section == 'recommended' && count<=3){ %>
+                            <% if(products[i].section.name == 'recommended' && count<=3){ %>
                                 <% count++ %> 
                                 
                                 <div class="card">
                                     <div class="face front">
-                                        <img src="<%=products[i].imageUri%>" alt="imagen-game">
+                                        <img src="<%=products[i].image%>" alt="imagen-game">
                                         <h3><%=products[i].name %></h3>
                                     </div>
                                     <div class="face back">
                                         <h4><%=products[i].name%></h4>
-                                        <p>Categoría: <%=products[i].category%></p>
+                                        <p>Categoría: <%=products[i].category.name%></p>
                                         <div class="link-buy">
-                                            <a href="/product/<%=products[i].id%>"><%=products[i].value %> - COMPRAR</a>
+                                            <a href="/products/<%=products[i].id%>"><%=products[i].final_value %> - COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>
@@ -79,25 +81,25 @@
                             <h3>Ofertas</h3>
                         </div>
                         <div class="button">
-                            <a href="/offers">Ver todos</a>
+                            <a href="/products/offers">Ver todos</a>
                         </div>
                     </div>
                     <section class="recommended">
                         <% count = 0 %> 
                         <% for(let i=0;i<products.length;i++){%>
-                            <% if(products[i].section == 'offer' && count<=3){ %>
+                            <% if(products[i].section.name == 'offer' && count<=3){ %>
                                 <% count++ %> 
                                 
                                 <div class="card">
                                     <div class="face front">
-                                        <img src="<%=products[i].imageUri%>" alt="imagen-game">
+                                        <img src="<%=products[i].image%>" alt="imagen-game">
                                         <h3><%=products[i].name %></h3>
                                     </div>
                                     <div class="face back">
                                         <h4><%=products[i].name%></h4>
-                                        <p>Categoría: <%=products[i].category%></p>
+                                        <p>Categoría: <%=products[i].category.name%></p>
                                         <div class="link-buy">
-                                            <a href="/product/<%=products[i].id%>"><%=products[i].value %> - COMPRAR</a>
+                                            <a href="/products/<%=products[i].id%>"><%=products[i].final_value %> - COMPRAR</a>
                                         </div>
                                     </div>
                                 </div>

@@ -1,33 +1,85 @@
 const fs = require("fs");
 const path = require("path");
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 const productsFilePath = path.join(__dirname, "../database/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const productsCartFilePath = path.join(__dirname, '../database/productsCart.json');
+let productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
 
 const controller = {
-  product: (req, res) => {
-    const id = req.params.id;
-    const product = products.find(product => product.id == id);
-    res.render("products/productDetail", { tittle: "Product" , product: product});
+  index: (req, res) => {
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+        res.render('products/main.ejs', {products:products,tittle:'Games Hub'});
+    })
   },
-  newProduct: (req, res) => {
-    res.render("products/newProduct", { tittle: "New Product" });
+  best: (req,res) => {
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/bestSelling.ejs', {products:products,tittle:'Games Hub'})
+    })
+ 
+  },
+  recommended: (req,res) => {
+
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/recommended.ejs', {products:products,tittle:'Games Hub'})
+    })
+ 
+  },
+  offer: (req,res) => {
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/offers.ejs', {products:products,tittle:'Games Hub'})
+    })
+    
+  },
+  allProducts: (req,res) => {
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/product.ejs', {products:products,tittle:'Games Hub'})
+    })
+    
+  },
+  productDetail: (req, res) => {
+    db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
+    .then(product => {
+           res.render("products/productDetail", { tittle: "Product" , product: product});
+    })
+    
+    
+  },
+  newProduct: async(req, res) => {
+    let categories= await db.Category.findAll();
+    let sections= await db.Section.findAll();
+    res.render("products/newProduct", { tittle: "New Product" ,categories,sections});
   },
   create: (req, res) => {
-    let game = req.body; 
-  
-    let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    game.value=parseFloat(req.body.value)
-    game.discount=parseFloat(req.body.discount)
-    game.discountValue=(game.value*(1-game.discount/100)).toFixed(2) // Para que solamente tenga dos digitos
-    game.discountValue=parseFloat(game.discountValue)
-    game.imageUri = '/images/games/'+ req.file.filename;
-    game.id = products[products.length - 1].id+1;
-    products.push (game);
-    fs.writeFileSync(productsFilePath,JSON.stringify(products,null," "));
-    res.redirect('/')
+    //Pendiente actualizacion de consolas 
+    console.log(req.body)
+    db.Product.create(
+      {
+                 name : req.body.name ,
+          description : req.body.description,
+                image : '/images/games/'+ req.file.filename,
+                value : parseFloat(req.body.value),
+             discount : parseFloat(req.body.discount),
+          final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
+          category_id : req.body.category,
+           section_id : req.body.section
+      }
+  )
+  .then(() => {
+      res.redirect('/products/all')
+  })
+  .catch(e => console.log(e))
+
+
   },
   showEdit: (req, res) => {
     let id = req.params.id;
@@ -37,10 +89,20 @@ const controller = {
 
   update: (req, res) => {
     let productOld = products.find(product=>product.id==req.params.id)
+    let consoleTypeArray=[];
+    
+    if(req.body.console){
+        let consoleTypeArray2=[];
+        let isArray=Array.isArray(req.body.console)
+        consoleTypeArray2.push(req.body.console)
+        consoleTypeArray=(isArray)?req.body.console:consoleTypeArray2
+        console.log(consoleTypeArray)
+    }
+
     const editedGame={
       id:parseInt(req.params.id),
       name:req.body.name,
-      consoleType:req.body.console,
+      consoleType:consoleTypeArray,
       value:parseFloat(req.body.price),
       discount:parseFloat(req.body.discount),
       discountValue:(parseFloat(req.body.price)*(1-parseFloat(req.body.discount/100))).toFixed(2) ,// Para que solamente tenga dos digitos
@@ -66,6 +128,35 @@ const controller = {
       fs.writeFileSync(productsFilePath,JSON.stringify(finalProducts,null," "));
       res.redirect('/')
 
+  },
+  
+  cart: (req, res) => {
+    let totalCart=0
+    productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
+    // console.log(productsCart)
+     for(const element of productsCart) { 
+      totalCart=element.discountValue+totalCart
+     }
+     totalCart=parseFloat(totalCart).toFixed(2)
+    res.render("products/productCart.ejs",{products:productsCart,totalCart:totalCart,tittle:'Product Cart'});
+
+  },
+  addToCart:(req,res)=>{
+    let product = products.find(product=>product.id==req.params.id)
+    if(!product){
+      res.redirect(`/`)
+    }
+    productsCart.push(product)
+    fs.writeFileSync(productsCartFilePath,JSON.stringify(productsCart,null," "));
+    res.redirect(`/products/cart/all`)
+  },
+  
+  cartDelete:(req,res)=>{
+   
+      const id = req.params.id;
+      const finalProductsCart=productsCart.filter(product=>product.id!=id);
+      fs.writeFileSync(productsCartFilePath,JSON.stringify(finalProductsCart,null," "));
+      res.redirect(`/products/cart/all`)
   }
 };
 
