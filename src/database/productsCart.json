@@ -1,41 +1,5 @@
 [
  {
-  "id": 30,
-  "name": "Naruto Storm Trilogy",
-  "consoleType": "nintendo-switch",
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "sellers",
-  "imageUri": "/images/main-cards/narutostorm.jpeg",
-  "category": "accion",
-  "description": "Naruto: Ultimate Ninja Storm Trilogy es un recopilatorio exclusivo de la distribución digital que incluye los tres primeros juegos numerados de esta exitosa saga de juegos de lucha basados en el famoso manga creado por Masashi Kishimoto."
- },
- {
-  "id": 16,
-  "name": "Crash Bandicoot Trilogy",
-  "consoleType": "ps5",
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "recommended",
-  "imageUri": "images/main-cards/crashbandicoot.jpeg",
-  "category": "arcade",
-  "description": "Se trata de una remasterización de los tres primeros juegos de la serie Crash Bandicoot aparecidos en la consola PlayStation a finales de los 90 y desarrollados por Naughty Dog, pero mejorados con gráficos totalmente renovados, cambios estéticos y ciertas novedades jugables."
- },
- {
-  "id": 28,
-  "name": "LOTR Gollum",
-  "consoleType": "nintendo-switch",
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "sellers",
-  "imageUri": "/images/main-cards/lotrgollum.jpeg",
-  "category": "accion",
-  "description": "The Lord of the Rings: Gollum, desarrollado y editado por Daedalic Entertainment para PC, PlayStation 4, Xbox One, Switch, PlayStation 5 y Xbox Series, es una aventura de acción centrada en la historia. Embárcate en un peligroso viaje como Gollum, en busca del único tesoro que conoce. Gollum es hábil y astuto, pero su personalidad está dividida. Una mente, dos egos: ¡tú decides!"
- },
- {
   "id": 25,
   "name": "Visage",
   "consoleType": "nintendo-switch",
@@ -46,5 +10,17 @@
   "imageUri": "/images/main-cards/visage.jpeg",
   "category": "accion",
   "description": "Visage es un videojuego de terror en primera persona desarrollado por SadSquare Studio, con énfasis en el horror psicológico, que nos llevará a vivir una serie de sucesos paranormales ambientados en los años ochenta, en un pueblo apartado y en un caserón enorme. Está pensado para consolas y PC."
+ },
+ {
+  "id": 30,
+  "name": "Naruto Storm Trilogy",
+  "consoleType": "nintendo-switch",
+  "value": 6.99,
+  "discount": 15,
+  "discountValue": 5.94,
+  "section": "sellers",
+  "imageUri": "/images/main-cards/narutostorm.jpeg",
+  "category": "accion",
+  "description": "Naruto: Ultimate Ninja Storm Trilogy es un recopilatorio exclusivo de la distribución digital que incluye los tres primeros juegos numerados de esta exitosa saga de juegos de lucha basados en el famoso manga creado por Masashi Kishimoto."
  }
 ]
