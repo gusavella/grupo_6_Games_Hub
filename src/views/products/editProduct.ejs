@@ -9,7 +9,7 @@
           <h3>Edicion de producto</h3>
           <div class="edit-product-form-box">
            
-              <img src=" <%= product.imageUri %> "  class="edit-product-image" alt="imagen de juego" >
+            <img src=" <%= product.image %> "  class="edit-product-image" alt="imagen de juego" >
            
             <form action="/products/<%=product.id%>/edit?_method=PUT" class="edit-product-form" method="post"
               enctype="multipart/form-data">
@@ -32,37 +32,25 @@
               <div class="edit-product-div">
                 <label for="category" class="edit-product-label" >Categoria</label>
                 <select name="category" id="category">
-                  <option value="accion" <%=product.category=='accion' ?'selected':''%> >Accion</option>
-                  <option value="aventura" <%=product.category=='aventura' ?'selected':''%> >Aventura</option>
-                  <option value="arcade" <%=product.category=='arcade' ?'selected':''%>>Arcade</option>
-                  <option value="deportes" <%=product.category=='deportes' ?'selected':''%>>Deportes</option>
-                  <option value="estrategia" <%=product.category=='estrategia' ?'selected':''%>>Estrategia</option>
+                  <% for (let i=0 ; i<categories.length ; i++) {%>
+                    <option value="accion" <%=product.category_id==categories[i].id ?'selected':''%> ><%= categories[i].name %></option>
+                  <%}%>
                 </select>
               </div>
               <div class="edit-product-div">
                 <label for="console" class="edit-product-label" >Consolas compatibles:</label>
-                <div class="new-console-checkbox">
-                  <input type="checkbox" name="console" id="ps4" value="ps4" <%=product.consoleType.includes('ps4')
-                    ?'checked':''%>/>
-                  <label for="ps4">PS4</label>
+                <div class="consoleType-checkbox">
+                  <% for (let i=0 ; i<consoles.length ; i++) {%>
+                    <div class="consoleType-checkbox-div">
+                      <input type="checkbox" name="consoleType" id="<%=consoles[i].name%>" value="<%=consoles[i].id%>" 
+                          <% for (let j=0 ; j<product.consoles.length ; j++) {%>
+                            <%=product.consoles[j].id==consoles[i].id?'checked':' '%>
+                          <%}%>
+                     />
+                      <label for="<%=consoles[i].name%>"><%=consoles[i].name%></label>
+                    </div>
+                    <%}%>
 
-                  <input type="checkbox" name="console" id="ps5" value="ps5" <%=product.consoleType.includes('ps5')
-                    ?'checked':''%>
-                  />
-                  <label for="ps5">PS5</label>
-
-                  <input type="checkbox" name="console" id="xbox" value="xbox" <%=product.consoleType.includes('xbox')
-                    ?'checked':''%> />
-                  <label for="xbox">XBox</label>
-
-                  <input type="checkbox" name="console" id="Pc" value="Pc" <%=product.consoleType.includes('Pc')
-                    ?'checked':''%>/>
-                  <label for="Pc">Pc</label>
-
-                  <input type="checkbox" name="console" id="nintendo-switch" value="nintendo-switch"
-                    <%=product.consoleType.includes('nintendo-switch') ?'checked':''%>
-                  />
-                  <label for="nintendo-switch">Nintendo Switch</label>
                 </div>
                
               </div>
@@ -77,9 +65,11 @@
               <div class="edit-product-div">
                 <label for="section" class="edit-product-label" >Sección</label>
                 <select name="section" id="section">
-                  <option value="offer" <%=product.section=='offer' ?'selected':''%>>Oferta</option>
-                  <option value="recommended" <%=product.section=='recommended' ?'selected':''%>>Recomendado</option>
-                  <option value="sellers" <%=product.section=='sellers' ?'selected':''%>>Más Vendidos</option>
+
+                  <% for (let i=0 ; i<sections.length ; i++) {%>
+                    <option value="accion" <%=product.section_id==sections[i].id ?'selected':''%> ><%= sections[i].name %></option>
+                  <%}%>
+                  
                 </select>
               </div>
               <div class="edit-product-button">

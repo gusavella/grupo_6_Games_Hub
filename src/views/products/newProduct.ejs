@@ -41,26 +41,14 @@
           <div class="new-product-div">
           <label for="consoleType" class="new-product-label">Consolas compatibles: </label>
           <div class="consoleType-checkbox">
-            <input type="checkbox" name="consoleType" id="ps4" value="ps4" />
-            <label for="ps4">PS4</label>
-
-            <input type="checkbox" name="consoleType" id="ps5" value="ps5" />
-            <label for="ps5">PS5</label>
-
-            <input type="checkbox" name="consoleType" id="xbox" value="xbox" />
-            <label for="xbox">XBox</label>
-
-            <input type="checkbox" name="consoleType" id="Pc" value="Pc" />
-            <label for="Pc">Pc</label>
-
-            <input
-              type="checkbox"
-              name="consoleType"
-              id="nintendo-switch"
-              value="nintendo-switch"
-            />
-            </div>
-            <label for="nintendo-switch">Nintendo Switch</label>
+            <% for (let i=0 ; i<consoles.length ; i++) {%>
+              <div class="consoleType-checkbox-div">
+                <input type="checkbox" name="consoleType" id="<%=consoles[i].name%>" value="<%=consoles[i].id%>" />
+                <label for="<%=consoles[i].name%>"><%=consoles[i].name%></label>
+              </div>
+              <%}%>
+           </div>
+           
           </div>
           <div class="new-product-div">
           <label for="value" class="new-product-label">Precio: </label>

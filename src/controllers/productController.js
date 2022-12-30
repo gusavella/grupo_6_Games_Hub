@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
@@ -57,7 +56,8 @@ const controller = {
   newProduct: async(req, res) => {
     let categories= await db.Category.findAll();
     let sections= await db.Section.findAll();
-    res.render("products/newProduct", { tittle: "New Product" ,categories,sections});
+    let consoles= await db.Console.findAll();
+    res.render("products/newProduct", { tittle: "New Product" ,categories,sections,consoles});
   },
   create: (req, res) => {
     //Pendiente actualizacion de consolas 
@@ -81,10 +81,14 @@ const controller = {
 
 
   },
-  showEdit: (req, res) => {
-    let id = req.params.id;
-    let product = products.find(product=>product.id==id)
-    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product});
+  showEdit: async (req, res) => {
+    let categories= await db.Category.findAll();
+    let sections= await db.Section.findAll();
+    let consoles= await db.Console.findAll();
+    let product= await  db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
+        
+  // console.log(product)
+    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product,categories,sections,consoles});
   },
 
   update: (req, res) => {
