@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(200),
             allowNull: false
         },
-        surmanes: {
+        surnames: {
             type: dataTypes.STRING(200),
             allowNull: false
         },
