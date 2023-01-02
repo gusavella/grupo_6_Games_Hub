@@ -11,6 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema gamesHub
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `gamesHub`  ;
 CREATE SCHEMA IF NOT EXISTS `gamesHub` DEFAULT CHARACTER SET utf8 ;
 USE `gamesHub` ;
 
@@ -118,7 +119,7 @@ DROP TABLE IF EXISTS `gamesHub`.`users` ;
 CREATE TABLE IF NOT EXISTS `gamesHub`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `names` VARCHAR(200) NOT NULL,
-  `surmanes` VARCHAR(200) NOT NULL,
+  `surnames` VARCHAR(200) NOT NULL,
   `email` VARCHAR(200) NOT NULL,
   `password` VARCHAR(200) NOT NULL,
   `address` VARCHAR(45) NOT NULL,
