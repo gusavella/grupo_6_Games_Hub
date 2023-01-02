@@ -79,3 +79,7 @@ https://www.figma.com/file/FaSg1WJLw2FJhlEZvasdAZ/Digital_House?node-id=161%3A23
 
  #### Register:
  ![Register](./Wireframe/registroGamesHub.png)
+
+## Modelo Base de datos:
+ ![Base_de_datos](./database_files/Modelo base de datos GamesHub.png)
+
