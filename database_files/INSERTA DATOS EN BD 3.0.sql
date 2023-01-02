@@ -1,7 +1,7 @@
 /*INSERTA SECCIONES*/
-INSERT INTO gameshub.sections (`id`,`name`,`create_time`,`update_time`) VALUES (1,'offer','2022-12-18 09:54:59',NULL);
-INSERT INTO gameshub.sections (`id`,`name`,`create_time`,`update_time`) VALUES (2,'recommended','2022-12-18 09:54:59',NULL);
-INSERT INTO gameshub.sections (`id`,`name`,`create_time`,`update_time`) VALUES (3,'sellers','2022-12-18 09:54:59',NULL);
+INSERT INTO gameshub.sections (`id`,`name`,`create_time`,`update_time`) VALUES (1,'Ofertas','2022-12-18 09:54:59',NULL);
+INSERT INTO gameshub.sections (`id`,`name`,`create_time`,`update_time`) VALUES (2,'Recomendados','2022-12-18 09:54:59',NULL);
+INSERT INTO gameshub.sections (`id`,`name`,`create_time`,`update_time`) VALUES (3,'Mas vendidos','2022-12-18 09:54:59',NULL);
 
 /*INSERTA CATEGORIAS*/
 INSERT INTO gameshub.categories (`id`,`name`,`create_time`,`update_time`) VALUES (1,'Accion','2022-12-18 09:49:06',NULL);
