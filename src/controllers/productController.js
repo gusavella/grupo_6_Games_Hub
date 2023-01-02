@@ -59,27 +59,41 @@ const controller = {
     let consoles= await db.Console.findAll();
     res.render("products/newProduct", { tittle: "New Product" ,categories,sections,consoles});
   },
-  create: (req, res) => {
+  create: async(req, res) => {
     //Pendiente actualizacion de consolas 
     console.log(req.body)
-    db.Product.create(
-      {
-                 name : req.body.name ,
-          description : req.body.description,
-                image : '/images/games/'+ req.file.filename,
-                value : parseFloat(req.body.value),
-             discount : parseFloat(req.body.discount),
-          final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
-          category_id : req.body.category,
-           section_id : req.body.section
-      }
-  )
-  .then(() => {
-      res.redirect('/products/all')
-  })
-  .catch(e => console.log(e))
+  
+   try{
+    let createdProduct= await db.Product.create(
+            {
+                      name : req.body.name ,
+                description : req.body.description,
+                      image : req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+                      value : parseFloat(req.body.value),
+                  discount : parseFloat(req.body.discount),
+                final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
+                category_id : req.body.category,
+                section_id : req.body.section,
+                  
+            })
 
+ 
+   if(req.body.consoles){
+    let consolesAssigned= req.body.consoles
+    for( let i=0; i<consolesAssigned.length; i++ ){
+      await db.ProductConsole.create({
+        console_id : consolesAssigned[i],
+        product_id:createdProduct.id })
 
+    }
+
+   }
+ 
+    res.redirect('/products/all')
+ 
+}
+  catch(e){console.log(e)} 
+  
   },
   showEdit: async (req, res) => {
     try{
@@ -87,12 +101,18 @@ const controller = {
     let sections= await db.Section.findAll();
     let consoles= await db.Console.findAll();
     let product= await  db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
+    let productConsoles = await  db.ProductConsole.findAll({where:{product_id:req.params.id}})
+    let productConsolesArray=[]
         
-  // console.log(product)
-    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product,categories,sections,consoles});
+    if(productConsoles){
+    productConsoles.forEach(productConsole=>{
+      productConsolesArray.push(productConsole.console_id)
+    })
+   }
+    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product,categories,sections,consoles,productConsolesArray});
     }
     catch(e){
-      conmsole.log(e)
+      console.log(e)
     }
   },
 
@@ -101,25 +121,34 @@ const controller = {
     let productOld = await  db.Product.findByPk(req.params.id)
   
 
-    const editedGame={
-      name:req.body.name,
-      value:parseFloat(req.body.price),
-      discount:parseFloat(req.body.discount),
-      final_value:(parseFloat(parseFloat(req.body.price)*(1-parseFloat(req.body.discount)/100))).toFixed(2) ,// Para que solamente tenga dos digitos
-      section_id:req.body.section,
-      image:req.file?'/images/games/'+req.file.filename:productOld.image,
-      category_id:req.body.category,
-      description:req.body.description
+    const editedProduct={
+             name : req.body.name,
+            value : parseFloat(req.body.price),
+         discount : parseFloat(req.body.discount),
+      final_value : (parseFloat(parseFloat(req.body.price)*(1-parseFloat(req.body.discount)/100))).toFixed(2) ,// Para que solamente tenga dos digitos
+       section_id : req.body.section,
+            image : req.file?'/images/games/'+req.file.filename:productOld.image,
+      category_id : req.body.category,
+      description : req.body.description
   }
 
-  console.log(editedGame)
-    await db.Product.update(editedGame, {
+    await db.Product.update(editedProduct, {
       where:{
         id:req.params.id
       }
     });
-
-   
+    await db.ProductConsole.destroy({where:{ 
+      product_id:req.params.id
+    }})
+    if(req.body.consoles){
+         let consolesAssigned= req.body.consoles
+      for( let i=0; i<consolesAssigned.length; i++ ){
+        await db.ProductConsole.create({
+          console_id : consolesAssigned[i],
+          product_id : req.params.id })
+  
+      }
+    }
  }
  catch(e){
   console.log(e)

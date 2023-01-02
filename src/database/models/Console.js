@@ -33,6 +33,10 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: true
         })
 
+        Console.hasMany(models.ProductConsole, {
+            as: "consoles_products_consoles",
+            foreignKey: "console_id"
+        })
    }
  
     return Console

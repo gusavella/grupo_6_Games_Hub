@@ -49,21 +49,21 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'update_time',
         deletedAt: 'delete_time'
     }
-    const Game = sequelize.define(alias, cols, config); 
+    const Product = sequelize.define(alias, cols, config); 
 
-    Game.associate = function (models) {
+    Product.associate = function (models) {
 
 
-        Game.belongsTo(models.Section, {
+        Product.belongsTo(models.Section, {
             as: "section",
             foreignKey: "section_id"
         }),
-        Game.belongsTo(models.Category, {
+        Product.belongsTo(models.Category, {
             as: "category",
             foreignKey: "category_id"
         })
 
-        Game.belongsToMany(models.Console, {
+        Product.belongsToMany(models.Console, {
             as: "consoles",
             through: "products_consoles",
             foreignKey: "product_id",
@@ -71,7 +71,16 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: true
         })
 
+        Product.hasMany(models.ProductConsole, {
+            as: "products_consoles",
+            foreignKey: "product_id"
+        })
+        // Product.belongsTo(models.ProductConsole, {
+        //     as: "products_consoles",
+        //     foreignKey: "id"
+        // })
+
    }
  
-    return Game
+    return Product
 };
