@@ -6,6 +6,20 @@ const controller = {
         .then(products => {
             res.json(products)
         })
-}}
+    },
+    pc: async (req, res) => {
+       await db.ProductConsole.findAll()
+        .then(ProductConsoles => {
+            res.json(ProductConsoles)
+        })
+    },
+    pcDetail:async (req, res) => {
+        await db.ProductConsole.findAll({where:{Product_id:req.params.id}})
+         .then(ProductConsoles => {
+             res.json(ProductConsoles)
+         })
+    }
+
+}
 
     module.exports=controller;
