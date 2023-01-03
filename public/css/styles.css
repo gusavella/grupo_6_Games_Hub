@@ -978,6 +978,32 @@ h2 {
     color:white;
 }
 /* --------------------- USER DETAIL ------------------------*/
+
+/* ---------------------    ROLES    ------------------------*/
+.role-box{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    /* max-width: 1000px; */
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-content: center;
+    align-items: center;
+}
+.role-td{
+    display:flex;
+}
+.role-input{
+    border-radius: 5px;
+    padding: 3px;
+}
+/* ---------------------    ROLES    ------------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */

@@ -49,15 +49,15 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'update_time',
         deletedAt: 'delete_time'
     }
-    const Section = sequelize.define(alias, cols, config); 
+    const User = sequelize.define(alias, cols, config); 
 
-    Section.associate = function(models) {
+    User.associate = function(models) {
        
-        // Section.hasMany(models.Product, {
-        //     as: "products",
-        //     foreignKey: "section_id"
-        // })
+        User.belongsTo(models.Role, {
+            as: "role",
+            foreignKey: "role_id"
+        })
     }
  
-    return Section
+    return User
 };

@@ -15,7 +15,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 const controller = {
     all: async (req, res) => {
       try{
-        let users= await db.User.findAll()
+        let users= await db.User.findAll({include:["role"]})
         res.json(users);
       }
       catch(e){
