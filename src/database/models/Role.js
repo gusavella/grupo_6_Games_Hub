@@ -22,18 +22,15 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Role = sequelize.define(alias, cols, config); 
 
-    // Role.associate = function (models) {
+     Role.associate = function (models) {
 
 
-    //     Role.belongsToMany(models.Movie, {
-    //         as: "movies",
-    //         through: "actor_movie",
-    //         foreignKey: "actor_id",
-    //         otherKey: "movie_id",
-    //         timestamps: false
-    //     })
+        Role.hasMany(models.User, {
+            as: "users",
+            foreignKey: "role_id"
+        })
 
-   // }
+    }
  
     return Role
 };
