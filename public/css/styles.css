@@ -996,8 +996,12 @@ h2 {
     align-content: center;
     align-items: center;
 }
+.role-th{
+color:white;
+}
 .role-td{
     display:flex;
+    align-self: center;
 }
 .role-input{
     border-radius: 5px;
