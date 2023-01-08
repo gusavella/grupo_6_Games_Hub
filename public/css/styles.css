@@ -138,6 +138,12 @@ footer section{
     flex-direction: column;
 }
 
+.login-validation-error{
+    color: red;
+}
+.is-invalid{
+    border-color: red;
+}
 /* --------------------------- REGISTER --------------------------- */
 
 /* --------------------------- MAIN --------------------------- */
@@ -1160,10 +1166,6 @@ h2 {
     .login-button:hover {
         background-color: #183153;
         color: #1AADB4;
-    }
-
-    .login-validation-error{
-        color: red;
     }
 /* --------------------------- LOGIN --------------------------- */
     .carousel{

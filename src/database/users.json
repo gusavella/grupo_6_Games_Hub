@@ -128,5 +128,15 @@
   "adress": "fyftsertaedfds",
   "image": "/images/users/1671893186231.ico",
   "id": 13
+ },
+ {
+  "names": "Felipe",
+  "surnames": "Mendez",
+  "password": "$2a$10$xNx1jvZkZRlZB5588SK3yerZCl723dSrynYlpweztpMDcwsggj1ia",
+  "phone": "0424889911",
+  "email": "felipe@elvalidador.com",
+  "adress": "venezuela",
+  "image": "/images/users/1673130952055.jpg",
+  "id": 14
  }
 ]

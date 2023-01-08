@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <%- include('../partials/head')%>
+  <body class="body-register">
+    <%- include('../partials/header')%>
+    <main class="main-register">
+    <div class="role-box">
+      <h3 class="title">Secciones</h3>
+     
+      <table description="role table">
+       <% for (section in sections){ %>
+        <tr>
+          <form action="/sections/<%=sections[section].id%>/edit?_method=PUT" method="post">
+          <td><input type="text" class="role-input" id="<%=sections[section].name%>" value=<%=sections[section].name%> name="name"></td>
+          <td class="role-td">
+            <div >
+              <button class="new-product-button" type="submit">Editar</button>
+            </div>
+          </form>
+           <div>
+              <form action="/sections/<%=sections[section].id%>?_method=DELETE" method="post">
+                <button class="edit-product-delete-button" type="submit">Borrar</button>
+              </form>
+           </div>
+          </td>
+        </tr>
+        <%}%>
+        <tr>
+          <form action="/sections/add" method="post">
+          <td><input type="text" name="name" class="role-input" ></td>            
+            <td><button class="new-product-button" type="submit">Agregar</button></td>
+            <td></td>
+          </form>  
+        </tr>
+      </table>
+      
+    </div>
+  </main>
+  <%- include('../partials/footer')%>
+</body>
+</html>
