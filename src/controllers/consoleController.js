@@ -11,8 +11,8 @@ const controller = {
     },
     create:async(req,res)=>{
         try{
-           await db.Role.create({name:req.body.name})
-            res.redirect('/roles/all')
+           await db.Console.create({name:req.body.name})
+            res.redirect('/consoles/all')
         }catch(e){
             console.log(e)
         }
@@ -21,22 +21,22 @@ const controller = {
         try{
             // console.log('paramsId:',req.params.id)
             // console.log(req.body)
-            await db.Role.update({name:req.body.name},
+            await db.Console.update({name:req.body.name},
                 {where:{
                         id:req.params.id
                         }
                 })
-            res.redirect('/roles/all')
+            res.redirect('/consoles/all')
         }catch(e){
             console.log(e)
         }
       },
       delete:async(req,res)=>{
         try{
-           await db.Role.destroy({where:{
+           await db.Console.destroy({where:{
             id:req.params.id
            }})
-            res.redirect('/roles/all')
+            res.redirect('/consoles/all')
         }catch(e){
             console.log(e)
         }
