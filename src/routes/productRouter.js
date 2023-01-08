@@ -30,7 +30,9 @@ let storage = multer.diskStorage({
 
 //creacion producto
 router.get('/new',productController.newProduct)
+
 router.post('/new', upload.single('new-img'),productController.create)
+
 //vista de cada producto
 router.get('/:id', productController.productDetail)
 

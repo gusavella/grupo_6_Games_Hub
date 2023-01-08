@@ -17,8 +17,7 @@ let storage = multer.diskStorage({
    })
    let upload = multer({ storage: storage })
 
-
-   router.get('/all',userController.all)   
+router.get('/all',userController.all)   
 
 router.get('/detail/:id',userController.detail)
 //Login
