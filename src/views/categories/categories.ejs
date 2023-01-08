@@ -1,0 +1,46 @@
+
+  
+  <%- include('../partials/head')%>
+  <body class="body-register">
+    <%- include('../partials/header')%>
+    <main class="main-register">
+    <div class="role-box">
+      <h3 class="title">Categorías</h3>
+     
+      <table description="role table">
+        <tr class="role-th">
+          <th>Nombre</th>
+          <th>Operaciones</th>
+        </tr>
+        
+       <% for (category in categories){ %>
+        <tr>
+          <form action="/categories/<%=categories[category].id%>/edit?_method=PUT" method="post">
+          <td><input type="text" class="role-input" id="<%=categories[category].name%>" value=<%=categories[category].name%> name="name"></td>
+          <td class="role-td">
+            <div >
+              <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            </div>
+          </form>
+           <div >
+              <form action="/categories/<%=categories[category].id%>?_method=DELETE" method="post">
+                <button class="edit-product-delete-button" type="submit"><i class="fa-solid fa-trash"></i> Borrar</button>
+              </form>
+           </div>
+          </td>
+        </tr>
+        <%}%>
+        <tr>
+          <form action="/categories/add" method="post">
+            <td ><input type="text" name="name" class="role-input" ></td>            
+            <td ><button class="new-product-button" type="submit"><i class="fa-solid fa-plus"></i> Agregar</button></td>
+            <td></td>
+          </form>  
+        </tr>
+      </table>
+      
+    </div>
+  </main>
+  <%- include('../partials/footer')%>
+</body>
+
