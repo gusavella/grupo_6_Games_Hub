@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt= require("bcryptjs")
 const {	validationResult} = require('express-validator');
-const User = require("../models/Users")
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -24,9 +23,11 @@ const controller = {
       
     },
     detail: (req, res) => {
-          let user=User.findByPk(req.params.id)
-          console.log(user)
+          db.User.findByPk(req.params.id)
+          .then(function(user){
         res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+          })
+        
     },
     login: (req, res) => {
       console.log('cookies:',req.cookies)
@@ -42,9 +43,13 @@ const controller = {
 				oldData: req.body
 			});
 		}
-      let userToLogin = User.findByField('email',req.body.email)
-
-      if(userToLogin){
+      db.User.findOne({
+        where:{
+          email:req.body.email
+        }
+      })
+      .then(function(userToLogin){
+        if(userToLogin){
         let isOkPassword = bcrypt.compareSync(req.body.password,userToLogin.password)
         if(isOkPassword){
           delete userToLogin.password
@@ -72,6 +77,8 @@ const controller = {
                                     }
                                   }
                   })
+      })
+      
 
     },
     logout: (req,res) => {
@@ -90,17 +97,53 @@ const controller = {
           oldData: req.body
         })
       } else {
-          let newUser = req.body
-          newUser.image = '/images/users/' + req.file.filename;
-          User.create(newUser)
-          res.redirect('/')
+          db.User.create({
+            names: req.body.names,
+            surnames: req.body.surnames,
+            email:req.body.email,
+            password: bcrypt.hashSync(req.body.password,10),
+            address:req.body.address,
+            phone:req.body.phone,
+            image: req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+            role_id:2
+          })
+          .then(function(user){
+            res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+          })
         }
     },
-    createUser: (req, res) => {
-      let newUser = req.body
-      newUser.image = '/images/users/' + req.file.filename;
-      User.create(newUser)
-      res.redirect('/')
+    edit: (req,res) =>{
+      db.User.findByPk(req.params.id)
+      .then(function(oldData){
+        res.render("users/userEdit.ejs", { tittle: "Editar Usuario" , oldData:oldData})
+      })
+      
+    },
+    update: (req,res) =>{
+      console.log(req.body)
+      db.User.update({
+            names: req.body.names,
+            surnames: req.body.surnames,
+            email:req.body.email,
+            address:req.body.address,
+            phone:req.body.phone,
+            image: req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+      },{where:{id:req.params.id}})
+      .then(function(user){
+        console.log(user)
+        res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+      })
+    },
+    delete: (req,res) =>{
+      db.User.destroy({
+        where:{
+          id:req.params.id
+        }
+      })
+      .then(function(){
+        res.redirect("/")
+      })
+      
     },
     profile: (req, res) => {
       res.render('users/userDetail', {tittle:'Games Hub'})

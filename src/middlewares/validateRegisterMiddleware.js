@@ -7,5 +7,5 @@ module.exports = [
     body('email')
         .notEmpty().withMessage('Debes escribir un email válido').bail()
         .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('adress').notEmpty().withMessage('Debes añadir tú dirección'),
+    body('address').notEmpty().withMessage('Debes añadir tú dirección'),
 ]
