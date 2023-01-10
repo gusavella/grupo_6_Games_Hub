@@ -19,8 +19,8 @@ const controller = {
       },
       update:async(req,res)=>{
         try{
-            console.log('paramsId:',req.params.id)
-            console.log(req.body)
+            // console.log('paramsId:',req.params.id)
+            // console.log(req.body)
             await db.Role.update({name:req.body.name},
                 {where:{
                         id:req.params.id

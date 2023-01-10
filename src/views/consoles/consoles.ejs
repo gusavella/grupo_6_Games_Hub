@@ -5,7 +5,7 @@
     <%- include('../partials/header')%>
     <main class="main-register">
     <div class="role-box">
-      <h3 class="title">Roles</h3>
+      <h3 class="title">consoles</h3>
      
       <table description="role table">
         <tr class="role-th">
@@ -13,17 +13,17 @@
           <th>Operaciones</th>
         </tr>
         
-       <% for (role in roles){ %>
+       <% for (console in consoles){ %>
         <tr>
-          <form action="/roles/<%=roles[role].id%>/edit?_method=PUT" method="post">
-          <td><input type="text" class="role-input" id="<%=roles[role].name%>" value=<%=roles[role].name%> name="name"></td>
+          <form action="/consoles/<%=consoles[console].id%>/edit?_method=PUT" method="post">
+          <td><input type="text" class="role-input" id="<%=consoles[console].name%>" value=<%=consoles[console].name%> name="name"></td>
           <td class="role-td">
             <div >
               <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
             </div>
           </form>
            <div >
-              <form action="/roles/<%=roles[role].id%>?_method=DELETE" method="post">
+              <form action="/consoles/<%=consoles[console].id%>?_method=DELETE" method="post">
                 <button class="edit-product-delete-button" type="submit"><i class="fa-solid fa-trash"></i> Borrar</button>
               </form>
            </div>
@@ -31,7 +31,7 @@
         </tr>
         <%}%>
         <tr>
-          <form action="/roles/add" method="post">
+          <form action="/consoles/add" method="post">
             <td ><input type="text" name="name" class="role-input" ></td>            
             <td ><button class="new-product-button" type="submit"><i class="fa-solid fa-plus"></i> Agregar</button></td>
             <td></td>
