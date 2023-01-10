@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt= require("bcryptjs")
 const {	validationResult} = require('express-validator');
-const Users = require("../models/Users.js")
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -26,7 +25,7 @@ const controller = {
     detail: (req, res) => {
           db.User.findByPk(req.params.id)
           .then(function(user){
-            res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+        res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
           })
         
     },
@@ -87,34 +86,30 @@ const controller = {
     processRegister : (req, res) => {
       const resultValidationRegister = validationResult(req);
       if (resultValidationRegister.errors.length > 0){
-        console.log(resultValidationRegister)
-        return res.render('register/register.ejs', { tittle: 'Registro con error',
+        return res.render('register/register.ejs', { tittle: 'Registro',
           errors: resultValidationRegister.mapped(),
           oldData: req.body
         })
       } else {
-              db.User.create({
-              names: req.body.names,
-              surnames:req.body.surnames,
-              email:req.body.email,
-              password:bcrypt.hashSync(req.body.password,10),
-              address:req.body.address,
-              phone:req.body.phone,
-              image: req.file ? '/images/users/' + req.file.filename : '/images/defaultImage.png',
-              role_id:2
-
-            })
-            .then((user) => {
-              res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
-            })
-          }
-          
-         
-        },
+          db.User.create({
+            names: req.body.names,
+            surnames: req.body.surnames,
+            email:req.body.email,
+            password: bcrypt.hashSync(req.body.password,10),
+            address:req.body.address,
+            phone:req.body.phone,
+            image: req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+            role_id:2
+          })
+          .then(function(user){
+            res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+          })
+        }
+    },
     createUser: (req, res) => {
       let newUser = req.body
       newUser.image = '/images/users/' + req.file.filename;
-      Users.create(newUser)
+      User.create(newUser)
       res.redirect('/')
     },
     profile: (req, res) => {
