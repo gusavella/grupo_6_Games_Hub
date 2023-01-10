@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt= require("bcryptjs")
 const {	validationResult} = require('express-validator');
-const User = require("../models/Users")
+const Users = require("../models/Users.js")
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -24,9 +24,11 @@ const controller = {
       
     },
     detail: (req, res) => {
-          let user=User.findByPk(req.params.id)
-          console.log(user)
-        res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+          db.User.findByPk(req.params.id)
+          .then(function(user){
+            res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+          })
+        
     },
     login: (req, res) => {
       console.log('cookies:',req.cookies)
@@ -85,21 +87,34 @@ const controller = {
     processRegister : (req, res) => {
       const resultValidationRegister = validationResult(req);
       if (resultValidationRegister.errors.length > 0){
-        return res.render('register/register.ejs', { tittle: 'Registro',
+        console.log(resultValidationRegister)
+        return res.render('register/register.ejs', { tittle: 'Registro con error',
           errors: resultValidationRegister.mapped(),
           oldData: req.body
         })
       } else {
-          let newUser = req.body
-          newUser.image = '/images/users/' + req.file.filename;
-          User.create(newUser)
-          res.redirect('/')
-        }
-    },
+              db.User.create({
+              names: req.body.names,
+              surnames:req.body.surnames,
+              email:req.body.email,
+              password:bcrypt.hashSync(req.body.password,10),
+              address:req.body.address,
+              phone:req.body.phone,
+              image: req.file ? '/images/users/' + req.file.filename : '/images/defaultImage.png',
+              role_id:2
+
+            })
+            .then((user) => {
+              res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+            })
+          }
+          
+         
+        },
     createUser: (req, res) => {
       let newUser = req.body
       newUser.image = '/images/users/' + req.file.filename;
-      User.create(newUser)
+      Users.create(newUser)
       res.redirect('/')
     },
     profile: (req, res) => {

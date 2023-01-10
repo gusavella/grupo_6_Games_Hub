@@ -107,13 +107,13 @@
             </div>
             <div class="register-division">
               <div class="details">
-                <label class="details" for="adress">Dirección:</label>
+                <label class="details" for="address">Dirección:</label>
               </div>
               <input
-                class="details <%= locals.errors && errors.adress ? 'is-invalid' : null %>"
+                class="details <%= locals.errors && errors.address ? 'is-invalid' : null %>"
                 type="text"
-                name="adress"
-                id="adress"
+                name="address"
+                id="address"
                 placeholder=" ej: calle falsa 123"
                 value="<%= locals.oldData ? oldData.adress : null %>"
               />
