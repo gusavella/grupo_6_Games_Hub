@@ -6,9 +6,9 @@
     <%- include('../partials/header')%>
     <main class="main-register">
     <div class="register-box">
-      <h3 class="title">Registro</h3>
+      <h3 class="title">Editar Usuario</h3>
       <hr />
-      <form class="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
+      <form class="register-form" action="/users/edit/<%=oldData.id%>" method="post" enctype="multipart/form-data">
         <div class="input-box">
           <div class="register-block-inline">
             <div class="register-division">
@@ -114,7 +114,7 @@
                 name="address"
                 id="address"
                 placeholder=" ej: calle falsa 123"
-                value="<%= locals.oldData ? oldData.adress : null %>"
+                value="<%= locals.oldData ? oldData.address : null %>"
               />
               <% if (locals.errors && errors.adress){%>
                 <div class="login-validation-error">
@@ -125,14 +125,15 @@
             <div class="register-division">
               <div class="details">
                 <label class="details" for="">Imagen de perfil</label>
+            </div>
                 <input type="file" name="image" id="image">  
-              </div>
+              
             </div>
           </div>
         </div>
 
         <div >
-          <button type="submit" class="buy-button">Registrarse</button>
+          <button type="submit" class="buy-button">Editar</button>
         </div>
       </form>
     </div>

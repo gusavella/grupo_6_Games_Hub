@@ -17,6 +17,9 @@
             <div class="data-profile">
                 <p>Direccion: <%= user.address%></p>
                 <p>Telefono: <%= user.phone%></p>
+                <form action="/users/edit/<%=user.id%>" method="get">
+                    <button>Editar usuario</button>
+                </form>
             </div>
         </div>
     </main>

@@ -43,9 +43,13 @@ const controller = {
 				oldData: req.body
 			});
 		}
-      let userToLogin = User.findByField('email',req.body.email)
-
-      if(userToLogin){
+      db.User.findOne({
+        where:{
+          email:req.body.email
+        }
+      })
+      .then(function(userToLogin){
+        if(userToLogin){
         let isOkPassword = bcrypt.compareSync(req.body.password,userToLogin.password)
         if(isOkPassword){
           delete userToLogin.password
@@ -73,6 +77,8 @@ const controller = {
                                     }
                                   }
                   })
+      })
+      
 
     },
     logout: (req,res) => {
@@ -106,11 +112,38 @@ const controller = {
           })
         }
     },
-    createUser: (req, res) => {
-      let newUser = req.body
-      newUser.image = '/images/users/' + req.file.filename;
-      User.create(newUser)
-      res.redirect('/')
+    edit: (req,res) =>{
+      db.User.findByPk(req.params.id)
+      .then(function(oldData){
+        res.render("users/userEdit.ejs", { tittle: "Editar Usuario" , oldData:oldData})
+      })
+      
+    },
+    update: (req,res) =>{
+      console.log(req.body)
+      db.User.update({
+            names: req.body.names,
+            surnames: req.body.surnames,
+            email:req.body.email,
+            address:req.body.address,
+            phone:req.body.phone,
+            image: req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+      },{where:{id:req.params.id}})
+      .then(function(user){
+        console.log(user)
+        res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+      })
+    },
+    delete: (req,res) =>{
+      db.User.destroy({
+        where:{
+          id:req.params.id
+        }
+      })
+      .then(function(){
+        res.redirect("/")
+      })
+      
     },
     profile: (req, res) => {
       res.render('users/userDetail', {tittle:'Games Hub'})
