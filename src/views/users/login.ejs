@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+    
+<body class="body-login">
+  <%- include('../partials/header')%>
+    <main class="main-login">
+        <div class="login-box">
+            <h3>Login</h3>
+            <form class="login-form" action="/users/login" method="post">
+                <label class='label-login' for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="name@mail.com">
+                <% if (locals.errors && errors.email){%>
+                    <div class="login-validation-error">
+                        <%= errors.email.msg%>
+                    </div>
+                <%}%>   
+                <label class='label-login' for="password">Contraseña</label>
+                <input type="password" name="password" id="password" required placeholder="Password">
+                <% if (locals.errors && errors.password){%>
+                    <div class="login-validation-error">
+                        <%= errors.password.msg%>
+                    </div>
+                <%}%>   
+                <div class="remember-check">
+                <input type="checkbox" value="remember" id="remember-check" name="rememberCheck">
+                <label class='label-login' for="remember-check">Recordarme</label>
+            </div>
+                <button class="buy-button" type="submit">Ingresar</button>
+                <a href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a>
+            </form>
+            <a class="register" href="/users/register">Registrarse</a>
+        </div>
+    </main>
+    <%- include('../partials/footer')%>
+</body>
+</html>

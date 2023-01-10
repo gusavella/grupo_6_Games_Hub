@@ -1,96 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head')%>
+<%- include('../partials/head')%>
+
   <body>
     <%- include('../partials/header')%>
-    <main class="new-product-main">
-      <div class="new-product-box">
-        <h3>Edicion de producto</h3>
-        <div class="edit-product-form-box">
-        <img src=" <%= product.imageUri %> " alt="imagen de juego" width="120px" height="150px">
-        <form
-          action="/product/<%=product.id%>/edit?_method=PUT"
-          class="edit-product-form"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <div class="edit-product-div">
-            <label for="name">Nombre:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value="<%=product.name%>"
-            />
-          </div>
-          <label for="description">Descripcion:</label>
-          <textarea
-            type="textarea"
-            cols="40"
-            rows="10"
-            name="description"
-            id="description"
-            class="edit-product-text-area"
+      <main class="new-product-main">
+        <div class="new-product-box">
+          <h3>Edicion de producto</h3>
+          <div class="edit-product-form-box">
+           
+            <img src=" <%= product.image %> "  class="edit-product-image" alt="imagen de juego" >
+           
+            <form action="/products/<%=product.id%>/edit?_method=PUT" class="edit-product-form" method="post"
+              enctype="multipart/form-data">
+
+              <div class="edit-product-div">
+                <label for="new-img"class="edit-product-label">Imagen:</label>
+                <input type="file" name="new-img" id="new-img" />
+              </div>
+
+              <div class="edit-product-div">
+                <label for="name" class="edit-product-label">Nombre:</label>
+                <input type="text" name="name" id="name" value="<%=product.name%>" />
+              </div>
+              <div class="edit-product-div">
+                <label for="description" class="edit-product-label" >Descripcion:</label>
+                <textarea type="textarea" cols="40" rows="10" name="description" id="description"
+                  class="edit-product-text-area"><%=product.description%></textarea>
+              </div>
             
-          ><%=product.description%></textarea>
-          <div class="edit-product-div">
-            <label for="new-img">Imagen:</label>
-            <input type="file" name="new-img" id="new-img" />
-          </div>
-          <div class="edit-product-div">
-            <label for="category">Categoria</label>
-            <select name="category" id="category">
-              <option value="accion" <%=product.category=='accion'?'selected':''%>>Accion</option>
-              <option value="aventura" <%=product.category=='aventura'?'selected':''%> >Aventura</option>
-              <option value="arcade" <%=product.category=='arcade'?'selected':''%>>Arcade</option>
-              <option value="deportes" <%=product.category=='deportes'?'selected':''%>>Deportes</option>
-              <option value="estrategia"<%=product.category=='estrategia'?'selected':''%>>Estrategia</option>
-            </select>
-          </div>
-          <label for="console">Consolas compatibles:</label>
-          <div class="new-console-checkbox">
-            <input type="checkbox" name="console" id="ps4" value="ps4"  <%=product.consoleType=='ps4'?'checked':''%>/>
-            <label for="ps4">PS4</label>
+              <div class="edit-product-div">
+                <label for="category" class="edit-product-label" >Categoria</label>
+                <select name="category" id="category">
+                  <% for (let i=0 ; i<categories.length ; i++) {%>
+                    <option value=<%=categories[i].id%> <%=product.category_id==categories[i].id ?'selected':''%> ><%= categories[i].name %></option>
+                  <%}%>
+                </select>
+              </div>
+              <div class="edit-product-div">
+                <label for="console" class="edit-product-label" >Consolas compatibles:</label>
+                <div class="consoleType-checkbox">
+                  <% for (let i=0 ; i<consoles.length ; i++) {%>
+                    <div class="consoleType-checkbox-div">
+                      <input type="checkbox" name="consoles" id="<%=consoles[i].name%>" value="<%=consoles[i].id%>" 
+                          <% for (let j=0 ; j<productConsolesArray.length ; j++) {%>
+                                <%=productConsolesArray[j]==consoles[i].id?'checked':' '%>
+                          <%}%>
+                     />
+                      <label for="<%=consoles[i].name%>"><%=consoles[i].name%></label>
+                    </div>
+                    <%}%>
 
-            <input type="checkbox" name="console" id="ps5" value="ps5" <%=product.consoleType=='ps5'?'checked':''%> />
-            <label for="ps5">PS5</label>
+                </div>
+               
+              </div>
+              <div class="edit-product-div">
+                <label for="price" class="edit-product-label" >Precio:</label>
+                <input step="any" type="number" name="price" id="price" value="<%=product.value%>" />
+              </div>
+              <div class="edit-product-div">
+                <label for="discount" class="edit-product-label" >Descuento:</label>
+                <input step="any" type="number" name="discount" id="discount" value="<%=product.discount%>" />
+              </div>
+              <div class="edit-product-div">
+                <label for="section" class="edit-product-label" >Sección</label>
+                <select name="section" id="section">
 
-            <input type="checkbox" name="console" id="xbox" value="xbox" <%=product.consoleType=='xbox'?'checked':''%>  />
-            <label for="xbox">XBox</label>
+                  <% for (let i=0 ; i<sections.length ; i++) {%>
+                    <option value=<%=sections[i].id%> <%=product.section_id==sections[i].id ?'selected':''%> ><%= sections[i].name %></option>
+                  <%}%>
+                  
+                </select>
+              </div>
+              <div class="edit-product-button">
+                <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+              </div>
+              
+            </form>
+            <form action="/products/<%=product.id%>?_method=DELETE" method="post">
+              <div class="edit-product-button">
+                <button class="edit-product-delete-button" type="submit"><i class="fa-solid fa-trash"></i> Borrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
 
-            <input type="checkbox" name="console" id="Pc" value="Pc"  <%=product.consoleType=='Pc'?'checked':''%>/>
-            <label for="Pc">Pc</label>
-
-            <input
-              type="checkbox"
-              name="console"
-              id="nintendo-switch"
-              value="nintendo-switch"
-              <%=product.consoleType=='nintendo-switch'?'checked':''%>
-            />
-            <label for="nintendo-switch">Nintendo Switch</label>
-          </div>
-          <div class="edit-product-div">
-            <label for="price">Precio:</label>
-            <input type="number" name="price" id="price" value="<%=product.value%>"/>
-          </div>
-          <div class="edit-product-div">
-            <label for="discount">Descuento:</label>
-            <input type="number" name="discount" id="discount" value="<%=product.discount%>"/>
-          </div>
-          <div class="edit-product-div">
-            <label for="section">Sección</label>
-            <select name="section" id="section">
-              <option value="on-sale" <%=product.section=='on-sale'?'selected':''%>>Oferta</option>
-              <option value="recommended"  <%=product.section=='recommended'?'selected':''%>>Recomendado</option>
-              <option value="best-sellers" <%=product.section=='best-sellers'?'selected':''%>>Más Vendidos</option>
-            </select>
-            </div>
-          <button class="new-product-button" type="submit">Editar</button>
-        </form>
-      </div>
-    </div>
-    </main>
-    <%- include('../partials/footer')%>
+      </main>
+      <%- include('../partials/footer')%>
   </body>
+
 </html>

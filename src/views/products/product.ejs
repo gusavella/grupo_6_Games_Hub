@@ -15,14 +15,20 @@
         <div class="container-selling">
             <section class="best-selling">
                 <% for(let i=0;i<products.length;i++){%>
-                    <% if(products[i].section){ %>
-                        <a href="/product/<%=products[i].id%>">
+                    <% if(products[i].section.name){ %>
                         <div class="card">
-                            <img src="<%=products[i].imageUri%>" alt="imagen-game">
-                            <h4><%=products[i].name%></h4>
-                            <p class="price"><%=products[i].value %> - <span><a href="/<%=products[i].id %>">COMPRAR</a></span></p>
+                            <div class="face front">
+                                <img src="<%=products[i].image%>" alt="imagen-game">
+                                <h3><%=products[i].name %></h3>
+                            </div>
+                            <div class="face back">
+                                <h4><%=products[i].name%></h4>
+                                <p>Categoría: <%=products[i].category.name%></p>
+                                <div class="link-buy">
+                                    <a href="/products/<%=products[i].id%>"><%=products[i].final_value %> - COMPRAR</a>
+                                </div>
+                            </div>
                         </div>
-                    </a>
                     <%} %>
                 <%} %>
             </section>

@@ -8,7 +8,7 @@
     <main class="product-main">
       <div class="product-detail-container">
       <div class="logo">
-        <img src="<%= product.imageUri %>" alt="Terraria Logo" />
+        <img src="<%= product.image %>" alt="Terraria Logo" />
         <h1><%= product.name %></h1>
       </div>
 
@@ -16,12 +16,15 @@
         <div class="product-buy-info">
           <div class="product-prices">
             <p class="product-discount">-<%= product.discount %>%</p>
-            <p class="product-final-price"><%= product.discountValue %></p>
-            <p class="product-price"><%= product.value %></p>
+            <p class="product-final-price">$<%= product.final_value %></p>
+            <p class="product-price">$<%= product.value %></p>
           </div>
-          <a class="product-addcar" href="#"
-            >Añadir al carrito<i class="fa-solid fa-cart-shopping"></i
-          ></a>
+          <form method="post" action=<%=`/products/cart/add/${product.id}` %>>
+
+            <button class="product-addcar" type="submit"
+            >Añadir al carrito<em class="fa-solid fa-cart-shopping"></em>
+          </form>
+         
         </div>
       </section>
     </div>

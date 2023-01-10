@@ -4,12 +4,20 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 let logger = require('morgan');
+const expressSession = require("express-session");
 
 let indexRouter = require('./src/routes/index');
-let cartRouter = require('./src/routes/cart');
-let loginRouter = require('./src/routes/login');
-let registerRouter = require('./src/routes/register');
-let productRouter = require('./src/routes/product');
+let productRouter = require('./src/routes/productRouter');
+let userRouter = require('./src/routes/userRouter');
+let roleRouter = require('./src/routes/roleRouter');
+let consoleRouter = require('./src/routes/consoleRouter');
+let sectionRouter = require('./src/routes/sectionRouter');
+let categoryRouter = require('./src/routes/categoryRouter');
+let gameRouter = require('./src/routes/gameRouter');
+let productConsoleRouter = require('./src/routes/productConsoleRouter');
+
+
+let userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
 
 let app = express();
 
@@ -22,14 +30,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './public')));
-
 app.use(methodOverride('_method')); 
+app.use(expressSession({secret: "secret",resave: false,saveUninitialized: false}));
+app.use(userLoggedMiddleware);
 
 app.use('/', indexRouter);
-app.use('/cart', cartRouter);
-app.use('/login', loginRouter);
-app.use('/register', registerRouter);
-app.use('/product', productRouter);
+app.use('/products', productRouter);
+app.use('/users', userRouter);
+app.use('/roles', roleRouter);
+app.use('/consoles', consoleRouter);
+app.use('/sections', sectionRouter);
+app.use('/categories', categoryRouter);
+app.use('/games', gameRouter);
+app.use('/productConsole', productConsoleRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

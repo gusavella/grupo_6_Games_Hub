@@ -1,0 +1,62 @@
+[
+ {
+  "names": "Manuel",
+  "surnames": "Belgrano",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "12345678",
+  "email": "manu@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "argentina123",
+  "id": 1
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "cordillera 456",
+  "id": 2
+ },
+ {
+  "names": "Pedro",
+  "surnames": "alvarez",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "456465465",
+  "email": "jajaj@jajajaj",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "alla 123",
+  "id": 3
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "cordillera 456",
+  "id": 4
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "cordillera 456",
+  "id": 5
+ },
+ {
+  "names": "Jose",
+  "surnames": "San Martin",
+  "password": "$2a$10$T5dhAs9qXNQ5g9r8pqymIucCc0q2laj0ggRIrpq315TixZ8o2c1DW",
+  "phone": "45678910",
+  "email": "pepito@gmail.com",
+  "image": "/images/users/1667867621671.jpeg",
+  "adress": "cordillera 456",
+  "id": 6
+ }
+]

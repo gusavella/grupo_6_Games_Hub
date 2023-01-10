@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const bcrypt= require("bcryptjs")
-const {	validationResult, body} = require('express-validator');
+const {	validationResult} = require('express-validator');
 const User = require("../models/Users")
 
 const db = require('../database/models');
@@ -81,27 +81,30 @@ const controller = {
     },
     register : (req, res) => {
       res.render ("register/register.ejs",{tittle:'Register'});
-  },
-  createUser: async (req, res) => {
+    },
+    processRegister : (req, res) => {
+      const resultValidationRegister = validationResult(req);
+      if (resultValidationRegister.errors.length > 0){
+        return res.render('register/register.ejs', { tittle: 'Registro',
+          errors: resultValidationRegister.mapped(),
+          oldData: req.body
+        })
+      } else {
+          let newUser = req.body
+          newUser.image = '/images/users/' + req.file.filename;
+          User.create(newUser)
+          res.redirect('/')
+        }
+    },
+    createUser: (req, res) => {
       let newUser = req.body
-      try{
-        let createdUser = await db.User.create({
-          names:newUser.names,
-          surnames:newUser.surnames,
-          email:newUser.email,
-          password:bcrypt.hashSync(newUser.password,10),
-          address:newUser.address,
-          phone:newUser.phone,
-          image:req.file?'/images/users/'+ req.file.filename:'/images/defaultImage.png'
-      })
+      newUser.image = '/images/users/' + req.file.filename;
+      User.create(newUser)
       res.redirect('/')
-      }
-
-      catch(e){console.log(e)}
-  },
-  profile: (req, res) => {
+    },
+    profile: (req, res) => {
       res.render('users/userDetail', {tittle:'Games Hub'})
-  }
+    }
 };
 
 module.exports = controller;
