@@ -17,11 +17,13 @@
         <% if (locals.isLogged){%>
           <li class="header-name"><a href="/users/detail/<%=locals.userLogged.id%>"><%=locals.userLogged.names%></a></li>
         <%}%>
-        <li>
-          <a class="header-icon" href="/products/cart/all"
-            ><em class="fa-solid fa-cart-shopping"></em
-          ></a>
-        </li>
+        <% if (locals.isLogged){%>
+          <li>
+            <a class="header-icon" href="/products/cart/all"
+              ><em class="fa-solid fa-cart-shopping"></em
+            ></a>
+          </li>
+          <%}%>
         <li>
           <a class="header-icon burger-menu" href="#"
             ><em class="fa-solid fa-bars"></em

@@ -116,9 +116,9 @@
                 placeholder=" ej: calle falsa 123"
                 value="<%= locals.oldData ? oldData.adress : null %>"
               />
-              <% if (locals.errors && errors.adress){%>
+              <% if (locals.errors && errors.address){%>
                 <div class="login-validation-error">
-                    <%= errors.adress.msg%>
+                    <%= errors.address.msg%>
                 </div>
               <%}%>
             </div>

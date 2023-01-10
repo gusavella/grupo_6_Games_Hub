@@ -631,6 +631,7 @@ a{
     margin-top: 10px;
     text-align: center;
     border-radius: 5px;
+    justify-content: center;
 }
 
 .product-prices{
@@ -664,6 +665,7 @@ a{
     color:white;
     background-color: #1AADB4;
     width: 90%;
+    height: 90%;
     padding: 1.9%;
     border-radius: 5px;
     text-decoration: none;
