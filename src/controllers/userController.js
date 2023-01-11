@@ -119,7 +119,7 @@ const controller = {
       })
       
     },
-    update: (req,res) =>{
+    update: async (req,res) =>{
       console.log(req.body)
       db.User.update({
             names: req.body.names,
@@ -131,7 +131,7 @@ const controller = {
       },{where:{id:req.params.id}})
       .then(function(user){
         console.log(user)
-        res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
+        res.redirect(`/users/detail/${req.params.id}`);
       })
     },
     delete: (req,res) =>{

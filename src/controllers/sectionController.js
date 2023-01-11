@@ -21,11 +21,13 @@ const controller = {
         try{
             console.log('paramsId:',req.params.id)
             console.log(req.body)
-            await db.Section.update({name:req.body.name},
+           let updated= await db.Section.update({name:req.body.name},
                 {where:{
                         id:req.params.id
                         }
                 })
+
+                console.log(updated)
             res.redirect('/sections/all')
         }catch(e){
             console.log(e)
