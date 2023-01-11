@@ -119,16 +119,25 @@ const controller = {
       })
       
     },
-    update: async (req,res) =>{
-      console.log(req.body)
+    update: (req,res) =>{
+    // console.log('Body:',req.body)
+    // res.json(req.body)
+    // let userOld = await  db.User.findByPk(req.params.id)
+    // console.log('old:',userOld)
+
       db.User.update({
-            names: req.body.names,
-            surnames: req.body.surnames,
-            email:req.body.email,
-            address:req.body.address,
-            phone:req.body.phone,
-            image: req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
-      },{where:{id:req.params.id}})
+                    names : req.body.names,
+                 surnames : req.body.surnames,
+                 password : bcrypt.hashSync(req.body.password,10),
+                    email : req.body.email,
+                  address : req.body.address,
+                    phone : req.body.phone,
+                    image : req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png'},
+                    {
+                    where : {
+                            id : req.params.id
+                            }
+                    })
       .then(function(user){
         console.log(user)
         res.redirect(`/users/detail/${req.params.id}`);

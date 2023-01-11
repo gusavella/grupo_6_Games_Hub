@@ -41,7 +41,7 @@ router.delete("/:id",userController.delete)
 //EDITAR
 router.get("/edit/:id",userController.edit)
 
-router.post("/edit/:id",userController.update)
+router.put("/:id/edit",upload.single('image'),userController.update)
 
 
 module.exports = router;

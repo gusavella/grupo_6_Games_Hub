@@ -6,7 +6,7 @@
 <body class="body-main">
   <%- include('../partials/header') %>
     <main>
-        <div class="container-profile" style="display: flex; justify-content: space-evenly;">
+        <div class="container-profile" >
             <div class="img-profile">
                 <img src="<%= user.image%>" alt="" style="width: 300px;">
             </div>
@@ -18,7 +18,7 @@
                 <p>Direccion: <%= user.address%></p>
                 <p>Telefono: <%= user.phone%></p>
                 <form action="/users/edit/<%=user.id%>" method="get">
-                    <button>Editar usuario</button>
+                    <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                 </form>
             </div>
         </div>
