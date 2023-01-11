@@ -3,6 +3,7 @@ let router = express.Router();
 let path = require('path');
 const multer = require('multer');
 const productController =require('../controllers/productController');
+const authMiddleware = require('../middlewares/authMiddleware')
 
 //
 let storage = multer.diskStorage({
@@ -22,9 +23,6 @@ let storage = multer.diskStorage({
  router.get('/offers', productController.offer);
  router.get('/recommended',productController.recommended);
  router.get('/products', productController.allProducts);
- const authMiddleware = require('../middlewares/authMiddleware')
- 
-
 
  router.get('/all', productController.allProducts)
 

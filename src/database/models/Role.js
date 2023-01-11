@@ -10,7 +10,9 @@ module.exports = (sequelize, dataTypes) => {
         // updated_at: dataTypes.TIMESTAMP,
         name: {
             type: dataTypes.STRING(100),
-            allowNull: false
+            allowNull: false,
+            unique: true
+            
         }
     };
     let config = {
@@ -26,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
         Role.hasMany(models.User, {
-            as: "users",
+            as: "user",
             foreignKey: "role_id"
         })
 

@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  
-  <%- include('../partials/head')%>
+   <%- include('../partials/head')%>
   <body class="body-register">
     <%- include('../partials/header')%>
     <main class="main-register">
@@ -9,9 +6,13 @@
       <h3 class="title">Secciones</h3>
      
       <table description="role table">
+        <tr class="role-th">
+          <th>Nombre</th>
+          <th>Operaciones</th>
+        </tr>
        <% for (section in sections){ %>
         <tr>
-          <form action="/sections/<%=sections[section].id%>/edit?_method=PUT" method="post">
+          <form action="/sections/<%=sections[section].id%>/edit?_method=PUT" method="post" >
           <td><input type="text" class="role-input" id="<%=sections[section].name%>" value=<%=sections[section].name%> name="name"></td>
           <td class="role-td">
             <div >
