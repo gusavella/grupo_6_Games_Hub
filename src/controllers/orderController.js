@@ -3,7 +3,7 @@ const sequelize = db.sequelize;
 const controller = {
     all: async (req, res) => {
         try{
-            let orders=await db.Order.findAll({include:["user"]})
+            let orders=await db.Order.findAll({include:["user","order_product"]})
             res.json(orders)
         }catch(e){
             console.log(e)

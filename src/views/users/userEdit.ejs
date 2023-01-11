@@ -8,7 +8,7 @@
     <div class="register-box">
       <h3 class="title">Editar Usuario</h3>
       <hr />
-      <form class="register-form" action="/users/edit/<%=oldData.id%>" method="post" enctype="multipart/form-data">
+      <form action="/users/<%=oldData.id%>/edit?_method=PUT " class="register-form"  method="post" enctype="multipart/form-data">
         <div class="input-box">
           <div class="register-block-inline">
             <div class="register-division">
@@ -16,7 +16,7 @@
                 <label class="details" for="names">Nombres:</label>
               </div>
               <input
-                class="details <%= locals.errors && errors.names ? 'is-invalid' : null %>"
+                class="details"
                 type="text"
                 name="names"
                 id="names"
@@ -132,8 +132,8 @@
           </div>
         </div>
 
-        <div >
-          <button type="submit" class="buy-button">Editar</button>
+        <div class="edit-product-button">
+          <button type="submit" class="new-product-button"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
         </div>
       </form>
     </div>
