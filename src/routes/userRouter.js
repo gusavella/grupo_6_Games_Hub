@@ -34,6 +34,14 @@ router.get('/logout',userController.logout)
 router.get ("/register", guestMiddleware, userController.register);
 
 router.post('/register', upload.single('image'), validateRegisterMiddleware ,userController.processRegister);
-//REGISTER
+
+// DELETE
+router.delete("/:id",userController.delete)
+
+//EDITAR
+router.get("/edit/:id",userController.edit)
+
+router.post("/edit/:id",userController.update)
+
 
 module.exports = router;
