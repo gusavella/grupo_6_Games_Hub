@@ -13,7 +13,8 @@
        <% for (section in sections){ %>
         <tr>
           <form action="/sections/<%=sections[section].id%>/edit?_method=PUT" method="post" >
-          <td><input type="text" class="role-input" id="<%=sections[section].name%>" value=<%=sections[section].name%> name="name"></td>
+
+          <td><input type="text" class="role-input" id="<%=sections[section].name%>" value="<%=sections[section].name%>" name="name"></td>
           <td class="role-td">
             <div >
               <button class="new-product-button" type="submit">Editar</button>
