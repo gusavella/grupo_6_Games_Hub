@@ -16,7 +16,7 @@
        <% for (console in consoles){ %>
         <tr>
           <form action="/consoles/<%=consoles[console].id%>/edit?_method=PUT" method="post">
-          <td><input type="text" class="role-input" id="<%=consoles[console].name%>" value=<%=consoles[console].name%> name="name"></td>
+          <td><input type="text" class="role-input" id="<%=consoles[console].name%>" value="<%=consoles[console].name%>" name="name"></td>
           <td class="role-td">
             <div >
               <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>

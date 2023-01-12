@@ -8,15 +8,18 @@
     <main>
         <div class="container-profile" >
             <div class="img-profile">
-                <img src="<%= user.image%>" alt="" style="width: 300px;">
+                <img src="<%= user.image%>" alt="" >
             </div>
             <div class="data-profile">
-                <p>Nombres: <%= user.names%></p>
-                <p>Apellidos: <%= user.surnames%></p>
+                <div class="data-profile-label"><p>Nombres: <%= user.names%></p></div>
+                
+                <div class="data-profile-label"><p>Apellidos: <%= user.surnames%></p></div>
             </div>
             <div class="data-profile">
-                <p>Direccion: <%= user.address%></p>
-                <p>Telefono: <%= user.phone%></p>
+                <div class="data-profile-label">
+                    <p>Direccion: <%= user.address%></p>
+                </div>
+                <div class="data-profile-label"><p>Telefono: <%= user.phone%></p></div>
                 <form action="/users/edit/<%=user.id%>" method="get">
                     <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                 </form>
