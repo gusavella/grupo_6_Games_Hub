@@ -16,7 +16,7 @@
        <% for (role in roles){ %>
         <tr>
           <form action="/roles/<%=roles[role].id%>/edit?_method=PUT" method="post">
-          <td><input type="text" class="role-input" id="<%=roles[role].name%>" value=<%=roles[role].name%> name="name"></td>
+          <td><input type="text" class="role-input" id="<%=roles[role].name%>" value="<%=roles[role].name%>" name="name"></td>
           <td class="role-td">
             <div >
               <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>

@@ -4,6 +4,7 @@ const controller = {
     all: async (req, res) => {
         try{
             let sections = await db.Section.findAll()
+            // console.log(sections)
             res.render('sections/sections.ejs',{tittle:'Secciones', sections})
         }catch(e){
             console.log(e)
