@@ -26,17 +26,5 @@
   "imageUri": "/images/main-cards/quake.jpeg",
   "category": "accion",
   "description": "Quake 4 es la nueva entrega de Quake, la popular saga de videojuegos de acción en primera persona creada por John Romero, John Carmack y American McGee. Apostando por un diseño enfocado en los eSports y la vertiente online y competitiva, Quake Champions es una reformulación de Quake con nuevos ingredientes, mejores gráficos y la misma jugabilidad sólida y frenética de siempre."
- },
- {
-  "id": 28,
-  "name": "LOTR Gollum",
-  "consoleType": "nintendo-switch",
-  "value": 6.99,
-  "discount": 15,
-  "discountValue": 5.94,
-  "section": "sellers",
-  "imageUri": "/images/main-cards/lotrgollum.jpeg",
-  "category": "accion",
-  "description": "The Lord of the Rings: Gollum, desarrollado y editado por Daedalic Entertainment para PC, PlayStation 4, Xbox One, Switch, PlayStation 5 y Xbox Series, es una aventura de acción centrada en la historia. Embárcate en un peligroso viaje como Gollum, en busca del único tesoro que conoce. Gollum es hábil y astuto, pero su personalidad está dividida. Una mente, dos egos: ¡tú decides!"
  }
 ]
