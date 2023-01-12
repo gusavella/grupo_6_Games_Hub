@@ -6,6 +6,7 @@ const userController =require('../controllers/userController');
 const validateLoginMiddleware= require('../middlewares/validateLoginMiddleware')
 const validateRegisterMiddleware = require('../middlewares/validateRegisterMiddleware')
 const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -19,7 +20,7 @@ let storage = multer.diskStorage({
 
 router.get('/all',userController.all)   
 
-router.get('/detail/:id',userController.detail)
+router.get('/detail/:id',authMiddleware,userController.detail)
 //Login
 router.get('/login',guestMiddleware,userController.login)
 
@@ -39,7 +40,7 @@ router.post('/register', upload.single('image'), validateRegisterMiddleware ,use
 router.delete("/:id",userController.delete)
 
 //EDITAR
-router.get("/edit/:id",userController.edit)
+router.get("/edit/:id",authMiddleware,userController.edit)
 
 router.put("/:id/edit",upload.single('image'),userController.update)
 
