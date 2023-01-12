@@ -148,6 +148,21 @@ footer section{
     border-color: red;
 }
 /* --------------------------- REGISTER --------------------------- */
+/* --------------------------- LOGIN --------------------------- */
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color:rgba(0,0,0,0.4);
+    padding: 25px;
+    border-radius: 5px;
+    width: 80%;
+    margin: auto;
+}
+/* --------------------------- LOGIN --------------------------- */
 
 /* --------------------------- MAIN --------------------------- */
 
@@ -1111,8 +1126,9 @@ color:white;
     }
     /* ----------------------------------FOOTER---------------------------------- */
     /* --------------------------- LOGIN --------------------------- */
+
     .login-box {
-        padding: 25px 50px 25px;
+        max-width: 300px;
     }
 
     .body-login {
@@ -1130,16 +1146,6 @@ color:white;
         padding: 10px;
     }
 
-    .login-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        color: white;
-        background-color:rgba(0,0,0,0.4);
-        padding: 25px;
-        border-radius: 5px;
-    }
 
     .login-box h3 {
         border-bottom: solid 1px white;

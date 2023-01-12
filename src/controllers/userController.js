@@ -104,7 +104,7 @@ const controller = {
             password: bcrypt.hashSync(req.body.password,10),
             address:req.body.address,
             phone:req.body.phone,
-            image: req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+            image: req.file?'/images/users/'+ req.file.filename:'/images/defaultImage.png',
             role_id:2
           })
           .then(function(user){
@@ -132,7 +132,7 @@ const controller = {
                     email : req.body.email,
                   address : req.body.address,
                     phone : req.body.phone,
-                    image : req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png'},
+                    image : req.file?'/images/users/'+ req.file.filename:'/images/defaultImage.png'},
                     {
                     where : {
                             id : req.params.id
