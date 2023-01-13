@@ -17,12 +17,12 @@
           <td><input type="text" class="role-input" id="<%=sections[section].name%>" value="<%=sections[section].name%>" name="name"></td>
           <td class="role-td">
             <div >
-              <button class="new-product-button" type="submit">Editar</button>
+              <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
             </div>
           </form>
            <div>
               <form action="/sections/<%=sections[section].id%>?_method=DELETE" method="post">
-                <button class="edit-product-delete-button" type="submit">Borrar</button>
+                <button class="edit-product-delete-button" type="submit"><i class="fa-solid fa-trash"></i> Borrar</button>
               </form>
            </div>
           </td>
@@ -31,7 +31,7 @@
         <tr>
           <form action="/sections/add" method="post">
           <td><input type="text" name="name" class="role-input" ></td>            
-            <td><button class="new-product-button" type="submit">Agregar</button></td>
+            <td><button class="new-product-button" type="submit"><i class="fa-solid fa-plus"></i> Agregar</button></td>
             <td></td>
           </form>  
         </tr>
