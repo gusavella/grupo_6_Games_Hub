@@ -63,6 +63,13 @@ li{
 .header-name{
     color: #1AADB4
 }
+.search-button{
+    width: 25px;
+    margin:auto;
+    text-align: center;
+    align-self: center;
+    border-radius: 3px;
+    }
 /* ----------------------------------HEADER---------------------------------- */
 /* ----------------------------------FOOTER---------------------------------- */
 footer{
@@ -1005,17 +1012,19 @@ h2 {
     color: white;
     align-content: center;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-     align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .img-profile{
     display: flex;
     color: white;
-    align-content: start;
-    flex-wrap: wrap;
-    width: 100px;
-    height: 100px;
+    align-content: stretch;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    flex-direction: row;
 }
 .data-profile-label{
     display: flex;
