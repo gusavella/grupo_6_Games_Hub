@@ -848,6 +848,7 @@ h2 {
     justify-content: center;
     align-items: center;
     padding: 15px;
+    flex-direction: column-reverse;
 }
 
 .new-product-box {
@@ -1067,6 +1068,26 @@ color:white;
     height: 80vh;
 }
 /* ---------------------    ROLES    ------------------------*/
+/* ---------------------ERRORES FRONT------------------------*/
+
+.errors-box{
+    display:flex;
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    border-radius: 5px;
+   
+}
+.error{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:red;
+}
+/* ---------------------ERRORES FRONT------------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */

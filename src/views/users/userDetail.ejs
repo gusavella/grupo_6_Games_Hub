@@ -11,15 +11,15 @@
                 <img src="<%= user.image%>" alt="" >
             </div>
             <div class="data-profile">
-                <div class="data-profile-label"><p>Nombres: <%= user.names%></p></div>
+                <div class="data-profile-label"><p><label><strong>Nombres:</strong></label> <%= user.names%></p></div>
                 
-                <div class="data-profile-label"><p>Apellidos: <%= user.surnames%></p></div>
+                <div class="data-profile-label"><p><label><strong>Apellidos:</strong></label> <%= user.surnames%></p></div>
             </div>
             <div class="data-profile">
                 <div class="data-profile-label">
-                    <p>Direccion: <%= user.address%></p>
+                    <p><label><strong>Direccion:</strong></label> <%= user.address%></p>
                 </div>
-                <div class="data-profile-label"><p>Telefono: <%= user.phone%></p></div>
+                <div class="data-profile-label"><p><label><strong>Telefono:</strong></label> <%= user.phone%></p></div>
                 <form action="/users/edit/<%=user.id%>" method="get">
                     <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                 </form>

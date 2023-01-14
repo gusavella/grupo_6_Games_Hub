@@ -80,7 +80,7 @@ const controller = {
  
    if(req.body.consoles){
     let consolesAssigned= req.body.consoles
-    for( let i=0; i<consolesAssigned.length; i++ ){
+    for(let i of consolesAssigned){
       await db.ProductConsole.create({
         console_id : consolesAssigned[i],
         product_id:createdProduct.id })
