@@ -1,20 +1,24 @@
 window.addEventListener('load',function(){
+
   
 let addButton = document.getElementById('add-product-button')
 let form = document.querySelector('form')
 
+let errors =[];
+let body=document.querySelector('body')
+let mainBox=document.getElementById('main')
+let name=document.getElementById('name')
+let description=document.getElementById('description')
+let category=document.getElementById('category')
+let price = document.getElementById('value')
+let discount= document.getElementById('discount')
+let consoles= document.querySelectorAll('#consoles')
+let section= document.getElementById('section')
+let isCheckedConsole=false;
+
+
 addButton.addEventListener('click',(e)=>{
     e.preventDefault
-    let errors =[];
-    let body=document.querySelector('body')
-    let mainBox=document.getElementById('main')
-    let name=document.getElementById('name')
-    let description=document.getElementById('description')
-    let category=document.getElementById('category')
-    let price = document.getElementById('value')
-    let discount= document.getElementById('discount')
-    let consoles= document.querySelectorAll('#consoles')
-    let section= document.getElementById('section')
    
 
     if (name.value.length<=0){
@@ -43,39 +47,45 @@ addButton.addEventListener('click',(e)=>{
     if ( section.value<=0 ||section.value==undefined || section.value==null){
         errors.push('Selecciona una seccion')
        } 
-
-     console.log('consolas:',consoles)  
+   
      if(consoles){
         for(let i of consoles){ 
-            console.log(consoles[i])
-         
+            if(i.checked){
+                isCheckedConsole=true; 
+            }
         }
      }
      
-
-    if ( !consoles){
+    if ( !isCheckedConsole){
         errors.push('Debes escoger al menos una consola')
        }
  
     if (errors.length>0 ){
         drawErrors(errors)
+        // drawValues()
       }
    else{
+    console.log('enviando info')
     form.submit()
    }
-      function drawErrors(errors){
-        mainBox.innerHTML+='<div id="errors" class="errors-box"></div>' 
-        let errorsBox= document.getElementById('errors')
-        errorsBox.innerHTML+='<ul class="errors-list" id="errors-list"></ul>' 
-        let errorsList= document.getElementById('errors-list')
-            for(error in errors){   
-                errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
-            }    
-        }
-  
-   
+
+
+
 })
 
+function drawErrors(errors){
+    mainBox.innerHTML+='<div id="errors" class="errors-box"></div>' 
+    let errorsBox= document.getElementById('errors')
+    errorsBox.innerHTML+='<ul class="errors-list" id="errors-list"></ul>' 
+    let errorsList= document.getElementById('errors-list')
+        for(error in errors){   
+            errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
+        }   
+  return  null   
+}
 
-
+function drawValues(){
+ 
+  
+}
 })
