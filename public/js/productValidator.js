@@ -1,7 +1,7 @@
 window.addEventListener('load',function(){
 
   
-let addButton = document.getElementById('add-product-button')
+let addProductButton = document.getElementById('add-product-button')
 let form = document.querySelector('form')
 
 let errors =[];
@@ -14,11 +14,11 @@ let price = document.getElementById('value')
 let discount= document.getElementById('discount')
 let consoles= document.querySelectorAll('#consoles')
 let section= document.getElementById('section')
-let isCheckedConsole=false;
+let isCheckedConsole=false
 
 
-addButton.addEventListener('click',(e)=>{
-    e.preventDefault
+addProductButton.addEventListener('click',(e)=>{
+    e.preventDefault()
    
 
     if (name.value.length<=0){
@@ -34,10 +34,6 @@ addButton.addEventListener('click',(e)=>{
     if (category.value.length<=0){
         errors.push('Debes ingresar una categoria')
         }
-    if (category.value.length<=0){
-        errors.push('Debes ingresar una categoria')
-        }
-
     if (price.value<=0){
         errors.push('Debes ingresar un valor de producto mayor a cero')
        }
@@ -55,6 +51,9 @@ addButton.addEventListener('click',(e)=>{
             }
         }
      }
+     else{
+        isCheckedConsole=false; 
+     }
      
     if ( !isCheckedConsole){
         errors.push('Debes escoger al menos una consola')
@@ -68,7 +67,7 @@ addButton.addEventListener('click',(e)=>{
     console.log('enviando info')
     form.submit()
    }
-
+   e.preventDefault()
 
 
 })
@@ -81,7 +80,7 @@ function drawErrors(errors){
         for(error in errors){   
             errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
         }   
-  return  null   
+  return  
 }
 
 function drawValues(){
