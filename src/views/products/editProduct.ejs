@@ -4,7 +4,7 @@
 
   <body>
     <%- include('../partials/header')%>
-      <main class="new-product-main">
+      <main class="new-product-main" id="main">
         <div class="new-product-box">
           <h3>Edicion de producto</h3>
           <div class="edit-product-form-box">
@@ -12,7 +12,7 @@
             <img src=" <%= product.image %> "  class="edit-product-image" alt="imagen de juego" >
            
             <form action="/products/<%=product.id%>/edit?_method=PUT" class="edit-product-form" method="post"
-              enctype="multipart/form-data">
+              enctype="multipart/form-data" id="form">
 
               <div class="edit-product-div">
                 <label for="new-img"class="edit-product-label">Imagen:</label>
@@ -56,7 +56,7 @@
               </div>
               <div class="edit-product-div">
                 <label for="price" class="edit-product-label" >Precio:</label>
-                <input step="any" type="number" name="price" id="price" value="<%=product.value%>" />
+                <input step="any" type="number" name="price" id="value" value="<%=product.value%>" />
               </div>
               <div class="edit-product-div">
                 <label for="discount" class="edit-product-label" >Descuento:</label>
@@ -73,7 +73,7 @@
                 </select>
               </div>
               <div class="edit-product-button">
-                <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+                <button id="add-product-button" class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
               </div>
               
             </form>
@@ -87,6 +87,9 @@
 
       </main>
       <%- include('../partials/footer')%>
+      <script type="text/javascript" src="/js/productValidator.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
   </body>
 
 </html>

@@ -21,8 +21,7 @@ form.name.focus()
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
-    console.log('nombre:',name)
-
+ 
     if (name.value==""){
         errors.push('Debes ingresar un nombre')
         }
