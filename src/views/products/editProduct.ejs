@@ -42,7 +42,7 @@
                 <div class="consoleType-checkbox">
                   <% for (let i=0 ; i<consoles.length ; i++) {%>
                     <div class="consoleType-checkbox-div">
-                      <input type="checkbox" name="consoles" id="<%=consoles[i].name%>" value="<%=consoles[i].id%>" 
+                      <input type="checkbox" name="consoles" id="consoles"  value="<%=consoles[i].id%>" 
                           <% for (let j=0 ; j<productConsolesArray.length ; j++) {%>
                                 <%=productConsolesArray[j]==consoles[i].id?'checked':' '%>
                           <%}%>
