@@ -8,7 +8,7 @@
       <div class="new-product-box" >
         <h3>Agregar nuevo producto</h3>
         <div class="new-product-form-box">
-        <form action="/products/new" class="new-product-form" method="post" enctype="multipart/form-data" class="form">
+        <form action="/products/new" class="new-product-form" method="post" enctype="multipart/form-data" id="form">
           <div class="new-product-div">
             <label for="name" class="new-product-label">Nombre: </label>
             <input type="text" name="name" id="name" 
@@ -76,6 +76,6 @@
     </main>
     <%- include('../partials/footer')%>
     <script type="text/javascript" src="/js/productValidator.js"></script>
-  
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
