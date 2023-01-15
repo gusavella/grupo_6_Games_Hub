@@ -1,10 +1,9 @@
+
 window.addEventListener('load',function(){
 
   
 let addProductButton = document.getElementById('add-product-button')
-let form = document.querySelector('form')
-
-let errors =[];
+let form = document.getElementById('form')
 let body=document.querySelector('body')
 let mainBox=document.getElementById('main')
 let name=document.getElementById('name')
@@ -15,13 +14,16 @@ let discount= document.getElementById('discount')
 let consoles= document.querySelectorAll('#consoles')
 let section= document.getElementById('section')
 let isCheckedConsole=false
+let errors =[];
 
 
-addProductButton.addEventListener('click',(e)=>{
+form.name.focus()
+
+form.addEventListener('submit',(e)=>{
     e.preventDefault()
-   
+    console.log('nombre:',name)
 
-    if (name.value.length<=0){
+    if (name.value==""){
         errors.push('Debes ingresar un nombre')
         }
     else if (name.value.length>1 && name.value.length < 3 ){
@@ -61,14 +63,17 @@ addProductButton.addEventListener('click',(e)=>{
  
     if (errors.length>0 ){
         drawErrors(errors)
-        // drawValues()
+        drawValues()
+        Swal.fire(
+            'Cuidado!',
+            'Verifica los errores',
+            'error'
+        )
       }
    else{
     console.log('enviando info')
     form.submit()
    }
-   e.preventDefault()
-
 
 })
 
@@ -84,7 +89,25 @@ function drawErrors(errors){
 }
 
 function drawValues(){
- 
+ console.log('nombre',name)
+    // let name=document.getElementById('name')
+    // let description=document.getElementById('description')
+    // let category=document.getElementById('category')
+    // let price = document.getElementById('value')
+    // let discount= document.getElementById('discount')
+    // let consoles= document.querySelectorAll('#consoles')
+    // let section= document.getElementById('section')
   
+    // name.value=nameValue
+    // description.value=descriptionValue
+    // category.value=categoryValue
+    // price.value = priceValue
+    // discount.value= discountValue
+    // // let consoles= document.querySelectorAll('#consoles')
+    // section.value=sectionValue
+
+
 }
+
+
 })
