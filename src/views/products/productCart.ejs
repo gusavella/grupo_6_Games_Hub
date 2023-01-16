@@ -8,9 +8,9 @@
   <%- include('../partials/header')%>
   <div class="cart-container">
 
-      <div class="cart-section-container">
+      <div class="cart-section-container" >
         <section>
-        <div class="cart-tittle">
+        <div class="cart-tittle" id="cart-section-container">
           <p>Carrito de compras</p>
           <hr class="section-top-line" />
         </div>
@@ -45,6 +45,7 @@
         <% } %>
           
       </section>
+      <button id="toEmpty">Vaciar carrito</button>
       </div>
 
 
@@ -72,5 +73,6 @@
       </div>
   </div>
  </body>
+ <script type="text/javascript" src="/js/displayCart.js"></script>
 <%- include('../partials/footer')%>
 </html>

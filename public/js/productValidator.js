@@ -46,8 +46,8 @@ form.addEventListener('submit',(e)=>{
        } 
    
      if(consoles){
-        for(let i of consoles){ 
-            if(i.checked){
+        for(let console of consoles){ 
+            if(console.checked){
                 isCheckedConsole=true; 
             }
         }
@@ -88,24 +88,8 @@ function drawErrors(errors){
 }
 
 function drawValues(){
- console.log('nombre',name)
-    // let name=document.getElementById('name')
-    // let description=document.getElementById('description')
-    // let category=document.getElementById('category')
-    // let price = document.getElementById('value')
-    // let discount= document.getElementById('discount')
-    // let consoles= document.querySelectorAll('#consoles')
-    // let section= document.getElementById('section')
+ console.log('nombre:',name)
   
-    // name.value=nameValue
-    // description.value=descriptionValue
-    // category.value=categoryValue
-    // price.value = priceValue
-    // discount.value= discountValue
-    // // let consoles= document.querySelectorAll('#consoles')
-    // section.value=sectionValue
-
-
 }
 
 

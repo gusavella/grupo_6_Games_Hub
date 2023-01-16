@@ -8,22 +8,25 @@
     <main class="product-main">
       <div class="product-detail-container">
       <div class="logo">
-        <img src="<%= product.image %>" alt="Terraria Logo" />
-        <h1><%= product.name %></h1>
+        <img src="<%= product.image %>" alt="<%= product.image %>" id="image"/>
+        <h1 id="name"><%= product.name %></h1>
+        <p id="id"><%= product.id %></p>
       </div>
 
       <section class="product-buy">
         <div class="product-buy-info">
           <div class="product-prices">
             <p class="product-discount">-<%= product.discount %>%</p>
-            <p class="product-final-price">$<%= product.final_value %></p>
+            <p class="product-final-price" id="product-final-price" >$<%= product.final_value %></p>
             <p class="product-price">$<%= product.value %></p>
           </div>
-          <form method="post" action=<%=`/products/cart/add/${product.id}` %>>
+          <!-- <form method="post" action=<%=`/products/cart/add/${product.id}` %>> -->
 
-            <button class="product-addcar" type="submit"
+            <button class="product-addcar" type="button"
+         
             >Añadir al carrito<em class="fa-solid fa-cart-shopping"></em>
-          </form>
+               <!-- submit -->
+          <!-- </form> -->
          
         </div>
       </section>
@@ -33,6 +36,8 @@
         <p><%= product.description %></p>
       </section>
     </main>
-    <%- include('../partials/footer') %>
+      <%- include('../partials/footer') %>
+    <script type="text/javascript" src="/js/cart.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

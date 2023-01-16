@@ -1086,6 +1086,7 @@ color:white;
     align-items: center;
     text-align: center;
     color:red;
+    font-size: 25px;
 }
 /* ---------------------ERRORES FRONT------------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
@@ -1274,7 +1275,7 @@ color:white;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         margin: auto;
         flex-wrap: nowrap;
         align-content: space-between;
