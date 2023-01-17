@@ -24,7 +24,10 @@ function ready() {
 function displayCart() {
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
     let container = document.getElementById("cart-section-container")
+    let containerTotal = document.querySelector(".cart-value-description")
+    let total = document.querySelector(".total")
     container.innerHTML = ``
+
     for (let i=0; i<prodsCart.length; i++) {
         container.innerHTML += `
         <section>
@@ -57,31 +60,23 @@ function displayCart() {
               </div>
             </div>
            </article>
-
-
-
-       
+      
         `
-    }
-//     <div class="col-12 col-sm-6 col-lg-3">	
-//     <section class="product-box">
-//         <a href="/products/detail/${prodsCart[i].id}">
-//             <figure class="product-box_image">
-//                 <img src="/images/products/${prodsCart[i].image}" alt="${prodsCart[i].image}">
-//             </figure>
-//         </a>
-//             <article class="product-box_data">
-//                 <h2>Precio final: $ ${prodsCart[i].price}</h2>
-//                 <p>${prodsCart[i].name}</p>
-//                 <p>Cantidad: ${prodsCart[i].cantidad}</p>
-//                 <p>Subtotal: ${prodsCart[i].subTotal}</p>
-//                 <button onClick="sumar(${prodsCart[i].id})" class="btn btn-primary">Sumar</button>
-//                 <button onClick="restar(${prodsCart[i].id})" class="btn btn-secondary">Restar</button>
-//                 <i onClick="borrar(${prodsCart[i].id})" class="fa fa-trash"></i>
-//             </article>
+        containerTotal.innerHTML = ``
+        for (let i=0; i<prodsCart.length; i++) {
+            containerTotal.innerHTML += `
+                 
+            <div class="cart-value">
+              <p>${prodsCart[i].name}</p>
+              <p>$${prodsCart[i].price}</p>
+            </div>    
+
+            `
+        }
+        total.innerText='$'+prodsCart.reduce((acum, act) => acum += act.subTotal ,0)    
         
-//     </section>
-// </div>
+    }
+
 }
 
 function displayEmptyCart() {
