@@ -23,36 +23,32 @@ function ready() {
 
 function displayCart() {
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
-    let container = document.getElementById("cart-section-container")
+    console.log(localStorage.getItem("productsInCart"))
+    let container = document.getElementById("article-container")
     let containerTotal = document.querySelector(".cart-value-description")
     let total = document.querySelector(".total")
     container.innerHTML = ``
 
     for (let i=0; i<prodsCart.length; i++) {
         container.innerHTML += `
-        <section>
-        <div class="cart-tittle" id="cart-section-container">
-          <p>Carrito de compras</p>
-          <hr class="section-top-line" />
-        </div>
-        <article class="cart-article">
+            <article class="cart-article">
           
             <img src="${prodsCart[i].image}" alt='' class="cart-article-image" />
             <div>
               <p>${prodsCart[i].name}</p>
              
               <div class="delete-quantity">
-                <form action="/products/cart/<%=products[i].id%>?_method=DELETE" method="post">
-                 <button class="delete-basket" type="submit">
+                
+                 <button class="delete-basket" type="button" onClick="borrar(${prodsCart[i].id})">
                   <em class="fa-solid fa-trash"></em>
                 </button>
-                </form>
+               
                 <p>Cantidad :</p>
-                <p class="article-quantity">1</p>
-                <form class="quantity-form">
-                  <button class="quantity">+</button>
-                  <button class="quantity">-</button>
-                </form>
+                <p class="article-quantity">${prodsCart[i].quantity}</p>
+                <div class="quantity-form">
+                  <button class="quantity" onClick="sumar(${prodsCart[i].id})">+</button>
+                  <button class="quantity" onClick="restar(${prodsCart[i].id})">-</button>
+                </div>
               </div>
               <div class="value-container">
                 <p>Valor:</p>
@@ -68,12 +64,12 @@ function displayCart() {
                  
             <div class="cart-value">
               <p>${prodsCart[i].name}</p>
-              <p>$${prodsCart[i].price}</p>
+              <p>$${prodsCart[i].subTotal}</p>
             </div>    
 
             `
         }
-        total.innerText='$'+prodsCart.reduce((acum, act) => acum += act.subTotal ,0)    
+        total.innerText='$'+prodsCart.reduce((acum, act) => acum += act.subTotal ,0).toFixed(2)   
         
     }
 
@@ -92,8 +88,8 @@ function displayEmptyCart() {
 function sumar(id){
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
     let prod = prodsCart.find(row => row.id == id)
-    prod.cantidad += 1
-    prod.subTotal = prod.cantidad * prod.price
+    prod.quantity += 1
+    prod.subTotal = prod.quantity * prod.price
     localStorage.setItem("productosEnCarrito", JSON.stringify(prodsCart))
     displayCart()
     updateTotal()
@@ -102,9 +98,9 @@ function sumar(id){
 function restar(id) {
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
     let prod = prodsCart.find(row => row.id == id)
-    prod.cantidad -= 1
-    prod.subTotal = prod.cantidad * prod.price
-    if (prod.cantidad <= 0) {
+    prod.quantity -= 1
+    prod.subTotal = prod.quantity * prod.price
+    if (prod.quantity <= 0) {
         borrar(id)
         return
     }
@@ -134,8 +130,8 @@ function vaciarCarrito (){
 function updateTotal() {
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
     // let cantTotal = document.getElementById("cantTotal")
-    let precioTotal = document.getElementById(".total")
+    let precioTotal = document.querySelector(".total")
     let total = prodsCart.reduce((acum, act) => acum += act.subTotal ,0)
-    cantTotal.value = prodsCart.length
-    // precioTotal.value = total
+    // cantTotal.value = prodsCart.length
+    precioTotal.value = total
 }
