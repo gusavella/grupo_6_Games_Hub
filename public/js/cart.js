@@ -10,7 +10,7 @@ else {
 
 
 function ready(){
-    if (JSON.parse(localStorage.getItem("productsInCart")) == null) localStorage.setItem("productsInCart", JSON.stringify([]))
+    if (JSON.parse(localStorage.getItem("productsInCart")) == null)localStorage.setItem("productsInCart", JSON.stringify([]))
     // cartNumber()
     let button = document.querySelector(".product-addcar")
     // console.log(button)
@@ -39,22 +39,22 @@ function addItem(){
         image: document.getElementById("image").alt
     }
 
-     console.log('Producto Agregado:',product)
+    //  console.log('Producto Agregado:',product)
     if (prodsCart.length > 0) {
         let productInCart = prodsCart.find(prod => prod.id == product.id)
         if (!productInCart) {
-            product.qantity = 1
-            product.subTotal = product.qantity * product.price
+            product.quantity = 1
+            product.subTotal = product.quantity * product.price
             prodsCart = [...prodsCart, product]
         }
         else {
-            productInCart.qantity += 1
-            productInCart.subTotal = productInCart.price * productInCart.qantity 
+            productInCart.quantity += 1
+            productInCart.subTotal = productInCart.price * productInCart.quantity 
         }
     }
     else {
-        product.qantity = 1
-        product.subTotal = product.qantity * product.price
+        product.quantity = 1
+        product.subTotal = product.quantity * product.price
         prodsCart.push(product)
     }
     localStorage.setItem("productsInCart", JSON.stringify(prodsCart))

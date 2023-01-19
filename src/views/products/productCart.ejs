@@ -14,35 +14,10 @@
           <p>Carrito de compras</p>
           <hr class="section-top-line" />
         </div>
-        <% for(let i = 0; i<products.length ; i++) { %>
-          <article class="cart-article">
+        
+        <div class="cart-tittle" id="article-container">
           
-            <img src="<%=products[i].imageUri%>" alt="game_photo" class="cart-article-image" />
-            <div>
-              <p><%=products[i].name%></p>
-              <p><%=products[i].consoleType%></p>
-              <div class="delete-quantity">
-                <form action="/products/cart/<%=products[i].id%>?_method=DELETE" method="post">
-                 <button class="delete-basket" type="submit">
-                  <em class="fa-solid fa-trash"></em>
-                </button>
-                </form>
-                <p>Cantidad :</p>
-                <p class="article-quantity">1</p>
-                <form class="quantity-form">
-                  <button class="quantity">+</button>
-                  <button class="quantity">-</button>
-                </form>
-              </div>
-              <div class="value-container">
-                <p>Valor:</p>
-                <p>$<%=products[i].discountValue%></p>
-              </div>
-            </div>
-                   </article>
-
-
-        <% } %>
+        </div>
           
       </section>
       <button class="edit-product-delete-button" id="toEmpty"><i class="fa-solid fa-trash"></i> Vaciar carrito</button>
@@ -56,12 +31,7 @@
           <hr class="section-top-line" />
         </div>
         <div class="cart-value-description">
-          <% for(let i = 0; i<products.length ; i++) { %>
-            <div class="cart-value">
-              <p><%=products[i].name%></p>
-              <p>$<%=products[i].discountValue%></p>
-            </div>
-            <% } %>
+         
         </div>
         <hr class="total-bottom-line" />
         <strong class="total">
