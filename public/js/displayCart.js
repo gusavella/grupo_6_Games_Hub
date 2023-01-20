@@ -23,7 +23,7 @@ function ready() {
 
 function displayCart() {
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
-    console.log(localStorage.getItem("productsInCart"))
+    // console.log(localStorage.getItem("productsInCart"))
     let container = document.getElementById("article-container")
     let containerTotal = document.querySelector(".cart-value-description")
     let total = document.querySelector(".total")
