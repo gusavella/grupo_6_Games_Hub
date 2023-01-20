@@ -11,8 +11,14 @@ const controller = {
     },
     create:async(req,res)=>{
         try{
-           await db.Order.create({name:req.body.name})
-           res.redirect('/orders/all')
+           await db.Order.create({
+                                 total:req.body.total,
+                                 user_id:req.body.user_id                       
+                                })
+           res.json({
+            total:req.body.total,
+            user_id:req.body.user_id                       
+           })
         }catch(e){
            // console.log(e)
            console.log('Nombre:',e.name)  
