@@ -43,16 +43,21 @@ function addItem(){
     if (prodsCart.length > 0) {
         let productInCart = prodsCart.find(prod => prod.id == product.id)
         if (!productInCart) {
+            // console.log('entrando por !productInCart es decir producto no encontrado')
             product.quantity = 1
             product.subTotal = product.quantity * product.price
+            // console.log('producto:', product)
             prodsCart = [...prodsCart, product]
         }
         else {
+            // console.log('entrando por productInCart')
             productInCart.quantity += 1
             productInCart.subTotal = productInCart.price * productInCart.quantity 
+            // console.log('producto:', productInCart)
         }
     }
     else {
+        // console.log('entrando por prodsCart.length= 0')
         product.quantity = 1
         product.subTotal = product.quantity * product.price
         prodsCart.push(product)
