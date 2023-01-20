@@ -64,20 +64,20 @@ function displayCart() {
                  
             <div class="cart-value">
               <p>${prodsCart[i].name}</p>
-              <p>$${prodsCart[i].subTotal}</p>
+              <p>$${prodsCart[i].subTotal.toFixed(2) }</p>
             </div>    
 
             `
         }
-        total.innerText='$'+prodsCart.reduce((acum, act) => acum += act.subTotal ,0).toFixed(2)   
+        total.innerText='$'+prodsCart.reduce((acum, act) => acum += act.subTotal ,0).toFixed(2) 
         
     }
 
 }
 
 function displayEmptyCart() {
-    let container = document.getElementById("cart-section-container")
-    container.innerHTML += `
+    let container = document.getElementById("article-container")
+    container.innerHTML = `
     <div">
         <h2 >No hay elementos en el carrito</h2>
     </div>
@@ -86,27 +86,33 @@ function displayEmptyCart() {
 
 
 function sumar(id){
+    // console.log('ingresa a suma con id:',id)
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
     let prod = prodsCart.find(row => row.id == id)
-    prod.quantity += 1
-    prod.subTotal = prod.quantity * prod.price
-    localStorage.setItem("productosEnCarrito", JSON.stringify(prodsCart))
+    //   console.log('producto antes:',prod)
+    prod.quantity +=1
+    prod.subTotal = (prod.quantity * prod.price)  
+    //   console.log('producto despues:',prod)
+    localStorage.setItem("productsInCart", JSON.stringify(prodsCart))
     displayCart()
     updateTotal()
 }
 
 function restar(id) {
+    // console.log('Ingresando a restar')
     let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
     let prod = prodsCart.find(row => row.id == id)
+    //  console.log('producto antes:',prod)
     prod.quantity -= 1
-    prod.subTotal = prod.quantity * prod.price
+    prod.subTotal = (prod.quantity * prod.price)
+    //  console.log('producto despues:',prod)
     if (prod.quantity <= 0) {
         borrar(id)
         return
     }
     localStorage.setItem("productsInCart", JSON.stringify(prodsCart))
     displayCart()
-    updateTotal()
+    // updateTotal()
 }
 
 function borrar(id) {
@@ -118,13 +124,13 @@ function borrar(id) {
         return
     }
     displayCart()
-    updateTotal()
+    // updateTotal()
 }
 
 function vaciarCarrito (){
     localStorage.setItem("productsInCart", JSON.stringify([]))
     displayEmptyCart()
-    updateTotal()
+    // updateTotal()
 }
 
 function updateTotal() {

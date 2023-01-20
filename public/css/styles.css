@@ -603,7 +603,11 @@ a{
     border-radius:5px;
     border:1px solid white;
 }
-
+.centeredButton{
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
 .delete-basket:hover,.quantity:hover{
     background-color: #1AADB4;
     margin:1px solid white;
