@@ -603,7 +603,11 @@ a{
     border-radius:5px;
     border:1px solid white;
 }
-
+.centeredButton{
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
 .delete-basket:hover,.quantity:hover{
     background-color: #1AADB4;
     margin:1px solid white;
@@ -1344,6 +1348,8 @@ color:white;
         font-size: 30px;
     }
     .product-addcar{
+        width: 50%;
+        height:40%;
         margin: auto;
         padding: 1.9%;
         font-size: 30px;

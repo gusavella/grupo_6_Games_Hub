@@ -81,7 +81,7 @@ function drawErrors(errors){
     let errorsBox= document.getElementById('errors')
     errorsBox.innerHTML+='<ul class="errors-list" id="errors-list"></ul>' 
     let errorsList= document.getElementById('errors-list')
-        for(error in errors){   
+        for(let error in errors){   
             errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
         }   
   return  
