@@ -4,10 +4,7 @@ let path = require('path');
 const multer = require('multer');
 const productController =require('../controllers/productController');
 const authMiddleware = require('../middlewares/authMiddleware')
-<<<<<<< HEAD
-=======
 const validateProductsMiddleware = require('../middlewares/validateProductsMiddleware')
->>>>>>> nicolas
 
 //
 let storage = multer.diskStorage({
@@ -27,12 +24,9 @@ let storage = multer.diskStorage({
  router.get('/offers', productController.offer);
  router.get('/recommended',productController.recommended);
  router.get('/products', productController.allProducts);
-<<<<<<< HEAD
-=======
  
  
 
->>>>>>> nicolas
 
  router.get('/all', productController.allProducts)
 
