@@ -12,12 +12,24 @@
           <div class="new-product-div">
             <label for="name" class="new-product-label">Nombre: </label>
             <input type="text" name="name" id="name" 
-            placeholder="Ingrese nombre del juego"/>
+            placeholder="Ingrese nombre del juego"
+            value="<%= locals.oldData ? oldData.name : null %>"/>
+
+            <% if (locals.errors && errors.name){%>
+              <div class="login-validation-error">
+                  <%= errors.name.msg%>
+              </div>
+          <%}%>
           </div>
 
           <div class="new-product-div">
             <label for="new-img" class="new-product-label">Imagen: </label>
             <input type="file" name="new-img" id="new-img" />
+            <% if (locals.errors && errors.image){%>
+              <div class="login-validation-error">
+                  <%= errors.new-img.msg%>
+              </div>
+          <%}%>
           </div>
           <div class="new-product-div">
             <label for="description" class="new-product-label">Descripcion: </label>
@@ -26,8 +38,15 @@
               id="description"
               cols="30"
               rows="10"
-              >
+              placeholder="Contenido de la descripcion del juego"
+              value="<%= locals.oldData ? oldData.description : null %>"
+            >
             </textarea>
+            <% if (locals.errors && errors.description){%>
+              <div class="login-validation-error">
+                  <%= errors.description.msg%>
+              </div>
+          <%}%>
             </div>
           
           <div class="new-product-div">
@@ -37,6 +56,11 @@
             <option value="<%=categories[i].id%>"><%= categories[i].name %></option>
             <%}%>
           </select>
+          <% if (locals.errors && errors.category){%>
+            <div class="login-validation-error">
+                <%= errors.category.msg%>
+            </div>
+        <%}%>
           </div>
           <div class="new-product-div">
           <label for="consoleType" class="new-product-label">Consolas compatibles: </label>
@@ -47,17 +71,34 @@
                 <label for="<%=consoles[i].name%>"><%=consoles[i].name%></label>
               </div>
               <%}%>
+              <% if (locals.errors && errors.consoles){%>
+                <div class="login-validation-error">
+                    <%= errors.consoles.msg%>
+                </div>
+            <%}%>
            </div>
            
           </div>
           <div class="new-product-div">
           <label for="value" class="new-product-label">Precio: </label>
-          <input type="number" step="any" name="value" id="value" placeholder="Ingrese precio del juego" />
+          <input type="number" step="any" name="value" id="value" placeholder="Ingrese precio del juego" 
+          value="<%= locals.oldData ? oldData.value : null %>"/>
+          <% if (locals.errors && errors.value){%>
+            <div class="login-validation-error">
+                <%= errors.value.msg%>
+            </div>
+        <%}%>
             </div>
             <div class="new-product-div">
               <label for="discount" class="new-product-label">Descuento: </label>
               <input type="number" step="any" name="discount" id="discount" 
-              placeholder="Ingrese % de descuento"/>
+              placeholder="Ingrese % de descuento"
+              value="<%= locals.oldData ? oldData.discount : null %>"/>
+              <% if (locals.errors && errors.discount){%>
+                <div class="login-validation-error">
+                    <%= errors.discount.msg%>
+                </div>
+            <%}%>
             </div>
             <div class="new-product-div">
               <label for="section" class="new-product-label">Sección: </label>
@@ -66,6 +107,11 @@
                   <option value="<%=sections[i].id%>"><%= sections[i].name %></option>
                   <%}%>
               </select>
+              <% if (locals.errors && errors.section){%>
+                <div class="login-validation-error">
+                    <%= errors.section.msg%>
+                </div>
+            <%}%>
               </div>
               <div class="new-product-div-button">
           <button id="add-product-button" class="new-product-button" type="submit">Agregar Producto</button>

@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const {validationResult} = require('express-validator');
 
 const productsFilePath = path.join(__dirname, "../database/products.json");
 let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -60,9 +61,19 @@ const controller = {
     res.render("products/newProduct", { tittle: "New Product" ,categories,sections,consoles});
   },
   create: async(req, res) => {
+    let categories= await db.Category.findAll();
+    let sections= await db.Section.findAll();
+    let consoles= await db.Console.findAll();
     //Pendiente actualizacion de consolas 
     console.log(req.body)
-  
+    const resultValidationProduct = validationResult(req);
+      if (resultValidationProduct.errors.length > 0){
+        return res.render('products/newProduct', { tittle: 'New Product',
+          categories,sections,consoles,
+          errors: resultValidationProduct.mapped(),
+          oldData: req.body
+        })
+      } else {
    try{
     let createdProduct= await db.Product.create(
             {
@@ -93,7 +104,7 @@ const controller = {
  
 }
   catch(e){console.log(e)} 
-  
+}
   },
   showEdit: async (req, res) => {
     try{
