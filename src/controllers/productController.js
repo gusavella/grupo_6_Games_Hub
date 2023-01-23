@@ -64,7 +64,6 @@ const controller = {
     let categories= await db.Category.findAll();
     let sections= await db.Section.findAll();
     let consoles= await db.Console.findAll();
-    //Pendiente actualizacion de consolas 
     console.log(req.body)
     const resultValidationProduct = validationResult(req);
       if (resultValidationProduct.errors.length > 0){
@@ -73,36 +72,37 @@ const controller = {
           errors: resultValidationProduct.mapped(),
           oldData: req.body
         })
-      } else {
-   try{
-    let createdProduct= await db.Product.create(
-            {
-                      name : req.body.name ,
-                description : req.body.description,
-                      image : req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
-                      value : parseFloat(req.body.value),
-                  discount : parseFloat(req.body.discount),
-                final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
-                category_id : req.body.category,
-                section_id : req.body.section,
-                  
-            })
+      } 
+      else {
+          try{
+            let createdProduct= await db.Product.create(
+                    {
+                              name : req.body.name ,
+                        description : req.body.description,
+                              image : req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
+                              value : parseFloat(req.body.value),
+                          discount : parseFloat(req.body.discount),
+                        final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
+                        category_id : req.body.category,
+                        section_id : req.body.section,
+                          
+                    })
 
 
-   if(req.body.consoles){
-    let consolesAssigned= req.body.consoles
-    for(let console of consolesAssigned){
-      await db.ProductConsole.create({
-        console_id : console,
-        product_id:createdProduct.id })
+                if(req.body.consoles){
+                  let consolesAssigned= req.body.consoles
+                  for(let console of consolesAssigned){
+                    await db.ProductConsole.create({
+                      console_id : console,
+                      product_id:createdProduct.id })
 
-    }
+                  }
 
-   }
- 
-    res.redirect('/products/all')
- 
-}
+                }
+              
+                  res.redirect('/products/all')
+              
+              }
   catch(e){console.log(e)} 
 }
   },
@@ -153,9 +153,9 @@ const controller = {
     }})
     if(req.body.consoles){
          let consolesAssigned= req.body.consoles
-      for( let i=0; i<consolesAssigned.length; i++ ){
+      for(const element of consolesAssigned){
         await db.ProductConsole.create({
-          console_id : consolesAssigned[i],
+          console_id : element,
           product_id : req.params.id })
   
       }
@@ -168,7 +168,6 @@ const controller = {
   },
   delete: async (req,res)=>{
    
-      const id = req.params.id;
     try{
        await  db.Product.destroy({where :{
                                           id:req.params.id
@@ -183,8 +182,7 @@ const controller = {
   cart: (req, res) => {
     let totalCart=0
     productsCart = JSON.parse(fs.readFileSync(productsCartFilePath, 'utf-8'));
-    // console.log(productsCart)
-     for(const element of productsCart) { 
+    for(const element of productsCart) { 
       totalCart=element.discountValue+totalCart
      }
      totalCart=parseFloat(totalCart).toFixed(2)

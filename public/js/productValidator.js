@@ -84,7 +84,7 @@ function drawErrors(errors){
         for(let error in errors){   
             errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
         }   
-  return  
+  
 }
 
 function drawValues(){
