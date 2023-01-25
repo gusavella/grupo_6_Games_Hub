@@ -14,16 +14,27 @@ function  ready(){
      console.log('entra a comprar')
 
     // console.log(localStorage.getItem("productsInCart"))
+    console.log('Usuario:',sessionStorage.getItem("userEmail"))
 
      let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
      console.log('carrito',prodsCart)
      let body = {
-                    total:200,
-                    user_id:1
+                    total:prodsCart.reduce((acum, act) => acum += act.subTotal ,0).toFixed(2) ,
+                    products:prodsCart
                 }
-    const respuesta = await fetchCreate(body)
+    const response = await fetchCreate(body)
    
-
+    console.log('respuesta',response)
+    if(response.information.status==200){
+        Swal.fire(
+            'Exito!',
+            'Se ha creado la orden exitosamente',
+            'success'
+        )
+        localStorage.setItem("productsInCart", JSON.stringify([]))
+        displayEmptyCart()
+        displayCart()
+    }
     })
     async function fetchCreate(model) { 
         const res = await fetch('/orders/add', {

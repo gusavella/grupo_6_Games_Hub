@@ -29,42 +29,42 @@ function displayCart() {
     let total = document.querySelector(".total")
     container.innerHTML = ``
 
-    for (let i=0; i<prodsCart.length; i++) {
+    for (const element of prodsCart) {
         container.innerHTML += `
             <article class="cart-article">
           
-            <img src="${prodsCart[i].image}" alt='' class="cart-article-image" />
+            <img src="${element.image}" alt='' class="cart-article-image" />
             <div>
-              <p>${prodsCart[i].name}</p>
+              <p>${element.name}</p>
              
               <div class="delete-quantity">
                 
-                 <button class="delete-basket" type="button" onClick="borrar(${prodsCart[i].id})">
+                 <button class="delete-basket" type="button" onClick="borrar(${element.id})">
                   <em class="fa-solid fa-trash"></em>
                 </button>
                
                 <p>Cantidad :</p>
-                <p class="article-quantity">${prodsCart[i].quantity}</p>
+                <p class="article-quantity">${element.quantity}</p>
                 <div class="quantity-form">
-                  <button class="quantity" onClick="sumar(${prodsCart[i].id})">+</button>
-                  <button class="quantity" onClick="restar(${prodsCart[i].id})">-</button>
+                  <button class="quantity" onClick="sumar(${element.id})">+</button>
+                  <button class="quantity" onClick="restar(${element.id})">-</button>
                 </div>
               </div>
               <div class="value-container">
                 <p>Valor:</p>
-                <p>$${prodsCart[i].price}</p>
+                <p>$${element.price}</p>
               </div>
             </div>
            </article>
       
         `
         containerTotal.innerHTML = ``
-        for (let i=0; i<prodsCart.length; i++) {
+        for (const element of prodsCart) {
             containerTotal.innerHTML += `
                  
             <div class="cart-value">
-              <p>${prodsCart[i].name}</p>
-              <p>$${prodsCart[i].subTotal.toFixed(2) }</p>
+              <p>${element.name}</p>
+              <p>$${element.subTotal.toFixed(2) }</p>
             </div>    
 
             `
