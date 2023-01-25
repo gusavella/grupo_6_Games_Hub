@@ -201,6 +201,7 @@ CREATE TABLE IF NOT EXISTS `gamesHub`.`orders_products` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
   `value` FLOAT NOT NULL,
+  `subTotal` FLOAT NOT NULL,
   `order_id` INT NOT NULL,
   `product_id` INT NOT NULL,
   `create_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

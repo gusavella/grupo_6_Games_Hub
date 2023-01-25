@@ -11,13 +11,27 @@ const controller = {
     },
     create:async(req,res)=>{
         try{
-           await db.Order.create({
+            console.log('productos:',req.body.products )
+           let createdOrder=await db.Order.create({
                                  total:req.body.total,
-                                 user_id:req.body.user_id                       
+                                 user_id:req.session.userLogged.id    // para grabar el id del usuario que esta en la sesion (logueado)         
                                 })
+            // console.log('orden creada:',createdOrder)    
+            let products=    req.body.products            
+            for(let product in products){
+                    await db.OrderProduct.create({
+                        quantity : products[product].quantity,
+                           value : products[product].price,
+                        subTotal : products[product].subTotal,
+                        order_id : createdOrder.id,
+                      product_id : products[product].id
+
+                    })
+            }                       
            res.json({
-            total:req.body.total,
-            user_id:req.body.user_id                       
+                information:{
+                    status:200,
+                }                      
            })
         }catch(e){
            // console.log(e)
