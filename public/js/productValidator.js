@@ -1,7 +1,13 @@
+if (document.readyState == "loading") {
+    document.addEventListener("DOMContentLoaded", ready)
+}
 
-window.addEventListener('load',function(){
+else {
+    ready()
+}
 
-  
+
+function ready() {
 let addProductButton = document.getElementById('add-product-button')
 let form = document.getElementById('form')
 let body=document.querySelector('body')
@@ -14,14 +20,16 @@ let discount= document.getElementById('discount')
 let consoles= document.querySelectorAll('#consoles')
 let section= document.getElementById('section')
 let isCheckedConsole=false
-let errors =[];
 
 
-form.name.focus()
+
+
 
 form.addEventListener('submit',(e)=>{
+    let errors =[];
+    console.log('Hola ')
     e.preventDefault()
- 
+ console.log('name:',name.value)
     if (name.value==""){
         errors.push('Debes ingresar un nombre')
         }
@@ -59,32 +67,35 @@ form.addEventListener('submit',(e)=>{
     if ( !isCheckedConsole){
         errors.push('Debes escoger al menos una consola')
        }
- 
+  console.log('errores:',errors.length)
     if (errors.length>0 ){
-        drawErrors(errors)
-        drawValues()
-        Swal.fire(
+          
+        let errorsList= document.getElementById('errors-list')
+        errorsList.innerHTML=``
+        for(let error in errors){   
+            errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
+        }   
+
+         Swal.fire(
             'Cuidado!',
             'Verifica los errores',
             'error'
         )
       }
    else{
+    console.log('errores:',errors.length)
     console.log('enviando info')
-    form.submit()
+    
    }
 
 })
 
 function drawErrors(errors){
-    mainBox.innerHTML+='<div id="errors" class="errors-box"></div>' 
+    mainBox.innerHTML+='' 
     let errorsBox= document.getElementById('errors')
-    errorsBox.innerHTML+='<ul class="errors-list" id="errors-list"></ul>' 
-    let errorsList= document.getElementById('errors-list')
-        for(let error in errors){   
-            errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
-        }   
-  
+    errorsBox.innerHTML+='' 
+   
+        
 }
 
 function drawValues(){
@@ -93,4 +104,6 @@ function drawValues(){
 }
 
 
-})
+// })
+
+}
