@@ -8,7 +8,7 @@
       <div class="new-product-box" >
         <h3>Agregar nuevo producto</h3>
         <div class="new-product-form-box">
-        <form action="/products/new" class="new-product-form" method="post" enctype="multipart/form-data" id="form">
+        <form method="post" action="/products/new" enctype="multipart/form-data" class="new-product-form" id="form">
           <div class="new-product-div">
             <label for="name" class="new-product-label">Nombre: </label>
             <input type="text" name="name" id="name" 
@@ -114,14 +114,17 @@
             <%}%>
               </div>
               <div class="new-product-div-button">
-          <button id="add-product-button" class="new-product-button" type="submit">Agregar Producto</button>
+          <button id="add-product-button" type="submit" class="new-product-button" >Agregar Producto</button>
         </div>
-        </form>
+      </form>
       </div>
+      </div>
+      <div id="errors" class="errors-box">
+        <ul class="errors-list" id="errors-list"></ul>
       </div>
     </main>
     <%- include('../partials/footer')%>
-    <script type="text/javascript" src="/js/productValidator.js"></script>
+    <script  src="/js/productValidator.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

@@ -11,11 +11,10 @@ function  ready(){
 
     buyButton.addEventListener('click',async (e)=>{
 
-     console.log('entra a comprar')
+    //  console.log('entra a comprar')
 
     // console.log(localStorage.getItem("productsInCart"))
-    console.log('Usuario:',sessionStorage.getItem("userEmail"))
-
+    
      let prodsCart = JSON.parse(localStorage.getItem("productsInCart"))
      console.log('carrito',prodsCart)
      let body = {
@@ -24,11 +23,11 @@ function  ready(){
                 }
     const response = await fetchCreate(body)
    
-    console.log('respuesta',response)
+    // console.log('respuesta',response)
     if(response.information.status==200){
         Swal.fire(
             'Exito!',
-            'Se ha creado la orden exitosamente',
+            'Se ha creado la Orden exitosamente',
             'success'
         )
         localStorage.setItem("productsInCart", JSON.stringify([]))
