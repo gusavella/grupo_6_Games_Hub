@@ -23,7 +23,7 @@ const controller = {
       
     },
     detail: (req, res) => {
-          db.User.findByPk(req.params.id)
+          db.User.findByPk(req.params.id,{include: ["role"]})
           .then(function(user){
         res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
           })
