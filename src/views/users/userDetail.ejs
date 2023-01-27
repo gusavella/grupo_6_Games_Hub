@@ -8,7 +8,7 @@
     <main>
         <div class="container-profile" >
             <div class="img-profile">
-                <img src="<%= user.image%>" alt="" >
+                <img src="<%= user.image==undefined?user.image:'/images/defaultImage.png'%>" alt="" >
             </div>
             <div class="data-profile">
                 <div class="data-profile-label"><p><label><strong>Nombres:</strong></label> <%= user.names%></p></div>
