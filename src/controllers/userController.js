@@ -23,7 +23,7 @@ const controller = {
       
     },
     detail: (req, res) => {
-          db.User.findByPk(req.params.id)
+          db.User.findByPk(req.params.id,{include: ["role"]})
           .then(function(user){
         res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
           })
@@ -34,7 +34,7 @@ const controller = {
       res.render("users/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
-      console.log(req.body)
+      // console.log(req.body)
       const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
