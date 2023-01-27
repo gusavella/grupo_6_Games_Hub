@@ -44,5 +44,7 @@ router.get("/edit/:id",authMiddleware,userController.edit)
 
 router.put("/:id/edit",upload.single('image'),userController.update)
 
+//PANEL
+ router.get ("/adminPanel", authMiddleware,  userController.panel);  
 
 module.exports = router;

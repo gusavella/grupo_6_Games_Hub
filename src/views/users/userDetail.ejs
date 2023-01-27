@@ -21,8 +21,14 @@
                     <p><label><strong>Direccion:</strong></label> <%= user.address%></p>
                 </div>
                 <div class="data-profile-label"><p><label><strong>Telefono:</strong></label> <%= user.phone%></p></div>
+                <% if(user.role_id==1){%>
+                    <form action="/users/adminPanel" method="get">
+                        <button class="new-product-button" type="submit" ><i class="fa-regular fa-pen-to-square"></i> Panel admin</button>
+                    </form>
+                    
+                <%}%>
                 <form action="/users/edit/<%=user.id%>" method="get">
-                    <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+                    <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar usuario</button>
                 </form>
             </div>
         </div>

@@ -852,7 +852,7 @@ h2 {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .new-product-box {
@@ -861,7 +861,7 @@ h2 {
     background-color:rgba(0,0,0,0.4);
     padding: 25px;
     border-radius: 5px;
-    width: 85vw;
+    width: 80%;
     max-width: 800px;
 
 }
@@ -1077,12 +1077,16 @@ color:white;
 .errors-box{
     display:flex;
     position: relative;
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding:5px;
+    padding:25px; 
     border-radius: 5px;
+    width: 80%;
+    visibility: hidden;
+    max-width: 800px;
+    background-color: rgba(201, 29, 29, 0.1);
    
 }
 .error{
@@ -1093,6 +1097,11 @@ color:white;
     font-size: 25px;
 }
 /* ---------------------ERRORES FRONT------------------------*/
+/* ---------------------PANEL  ADMIN------------------------*/
+.label{
+    color:white;
+}
+/* ---------------------PANEL  ADMIN------------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */

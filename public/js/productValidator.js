@@ -19,11 +19,9 @@ let price = document.getElementById('value')
 let discount= document.getElementById('discount')
 let consoles= document.querySelectorAll('#consoles')
 let section= document.getElementById('section')
+let errorsBox= document.getElementById('errors')
+errorsBox.style.visibility='hidden'
 let isCheckedConsole=false
-
-
-
-
 
 form.addEventListener('submit',(e)=>{
     let errors =[];
@@ -34,7 +32,7 @@ form.addEventListener('submit',(e)=>{
         errors.push('Debes ingresar un nombre')
         }
     else if (name.value.length>1 && name.value.length < 3 ){
-        errors.push('Nombre debe ser mayor a 3 caracteres')
+        errors.push('Nombre debe ser mayor o igual a 3 caracteres')
         }
    
     if (description.value.length<=0){
@@ -72,6 +70,7 @@ form.addEventListener('submit',(e)=>{
           
         let errorsList= document.getElementById('errors-list')
         errorsList.innerHTML=``
+        errorsBox.style.visibility='visible'
         for(let error in errors){   
             errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
         }   
@@ -92,7 +91,7 @@ form.addEventListener('submit',(e)=>{
 
 function drawErrors(errors){
     mainBox.innerHTML+='' 
-    let errorsBox= document.getElementById('errors')
+   
     errorsBox.innerHTML+='' 
    
         
