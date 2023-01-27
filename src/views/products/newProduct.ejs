@@ -5,6 +5,9 @@
   <body>
     <%- include('../partials/header')%>
     <main class="new-product-main" id="main">
+      <div id="errors" class="errors-box">
+        <ul class="errors-list" id="errors-list"></ul>
+      </div>
       <div class="new-product-box" >
         <h3>Agregar nuevo producto</h3>
         <div class="new-product-form-box">
@@ -39,7 +42,7 @@
               cols="30"
               rows="10"
               placeholder="Contenido de la descripcion del juego"
-              value="<%= locals.oldData ? oldData.description : null %>"
+              value="<%= locals.oldData ? oldData.description : 'Pon aqui la descipcion del producto' %>"
             >
             </textarea>
             <% if (locals.errors && errors.description){%>
@@ -119,9 +122,7 @@
       </form>
       </div>
       </div>
-      <div id="errors" class="errors-box">
-        <ul class="errors-list" id="errors-list"></ul>
-      </div>
+     
     </main>
     <%- include('../partials/footer')%>
     <script  src="/js/productValidator.js"></script>

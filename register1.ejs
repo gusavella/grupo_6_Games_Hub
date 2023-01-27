@@ -16,36 +16,27 @@
                 <label class="details" for="names">Nombres:</label>
               </div>
               <input
-                class="details <%= locals.errors && errors.names ? 'is-invalid' : null %>"
+                class="details"
                 type="text"
                 name="names"
                 id="names"
                 placeholder=" Ingresa tu nombre"
-                value="<%= locals.oldData ? oldData.names : null %>"
+                minlength="3"
+                required
               />
-              <% if (locals.errors && errors.names){%>
-                <div class="login-validation-error">
-                    <%= errors.names.msg%>
-                </div>
-            <%}%> 
             </div>
             <div class="register-division">
               <div class="details">
                 <label class="details" for="surnames">Apellidos:</label>
               </div>
+
               <input
-                class="details <%= locals.errors && errors.surnames ? 'is-invalid' : null %>"
+                class="details"
                 type="text"
                 name="surnames"
                 id="surnames"
                 placeholder=" Ingresa tu apellido"
-                value="<%= locals.oldData ? oldData.surnames : null %>"
               />
-              <% if (locals.errors && errors.surnames){%>
-                <div class="login-validation-error">
-                    <%= errors.surnames.msg%>
-                </div>
-              <%}%>
             </div>
           </div>
           <div class="register-block-inline">
@@ -53,36 +44,30 @@
               <div class="details">
                 <label class="details" for="password">Contraseña:</label>
               </div>
+
               <input
-                class="details <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                class="details"
                 type="password"
                 name="password"
                 id="password"
+                minlength="6"
                 placeholder="Mínimo 6 caracteres"
+                required
               />
-              <% if (locals.errors && errors.password){%>
-                <div class="login-validation-error">
-                    <%= errors.password.msg%>
-                </div>
-              <%}%>
             </div>
             <div class="register-division">
               <div class="details">
                 <label class="details" for="phone">Teléfono:</label>
               </div>
               <input
-                class="details <%= locals.errors && errors.phone ? 'is-invalid' : null %>"
+                class="details"
                 type="tel"
                 name="phone"
                 id="phone"
-                placeholder=" 1122334455"
-                value="<%= locals.oldData ? oldData.phone : null %>"
+                placeholder=" ej: 1122334455"
+                minlength="8"
+                required
               />
-              <% if (locals.errors && errors.phone){%>
-                <div class="login-validation-error">
-                    <%= errors.phone.msg%>
-                </div>
-              <%}%>
             </div>
           </div>
           <div class="register-block-inline">
@@ -90,47 +75,37 @@
               <div class="details">
                 <label class="details" for="email">E-mail:</label>
               </div>
+
               <input
-                class="details <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                type="text"
+                class="details"
+                type="email"
                 name="email"
                 id="email"
-                placeholder=" bestpage@gameshub.com"
-                value="<%= locals.oldData ? oldData.email : null %>"
+                placeholder=" ej: laracroft@....com"
+                required
               />
-              <% if (locals.errors && errors.email){%>
-                <div class="login-validation-error">
-                    <%= errors.email.msg%>
-                </div>
-              <%}%>
             </div>
             <div class="register-division">
               <div class="details">
                 <label class="details" for="address">Dirección:</label>
               </div>
+
               <input
-                class="details <%= locals.errors && errors.address ? 'is-invalid' : null %>"
+                class="details"
                 type="text"
                 name="address"
                 id="address"
                 placeholder=" ej: calle falsa 123"
-                value="<%= locals.oldData ? oldData.adress : null %>"
+                required
               />
-              <% if (locals.errors && errors.address){%>
-                <div class="login-validation-error">
-                    <%= errors.address.msg%>
-                </div>
-              <%}%>
+            </div>
+            <div class="register-division">
+              <div class="details">
+                <label class="details" for="">Imagen de perfil</label>
+                <input type="file" name="image" id="image">  
+              </div>
             </div>
           </div>
-          <div class="register-block-inline">
-          <div class="register-division">
-            <div class="details">
-              <label class="details" for="">Imagen de perfil</label>
-              <input type="file" name="image" id="image">  
-            </div>
-          </div>
-        </div>
         </div>
 
         <div >
