@@ -12,18 +12,16 @@
             </div>
             <div class="data-profile">
                 <div class="data-profile-label"><p><label><strong>Nombres:</strong></label> <%= user.names%></p></div>
-                
                 <div class="data-profile-label"><p><label><strong>Apellidos:</strong></label> <%= user.surnames%></p></div>
                 <div class="data-profile-label"><p><label><strong>Email:</strong></label> <%= user.email%></p></div>
-                <div class="data-profile-label"><p><label><strong>Rol:</strong></label> <%= user.role.name%></p></div>
-            </div>
-            <div class="data-profile">
-                <div class="data-profile-label">
-                    <p><label><strong>Direccion:</strong></label> <%= user.address%></p>
-                </div>
+                <div class="data-profile-label"><p><label><strong>Direccion:</strong></label> <%= user.address%></p></div>
                 <div class="data-profile-label"><p><label><strong>Telefono:</strong></label> <%= user.phone%></p></div>
+                <div class="data-profile-label"><p><label><strong>Rol:</strong></label> <%= user.role.name%></p></div>
 
                
+            </div>
+            <div class="data-profile">
+                
                 <% if(user.role_id==1){%>
                     <form action="/users/adminPanel" method="get">
                         <button class="new-product-button" type="submit" ><i class="fa-regular fa-pen-to-square"></i> Panel admin</button>
