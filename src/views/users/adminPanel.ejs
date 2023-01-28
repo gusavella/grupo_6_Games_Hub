@@ -1,0 +1,60 @@
+
+  
+  <%- include('../partials/head')%>
+  <body class="body-register">
+    <%- include('../partials/header')%>
+    <main class="main-register">
+    <div class="role-box">
+      <h3 class="title">Panel administrativo</h3>
+     
+      <table description="admin table">
+        <tr class="role-th">
+          <th>Nombre</th>
+          <th>Ir a</th>
+        </tr>
+        
+   
+        <tr>
+          <form action="/roles/all" method="get">
+            <td><label><p class="label">Roles</p></label></td>
+            <td class="role-td">
+               <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Roles</button>
+                
+            </td>
+            </form>
+        </tr>
+        
+          <tr>
+            <form action="/consoles/all" method="get">
+              <td><label><p class="label">Consolas</p></label></td>
+              <td class="role-td">
+                 <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Consolas</button>
+                  
+              </td>
+              </form>
+          </tr>
+          <tr>
+            <form action="/sections/all" method="get">
+              <td><label><p class="label">Secciones</p></label></td>
+              <td class="role-td">
+                 <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Secciones</button>
+                  
+              </td>
+              </form>
+          </tr>
+          <tr>
+            <form action="/products/new" method="get">
+              <td><label><p class="label">Nuevo producto</p></label></td>
+              <td class="role-td">
+                 <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Nuevo Producto</button>
+                  
+              </td>
+              </form>
+          </tr>
+      </table>
+      
+    </div>
+  </main>
+  <%- include('../partials/footer')%>
+</body>
+

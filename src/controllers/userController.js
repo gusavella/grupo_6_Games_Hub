@@ -23,18 +23,18 @@ const controller = {
       
     },
     detail: (req, res) => {
-          db.User.findByPk(req.params.id)
+          db.User.findByPk(req.params.id,{include: ["role"]})
           .then(function(user){
         res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
           })
         
     },
     login: (req, res) => {
-      console.log('cookies:',req.cookies)
+      // console.log('cookies:',req.cookies)
       res.render("users/login.ejs",{tittle:'Login'});
     },
     loginProcess: (req,res) => {
-      console.log(req.body)
+      // console.log(req.body)
       const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
@@ -47,7 +47,7 @@ const controller = {
         where:{
           email:req.body.email
         }
-      })
+      },{include: ["role"]})
       .then(function(userToLogin){
         if(userToLogin){
         let isOkPassword = bcrypt.compareSync(req.body.password,userToLogin.password)
@@ -87,12 +87,12 @@ const controller = {
       return res.redirect('/')
     },
     register : (req, res) => {
-      res.render ("register/register.ejs",{tittle:'Register'});
+      res.render ("users/register.ejs",{tittle:'Register'});
     },
     processRegister : (req, res) => {
       const resultValidationRegister = validationResult(req);
       if (resultValidationRegister.errors.length > 0){
-        return res.render('register/register.ejs', { tittle: 'Registro',
+        return res.render('users/register.ejs', { tittle: 'Registro',
           errors: resultValidationRegister.mapped(),
           oldData: req.body
         })
@@ -156,6 +156,10 @@ const controller = {
     },
     profile: (req, res) => {
       res.render('users/userDetail', {tittle:'Games Hub'})
+    }
+    ,
+    panel:(req,res)=>{
+      res.render('users/adminPanel', {tittle:'Panel'})
     }
 };
 

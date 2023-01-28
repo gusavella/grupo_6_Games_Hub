@@ -1,7 +1,13 @@
+if (document.readyState == "loading") {
+    document.addEventListener("DOMContentLoaded", ready)
+}
 
-window.addEventListener('load',function(){
+else {
+    ready()
+}
 
-  
+
+function ready() {
 let addProductButton = document.getElementById('add-product-button')
 let form = document.getElementById('form')
 let body=document.querySelector('body')
@@ -13,20 +19,20 @@ let price = document.getElementById('value')
 let discount= document.getElementById('discount')
 let consoles= document.querySelectorAll('#consoles')
 let section= document.getElementById('section')
+let errorsBox= document.getElementById('errors')
+errorsBox.style.visibility='hidden'
 let isCheckedConsole=false
-let errors =[];
-
-
-form.name.focus()
 
 form.addEventListener('submit',(e)=>{
+    let errors =[];
+    console.log('Hola ')
     e.preventDefault()
- 
+ console.log('name:',name.value)
     if (name.value==""){
         errors.push('Debes ingresar un nombre')
         }
     else if (name.value.length>1 && name.value.length < 3 ){
-        errors.push('Nombre debe ser mayor a 3 caracteres')
+        errors.push('Nombre debe ser mayor o igual a 3 caracteres')
         }
    
     if (description.value.length<=0){
@@ -59,32 +65,36 @@ form.addEventListener('submit',(e)=>{
     if ( !isCheckedConsole){
         errors.push('Debes escoger al menos una consola')
        }
- 
+  console.log('errores:',errors.length)
     if (errors.length>0 ){
-        drawErrors(errors)
-        drawValues()
-        Swal.fire(
+          
+        let errorsList= document.getElementById('errors-list')
+        errorsList.innerHTML=``
+        errorsBox.style.visibility='visible'
+        for(let error in errors){   
+            errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
+        }   
+
+         Swal.fire(
             'Cuidado!',
             'Verifica los errores',
             'error'
         )
       }
    else{
+    console.log('errores:',errors.length)
     console.log('enviando info')
-    form.submit()
+    
    }
 
 })
 
 function drawErrors(errors){
-    mainBox.innerHTML+='<div id="errors" class="errors-box"></div>' 
-    let errorsBox= document.getElementById('errors')
-    errorsBox.innerHTML+='<ul class="errors-list" id="errors-list"></ul>' 
-    let errorsList= document.getElementById('errors-list')
-        for(let error in errors){   
-            errorsList.innerHTML+=`<li class="error">${errors[error]}</li>`  
-        }   
-  return  
+    mainBox.innerHTML+='' 
+   
+    errorsBox.innerHTML+='' 
+   
+        
 }
 
 function drawValues(){
@@ -93,4 +103,6 @@ function drawValues(){
 }
 
 
-})
+// })
+
+}

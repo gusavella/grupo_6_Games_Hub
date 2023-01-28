@@ -10,6 +10,14 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER(),
             allowNull: false        
         },
+        value: {
+            type: dataTypes.FLOAT,
+            allowNull: false        
+        },
+        subTotal: {
+            type: dataTypes.FLOAT,
+            allowNull: false        
+        },
         order_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
