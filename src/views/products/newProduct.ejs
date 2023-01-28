@@ -25,7 +25,7 @@
           <div class="new-product-div">
             <label for="new-img" class="new-product-label">Imagen: </label>
             <input type="file" name="new-img" id="new-img" />
-            <% if (locals.errors && errors.image){%>
+            <% if (locals.errors && errors.new-img){%>
               <div class="login-validation-error">
                   <%= errors.new-img.msg%>
               </div>
