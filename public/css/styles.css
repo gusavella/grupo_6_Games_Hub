@@ -505,9 +505,9 @@ a{
     flex-wrap: nowrap;
     display:flex;
     flex-direction: column;
-    color:white
-     
-}
+    color:white;
+    width:90%;
+  }
 .cart-tittle{
     text-align: center;
     font-size:24px;
