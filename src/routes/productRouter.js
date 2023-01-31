@@ -55,4 +55,6 @@ router.post('/cart/add/:id',authMiddleware,productController.addToCart)
 
 router.delete('/cart/:id',authMiddleware,productController.cartDelete)
 
+/*Lista de productos*/
+router.get('/edit/list',productController.showList)
 module.exports = router;
