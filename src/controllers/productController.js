@@ -205,6 +205,12 @@ const controller = {
       const finalProductsCart=productsCart.filter(product=>product.id!=id);
       fs.writeFileSync(productsCartFilePath,JSON.stringify(finalProductsCart,null," "));
       res.redirect(`/products/cart/all`)
+  },
+  showList:(req,res)=>{
+    db.Product.findAll({include: ["section","category","consoles"]})
+    .then(products => {
+      res.render('products/productList.ejs', {products:products,tittle:'Lista de productos'})
+    })
   }
 };
 
