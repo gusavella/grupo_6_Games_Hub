@@ -84,7 +84,7 @@ form.addEventListener('submit',(e)=>{
    else{
     console.log('errores:',errors.length)
     console.log('enviando info')
-    
+    form.submit()
    }
 
 })
