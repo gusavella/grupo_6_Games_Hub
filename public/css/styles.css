@@ -1081,21 +1081,19 @@ color:white;
     max-width: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column;
-    padding:25px; 
+    flex-direction: column; 
     border-radius: 5px;
     width: 80%;
     visibility: hidden;
     max-width: 800px;
-    background-color: rgba(201, 29, 29, 0.1);
-   
+    padding-top: 15px;
 }
 .error{
     justify-content: center;
     align-items: center;
     text-align: center;
     color:red;
-    font-size: 25px;
+    font-size: 18px;
 }
 /* ---------------------ERRORES FRONT------------------------*/
 /* ---------------------PANEL  ADMIN------------------------*/
