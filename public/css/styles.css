@@ -1081,12 +1081,13 @@ color:white;
     max-width: 100%;
     margin: auto;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    padding-top: 15px;
     border-radius: 5px;
     width: 80%;
     visibility: hidden;
     max-width: 800px;
-    padding-top: 15px;
+   
 }
 .error{
     justify-content: center;
