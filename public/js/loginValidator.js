@@ -24,7 +24,7 @@ console.log('form:',loginForm)
 
     if (email.value ==('')){
         errors.push ('Debes ingresar una dirección de email');
-    } else if (email.value.indexOf('@') == -1 & email.value.length > 0) {
+    } else if (email.value.indexOf('@') == -1 || email.value.indexOf ('.') == -1 & email.value.length > 0) {
         errors.push ('Debes ingresar un email válido');
     }
     if (password.value == ('')) {
