@@ -31,10 +31,10 @@ document.querySelectorAll(".carousel").forEach(carousel => {
         }
         buttons[counter].click()
         counter+=1   
-    setTimeout(pulse, 3000, buttons);
+    setTimeout(pulse, 4000, buttons);
     } 
     
-    setTimeout(pulse, 3000, buttons);
+    setTimeout(pulse, 4000, buttons);
    
 });
 
