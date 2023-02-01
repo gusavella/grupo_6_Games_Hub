@@ -1,3 +1,4 @@
+
 if (document.readyState == "loading") {
     document.addEventListener("DOMContentLoaded", ready)
 }
@@ -8,16 +9,19 @@ else {
 
 function ready() {
 
-let loginForm = document.querySelector('.login-form');
+let loginForm = document.getElementById('login-form');
     let email = document.querySelector('#email');
     let password = document.querySelector('#password')
     let errorsBox= document.getElementById('errors')
-errorsBox.style.visibility='hidden'
+    errorsBox.style.visibility='hidden'
+
+console.log('form:',loginForm)
 
     loginForm.addEventListener ('submit', function(e){
         let errors = [];
         e.preventDefault();
-    })
+        console.log('Entramos en validacion')
+
     if (email.value ==('')){
         errors.push ('Debes ingresar una dirección de email');
     } else if (email.value.indexOf('@') == -1 & email.value.length > 0) {
@@ -41,8 +45,9 @@ errorsBox.style.visibility='hidden'
    else{
     console.log('errores:',errors.length)
     console.log('enviando info')
-    
+    loginForm.submit()
    }
+})
 }
 
 
