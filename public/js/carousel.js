@@ -1,4 +1,5 @@
 document.querySelectorAll(".carousel").forEach(carousel => {
+    let counter=0;
     const items = carousel.querySelectorAll(".carousel-item");
     const button_html = Array.from(items, () => {
         return `<span class="carousel-button"></span>`;
@@ -22,4 +23,18 @@ document.querySelectorAll(".carousel").forEach(carousel => {
 
     items[0].classList.add('carousel-item-selected');
     buttons[0].classList.add('carousel-button-selected');
+    
+
+    function pulse(buttons){ 
+        if(counter==buttons.length){
+            counter=0
+        }
+        buttons[counter].click()
+        counter+=1   
+    setTimeout(pulse, 3000, buttons);
+    } 
+    
+    setTimeout(pulse, 3000, buttons);
+   
 });
+
