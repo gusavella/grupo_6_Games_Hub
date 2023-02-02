@@ -4,7 +4,7 @@
   <body class="body-register">
     <%- include('../partials/header')%>
     <main class="main-register">
-    <div class="role-box">
+    <div class="role-box" id="gradient-border">
       <h3 class="title">consoles</h3>
      
       <table description="role table">
@@ -31,8 +31,8 @@
         </tr>
         <%}%>
         <tr>
-          <form action="/consoles/add" method="post">
-            <td ><input type="text" name="name" class="role-input" ></td>            
+          <form action="/consoles/add" method="post" id="console-form">
+            <td ><input type="text" name="name" class="role-input-2" id="new-input-console"></td>            
             <td ><button class="new-product-button" type="submit"><i class="fa-solid fa-plus"></i> Agregar</button></td>
             <td></td>
           </form>  
@@ -40,7 +40,9 @@
       </table>
       
     </div>
+    <p class="warning-msg" id="warning"></p>
   </main>
   <%- include('../partials/footer')%>
+  <script type="text/javascript" src="/js/validationConsoles.js"></script>
 </body>
 

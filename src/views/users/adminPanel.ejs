@@ -9,14 +9,13 @@
      
       <table description="admin table">
         <tr class="role-th">
-          <th>Nombre</th>
-          <th>Ir a</th>
-        </tr>
+          <th>Pulsa la opcion</th>
+         </tr>
         
    
         <tr>
           <form action="/roles/all" method="get">
-            <td><label><p class="label">Roles</p></label></td>
+          
             <td class="role-td">
                <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Roles</button>
                 
@@ -26,7 +25,7 @@
         
           <tr>
             <form action="/consoles/all" method="get">
-              <td><label><p class="label">Consolas</p></label></td>
+            
               <td class="role-td">
                  <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Consolas</button>
                   
@@ -35,7 +34,7 @@
           </tr>
           <tr>
             <form action="/sections/all" method="get">
-              <td><label><p class="label">Secciones</p></label></td>
+              
               <td class="role-td">
                  <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Secciones</button>
                   
@@ -43,10 +42,19 @@
               </form>
           </tr>
           <tr>
-            <form action="/products/new" method="get">
-              <td><label><p class="label">Nuevo producto</p></label></td>
+            <form action="/categories/all" method="get">
+            
               <td class="role-td">
-                 <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Nuevo Producto</button>
+                 <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Categorias</button>
+                  
+              </td>
+              </form>
+          </tr>
+          <tr>
+            <form action="/products/edit/list" method="get">
+          
+              <td class="role-td">
+                 <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Productos</button>
                   
               </td>
               </form>

@@ -58,7 +58,7 @@ const controller = {
             res.cookie('userEmail',`${userToLogin.email}`,{maxAge:1000*60*10})
           }
          
-          console.log(req.session)
+          // console.log(req.session)
             return res.redirect(`/users/detail/${userToLogin.id}`)
         }
         return res.render('users/login.ejs',{ tittle:'Login',

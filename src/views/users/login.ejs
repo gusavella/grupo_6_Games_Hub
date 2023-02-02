@@ -4,19 +4,22 @@
     
 <body class="body-login">
   <%- include('../partials/header')%>
-    <main class="main-login">
+  <div id="errors" class="errors-box">
+    <ul class="errors-list" id="errors-list"></ul>
+  </div>
+    <main class="main-login">  
         <div class="login-box">
             <h3>Login</h3>
-            <form class="login-form" action="/users/login" method="post">
+            <form class="login-form" id="login-form" action="/users/login" method="post">
                 <label class='label-login' for="email">Email</label>
-                <input type="email" name="email" id="email" required placeholder="name@mail.com">
+                <input type="email" name="email" id="email" placeholder="name@mail.com">
                 <% if (locals.errors && errors.email){%>
                     <div class="login-validation-error">
                         <%= errors.email.msg%>
                     </div>
                 <%}%>   
                 <label class='label-login' for="password">Contraseña</label>
-                <input type="password" name="password" id="password" required placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password">
                 <% if (locals.errors && errors.password){%>
                     <div class="login-validation-error">
                         <%= errors.password.msg%>
@@ -33,5 +36,6 @@
         </div>
     </main>
     <%- include('../partials/footer')%>
+    <script  src="/js/loginValidator.js"></script>
 </body>
 </html>

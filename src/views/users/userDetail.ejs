@@ -8,7 +8,7 @@
     <main>
         <div class="container-profile" >
             <div class="img-profile">
-                <img src="<%= user.image%>" alt="" >
+                <img src="<%= user.image==undefined?user.image:'/images/defaultImage.png'%>" alt="" >
             </div>
             <div class="data-profile">
                 <div class="data-profile-label"><p><label><strong>Nombres:</strong></label> <%= user.names%></p></div>
@@ -16,13 +16,14 @@
                 <div class="data-profile-label"><p><label><strong>Email:</strong></label> <%= user.email%></p></div>
                 <div class="data-profile-label"><p><label><strong>Direccion:</strong></label> <%= user.address%></p></div>
                 <div class="data-profile-label"><p><label><strong>Telefono:</strong></label> <%= user.phone%></p></div>
+                <%if(user.role!=undefined){%>
                 <div class="data-profile-label"><p><label><strong>Rol:</strong></label> <%= user.role.name%></p></div>
-
+                <%}%>
                
             </div>
             <div class="data-profile">
                 
-                <% if(user.role_id==1){%>
+                <% if(user.role!=undefined && user.role.name=='admin'){%>
                     <form action="/users/adminPanel" method="get">
                         <button class="new-product-button" type="submit" ><i class="fa-regular fa-pen-to-square"></i> Panel admin</button>
                     </form>

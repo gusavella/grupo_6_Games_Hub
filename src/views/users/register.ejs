@@ -4,11 +4,14 @@
   <%- include('../partials/head')%>
   <body class="body-register">
     <%- include('../partials/header')%>
+    <div id="errors" class="errors-box">
+      <ul class="errors-list" id="errors-list"></ul>
+    </div>
     <main class="main-register">
     <div class="register-box">
       <h3 class="title">Registro</h3>
       <hr />
-      <form class="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
+      <form class="register-form" id="form" action="/users/register" method="POST" enctype="multipart/form-data">
         <div class="input-box">
           <div class="register-block-inline">
             <div class="register-division">
@@ -72,7 +75,7 @@
               </div>
               <input
                 class="details <%= locals.errors && errors.phone ? 'is-invalid' : null %>"
-                type="tel"
+                type="number"
                 name="phone"
                 id="phone"
                 placeholder=" 1122334455"
@@ -140,5 +143,6 @@
     </div>
   </main>
   <%- include('../partials/footer')%>
+  <script  src="/js/registerValidator.js"></script>
 </body>
 </html>

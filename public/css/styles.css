@@ -207,6 +207,7 @@ a{
 
 .carousel-item-selected {
     display: block;
+
 }
 
 .carousel-nav {
@@ -505,9 +506,9 @@ a{
     flex-wrap: nowrap;
     display:flex;
     flex-direction: column;
-    color:white
-     
-}
+    color:white;
+    width:90%;
+  }
 .cart-tittle{
     text-align: center;
     font-size:24px;
@@ -1037,22 +1038,47 @@ h2 {
 /* --------------------- USER DETAIL ------------------------*/
 
 /* ---------------------    ROLES    ------------------------*/
-.role-box{
-    max-width: 700px;
-    margin: auto;
+.role-box {
     display: flex;
-    flex-direction: column;
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    /* max-width: 1000px; */
-    width: 100%;
-    padding: 25px 30px;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-content: center;
     align-items: center;
-}
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+  }
+  #gradient-border {
+    --borderWidth: 3px;
+    padding: 20px 0;
+    background: #1D1F20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  #gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
 .role-th{
 color:white;
 }
@@ -1060,7 +1086,7 @@ color:white;
     display:flex;
     align-self: center;
 }
-.role-input{
+.role-input .role-input-2{
     border-radius: 5px;
     padding: 3px;
 }
@@ -1081,12 +1107,11 @@ color:white;
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding:25px; 
+    padding-top: 15px;
     border-radius: 5px;
     width: 80%;
     visibility: hidden;
     max-width: 800px;
-    background-color: rgba(201, 29, 29, 0.1);
    
 }
 .error{
@@ -1094,7 +1119,7 @@ color:white;
     align-items: center;
     text-align: center;
     color:red;
-    font-size: 25px;
+    font-size: 18px;
 }
 /* ---------------------ERRORES FRONT------------------------*/
 /* ---------------------PANEL  ADMIN------------------------*/
@@ -1381,4 +1406,11 @@ color:white;
     .container-selling {
         width: 100%;
     }
+}
+
+#warning {
+    text-align: center;
+    color: white;
+    text-shadow: rgb(255, 0, 0) 1px 0 10px;
+    font-size: 30px;
 }
