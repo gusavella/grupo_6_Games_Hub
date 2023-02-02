@@ -82,6 +82,13 @@ function displayEmptyCart() {
         <h2 >No hay elementos en el carrito</h2>
     </div>
     `
+    let containerTotal = document.querySelector(".cart-value-description")
+    let total = document.querySelector(".total")
+    containerTotal.innerHTML = ` 
+    <div">
+        <h2 >No hay elementos en el carrito</h2>
+     </div> `
+    total.innerText='$0' 
 }
 
 

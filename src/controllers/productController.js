@@ -77,14 +77,14 @@ const controller = {
           try{
             let createdProduct= await db.Product.create(
                     {
-                              name : req.body.name ,
+                               name : req.body.name ,
                         description : req.body.description,
                               image : req.file?'/images/games/'+ req.file.filename:'/images/defaultImage.png',
                               value : parseFloat(req.body.value),
-                          discount : parseFloat(req.body.discount),
+                           discount : parseFloat(req.body.discount),
                         final_value : (parseFloat(req.body.value*(1-req.body.discount/100))).toFixed(2), // Para que solamente tenga dos digitos
                         category_id : req.body.category,
-                        section_id : req.body.section,
+                         section_id : req.body.section,
                           
                     })
 
