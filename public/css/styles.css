@@ -1074,7 +1074,7 @@ b {
   #gradient-border {
     --borderWidth: 3px;
     padding: 20px 0;
-    background: #1D1F20;
+    background:  rgba(0,0,0,0.4);
     position: relative;
     border-radius: var(--borderWidth);
   }
