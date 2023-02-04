@@ -15,8 +15,8 @@ const controller = {
            res.redirect('/roles/all')
         }catch(e){
            // console.log(e)
-           console.log('Nombre:',e.name)  
-           console.log('errors:',e.errors) 
+        //    console.log('Nombre:',e.name)  
+        //    console.log('errors:',e.errors) 
          //  console.log('errors length:',e.errors.length)  
            for(error in e.errors){
             console.log('error:',e.errors[error].validatorKey)  
