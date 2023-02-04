@@ -3,3 +3,5 @@
 package-lock.json
 
 /Dashboard_react/node_modules
+
+/Dashboard_react/package-lock.json

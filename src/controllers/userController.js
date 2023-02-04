@@ -139,7 +139,7 @@ const controller = {
                             }
                     })
       .then(function(user){
-        console.log(user)
+        // console.log(user)
         res.redirect(`/users/detail/${req.params.id}`);
       })
     },

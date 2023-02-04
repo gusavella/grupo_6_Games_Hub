@@ -11,7 +11,7 @@ const controller = {
     },
     create:async(req,res)=>{
         try{
-            console.log('productos:',req.body.products )
+            // console.log('productos:',req.body.products )
            let createdOrder=await db.Order.create({
                                  total:req.body.total,
                                  user_id:req.session.userLogged.id    // para grabar el id del usuario que esta en la sesion (logueado)         
@@ -35,8 +35,8 @@ const controller = {
            })
         }catch(e){
            // console.log(e)
-           console.log('Nombre:',e.name)  
-           console.log('errors:',e.errors) 
+        //    console.log('Nombre:',e.name)  
+        //    console.log('errors:',e.errors) 
          //  console.log('errors length:',e.errors.length)  
            for(error in e.errors){
             console.log('error:',e.errors[error].validatorKey)  

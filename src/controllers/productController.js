@@ -64,7 +64,7 @@ const controller = {
     let categories= await db.Category.findAll();
     let sections= await db.Section.findAll();
     let consoles= await db.Console.findAll();
-    console.log(req.body)
+    // console.log(req.body)
     const resultValidationProduct = validationResult(req);
       if (resultValidationProduct.errors.length > 0){
         return res.render('products/newProduct', { tittle: 'New Product',
