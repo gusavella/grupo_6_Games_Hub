@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { validationResult } = require('express-validator')
 const controller = {
     all: async (req, res) => {
         try{
@@ -10,12 +11,21 @@ const controller = {
         }
     },
     create:async(req,res)=>{
-        try{
-           await db.Category.create({name:req.body.name})
-            res.redirect('/categories/all')
-        }catch(e){
-            console.log(e)
+        resultValidation = validationResult(req)
+        let categories=await db.Category.findAll()
+        if (resultValidation.errors.length > 0){
+            return res.render('categories/categories.ejs', {tittle : 'Roles', categories,
+                errors: resultValidation.mapped(),
+            })
+        } else {
+            try{
+                await db.Category.create({name:req.body.name})
+                 res.redirect('/categories/all')
+             }catch(e){
+                 console.log(e)
+             }
         }
+        
       },
       update:async(req,res)=>{
         try{

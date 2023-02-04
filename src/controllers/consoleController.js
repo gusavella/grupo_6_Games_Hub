@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { validationResult } = require('express-validator')
 const controller = {
     all: async (req, res) => {
         try{
@@ -10,6 +11,13 @@ const controller = {
         }
     },
     create:async(req,res)=>{
+        resultValidation = validationResult(req)
+        let consoles=await db.Console.findAll()
+        if (resultValidation.errors.length > 0){
+            return res.render('consoles/consoles.ejs', {tittle : 'Consolas', consoles,
+                errors: resultValidation.mapped(),
+            })
+        }
         try{
            await db.Console.create({name:req.body.name})
             res.redirect('/consoles/all')
