@@ -16,6 +16,9 @@ let categoryRouter = require('./src/routes/categoryRouter');
 let gameRouter = require('./src/routes/gameRouter');
 let productConsoleRouter = require('./src/routes/productConsoleRouter');
 let orderRouter = require('./src/routes/orderRouter');
+const apiUsersRouter = require('./src/routes/apiUsersRouter');
+const apiProductsRouter = require('./src/routes/apiProductsRouter');
+
 
 
 let userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
@@ -46,6 +49,10 @@ app.use('/games', gameRouter);
 app.use('/productConsoles', productConsoleRouter);
 app.use('/orders', orderRouter);
 
+// api
+
+app.use('/api/users', apiUsersRouter)
+app.use('/api/products', apiProductsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
