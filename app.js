@@ -18,6 +18,8 @@ let productConsoleRouter = require('./src/routes/productConsoleRouter');
 let orderRouter = require('./src/routes/orderRouter');
 
 
+
+
 let userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware')
 
 let app = express();
@@ -45,6 +47,7 @@ app.use('/categories', categoryRouter);
 app.use('/games', gameRouter);
 app.use('/productConsoles', productConsoleRouter);
 app.use('/orders', orderRouter);
+
 
 
 // catch 404 and forward to error handler
