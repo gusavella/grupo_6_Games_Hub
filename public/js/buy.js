@@ -21,19 +21,30 @@ function  ready(){
                     total:prodsCart.reduce((acum, act) => acum += act.subTotal ,0).toFixed(2) ,
                     products:prodsCart
                 }
-    const response = await fetchCreate(body)
+    if(body.total>0){
+        const response = await fetchCreate(body)
+
+        if(response.information.status==200){
+            Swal.fire(
+                'Exito!',
+                'Se ha creado la Orden exitosamente',
+                'success'
+            )
+            localStorage.setItem("productsInCart", JSON.stringify([]))
+            displayEmptyCart()
+            displayCart()
+        }
+    }            
+    else{
+        Swal.fire(
+            'Error!',
+            'No se puede crear una orden sin productos ',
+            'error'
+        )  
+    }
    
     // console.log('respuesta',response)
-    if(response.information.status==200){
-        Swal.fire(
-            'Exito!',
-            'Se ha creado la Orden exitosamente',
-            'success'
-        )
-        localStorage.setItem("productsInCart", JSON.stringify([]))
-        displayEmptyCart()
-        displayCart()
-    }
+    
     })
     async function fetchCreate(model) { 
         const res = await fetch('/orders/add', {

@@ -43,8 +43,8 @@ console.log('form:',loginForm)
         }   
       }
    else{
-    console.log('errores:',errors.length)
-    console.log('enviando info')
+    // console.log('errores:',errors.length)
+    // console.log('enviando info')
     loginForm.submit()
    }
 })

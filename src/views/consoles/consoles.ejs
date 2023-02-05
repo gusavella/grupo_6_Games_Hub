@@ -41,6 +41,11 @@
       
     </div>
     <p class="warning-msg" id="warning"></p>
+    <% if (locals.errors && errors.name){%>
+      <div class="warning-msg" id="warning">
+          <%= errors.name.msg%>
+      </div>
+  <%}%>
   </main>
   <%- include('../partials/footer')%>
   <script type="text/javascript" src="/js/validationConsoles.js"></script>

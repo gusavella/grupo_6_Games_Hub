@@ -14,13 +14,13 @@
     <div class="main-container">
 
         <div class="container-selling">
-            <section >
+            <section class="container-selling">
               <table description="Product table for edit ">
                 <tr>
                   <th>Nombre</th><th>Accion</th>
                 </tr>
                 <tr>
-                  <td><label><p class="label">Crear nuevo producto</p></label></td>
+                  <td><label><p class="list-label">Crear nuevo producto</p></label></td>
                   <td class="role-td">
                     <form action="/products/new" method="get">
                       <button class="new-product-button" type="submit"><i class="fa-solid fa-plus"></i>  Nuevo Producto</button>
@@ -30,7 +30,7 @@
                 <% for(let i=0;i<products.length;i++){%>
                  <tr>
                     <td>
-                      <h3><%=products[i].name %></h3>
+                     <p class="list-label"><%=products[i].name %><p>
                     </td>
                     <td>  
                         <form action="/products/<%=products[i].id%>/edit" method="get">
