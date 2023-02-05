@@ -12,7 +12,7 @@
           <th>Nombre</th>
           <th>Operaciones</th>
         </tr>
-        
+
        <% for (role in roles){ %>
         <tr>
           <form action="/roles/<%=roles[role].id%>/edit?_method=PUT" method="post">
@@ -41,6 +41,11 @@
       
     </div>
     <p class="warning-msg" id="warning"></p>
+    <% if (locals.errors && errors.name){%>
+      <div class="warning-msg" id="warning">
+          <%= errors.name.msg%>
+      </div>
+  <%}%>
   </main>
   <%- include('../partials/footer')%>
   <script type="text/javascript" src="/js/validationSRCC.js"></script>
