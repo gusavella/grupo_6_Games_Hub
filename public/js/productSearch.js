@@ -22,7 +22,7 @@ async function ready(){
     displayProducts(products.products)
     let searchBar = document.querySelector('.search-form_input')
     searchBar.addEventListener('change', (e) => {
-        filter(products.products, e.target.value)
+                                                filter(products.products, e.target.value)
     })
 }
 
@@ -30,17 +30,18 @@ function displayProducts(products){
     let container = document.querySelector('.best-selling')
     container.innerHTML = ``
     for (let i = 0; i < products.length; i++){
+       
         container.innerHTML += `
             <div class="card">
                 <div class="face front">
-                    <img src="<%=products[i].image%>" alt="imagen-game">
-                    <h3><%=products[i].name %></h3>
+                    <img src="${products[i].image}" alt="imagen-game">
+                    <h3>${products[i].name }</h3>
                 </div>
                 <div class="face back">
-                    <h4><%=products[i].name%></h4>
-                    <p>Categoría: <%=products[i].category.name%></p>
+                    <h4>${products[i].name}</h4>
+                    <p>Categoría: ${products[i].asociations[0]}</p>
                     <div class="link-buy">
-                        <a href="/products/<%=products[i].id%>"><%=products[i].final_value %> - COMPRAR</a>
+                        <a href="/products/${products[i].id}">${products[i].final_value } - COMPRAR</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +51,7 @@ function displayProducts(products){
 function filter(products, search) {
     if (search == "") displayProducts(products)
     else {
-        let productsFiltered = products.filter(product => product.name.toLowerCase().includes(busqueda.toLowerCase()) || product.description.toLowerCase().includes(busqueda.toLowerCase()))
+        let productsFiltered = products.filter(product => product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase()))
         displayProducts(productsFiltered)
     }
 }

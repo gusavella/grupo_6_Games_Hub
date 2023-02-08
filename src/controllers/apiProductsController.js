@@ -15,6 +15,7 @@ module.exports = {
             let productDetail = {
                 id: product.id,
                 name: product.name,
+                final_value:product.final_value,
                 description: product.description,
                 image: `http://localhost:3030${product.image}`,
                 asociations: [product.category.name, product.section, product.consoles],
