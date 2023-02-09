@@ -17,17 +17,27 @@ async function fetchApi(url, config){
 }
 
 async function ready(){
-    let otherSearchBar = document.querySelector('.search-form_input')
+     let otherSearchBar = document.querySelector('.search-form_input')
+    otherSearchBar.addEventListener('keyup', (e) => {
+        var inputText = e.target.value   
+        sessionStorage.setItem('searchText', inputText)
+    })
     otherSearchBar.addEventListener('change', (e) => {
         if(window.location.pathname != '/products/search'){
-            location.href = 'http://localhost:3030/products/search'
+            location.href = 'http://localhost:3030/products/search'           
         }
-})
+    })
+
     const response = await fetch('/api/products')
     const products = await response.json()
     displayProducts(products.products)
+
     let searchBar = document.querySelector('.search-form_input')
+    searchBar.value = sessionStorage.getItem('searchText')
+    var event = new Event('change')
+    searchBar.dispatchEvent(event)
     searchBar.addEventListener('change', (e) => {
+        console.log(sessionStorage.getItem('searchText'))
         filter(products.products, e.target.value)       
     })
 }
