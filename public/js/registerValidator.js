@@ -37,8 +37,8 @@ function ready() {
 
         if (password.value == ""){
             errors.push('Debes ingresar una contraseña')
-        } else if (surnames.value.length < 6){
-            errors.push('La contraseña debe ser mayor a 3 caracteres')
+        } else if (password.value.length <= 3){
+            errors.push('La contraseña debe ser mayor a 4 caracteres')
         }
         
         if (phone.value == ""){

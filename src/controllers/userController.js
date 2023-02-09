@@ -95,22 +95,36 @@ const controller = {
         return res.render('users/register.ejs', { tittle: 'Registro',
           errors: resultValidationRegister.mapped(),
           oldData: req.body
+        })}
+        db.User.findOne({
+          where:{
+            email:req.body.email
+          }
         })
-      } else {
-          db.User.create({
-            names: req.body.names,
-            surnames: req.body.surnames,
-            email:req.body.email,
-            password: bcrypt.hashSync(req.body.password,10),
-            address:req.body.address,
-            phone:req.body.phone,
-            image: req.file?'/images/users/'+ req.file.filename:'/images/defaultImage.png',
-            role_id:2
-          })
-          .then(function(user){
-            res.render("users/userDetail.ejs", { tittle: "User Detail",user:user });
-          })
-        }
+        .then(function(userToRegister){
+          if(userToRegister){
+            return res.render('users/register.ejs', { tittle: 'Registro', 
+            errors: {
+              email: {
+                msg: 'Este email ya esta en uso'
+              }
+            }, oldData: req.body})
+          } else {
+            db.User.create({
+              names: req.body.names,
+              surnames: req.body.surnames,
+              email:req.body.email,
+              password: bcrypt.hashSync(req.body.password,10),
+              address:req.body.address,
+              phone:req.body.phone,
+              image: req.file?'/images/users/'+ req.file.filename:'/images/defaultImage.png',
+              role_id:2
+            })
+            .then(function(user){
+              res.render("users/login.ejs", { tittle: "Login",user:user });
+            })
+          }
+        })
     },
     edit: (req,res) =>{
       db.User.findByPk(req.params.id)
