@@ -15,7 +15,7 @@
           <li><a class="header-link" href="/users/register">Register</a></li>
         <%}%>
         <% if (locals.isLogged){%>
-          <li class="header-name"><a href="/users/detail/<%=locals.userLogged.id%>"><%=locals.userLogged.names%></a></li>
+          <li class="header-link"><a href="/users/detail/<%=locals.userLogged.id%>"><%=locals.userLogged.names%></a></li>
         <%}%>
         <% if (locals.isLogged){%>
           <li>
@@ -25,7 +25,7 @@
           </li>
           <%}%>
         <li>
-          <a class="header-icon burger-menu" href="#"
+          <a id="burgerButton" class="header-icon burger-menu" href="#"
             ><em class="fa-solid fa-bars"></em
           ></a>
         </li>
@@ -45,4 +45,36 @@
           </li>
         </ul>
       </nav>
+      <div class="burgerMenu">
+        <ul class="burger-header-user-list">
+          <% if (!locals.isLogged){%>
+            <li><a class="burger-header-link" href="/users/login">Login</a></li>
+          <%}%>
+          <% if (locals.isLogged){%>
+            <li><a class="burger-header-link" href="/users/logout">Logout</a></li>
+          <%}%>
+          <% if (!locals.isLogged){%>
+            <li><a class="burger-header-link" href="/users/register">Register</a></li>
+          <%}%>
+          <% if (locals.isLogged){%>
+            <li class="burger-header-name"><a href="/users/detail/<%=locals.userLogged.id%>"><%=locals.userLogged.names%></a></li>
+          <%}%>
+            </ul>
+            <nav>
+              <ul class="burger-header-nav-bar">
+                <li><a class="burger-header-link" href="/">Tienda</a></li>
+                <li><a class="burger-header-link" href="/products/offers">Ofertas</a></li>
+                <li><a class="burger-header-link" href="/products/recommended">Recomendados</a></li>
+                <li><a class="burger-header-link" href="/products/all">Todos</a></li>
+                <li><a class="burger-header-link" href="/products//best-selling">Más vendidos</a></li>
+                <li>
+                  <div class="search">
+                      <input type="text" placeholder="Buscar productos, marcas y más" name="keywords" class="search-form_input"/>
+                      <button type="submit" class="search-button"><em class="fa-solid fa-magnifying-glass search-icon"></em></button>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+      </div>
     </header>
+    <script  src="/js/burgerMenu.js"></script>
