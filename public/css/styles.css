@@ -1182,11 +1182,7 @@ color:white;
         justify-content: space-around;
     }
 
-    .fa-magnifying-glass:before, .fa-search:before {
-        position: relative;
-        right: 5px;
-    }
-    /* ----------------------------------HEADER---------------------------------- */
+        /* ----------------------------------HEADER---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
         height: 170px;

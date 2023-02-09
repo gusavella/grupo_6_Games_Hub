@@ -7,7 +7,7 @@ module.exports = [
     body('description')
         .notEmpty().withMessage('Debes ingresar una descripción').bail()
         .isLength({min:20}).withMessage('La descripción debe tener al menos 20 caracteres'),
-    body('new-img')
+        body('new-img')
         .custom((value,{req}) =>{
             let file = req.file
             let acceptedExtensions = ['.jpg','.png','.jpeg','.gif']

@@ -15,7 +15,18 @@ let storage = multer.diskStorage({
     cb(null,   Date.now()+path.extname(file.originalname))
     }
    })
-   let upload = multer({ storage: storage })
+   let upload = multer({ 
+        storage: storage,
+        /*fileFilter : function(req,file,cb) {
+            let acceptedExtensions = ['jpg','png','jpeg','gif']
+            let fileExtension = path.extname(file.originalname).toLowerCase()
+            if(acceptedExtensions.includes(fileExtension)){
+                return cb(null,true)
+            }else{
+                return cb(null,false)
+            }
+        }*/
+     })
 // Todos los grupos
 
 
