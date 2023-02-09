@@ -46,13 +46,14 @@ const controller = {
     })
     
   },
+  search: (req,res) => {
+    res.render('products/productSearch.ejs', {tittle: 'Games Hub'})
+  },
   productDetail: (req, res) => {
     db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
     .then(product => {
            res.render("products/productDetail", { tittle: "Product" , product: product});
-    })
-    
-    
+    })  
   },
   newProduct: async(req, res) => {
     let categories= await db.Category.findAll();

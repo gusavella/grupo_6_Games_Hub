@@ -17,17 +17,23 @@ async function fetchApi(url, config){
 }
 
 async function ready(){
+    let otherSearchBar = document.querySelector('.search-form_input')
+    otherSearchBar.addEventListener('change', (e) => {
+        if(window.location.pathname != '/products/search'){
+            location.href = 'http://localhost:3030/products/search'
+        }
+})
     const response = await fetch('/api/products')
     const products = await response.json()
     displayProducts(products.products)
     let searchBar = document.querySelector('.search-form_input')
     searchBar.addEventListener('change', (e) => {
-                                                filter(products.products, e.target.value)
+        filter(products.products, e.target.value)       
     })
 }
 
 function displayProducts(products){
-    let container = document.querySelector('.best-selling')
+    let container = document.querySelector('.product-search')
     container.innerHTML = ``
     for (let i = 0; i < products.length; i++){
        
@@ -53,5 +59,5 @@ function filter(products, search) {
     else {
         let productsFiltered = products.filter(product => product.name.toLowerCase().includes(search.toLowerCase()) || product.description.toLowerCase().includes(search.toLowerCase()))
         displayProducts(productsFiltered)
+        }
     }
-}
