@@ -53,7 +53,7 @@ router.get('/:id', productController.productDetail)
 // Editar un producto
 router.get('/:id/edit',productController.showEdit)
 //
-router.put('/:id/edit',upload.single('new-img'),productController.update)
+router.put('/:id/edit',upload.single('new-img'),validateProductsMiddleware,productController.update)
 
 router.delete('/:id',productController.delete)
 

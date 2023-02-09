@@ -64,7 +64,7 @@ const controller = {
     let categories= await db.Category.findAll();
     let sections= await db.Section.findAll();
     let consoles= await db.Console.findAll();
-    // console.log(req.body)
+    
     const resultValidationProduct = validationResult(req);
       if (resultValidationProduct.errors.length > 0){
         return res.render('products/newProduct', { tittle: 'New Product',
@@ -120,7 +120,7 @@ const controller = {
       productConsolesArray.push(productConsole.console_id)
     })
    }
-    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product,categories,sections,consoles,productConsolesArray});
+    res.render("products/editProduct.ejs", { tittle: "Editar Producto" ,product,productConsolesArray,categories,sections,consoles,productConsolesArray});
     }
     catch(e){
       console.log(e)
@@ -128,43 +128,66 @@ const controller = {
   },
 
   update: async(req, res) => {
-    try{
+    
     let productOld = await  db.Product.findByPk(req.params.id)
+    let categories= await db.Category.findAll();
+    let sections= await db.Section.findAll();
+    let consoles= await db.Console.findAll();
+    let productConsoles = await  db.ProductConsole.findAll({where:{product_id:req.params.id}})
+    let productConsolesArray=[]
+        
+    if(productConsoles){
+    productConsoles.forEach(productConsole=>{
+      productConsolesArray.push(productConsole.console_id)
+    })
+   }
+    
+    const resultValidationProduct = validationResult(req);
+      if (resultValidationProduct.errors.length > 0){
+        return res.render('products/editProduct', { tittle: 'Editar Producto',
+          categories,sections,consoles,productConsolesArray,
+          errors: resultValidationProduct.mapped(),
+          product: req.body
+        })
+      } else {
+        try{
+        const editedProduct={
+          name : req.body.name,
+         value : parseFloat(req.body.price),
+      discount : parseFloat(req.body.discount),
+   final_value : (parseFloat(parseFloat(req.body.price)*(1-parseFloat(req.body.discount)/100))).toFixed(2) ,// Para que solamente tenga dos digitos
+    section_id : req.body.section,
+         image : req.file?'/images/games/'+req.file.filename:productOld.image,
+   category_id : req.body.category,
+   description : req.body.description
+}
+
+ await db.Product.update(editedProduct, {
+   where:{
+     id:req.params.id
+   }
+ });
+ await db.ProductConsole.destroy({where:{ 
+   product_id:req.params.id
+ }})
+ if(req.body.consoles){
+      let consolesAssigned= req.body.consoles
+   for(const element of consolesAssigned){
+     await db.ProductConsole.create({
+       console_id : element,
+       product_id : req.params.id })
+
+   }
+ }
+}
+catch(e){
+console.log(e)
+}
+res.redirect(`/products/${req.params.id}`)
+      }
   
 
-    const editedProduct={
-             name : req.body.name,
-            value : parseFloat(req.body.price),
-         discount : parseFloat(req.body.discount),
-      final_value : (parseFloat(parseFloat(req.body.price)*(1-parseFloat(req.body.discount)/100))).toFixed(2) ,// Para que solamente tenga dos digitos
-       section_id : req.body.section,
-            image : req.file?'/images/games/'+req.file.filename:productOld.image,
-      category_id : req.body.category,
-      description : req.body.description
-  }
-
-    await db.Product.update(editedProduct, {
-      where:{
-        id:req.params.id
-      }
-    });
-    await db.ProductConsole.destroy({where:{ 
-      product_id:req.params.id
-    }})
-    if(req.body.consoles){
-         let consolesAssigned= req.body.consoles
-      for(const element of consolesAssigned){
-        await db.ProductConsole.create({
-          console_id : element,
-          product_id : req.params.id })
-  
-      }
-    }
- }
- catch(e){
-  console.log(e)
- }
- res.redirect(`/products/${req.params.id}`)
+    
   },
   delete: async (req,res)=>{
    

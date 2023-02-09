@@ -22,11 +22,21 @@
               <div class="edit-product-div">
                 <label for="name" class="edit-product-label">Nombre:</label>
                 <input type="text" name="name" id="name" value="<%=product.name%>" />
+                <% if (locals.errors && errors.name){%>
+                  <div class="login-validation-error">
+                      <%= errors.name.msg%>
+                  </div>
+              <%}%>
               </div>
               <div class="edit-product-div">
                 <label for="description" class="edit-product-label" >Descripcion:</label>
                 <textarea type="textarea" cols="40" rows="10" name="description" id="description"
                   class="edit-product-text-area"><%=product.description%></textarea>
+                  <% if (locals.errors && errors.description){%>
+                    <div class="login-validation-error">
+                        <%= errors.description.msg%>
+                    </div>
+                <%}%>
               </div>
             
               <div class="edit-product-div">
@@ -36,6 +46,11 @@
                     <option value=<%=categories[i].id%> <%=product.category_id==categories[i].id ?'selected':''%> ><%= categories[i].name %></option>
                   <%}%>
                 </select>
+                <% if (locals.errors && errors.category){%>
+                  <div class="login-validation-error">
+                      <%= errors.category.msg%>
+                  </div>
+              <%}%>
               </div>
               <div class="edit-product-div">
                 <label for="console" class="edit-product-label" >Consolas compatibles:</label>
@@ -51,16 +66,31 @@
                     </div>
                     <%}%>
 
+
                 </div>
-               
+               <% if (locals.errors && errors.consoles){%>
+                <div class="login-validation-error">
+                    <%= errors.consoles.msg%>
+                </div>
+            <%}%>
               </div>
               <div class="edit-product-div">
                 <label for="price" class="edit-product-label" >Precio:</label>
                 <input step="any" type="number" name="price" id="value" value="<%=product.value%>" />
+                <% if (locals.errors && errors.value){%>
+                  <div class="login-validation-error">
+                      <%= errors.value.msg%>
+                  </div>
+              <%}%>
               </div>
               <div class="edit-product-div">
                 <label for="discount" class="edit-product-label" >Descuento:</label>
                 <input step="any" type="number" name="discount" id="discount" value="<%=product.discount%>" />
+                <% if (locals.errors && errors.discount){%>
+                  <div class="login-validation-error">
+                      <%= errors.discount.msg%>
+                  </div>
+              <%}%>
               </div>
               <div class="edit-product-div">
                 <label for="section" class="edit-product-label" >Sección</label>
@@ -71,6 +101,11 @@
                   <%}%>
                   
                 </select>
+                <% if (locals.errors && errors.section){%>
+                  <div class="login-validation-error">
+                      <%= errors.section.msg%>
+                  </div>
+              <%}%>
               </div>
               <div class="edit-product-button">
                 <button id="add-product-button" class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
