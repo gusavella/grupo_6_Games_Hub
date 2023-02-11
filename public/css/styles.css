@@ -169,7 +169,52 @@ footer section{
     padding: 25px;
     border-radius: 5px;
     width: 80%;
+    max-width: 300px;
     margin: auto;
+}
+.main-login {
+    
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.remember-check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -30px;
+}
+
+.remember-check label{
+    font-size: 12px;
+}
+
+.forgot-pass {
+    color: #1AADB4;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.label-login {
+    padding: 10px;
+}
+
+.register {
+    text-decoration: none;
+    color: white;
+}
+.login-box h3 {
+    border-bottom: solid 1px white;
+    width: 100%;
+    text-align: center;
 }
 /* --------------------------- LOGIN --------------------------- */
 
@@ -1236,19 +1281,9 @@ color:white;
         font-family: 'Changa', sans-serif;
     }
 
-    .main-login {
     
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-    }
 
-
-    .login-box h3 {
-        border-bottom: solid 1px white;
-        width: 100%;
-        text-align: center;
-    }
+    
 
     .login-box button {
         margin: 15px;
@@ -1259,38 +1294,6 @@ color:white;
 
     .login-form input {
         padding: 2px;
-    }
-
-    .remember-check {
-        display: flex;
-        align-items: center;
-        position: relative;
-        left: -37px;
-    }
-
-    .remember-check label{
-        font-size: 12px;
-    }
-
-    .forgot-pass {
-        color: #1AADB4;
-        font-size: 10px;
-        text-decoration: none;
-    }
-
-    .label-login {
-        padding: 10px;
-    }
-
-    .login-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .register {
-        text-decoration: none;
-        color: white;
     }
 
     .login-button {
