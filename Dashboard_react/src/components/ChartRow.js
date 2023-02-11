@@ -7,6 +7,7 @@ function ChartRow(props){
                     <td>{props.id}</td>
                     <td>{props.name}</td>
                     <td>{props.email}</td>
+                    <td>{props.role}</td> 
                     <td>{props.detail}</td> 
                 </tr>
             )
