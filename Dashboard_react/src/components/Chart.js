@@ -17,6 +17,7 @@ function  Chart ({infoUsers}){
                                 <th>Id</th>
                                 <th>Nombre</th>
                                 <th>Correo</th>
+                                <th>Rol</th>
                                 <th>Detalle</th>
                                
                             </tr>
