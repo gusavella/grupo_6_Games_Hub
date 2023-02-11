@@ -35,7 +35,7 @@ let storage = multer.diskStorage({
  router.get('/offers', productController.offer);
  router.get('/recommended',productController.recommended);
  router.get('/products', productController.allProducts);
- 
+ router.get('/search', productController.search)
  
 
 

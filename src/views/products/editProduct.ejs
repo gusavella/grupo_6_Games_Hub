@@ -21,7 +21,7 @@
 
               <div class="edit-product-div">
                 <label for="name" class="edit-product-label">Nombre:</label>
-                <input type="text" name="name" id="name" value="<%=product.name%>" />
+                <input type="text" name="name" id="name" value="<%=locals.oldData ? oldData.name : product.name%>" />
                 <% if (locals.errors && errors.name){%>
                   <div class="login-validation-error">
                       <%= errors.name.msg%>
@@ -31,7 +31,7 @@
               <div class="edit-product-div">
                 <label for="description" class="edit-product-label" >Descripcion:</label>
                 <textarea type="textarea" cols="40" rows="10" name="description" id="description"
-                  class="edit-product-text-area"><%=product.description%></textarea>
+                  class="edit-product-text-area"><%=locals.oldData ? oldData.description : product.description%></textarea>
                   <% if (locals.errors && errors.description){%>
                     <div class="login-validation-error">
                         <%= errors.description.msg%>
@@ -76,7 +76,7 @@
               </div>
               <div class="edit-product-div">
                 <label for="price" class="edit-product-label" >Precio:</label>
-                <input step="any" type="number" name="price" id="value" value="<%=product.value%>" />
+                <input step="any" type="number" name="value" id="value" value="<%=locals.oldData ? oldData.value : product.value%>" />
                 <% if (locals.errors && errors.value){%>
                   <div class="login-validation-error">
                       <%= errors.value.msg%>
@@ -85,7 +85,7 @@
               </div>
               <div class="edit-product-div">
                 <label for="discount" class="edit-product-label" >Descuento:</label>
-                <input step="any" type="number" name="discount" id="discount" value="<%=product.discount%>" />
+                <input step="any" type="number" name="discount" id="discount" value="<%=locals.oldData ? oldData.discount : product.discount%>" />
                 <% if (locals.errors && errors.discount){%>
                   <div class="login-validation-error">
                       <%= errors.discount.msg%>
@@ -122,9 +122,8 @@
 
       </main>
       <%- include('../partials/footer')%>
-      <script type="text/javascript" src="/js/productValidator.js"></script>
+      <script  src="../../../public/js/productValidator.js"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
-  </body>
 
 </html>

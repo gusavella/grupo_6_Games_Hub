@@ -1,0 +1,254 @@
+[33mcommit b1358d111cc8c96f055d6612b14de2fe42cea4b7[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Thu Feb 9 11:51:59 2023 +0900
+
+    agrego burger menu
+
+[33mcommit 0b1b7af5eeed3645b374bc851562b35f7b481a8e[m
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Thu Feb 9 11:01:23 2023 +0900
+
+    arreglo detalle de newProduct
+
+[33mcommit 0022987a8a7bce09d88145f81793068723abc229[m
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Thu Feb 9 10:13:31 2023 +0900
+
+    aplicando validateProductMiddleware a la edicion del producto
+
+[33mcommit 622d6561e75b7c13646c7120680afeb66a094df7[m
+Merge: 5636ffa 545f3d9
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Thu Feb 9 09:20:20 2023 +0900
+
+    Merge branch 'master' of https://github.com/gusavella/grupo_6_Games_Hub
+
+[33mcommit 5636ffab3d81ef973f251589cac51c23ca64beb7[m
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Thu Feb 9 09:20:05 2023 +0900
+
+    tratando de arreglar validacion de imagenes
+
+[33mcommit 545f3d9dfb9e41df0f86a173182475afe9acc7ec[m
+Merge: aea3289 9df2efe
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Tue Feb 7 19:07:50 2023 -0500
+
+    Merge pull request #82 from gusavella/gustavo
+    
+    Realiza la busqueda de producto con barra de busqueda
+
+[33mcommit 9df2efe26d0d4556474d37096737b85b4b9fdb8d[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Tue Feb 7 19:07:27 2023 -0500
+
+    Realiza la busqueda de producto con barra de busqueda
+
+[33mcommit aea32894b7d0f25e94f62770cb30d5aafa367fcd[m
+Author: FelipeAMS <xfoarmks@gmail.com>
+Date:   Tue Feb 7 14:08:44 2023 -0400
+
+    Avance de la barra de búsqueda (entre en crisis)
+
+[33mcommit d271a4fcd8df891dca1fc2cf3bd22ee856b88509[m
+Author: FelipeAMS <xfoarmks@gmail.com>
+Date:   Tue Feb 7 12:14:29 2023 -0400
+
+    Agregando validación de email en uso al registrarse, arreglo de rutas al registrarse, arreglo de imagen de detalle de usuario,y arreglo de valores de la old data al registrarse
+
+[33mcommit 34c15cc01bb18a0b7d4995832d10e190e775c7db[m
+Merge: 8f44e8d 733b700
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Tue Feb 7 09:50:39 2023 +0900
+
+    Merge branch 'master' of https://github.com/gusavella/grupo_6_Games_Hub
+
+[33mcommit 733b7009f041821342d4aa4000791a214e22fc6b[m
+Merge: f3ea6de e0849bc
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 18:42:49 2023 -0500
+
+    Merge pull request #81 from gusavella/gustavo
+    
+    Modifico archivo Readme
+
+[33mcommit e0849bc2f993f4f41105befb488b0d6c86d09787[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 18:42:25 2023 -0500
+
+    Modifico archivo Readme
+
+[33mcommit f3ea6de82bdc3765e759602b1e7f64684a68d30a[m
+Merge: 1aa0129 7c03d29
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 18:34:48 2023 -0500
+
+    Merge pull request #80 from gusavella/gustavo
+    
+    Modifico archivo Readme
+
+[33mcommit 7c03d29d2d56f816e92fc6495fb0ad2bc5963359[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 18:34:25 2023 -0500
+
+    Modifico archivo Readme
+
+[33mcommit 1aa0129f44a6db4a2e815dc34ff1c98bb17773c9[m
+Merge: b8dbade eac0594
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 17:53:11 2023 -0500
+
+    Merge pull request #79 from gusavella/gustavo
+    
+    Modificacion titulo de pestaña React
+
+[33mcommit eac0594a1e95a5370c0aa02b5307fc0651427566[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 17:52:49 2023 -0500
+
+    Modificacion titulo de pestaña React
+
+[33mcommit b8dbade0646399cca26d3325c2db24cd63cdd262[m
+Merge: 96b9898 edd7b33
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 17:49:16 2023 -0500
+
+    Merge pull request #78 from gusavella/gustavo
+    
+    Modificacion de footer Dashboard oki
+
+[33mcommit edd7b33677e6914f6a2a317b009677ca264550c7[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 17:46:35 2023 -0500
+
+    Modificacion de footer
+
+[33mcommit 96b9898a424cddd028a5b846f040d045a01d9c0e[m
+Merge: d95cd6c 5c7b42d
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 17:33:31 2023 -0500
+
+    Merge pull request #77 from gusavella/gustavo
+    
+    Modifico estilos de dashboard react
+
+[33mcommit 5c7b42d817468e4e384c6bf8dd7dc534db60bf69[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 17:32:18 2023 -0500
+
+    Modifico estilos de dashboard react
+
+[33mcommit d95cd6c35c6387acbd43cd272365d9a7e88b9ab3[m
+Merge: 05571ee 41ee0fc
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 17:05:07 2023 -0500
+
+    Merge pull request #76 from gusavella/gustavo
+    
+    Gustavo
+
+[33mcommit 41ee0fc96dddcb924c33516a5933cb6f3d0bc6e4[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 17:04:33 2023 -0500
+
+    Integracion con Dasboard en React all
+
+[33mcommit ba0e8f8f1c83b61cfb4269638cb5531d56e35484[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 16:57:47 2023 -0500
+
+    Integracion con Dasboard en React elimino node_modules
+
+[33mcommit 05571ee4758c3696479e5ad9135d36fd6817a19a[m
+Merge: 579aff1 c97bf30
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 16:55:44 2023 -0500
+
+    Merge pull request #75 from gusavella/gustavo
+    
+    Integracion con Dasboard en React
+
+[33mcommit c97bf301331948e2257adfe46d61c54eaf6c064f[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 16:55:13 2023 -0500
+
+    Integracion con Dasboard en React
+
+[33mcommit 579aff104537eae63ba3279316cf602db30f430f[m
+Merge: c45d022 6018b49
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 16:53:10 2023 -0500
+
+    Merge pull request #74 from gusavella/gustavo
+    
+    20230205
+
+[33mcommit 6018b495c019ce4a91dc927625a37714f7506f8a[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 16:52:45 2023 -0500
+
+    20230205
+
+[33mcommit c45d0228721c1bb0ba2cfc031087fa2bcf850956[m
+Merge: 0d3f165 4ce0d57
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 16:45:10 2023 -0500
+
+    Merge pull request #73 from gusavella/gustavo
+    
+    Integracion con Dasboard en React
+
+[33mcommit 4ce0d574617d6374c822d8879fdda2f079b7c0c8[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 16:44:01 2023 -0500
+
+    Integracion con Dasboard en React
+
+[33mcommit 0d3f16556d0b3c8183b2078fc1df2633b827b77c[m
+Merge: c81bb54 fbbd8f8
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Sun Feb 5 16:15:56 2023 -0500
+
+    Merge pull request #72 from gusavella/gustavo
+    
+    Integracion con Dasboard en React
+
+[33mcommit fbbd8f847afff43dab416e5cdf05a63f35f5940e[m
+Merge: f2919e6 c81bb54
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 16:04:33 2023 -0500
+
+    Merge https://github.com/gusavella/grupo_6_Games_Hub into gustavo
+
+[33mcommit f2919e677257dc00b3ac499ca753aab1b273b0f8[m
+Author: Gustavo Avella <gusavella1984@gmail.com>
+Date:   Sun Feb 5 16:04:31 2023 -0500
+
+    ok
+
+[33mcommit 8f44e8daa3b5ef12dbdbe3a9123d50f275124b2b[m
+Merge: 5f29d6d c81bb54
+Author: NGiancristiano <ngiancristiano1@gmail.com>
+Date:   Sun Feb 5 11:19:46 2023 +0900
+
+    Merge branch 'master' of https://github.com/gusavella/grupo_6_Games_Hub
+
+[33mcommit c81bb54bc9514a7afc84beafb437411380114f02[m
+Author: FelipeAMS <xfoarmks@gmail.com>
+Date:   Sat Feb 4 19:27:35 2023 -0400
+
+    Armando api de productos y api de usuarios
+
+[33mcommit 7c9f2ed01b48d7b824959ba505ff603a5bc04c7f[m
+Author: FelipeAMS <xfoarmks@gmail.com>
+Date:   Sat Feb 4 00:28:43 2023 -0400
+
+    Agregando validaciones desde el back al resto de la página (secciones, roles, categorias y consolas) en el panel de admin
+
+[33mcommit b85efeeb4e6b41161ae797c93dff1c311e4fb748[m
+Merge: 5ecf701 51d54c5
+Author: gusavella <84609073+gusavella@users.noreply.github.com>
+Date:   Fri Feb 3 20:25:41 2023 -0500
+
+    Merge pull request #71 from gusavella/gustavo
+    

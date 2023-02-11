@@ -7,23 +7,9 @@ module.exports = [
     body('description')
         .notEmpty().withMessage('Debes ingresar una descripción').bail()
         .isLength({min:20}).withMessage('La descripción debe tener al menos 20 caracteres'),
-        body('new-img')
-        .custom((value,{req}) =>{
-            let file = req.file
-            let acceptedExtensions = ['.jpg','.png','.jpeg','.gif']
-
-            if(!file){
-                throw new Error('El producto debe tener una imagen')
-            }else{
-                let fileExtension = path.extname(file.originalname)
-                if(!acceptedExtensions.includes(fileExtension)) {
-                    throw new Error (`Las extensiones permitidas son ${acceptedExtensions.join(', ')}`)
-                }
-            }
-            return true
-        }),
     body('value')
-        .notEmpty().withMessage('El producto debe tener un precio').bail(),
+        .notEmpty().withMessage('El producto debe tener un precio').bail()
+        .isNumeric().withMessage('Debe ser un numero'),
     body('discount')
         .notEmpty().withMessage('De no tener decuento debe tener al menos un cero').bail()
         .isLength({max:2}).withMessage('El descuento no puede ser mayor a 99%'),
