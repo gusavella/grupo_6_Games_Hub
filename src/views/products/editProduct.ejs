@@ -11,8 +11,7 @@
            
             <img src=" <%= product.image %> "  class="edit-product-image" alt="imagen de juego" >
            
-            <form action="/products/<%=product.id%>/edit?_method=PUT" class="edit-product-form" method="post"
-              enctype="multipart/form-data" id="form">
+            <form action="/products/<%=product.id%>/edit?_method=PUT" class="edit-product-form" method="post" enctype="multipart/form-data" id="form">
 
               <div class="edit-product-div">
                 <label for="new-img"class="edit-product-label">Imagen:</label>
@@ -122,7 +121,7 @@
 
       </main>
       <%- include('../partials/footer')%>
-      <script  src="../../../public/js/productValidator.js"></script>
+      <script  src="/js/productValidator.js"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 
