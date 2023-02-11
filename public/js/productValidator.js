@@ -44,7 +44,7 @@ form.addEventListener('submit',(e)=>{
     if (price.value<=0){
         errors.push('Debes ingresar un valor de producto mayor a cero')
        }
-    if (discount.value<=0){
+    if (discount.value<0){
         errors.push('Debes ingresar un valor de descuento mayor o igual a cero')
        }
     if ( section.value<=0 ||section.value==undefined || section.value==null){

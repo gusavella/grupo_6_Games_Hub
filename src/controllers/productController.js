@@ -46,13 +46,14 @@ const controller = {
     })
     
   },
+  search: (req,res) => {
+    res.render('products/productSearch.ejs', {tittle: 'Games Hub'})
+  },
   productDetail: (req, res) => {
     db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
     .then(product => {
            res.render("products/productDetail", { tittle: "Product" , product: product});
-    })
-    
-    
+    })  
   },
   newProduct: async(req, res) => {
     let categories= await db.Category.findAll();
@@ -133,6 +134,7 @@ const controller = {
     let categories= await db.Category.findAll();
     let sections= await db.Section.findAll();
     let consoles= await db.Console.findAll();
+    let product= await  db.Product.findByPk(req.params.id,{include: ["section","category","consoles"]})
     let productConsoles = await  db.ProductConsole.findAll({where:{product_id:req.params.id}})
     let productConsolesArray=[]
         
@@ -145,15 +147,15 @@ const controller = {
     const resultValidationProduct = validationResult(req);
       if (resultValidationProduct.errors.length > 0){
         return res.render('products/editProduct', { tittle: 'Editar Producto',
-          categories,sections,consoles,productConsolesArray,
+          categories,sections,consoles,productConsolesArray,product,
           errors: resultValidationProduct.mapped(),
-          product: req.body
+          oldData: req.body
         })
       } else {
         try{
         const editedProduct={
           name : req.body.name,
-         value : parseFloat(req.body.price),
+         value : parseFloat(req.body.value),
       discount : parseFloat(req.body.discount),
    final_value : (parseFloat(parseFloat(req.body.price)*(1-parseFloat(req.body.discount)/100))).toFixed(2) ,// Para que solamente tenga dos digitos
     section_id : req.body.section,

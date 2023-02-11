@@ -297,6 +297,7 @@ a{
 } */
 
 .best-selling,
+.product-search,
 .recommended,
 .offers {
     display: flex;
