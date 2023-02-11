@@ -6,14 +6,15 @@ module.exports =  {
             count: 0,
             users: []
         }
-        let users = await db.User.findAll()
+        let users = await db.User.findAll({include:["role"]})
         response.count = users.length
         response.users = users.map(user => {
             let userDetail = {
                 id: user.id,
                 name: user.names,
                 email: user.email,
-                detail: `/api/users/${user.id}`
+                detail: `/api/users/${user.id}`,
+                role:user.role.name
             }
             return userDetail
         })

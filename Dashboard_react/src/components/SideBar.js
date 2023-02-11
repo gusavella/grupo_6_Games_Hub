@@ -16,7 +16,7 @@ function SideBar(){
         const response = await fetch('http://localhost:3030/api/users')
         const info = await response.json()
         setUsers(info)
-        console.log(info)
+        console.log('info:',info)
     }
     const fetchProducts = async () => {
         const response = await fetch('http://localhost:3030/api/products')

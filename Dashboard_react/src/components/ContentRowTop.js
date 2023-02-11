@@ -15,7 +15,7 @@ function ContentRowTop({infoUsers, infoProducts}){
 					{/*<!-- Content Row Movies-->*/}
 					<ContentRowMovies infoUsers={infoUsers} infoProducts={infoProducts}/>
 					<ContentRowCenter infoProducts={infoProducts}/>
-					<Chart />
+					<Chart infoUsers={infoUsers}/>
 	
 				</div>
 				{/*<!--End Content Row Top-->*/}

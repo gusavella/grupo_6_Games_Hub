@@ -1,8 +1,8 @@
 import React from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
+
 
 function LastMovieInDb({infoProducts}){
-    if(infoProducts != undefined){
+    if(infoProducts !== undefined){
         let product = infoProducts.products[infoProducts.products.length-1]
         console.log(product)
         return(
@@ -16,7 +16,7 @@ function LastMovieInDb({infoProducts}){
                             <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={product.image} alt={product.image}    />
                         </div>
                         <p>{product.description}</p>
-                        <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                        {/* <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a> */}
                     </div>
                 </div>
             </div>
