@@ -1446,8 +1446,8 @@ color:white;
 /*--------------BURGER MENU--------------------*/
 .burgerMenu {
     display: none;
-    background-color: #6929BA;
-    opacity: 0.7;
+    background-color:#302A3F;
+    opacity: 0.9;
     position: absolute;
     right: 0;
     z-index: 1;

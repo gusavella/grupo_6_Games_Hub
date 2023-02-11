@@ -20,7 +20,10 @@ let tableRowsData = [
 ]
 
 
-function Chart (){
+function  Chart ({infoUsers}){
+    if (infoUsers!== undefined){
+        let users=infoUsers.users
+        console.log('Usuarios en chart:',users)
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -29,25 +32,19 @@ function Chart (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Detalle</th>
+                               
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
+                           
+                            {console.log('usuarios en chart:',infoUsers.users)}
                             {
-                            tableRowsData.map( ( row , i) => {
+                                
+                                users.map( ( row , i) => {
                                 return <ChartRow { ...row} key={i}/>
                             })
                             }
@@ -58,7 +55,10 @@ function Chart (){
             </div>
         </div>
 
-    )
+    )}
+    else{
+        return <h2>Cargando...</h2>
+    }
 }
 
 export default Chart;
