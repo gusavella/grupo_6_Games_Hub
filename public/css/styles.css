@@ -10,7 +10,6 @@ body {
     background: linear-gradient(to bottom, #6929BA,#843890);
 }
 
-
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
@@ -105,7 +104,7 @@ footer section{
     height: 100vh;
 } 
 .main-register {
-    width: 90%;
+     /* max-width: 90%; */
 }
 .register-box {
     display: flex;
@@ -764,7 +763,7 @@ a{
     margin-top: 12px;
 }
 i {
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 h2 {
@@ -1003,10 +1002,9 @@ b {
 
 .new-product-button {
     margin: 7px;
-    padding: 5px;
+    padding: 5px 7px;
     border-radius: 5px;
     border-width: 0px;
-    width: 150px;
     background-color: #1AADB4;
     color: white;
     transition: all 450ms;
@@ -1073,10 +1071,10 @@ b {
 
 .edit-product-delete-button{
     margin: 7px;
-    padding: 5px;
+    padding: 5px 7px ;
     border-radius: 5px;
-    border-width: 0px;
-    width: 150px;
+    border: none;
+    /* width: 150px; */
     background-color:rgb(170, 7, 89) ;
     color: white;
     transition: all 450ms;
@@ -1122,6 +1120,13 @@ b {
     color: white;
     font-family: 'Raleway';
     font-size: 2.5rem;
+
+  }
+  .role-title {
+    padding: 20px;
+  }
+  .role-table {
+    padding: 15px;
   }
   #gradient-border {
     --borderWidth: 3px;
@@ -1202,6 +1207,20 @@ color:white;
 /* ---------------------PANEL  ADMIN------------------------*/
 .label{
     color:white;
+
+}
+.button-back{
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+    /* transition: all 450ms; */
+    position: absolute;
+    left: 100px;
+    top:130px; 
 }
 /* ---------------------PANEL  ADMIN------------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
@@ -1465,4 +1484,51 @@ color:white;
 
 .burgerView {
     display: block;
+}
+
+/*-----------MEDIA QUERIES ADMIN PANEL-----------------*/
+@media (max-width:630px) {
+.role-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+  }
+  .role-table {
+    border-top: solid 1px white;
+  }
+  /* .button-back {
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+    /* transition: all 450ms; */
+    /* position: absolute;
+    left: 40px;
+    top:100px; 
+  } */ 
+}
+@media (min-width:630px) {
+    .role-table {
+        border-left: solid 1px white;
+      }
+      /* .button-back {
+        margin: 7px;
+        padding: 5px;
+        border-radius: 5px;
+        border-width: 0px;
+        width: 70px;
+        background-color: #1AADB4;
+        color: white;
+        /* transition: all 450ms; */
+        /* position: absolute;
+        left: 100px;
+        top:130px; 
+      } */ 
 }
