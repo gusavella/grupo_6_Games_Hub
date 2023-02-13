@@ -6,7 +6,7 @@
     <a href="/users/adminPanel"><button class="button-back">Back</button></a>
     <main class="main-register">
     <div class="role-box" id="gradient-border">
-      <h3 class="title">consoles</h3>
+      <h3 class="console-title">Consoles</h3>
      
       <table description="role table">
         <tr class="role-th">
@@ -17,7 +17,7 @@
        <% for (console in consoles){ %>
         <tr>
           <form action="/consoles/<%=consoles[console].id%>/edit?_method=PUT" method="post">
-          <td><input type="text" class="role-input" id="<%=consoles[console].name%>" value="<%=consoles[console].name%>" name="name"></td>
+          <td class="td-input"><input type="text" class="role-input" id="<%=consoles[console].name%>" value="<%=consoles[console].name%>" name="name"></td>
           <td class="role-td">
             <div >
               <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
@@ -33,7 +33,7 @@
         <%}%>
         <tr>
           <form action="/consoles/add" method="post" id="console-form">
-            <td ><input type="text" name="name" class="role-input-2" id="new-input-console"></td>            
+            <td class="td-input"><input type="text" name="name" class="role-input-2" id="new-input-console"></td>            
             <td ><button class="new-product-button" type="submit"><i class="fa-solid fa-plus"></i> Agregar</button></td>
             <td></td>
           </form>  

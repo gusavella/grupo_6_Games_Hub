@@ -101,10 +101,10 @@ footer section{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 } 
 .main-register {
-     /* max-width: 90%; */
+     max-width: 90%;
 }
 .register-box {
     display: flex;
@@ -439,7 +439,7 @@ a{
 .section-title {
     display: flex;
     justify-content: space-around;
-    border-bottom: solid thin grey;
+    /* border-right: solid thin white; */
     margin: 0 40px;
     align-items: center;
 }
@@ -516,6 +516,7 @@ a{
 .main-container {
     display: flex;
     justify-content: space-evenly;
+    ;
 }
 
 .adds {
@@ -1008,6 +1009,7 @@ b {
     background-color: #1AADB4;
     color: white;
     transition: all 450ms;
+    
 }
 
 .new-product-button:hover {
@@ -1127,10 +1129,11 @@ b {
   }
   .role-table {
     padding: 15px;
+    /* border-left: solid 70% white; */
   }
   #gradient-border {
     --borderWidth: 3px;
-    padding: 20px 0;
+    padding: 10px 10px;
     background:  rgba(0,0,0,0.4);
     position: relative;
     border-radius: var(--borderWidth);
@@ -1168,9 +1171,12 @@ color:white;
     display:flex;
     align-self: center;
 }
-.role-input .role-input-2{
+.role-input , .role-input-2{
     border-radius: 5px;
     padding: 3px;
+    width:70%;
+    margin:auto;
+    border:none;
 }
 /* ---------------------    ROLES    ------------------------*/
 /* ---------------------    ROLES    ------------------------*/
@@ -1180,6 +1186,18 @@ color:white;
     height: 80vh;
 }
 /* ---------------------    ROLES    ------------------------*/
+/*---------------------- CONSOLES ----------------------------*/
+.console-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+}
+.console-title{
+    padding: 15px;
+}
 /* ---------------------ERRORES FRONT------------------------*/
 
 .errors-box{
@@ -1209,6 +1227,19 @@ color:white;
     color:white;
 
 }
+.panel-button {
+    margin: 7px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+    width:100%;
+}
+.panel-title {
+padding: 50px;
+}
 .button-back{
     margin: 7px;
     padding: 5px;
@@ -1219,10 +1250,15 @@ color:white;
     color: white;
     /* transition: all 450ms; */
     position: absolute;
-    left: 100px;
+    left: 30px;
     top:130px; 
 }
 /* ---------------------PANEL  ADMIN------------------------*/
+
+/*-----------------------CATEGORY PANEL----------------------*/
+.category-title {
+    padding :30px;
+}
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */
@@ -1254,6 +1290,9 @@ color:white;
         display:flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        /* position:fixed; */
+        /* bottom:0; */
+
     }
     .header-payment{
         display:flex;
@@ -1495,12 +1534,13 @@ color:white;
     justify-content: space-evenly;
     color: white;
     font-family: 'Raleway';
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    padding:0px 10px
   }
   .role-table {
     border-top: solid 1px white;
   }
-  /* .button-back {
+   .button-back {
     margin: 7px;
     padding: 5px;
     border-radius: 5px;
@@ -1508,12 +1548,21 @@ color:white;
     width: 70px;
     background-color: #1AADB4;
     color: white;
-    /* transition: all 450ms; */
-    /* position: absolute;
+     transition: all 450ms; 
+     position: absolute;
     left: 40px;
     top:100px; 
-  } */ 
+    margin: auto;
+   } 
+   .main-register {
+    padding:65px 15px ;
+   }
+   .td-input {
+    text-align: center;
+   }
+
 }
+
 @media (min-width:630px) {
     .role-table {
         border-left: solid 1px white;
@@ -1531,4 +1580,18 @@ color:white;
         left: 100px;
         top:130px; 
       } */ 
+      .main-register {
+        margin: auto;
+        padding: 15px;
+
+      }
+      @media (max-width: 390px) {
+        .new-product-button {
+            font-size: 10px;
+
+        }
+      }
+      @media (max-width: 810px) {
+        
+      }
 }
