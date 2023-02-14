@@ -68,6 +68,18 @@ const controller = {
         }catch(e){
             console.log(e)
         }
+      },
+      searchByUser: async (req,res)=>{
+        try{
+            let orders=await db.Order.findAll({include:["order_product"]})
+            let products=await db.Product.findAll()
+            let filteredOrders=orders.filter(order=>order.user_id==req.params.id)
+
+            //   res.json(filteredOrders)
+            res.render('orders/byUser.ejs',{tittle:'Ordenes del usuario',orders:filteredOrders,products})
+         }catch(e){
+             console.log(e)
+         }
       }
      
 

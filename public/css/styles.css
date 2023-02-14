@@ -1559,6 +1559,7 @@ padding: 50px;
     display: block;
 }
 
+
 /*-----------MEDIA QUERIES ADMIN PANEL-----------------*/
 @media (max-width:630px) {
 .role-box {
@@ -1629,3 +1630,31 @@ padding: 50px;
         
       }
 }
+=======
+.orders_tr{
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+.title{
+    color: white;
+    width:100%;
+    margin:auto;
+    text-align: center;
+   
+}
+.orders-container{
+    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    width: 80%;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+

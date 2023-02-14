@@ -1,0 +1,53 @@
+
+  <%- include('../partials/head')%>
+  <body class="body-register">
+    <%- include('../partials/header')%>
+    <main class="main-register">
+    <div class="orders-container" >
+      <h3 class="title">Ordenes</h3>
+     
+      <table description="orders table">
+        <tr class="role-th">
+          <th>Orden</th>
+          <th>Valor</th>
+          <th>Productos</th>
+        </tr>
+       <% if(orders){%> 
+          <% for (order in orders){ %>
+            <tr class="orders_tr">
+            <td><%=orders[order].id%></td>
+              <td >
+                $<%=orders[order].total%>
+              </td>
+
+              <td>
+                <ul>
+                  <% for (orderProduct in orders[order].order_product){%>
+                    <li>
+                      <p>
+                        <%= products[orders[order].order_product[orderProduct].product_id].name %>
+                        $<%= orders[order].order_product[orderProduct].value%> X 
+                        <%=orders[order].order_product[orderProduct].quantity%> = 
+                        $<%=orders[order].order_product[orderProduct].subTotal%>
+                      </p>
+                    </li>
+                  
+                  <%}%>
+                </ul>
+              </td>
+
+            </tr>
+            <%}%>
+       <%}else if(!orders){%>
+        <td>No hay datos para mostrar</td>
+        <td>No hay datos para mostrar</td>
+        <td>No hay datos para mostrar</td>
+       <%}%>
+      </table>
+      
+    </div>
+  
+  </main>
+  <%- include('../partials/footer')%>
+ </body>
+
