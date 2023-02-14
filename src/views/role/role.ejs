@@ -3,11 +3,14 @@
   <%- include('../partials/head')%>
   <body class="body-register">
     <%- include('../partials/header')%>
+    <a href="/users/adminPanel"><button class="button-back">Back</button></a>
     <main class="main-register">
-    <div class="role-box" id="gradient-border">
-      <h3 class="title">Roles</h3>
      
-      <table description="role table">
+    <div class="role-box" id="gradient-border">
+      <div class="role-title">
+        <h3>Roles</h3>
+     </div>
+      <table description="role table" class="responsive-table">
         <tr class="role-th">
           <th>Nombre</th>
           <th>Operaciones</th>

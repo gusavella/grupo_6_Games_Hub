@@ -10,7 +10,6 @@ body {
     background: linear-gradient(to bottom, #6929BA,#843890);
 }
 
-
 /* ----------------------------------HEADER---------------------------------- */
 header {
     background-color: #302A3F;
@@ -102,10 +101,10 @@ footer section{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 } 
 .main-register {
-    width: 90%;
+     max-width: 90%;
 }
 .register-box {
     display: flex;
@@ -440,7 +439,7 @@ a{
 .section-title {
     display: flex;
     justify-content: space-around;
-    border-bottom: solid thin grey;
+    /* border-right: solid thin white; */
     margin: 0 40px;
     align-items: center;
 }
@@ -517,6 +516,7 @@ a{
 .main-container {
     display: flex;
     justify-content: space-evenly;
+    ;
 }
 
 .adds {
@@ -764,7 +764,7 @@ a{
     margin-top: 12px;
 }
 i {
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 h2 {
@@ -1003,18 +1003,19 @@ b {
 
 .new-product-button {
     margin: 7px;
-    padding: 5px;
+    padding: 5px 7px;
     border-radius: 5px;
     border-width: 0px;
-    width: 150px;
     background-color: #1AADB4;
     color: white;
     transition: all 450ms;
+    
 }
 
 .new-product-button:hover {
     background-color: #183153;
     color: #1AADB4;
+    cursor: pointer;
 }
 /* ---------------------NEW PRODUCT ------------------------*/
 /* ---------------------EDIT PRODUCT ------------------------*/
@@ -1073,10 +1074,10 @@ b {
 
 .edit-product-delete-button{
     margin: 7px;
-    padding: 5px;
+    padding: 5px 7px ;
     border-radius: 5px;
-    border-width: 0px;
-    width: 150px;
+    border: none;
+    /* width: 150px; */
     background-color:rgb(170, 7, 89) ;
     color: white;
     transition: all 450ms;
@@ -1122,10 +1123,18 @@ b {
     color: white;
     font-family: 'Raleway';
     font-size: 2.5rem;
+
+  }
+  .role-title {
+    padding: 20px;
+  }
+  .responsive-table {
+    padding: 15px;
+    /* border-left: solid 70% white; */
   }
   #gradient-border {
     --borderWidth: 3px;
-    padding: 20px 0;
+    padding: 5px;
     background:  rgba(0,0,0,0.4);
     position: relative;
     border-radius: var(--borderWidth);
@@ -1163,9 +1172,12 @@ color:white;
     display:flex;
     align-self: center;
 }
-.role-input .role-input-2{
+.role-input , .role-input-2{
     border-radius: 5px;
     padding: 3px;
+    width:70%;
+    margin:auto;
+    border:none;
 }
 /* ---------------------    ROLES    ------------------------*/
 /* ---------------------    ROLES    ------------------------*/
@@ -1175,6 +1187,25 @@ color:white;
     height: 80vh;
 }
 /* ---------------------    ROLES    ------------------------*/
+/*---------------------- CONSOLES ----------------------------*/
+.console-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+}
+.body-console {
+    background: linear-gradient(to bottom, #6929BA,#843890);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.console-title{
+    padding: 25px;
+}
 /* ---------------------ERRORES FRONT------------------------*/
 
 .errors-box{
@@ -1202,8 +1233,66 @@ color:white;
 /* ---------------------PANEL  ADMIN------------------------*/
 .label{
     color:white;
+
+}
+.admin-button-back {
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+    position: fixed;
+    left: 40px;
+    top: 120px;
+}
+.admin-button-back:hover{
+    background-color: #183153;
+    color: #1AADB4;
+    cursor: pointer;
+}
+.panel-button {
+    margin: 7px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    border-width: 0px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+    width:100%;
+}
+.panel-button:hover{
+    background-color: #183153;
+    color: #1AADB4;
+    cursor: pointer;
+}
+.panel-title {
+padding: 50px;
+}
+.button-back{
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+   
+}
+.button-back:hover {
+    background-color: #183153;
+    color: #1AADB4;
+    cursor: pointer;
 }
 /* ---------------------PANEL  ADMIN------------------------*/
+
+/*-----------------------CATEGORY PANEL----------------------*/
+.category-title {
+    padding :30px;
+}
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */
@@ -1235,6 +1324,9 @@ color:white;
         display:flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        /* position:fixed; */
+        /* bottom:0; */
+
     }
     .header-payment{
         display:flex;
@@ -1466,6 +1558,79 @@ color:white;
 .burgerView {
     display: block;
 }
+
+
+/*-----------MEDIA QUERIES ADMIN PANEL-----------------*/
+@media (max-width:630px) {
+.role-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    padding:0px 10px
+  }
+  .responsive-table {
+    border-top: solid 1px white;
+  }
+  .admin-button-back{
+    /* position: absolute;
+    margin: auto; */
+}
+   .button-back {
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+     transition: all 450ms; 
+   } 
+   .main-register {
+    padding:10px 15px ;
+   }
+   .td-input {
+    text-align: center;
+   }
+
+}
+
+@media (min-width:631px) {
+    .responsive-table {
+        border-left: solid 1px white;
+      }
+      /* .button-back {
+        margin: 7px;
+        padding: 5px;
+        border-radius: 5px;
+        border-width: 0px;
+        width: 70px;
+        background-color: #1AADB4;
+        color: white;
+        /* transition: all 450ms; */
+        /* position: absolute;
+        left: 100px;
+        top:130px; 
+      } */ 
+      .main-register {
+        margin: auto;
+        padding: 15px;
+
+      }
+      @media (max-width: 390px) {
+        .new-product-button {
+            font-size: 10px;
+
+        }
+      }
+      @media (max-width: 769px) {
+        
+      }
+}
+=======
 .orders_tr{
     background-color:rgba(0,0,0,0.4);
     border-radius: 5px;
@@ -1491,4 +1656,5 @@ color:white;
     flex-direction: column;
 
 }
+
 
