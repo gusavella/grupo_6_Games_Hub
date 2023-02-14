@@ -1127,13 +1127,13 @@ b {
   .role-title {
     padding: 20px;
   }
-  .role-table {
+  .responsive-table {
     padding: 15px;
     /* border-left: solid 70% white; */
   }
   #gradient-border {
     --borderWidth: 3px;
-    padding: 10px 10px;
+    padding: 5px;
     background:  rgba(0,0,0,0.4);
     position: relative;
     border-radius: var(--borderWidth);
@@ -1196,7 +1196,7 @@ color:white;
     font-size: 2.5rem;
 }
 .console-title{
-    padding: 15px;
+    padding: 25px;
 }
 /* ---------------------ERRORES FRONT------------------------*/
 
@@ -1237,6 +1237,11 @@ color:white;
     transition: all 450ms;
     width:100%;
 }
+.panel-button:hover{
+    background-color: #183153;
+    color: #1AADB4;
+    cursor: pointer;
+}
 .panel-title {
 padding: 50px;
 }
@@ -1248,10 +1253,13 @@ padding: 50px;
     width: 70px;
     background-color: #1AADB4;
     color: white;
-    /* transition: all 450ms; */
-    position: absolute;
-    left: 30px;
-    top:130px; 
+    transition: all 450ms;
+   
+}
+.button-back:hover {
+    background-color: #183153;
+    color: #1AADB4;
+    cursor: pointer;
 }
 /* ---------------------PANEL  ADMIN------------------------*/
 
@@ -1537,7 +1545,7 @@ padding: 50px;
     font-size: 1.5rem;
     padding:0px 10px
   }
-  .role-table {
+  .responsive-table {
     border-top: solid 1px white;
   }
    .button-back {
@@ -1549,13 +1557,9 @@ padding: 50px;
     background-color: #1AADB4;
     color: white;
      transition: all 450ms; 
-     position: absolute;
-    left: 40px;
-    top:100px; 
-    margin: auto;
    } 
    .main-register {
-    padding:65px 15px ;
+    padding:10px 15px ;
    }
    .td-input {
     text-align: center;
@@ -1563,8 +1567,8 @@ padding: 50px;
 
 }
 
-@media (min-width:630px) {
-    .role-table {
+@media (min-width:631px) {
+    .responsive-table {
         border-left: solid 1px white;
       }
       /* .button-back {
@@ -1591,7 +1595,7 @@ padding: 50px;
 
         }
       }
-      @media (max-width: 810px) {
+      @media (max-width: 769px) {
         
       }
 }
