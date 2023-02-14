@@ -1015,6 +1015,7 @@ b {
 .new-product-button:hover {
     background-color: #183153;
     color: #1AADB4;
+    cursor: pointer;
 }
 /* ---------------------NEW PRODUCT ------------------------*/
 /* ---------------------EDIT PRODUCT ------------------------*/
@@ -1195,6 +1196,13 @@ color:white;
     font-family: 'Raleway';
     font-size: 2.5rem;
 }
+.body-console {
+    background: linear-gradient(to bottom, #6929BA,#843890);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .console-title{
     padding: 25px;
 }
@@ -1226,6 +1234,24 @@ color:white;
 .label{
     color:white;
 
+}
+.admin-button-back {
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+    position: fixed;
+    left: 40px;
+    top: 120px;
+}
+.admin-button-back:hover{
+    background-color: #183153;
+    color: #1AADB4;
+    cursor: pointer;
 }
 .panel-button {
     margin: 7px;
@@ -1548,6 +1574,10 @@ padding: 50px;
   .responsive-table {
     border-top: solid 1px white;
   }
+  .admin-button-back{
+    /* position: absolute;
+    margin: auto; */
+}
    .button-back {
     margin: 7px;
     padding: 5px;
