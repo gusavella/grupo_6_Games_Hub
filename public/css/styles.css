@@ -1293,6 +1293,45 @@ padding: 50px;
 .category-title {
     padding :30px;
 }
+
+/*-----------------------ORDERS----------------------*/
+.orders_tr{
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 5px;
+    margin:5px;
+    text-align: center;
+    color: white;
+}
+.orders-td{
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 10px;
+    margin:10px;
+    text-align: center;
+    color: white;
+}
+.title{
+    color: white;
+    width:100%;
+    margin:auto;
+    text-align: center;
+   
+}
+.orders-container{
+    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    max-width: 800px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+/*-----------------------ORDERS----------------------*/
  /* ----------------------------------ESTILOS PARA PANTALLAS---------------------------------- */
 @media (min-width: 769px) {
     /* ----------------------------------HEADER---------------------------------- */
@@ -1630,30 +1669,6 @@ padding: 50px;
         
       }
 }
-.orders_tr{
-    background-color:rgba(0,0,0,0.4);
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    color: white;
-}
-.title{
-    color: white;
-    width:100%;
-    margin:auto;
-    text-align: center;
-   
-}
-.orders-container{
-    display: flex;
-    background-color: rgba(0,0,0,0.4);
-    width: 80%;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 10px;
-    padding: 10px;
-    flex-direction: column;
 
-}
 
 
