@@ -15,12 +15,12 @@
        <% if(orders){%> 
           <% for (order in orders){ %>
             <tr class="orders_tr">
-            <td><%=orders[order].id%></td>
-              <td >
+            <td class="orders-td"><%=orders[order].id%></td>
+              <td class="orders-td">
                 $<%=orders[order].total%>
               </td>
 
-              <td>
+              <td class="orders-td">
                 <ul>
                   <% for (orderProduct in orders[order].order_product){%>
                     <li>

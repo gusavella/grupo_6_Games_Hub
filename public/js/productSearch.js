@@ -37,33 +37,36 @@ async function ready(){
     var event = new Event('change')
     searchBar.dispatchEvent(event)
     searchBar.addEventListener('change', (e) => {
-        console.log(sessionStorage.getItem('searchText'))
+      
         filter(products.products, e.target.value)       
     })
 }
 
 function displayProducts(products){
+
     let container = document.querySelector('.product-search')
-    container.innerHTML = ``
-    for (let i = 0; i < products.length; i++){
-       
-        container.innerHTML += `
-            <div class="card">
-                <div class="face front">
-                    <img src="${products[i].image}" alt="imagen-game">
-                    <h3>${products[i].name }</h3>
-                </div>
-                <div class="face back">
-                    <h4>${products[i].name}</h4>
-                    <p>Categoría: ${products[i].asociations[0]}</p>
-                    <div class="link-buy">
-                        <a href="/products/${products[i].id}">${products[i].final_value } - COMPRAR</a>
+    // if(container){
+        container.innerHTML = ``
+        for (let i = 0; i < products.length; i++){
+        
+            container.innerHTML += `
+                <div class="card">
+                    <div class="face front">
+                        <img src="${products[i].image}" alt="imagen-game">
+                        <h3>${products[i].name }</h3>
+                    </div>
+                    <div class="face back">
+                        <h4>${products[i].name}</h4>
+                        <p>Categoría: ${products[i].asociations[0]}</p>
+                        <div class="link-buy">
+                            <a href="/products/${products[i].id}">${products[i].final_value } - COMPRAR</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `
-    }
-}
+            `
+        }
+    // }
+ }
 function filter(products, search) {
     if (search == "") displayProducts(products)
     else {
