@@ -674,6 +674,62 @@ a{
 
 
 /* --------------------------- productCart --------------------------- */
+/*----------------------------productList--------------------------------*/
+.product-list-box{
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+    
+}
+#product-list-title{
+    font-size: 50px;
+}
+.button-back-list{
+    margin: 7px;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 0px;
+    width: 70px;
+    background-color: #1AADB4;
+    color: white;
+    transition: all 450ms;
+    /* position: absolute; */
+    left: 10px;
+    top: 130px;
+    align-items: center;    
+}
+.button-list-div {
+    display: flex;
+    justify-content: center;
+    padding-top:20px ;
+}
+.button-back-list:hover{
+    cursor: pointer;
+    background-color: #183153;
+    color: #1AADB4;
+}
+
+.list-table {
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.4);
+}
+.edit-list {
+    padding: 0px 50px;
+}
+.container-list {
+    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: right;    
+}
 
 /* --------------------------- productDetail --------------------------- */
 
@@ -1264,7 +1320,7 @@ color:white;
     background-color: #1AADB4;
     color: white;
     transition: all 450ms;
-    width:100%;
+    width:130px;
 }
 .panel-button:hover{
     background-color: #183153;
@@ -1358,7 +1414,9 @@ padding: 50px;
         display: flex;
         justify-content: space-around;
     }
-
+    .button-back-list{
+    margin: auto;    
+}
         /* ----------------------------------HEADER---------------------------------- */
     /* ----------------------------------FOOTER---------------------------------- */
     footer{
@@ -1672,6 +1730,32 @@ padding: 50px;
         
       }
 }
+
+.orders_tr{
+    background-color:rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+.title{
+    color: white;
+    width:100%;
+    margin:auto;
+    text-align: center;
+   
+}
+.orders-container{
+    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    width: 80%;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    flex-direction: column;
+
+
 
 
 

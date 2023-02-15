@@ -5,17 +5,31 @@
 
 <body>
   <%- include('../partials/header') %>
+
+  <div class="button-list-div">
+  <a href="/users/adminPanel"><button class="button-back-list">Atrás</button></a>
+  </div>
+<main class="main-register">
+  <div class="product-list-box">
+    <div class="title-selling">
+        <h1 id="product-list-title">Lista de Productos</h1>
+
   <a href="/users/adminPanel"><button class="button-back">Back</button></a>
 <main >
   <div class="role-box">
     <div >
         <h1>Lista de Productos</h1>
+
     </div>
     <div >
 
+        <div class="container-list">
+            <!-- <section class="container-selling"> -->
+              <table description="Product table for edit " class="list-table">
         <div >
             <section class="container-selling">
               <table description="Product table for edit ">
+              
                 <tr>
                   <th>Nombre</th><th>Accion</th>
                 </tr>
@@ -29,10 +43,10 @@
                 </tr>
                 <% for(let i=0;i<products.length;i++){%>
                  <tr>
-                    <td>
+                    <td class="product-list">
                      <p class="list-label"><%=products[i].name %><p>
                     </td>
-                    <td>  
+                    <td class="edit-list">  
                         <form action="/products/<%=products[i].id%>/edit" method="get">
                         <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
                       </form>
