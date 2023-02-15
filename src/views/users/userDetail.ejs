@@ -25,15 +25,15 @@
                 
                 <% if(user.role!=undefined && user.role.name=='admin'){%>
                     <form action="/users/adminPanel" method="get">
-                        <button class="new-product-button" type="submit" ><i class="fa-regular fa-pen-to-square"></i> Panel admin</button>
+                        <button class="panel-button" type="submit" ><i class="fa-regular fa-pen-to-square"></i> Panel admin</button>
                     </form>
                     
                 <%}%>
                 <form action="/users/edit/<%=user.id%>" method="get">
-                    <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar usuario</button>
+                    <button class="panel-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Editar usuario</button>
                 </form>
                 <form action="/orders/user/<%=user.id%>" method="get">
-                    <button class="new-product-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Ordenes</button>
+                    <button class="panel-button" type="submit"><i class="fa-regular fa-pen-to-square"></i> Ordenes</button>
                 </form>
             </div>
         </div>
