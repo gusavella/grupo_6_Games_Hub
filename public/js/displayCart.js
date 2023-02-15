@@ -43,8 +43,8 @@ function displayCart() {
                   <em class="fa-solid fa-trash"></em>
                 </button>
                
-                <p>Cantidad :</p>
-                <p class="article-quantity">${element.quantity}</p>
+                <p class="cart-text">Cantidad :</p>
+                <p class="cart-text">${element.quantity}</p>
                 <div class="quantity-form">
                   <button class="quantity" onClick="sumar(${element.id})">+</button>
                   <button class="quantity" onClick="restar(${element.id})">-</button>

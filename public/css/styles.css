@@ -101,7 +101,7 @@ footer section{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    /* height: 100%; */
 } 
 .main-register {
      max-width: 90%;
@@ -570,13 +570,16 @@ a{
 
 .cart-section-container , .cart-total-container{
     background-color:rgba(0,0,0,0.4);
-    width:80%;
+    width:100%;
     border-radius:10px;
     margin:auto;
     margin-bottom:10px;
     padding:10px;
+    font-size: 14px;
 }
-
+.cart-text{
+    font-size: 16px;
+}
 
 .cart-article{
     padding-top:5px;
@@ -599,7 +602,7 @@ a{
     background-color:rgba(0,0,0,0.1);
     color: white;
     border-radius:5px;
-    padding: 0 5px ;
+    padding: 0px 3px ;
     margin-right: 2px;
     margin-left: 2px;
     border:1px solid white;
@@ -1482,7 +1485,7 @@ padding: 50px;
 
     }
     .cart-section-container{
-        width: 80%;
+        width: 90%;
         margin: 10px;
      }
     .cart-total-container{
